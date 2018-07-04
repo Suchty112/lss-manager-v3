@@ -243,12 +243,12 @@ lssm.get_buildings = function() {
 lssm.newDragableDivOnMap=function(id, classe, pos) {
   if ("undefined" != typeof mapkit) {
       alert("[LSSM]\n\n" + I18n.t('lssm.mapkit'));
-  } else {
+  } else
     function changeX(p, m) {
         if (p <= -m + info._div.offsetWidth + 20)
             return -m + info._div.offsetWidth + 20;
         else if (p >= 0)
-            return 0
+            return 0;
         else
             return p;
     }
@@ -259,7 +259,7 @@ lssm.newDragableDivOnMap=function(id, classe, pos) {
         else if (p <= 0)
             return 0;
         else
-            return p
+            return p;
     }
     var info = L.control();
 
