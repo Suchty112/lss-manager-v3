@@ -1,7 +1,7 @@
 (function($) {
   if ("undefined" != typeof mapkit) {
       alert("[" + lssm.Module.clock.name[I18n.locale] + "]\n\n" + I18n.t('lssm.mapkit'));
-  } else {
+  } else 
     /*
      * id: id des umschließendesn Divs
      * targt: hier wird das umschließende Div an erster stelle eingehängt
