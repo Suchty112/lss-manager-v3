@@ -241,9 +241,6 @@ lssm.get_buildings = function() {
 };
 // liefert ein Div zurück welches auf der Karte verschoben werden kann und seine Position speichert und beim laden wieder annimmt.
 lssm.newDragableDivOnMap=function(id, classe, pos) {
-  if ("undefined" != typeof mapkit) {
-      alert("[LSSM]\n\n" + I18n.t('lssm.mapkit'));
-  } else
     function changeX(p, m) {
         if (p <= -m + info._div.offsetWidth + 20)
             return -m + info._div.offsetWidth + 20;
