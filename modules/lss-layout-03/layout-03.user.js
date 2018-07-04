@@ -16,6 +16,8 @@
 		'#missions>div>div>.btn-group a:last-child{border:none}'+
 		'</style>'
 	);
+	if ("undefined" != typeof mapkit) {
+	} else
 	map.invalidateSize(true);
 
 })();
