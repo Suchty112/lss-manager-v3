@@ -10,7 +10,7 @@
 		'#map{height:400px}'+
 		'#missions-panel-body{padding:0;height:500px!important}'+
 		'#missions > div > div > .btn-group{margin-bottom:5px;background-color:#fafafa;width:100%;border-radius:3px;border:1px solid #fafafa}'+
-		'#missions > div > div > .btn-group a{border:none;border-right:2px solid green}'+
+		'#missions > div > div > .btn-group a{border:none;border-right:2px solid #fafafa}'+
 		'#missions > div > div > .btn-group a:last-child{border:none}'+
 		'#missions strong{display:none!important}'+
 		'</style>'
