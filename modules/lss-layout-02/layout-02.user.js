@@ -9,7 +9,7 @@
 		'#radio_outer{padding-right:0; width: calc(25% - 15px) !important;}'+
 		'#map{height:400px}'+
 		'#missions-panel-body{padding:0;height:500px!important}'+
-		'#missions > div > div > .btn-group{margin-bottom:5px;width:100%;border-radius:3px;b}'+
+		'#missions > div > div > .btn-group{margin-bottom:5px;width:100%;border-radius:3px}'+
 		'#missions > div > div > .btn-group a{border:none;border-right:2px solid}'+
 		'#missions > div > div > .btn-group a:last-child{border:none}'+
 		'#missions strong{display:none!important}'+
