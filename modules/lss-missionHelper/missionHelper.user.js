@@ -60,7 +60,7 @@
 		}
 	}
 
-	var missionHelp = $('mission_help');
+	var missionHelp = $('#mission_help');
 
 	var aaoText = '';
 	markup = '<div class="alert alert-warning">';
