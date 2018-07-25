@@ -84,7 +84,7 @@
 				polheli: 'Police helicopter',
 				gkw: 'Utility Truck',
 				flf: 'ARFF (Airport Fire Truck)',
-				swat: 'SWAT',
+				swat: 'SWAT'
 			}
 		}
 
