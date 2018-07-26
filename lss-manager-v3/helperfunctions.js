@@ -278,14 +278,14 @@ if (I18n.locale == "en") {
             ]
         },
         24: {
-            'name': 'Brennendes Bus-HÃ¤uschen',
+            'name': 'Burning bus shelter',
             'credits': 900,
             'vehicles': {
                 'lf': 1
             }
         },
         25: {
-            'name': 'Verkehrsunfall',
+            'name': 'Road accident',
             'credits': 1000,
             'vehicles': {
                 'lf': 1
@@ -294,236 +294,140 @@ if (I18n.locale == "en") {
                 'min': 0,
                 'max': 1,
                 'transport': 40,
-                'nef': 20,
-                'specialisation': 'Unfallchirugie'
-            }
+                'specialisation': 'Traumatology'
+            },
+            'expansions': [
+                [2, 'Burning car'],
+                [24, 'Burning bus shelter'],
+                [47, 'Dangerous goods truck accident'],
+                [98, 'Unknown Tanker Spill']            
+            ]
         },
         26: {
-            'name': 'Brand im Supermarkt',
-            'credits': 3510,
-            'vehicles': {
-                'rw': 1,
-                'lf': 3,
-                'elw1': 1,
-                'elw2': 1,
-                'dlk': 1
-            },
-            'percentages': {
-                'rw': 30,
-                'elw2': 10,
-                'dlk': 70
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 25
-            }
-        },
-        27: {
-            'name': 'Auffahrunfall',
-            'credits': 700,
-            'vehicles': {
-                'rw': 1,
-                'lf': 1
-            },
-            'percentages': {
-                'rw': 30
-            }
-        },
-        28: {
-            'name': 'Garagenbrand',
+            'name': 'Garage fire',
             'credits': 1400,
             'vehicles': {
                 'lf': 2
-            },
-            'expansions': [
-                [102, 'Feuer in Einfamilienhaus'],
-                [103, 'Feuer in Einfamilienhaus'],
-                [104, 'Feuer in Einfamilienhaus'],
-                [105, 'Feuer in Einfamilienhaus']
-            ]
-        },
-        29: {
-            'name': 'Maschinenbrand',
-            'credits': 2470,
-            'vehicles': {
-                'lf': 3,
-                'rw': 1,
-                'elw1': 1,
-                'gwl2': 1,
-                'atem': 1
-            },
-            'percentages': {
-                'gwl2': 30,
-                'atem': 20
             }
         },
-        30: {
-            'name': 'GroÃŸe Ã–lspur',
-            'credits': 1900,
-            'vehicles': {
-                'lf': 1,
-                'oel': 1
-            },
-            'percentages': {
-                'oel': 75
-            },
-            'expansions': [
-                [95, 'Ausgedehnte Ã–lspur']
-            ]
-        },
-        31: {
-            'name': 'Auslaufende Betriebsstoffe',
+        27: {
+            'name': 'Gas Leak',
             'credits': 400,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [30, 'GroÃŸe Ã–lspur'],
-                [95, 'Ausgedehnte Ã–lspur'],
-                [94, 'Kleine Ã–lspur']
+                [25, 'Road accident'],
+                [47, 'Dangerous goods truck accident']
             ]
         },
-        32: {
-            'name': 'Kaminbrand',
+        28: {
+            'name': 'Fireplace fire',
             'credits': 1310,
             'vehicles': {
-                'lf': 1,
-                'dlk': 1,
-                'elw1': 1
+                'lf': 2,
+                'elw1': 1,
+                'dlk': 1
             }
         },
-        33: {
-            'name': 'MÃ¤hdrescher Brand',
+        29: {
+            'name': 'Harvester fire',
             'credits': 1200,
             'vehicles': {
                 'lf': 2
             }
         },
-        34: {
-            'name': 'Brand im Supermarkt',
-            'credits': 3710,
+        30: {
+            'name': 'Wastebin fire',
+            'credits': 110,
             'vehicles': {
-                'rw': 1,
-                'lf': 3,
-                'elw1': 1,
-                'elw2': 1,
-                'dlk': 1,
-                'mess': 1
+                'lf': 1
             },
-            'percentages': {
-                'rw': 50,
-                'elw2': 20,
-                'dlk': 80,
-                'mess': 30
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 30
-            },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'specialisation': 'Allgemeine Innere'
+            'expansions': [
+                [13, 'Burning Truck']
+            ]
+        },
+        31: {
+            'name': 'Wastebin fire',
+            'credits': 110,
+            'vehicles': {
+                'lf': 1
             }
+        },
+        32: {
+            'name': 'Wastebin fire',
+            'credits': 110,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        33: {
+            'name': 'Wastebin fire',
+            'credits': 110,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        34: {
+            'onlyRd': true,
+            'name': 'Alcoholic intoxication',
+            'specialisation': 'General Internal',
         },
         35: {
-            'name': 'Feuer im Krankenhaus',
-            'credits': 3810,
-            'vehicles': {
-                'rw': 2,
-                'lf': 4,
-                'elw1': 1,
-                'elw2': 1,
-                'dlk': 1
-            },
-            'percentages': {
-                'rw': 30,
-                'elw2': 30
-            },
-            'expansions': [
-                [320, 'GroÃŸfeuer im Krankenhaus']
-            ]
+            'onlyRd': true,
+            'name': 'Nosebleed',
+            'specialisation': 'General Surgeon',
         },
         36: {
-            'name': 'Brennender GÃ¼terwaggon',
-            'credits': 3310,
-            'vehicles': {
-                'rw': 2,
-                'lf': 4,
-                'elw1': 1,
-                'dlk': 1,
-                'mess': 1,
-                'dekon': 1
-            },
-            'percentages': {
-                'rw': 30,
-                'mess': 20,
-                'dekon': 10
-            }
+            'onlyRd': true,
+            'name': 'Cardiac infarction',
+            'transport': 100,
+            'specialisation': 'Cardiology',
         },
         37: {
-            'name': 'MÃ¼lleimerbrand',
-            'credits': 110,
-            'vehicles': {
-                'lf': 1
-            }
+            'onlyRd': true,
+            'name': 'Acute asthma',
+            'transport': 50,
+            'specialisation': 'General Internal',
         },
         38: {
-            'name': 'MÃ¼lleimerbrand',
-            'credits': 110,
-            'vehicles': {
-                'lf': 1
-            }
+            'onlyRd': true,
+            'name': 'Seizure',
+            'transport': 50,
+            'specialisation': 'Neurology',
         },
         39: {
-            'name': 'MÃ¼lleimerbrand',
-            'credits': 110,
-            'vehicles': {
-                'lf': 1
-            }
+            'onlyRd': true,
+            'name': 'Fever',
+            'transport': 90,
+            'specialisation': 'General Internal',
         },
         40: {
-            'name': 'MÃ¼lleimerbrand',
-            'credits': 110,
-            'vehicles': {
-                'lf': 1
-            },
-            'expansions': [
-                [35, 'Feuer im Krankenhaus']
-            ]
+            'onlyRd': true,
+            'name': 'Fallen person',
+            'transport': 30,
+            'specialisation': 'Traumatology',
         },
         41: {
             'vge': true,
-            'name': 'GroÃŸbrand',
-            'credits': 10010,
+            'name': 'Major Fire',
+            'credits': 10210,
             'vehicles': {
-                'lf': 6,
-                'mess': 1,
+                'lf': 10,
                 'elw1': 2,
                 'elw2': 1,
                 'dlk': 2,
                 'gwl2': 1,
-                'atem': 1
-            },
-            'percentages': {
-                'elw2': 90
+                'atem': 1,
+                'rw': 2
             }
         },
         42: {
-            'name': 'Tankstellenbrand',
-            'credits': 3720,
+            'name': 'Manhole Fire',
+            'credits': 210,
             'vehicles': {
-                'rw': 2,
-                'lf': 4,
-                'elw1': 1,
-                'elw2': 1,
-                'dlk': 1,
-                'mess': 1,
-                'gefahr': 1
-            },
-            'percentages': {
-                'rw': 30,
-                'elw2': 10,
-                'mess': 80,
-                'gefahr': 70
+                'lf': 2,
+                'elw1': 1    
             }
         },
         43: {
