@@ -1584,7 +1584,7 @@ else if (I18n.locale == "de") {
             }
         },
         119: {
-            'name': 'SÃ¼ÃŸigkeitendiebstahl',
+            'name': 'Süßigkeitendiebstahl',
             'credits': 100,
             'vehicles': {
                 'fustw': 1
