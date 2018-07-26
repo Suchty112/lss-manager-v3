@@ -281,22 +281,6 @@ lssm.missions = {
         'vehicles': {
             'lf': 1
         }
-    },
-    20: {
-        'name': 'Kellerbrand',
-        'credits': 2500,
-        'vehicles': {
-            'elw1': 1,
-            'lf': 3
-        },
-        'percentages': {
-            'elw1': 90
-        },
-        'patients': {
-            'min': 0,
-            'max': 2,
-            'specialisation': 'Allgemeine Innere'
-        }
     }
 }
 else if (I18n.locale == "de") {
