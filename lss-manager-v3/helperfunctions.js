@@ -437,74 +437,111 @@ if (I18n.locale == "en") {
             'specialisation': 'General Internal',
         },
         44: {
-            'onlyRd': true,
-            'name': 'Alkoholintoxitation',
-            'specialisation': 'Allgemeine Innere',
-            'tragehilfe': 20
-        },
-        45: {
-            'onlyRd': true,
-            'name': 'Nasenbluten unstillbar',
-            'specialisation': 'Allgemeine Chriguie'
-        },
-        46: {
-            'onlyRd': true,
-            'name': 'Herzinfarkt',
-            'transport': 100,
-            'nef': 100,
-            'specialisation': 'Kardiologie',
-            'tragehilfe': 20
-        },
-        47: {
-            'onlyRd': true,
-            'name': 'akuter Asthma-Anfall',
-            'transport': 50,
-            'nef': 100,
-            'specialisation': 'Allgemeine Innere'
-        },
-        48: {
-            'onlyRd': true,
-            'name': 'Krampfanfall',
-            'transport': 50,
-            'nef': 80,
-            'specialisation': 'Neurologie',
-            'tragehilfe': 10
-        },
-        49: {
-            'onlyRd': true,
-            'name': 'Fieber',
-            'transport': 90,
-            'nef': 20,
-            'specialisation': 'Allgemeine Innere',
-            'tragehilfe': 5
-        },
-        50: {
-            'onlyRd': true,
-            'name': 'GestÃ¼rzte Person',
-            'transport': 30,
-            'nef': 10,
-            'specialisation': 'Unfallchirugie',
-            'tragehilfe': 5
-        },
-        51: {
-            'name': 'Brand in Werkstatt',
-            'credits': 3620,
+            'name': 'Burning machine',
+            'credits': 2470,
             'vehicles': {
-                'rw': 1,
-                'lf': 4,
+                'lf': 3,
                 'elw1': 1,
-                'elw2': 1,
-                'dlk': 1
+                'rw': 1,
+                'gwl2': 1,
+                'atem': 1
             },
             'percentages': {
-                'rw': 30,
-                'elw2': 10
+                'gwl2': 30,
+                'atem': 20
+            }
+        },
+        45: {
+            'name': 'Burning locomotive',
+            'credits': 1800,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 1,
+                'rw': 1,
+                'gwl2': 1,
+                'atem': 1
+            },
+            'percentages': {
+                'rw': 50,
+                'atem': 30
             },
             'patients': {
                 'min': 0,
-                'max': 2,
-                'nef': 40,
-                'specialisation': 'Allgemeine Innere'
+                'max': 1,
+                'transport': 40,
+                'specialisation': 'General Surgeon'
+            }
+        },
+        46: {
+            'name': 'Gas station fire',
+            'credits': 3920,
+            'vehicles': {
+                'lf': 4,
+                'elw1': 1,
+                'elw2': 1,
+                'dlk': 1,
+                'rw': 2,
+                'atem': 1,
+                'gefahr': 1
+            },
+            'percentages': {
+                'rw': 30,
+                'atem': 30,
+                'gefahr': 70
+            }
+        },
+        47: {
+            'name': 'Dangerous goods truck accident',
+            'credits': 2200,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 1,
+                'rw': 1,
+                'gefahr': 1
+            },
+            'percentages': {
+                'rw': 50
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'specialisation': 'Traumatology'
+            }
+        },
+        48: {
+            'name': 'Shoplifting',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        49: {
+            'name': 'Shoplifting',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        50: {
+            'name': 'Parked car accident',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        51: {
+            'name': 'Parked car accident',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
             }
         },
         52: {
