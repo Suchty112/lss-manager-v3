@@ -230,144 +230,156 @@ else if (I18n.locale == "nl") {
     };
     lssm.missions = {
         0: {
-            'name': 'MÃƒÂ¼lleimerbrand',
+            'name': 'Brandende afvalbak',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             },
-            'expansions': [
-                [24, 'Brennendes Bus-HÃƒÂ¤uschen'],
-                [140, 'FlÃƒÂ¤chenbrand']
-            ]
         },
         1: {
-            'name': 'Containerbrand',
+            'name': 'Brandende container',
             'credits': 170,
             'vehicles': {
                 'lf': 1
             },
-            'expansions': [
-                [5, 'Zimmerbrand'],
-                [2, 'Brennender PKW']
-            ]
         },
         2: {
-            'name': 'Brennender PKW',
+            'name': 'Brandende personenauto',
             'credits': 370,
             'vehicles': {
                 'lf': 1
             },
-            'expansions': [
-                [28, 'Garagenbrand'],
-                [138, 'FlÃƒÂ¤chenbrand'],
-                [141, 'FlÃƒÂ¤chenbrand'],
-                [146, 'Brennendes Reetdachhaus']
-            ]
         },
         3: {
-            'name': 'Motorrad-Brand',
+            'name': 'Brandende motorfiets',
             'credits': 340,
             'vehicles': {
                 'lf': 1
             }
         },
         4: {
-            'name': 'Brennendes Gras (NL)',
+            'name': 'Brandend gras',
             'credits': 200,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [14, 'Kleiner Feldbrand']
+                [140, 'Natuurbrand']
             ]
         },
         5: {
-            'name': 'Zimmerbrand',
+            'name': 'Brand in woonkamer',
             'credits': 1400,
             'vehicles': {
                 'lf': 2,
+                'elw1': 1,
+                'fustw': 1,
                 'dlk': 1
             },
             'percentages': {
-                'dlk': 30
+                'dlk': 80
             },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'transport': 50,
-                'nef': 50,
-                'specialisation': 'Allgemeine Innere'
-            }
         },
         6: {
-            'name': 'Gartenlaubenbrand',
+            'name': 'Brand in tuinhuis',
             'credits': 600,
             'vehicles': {
-                'lf': 2
+                'lf': 1
             }
         },
         7: {
-            'name': 'Brennendes Laub',
+            'name': 'Brandende boom',
             'credits': 210,
+            'vehicles': {
+                'lf': 1 
+            },
+        },
+        8: {
+            'name': 'Brandend afval',
+            'credits': 220,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [6, 'Gartenlaubbrand'],
-                [138, 'FlÃƒÂ¤chenbrand'],
-                [139, 'FlÃƒÂ¤chenbrand'],
-                [140, 'FlÃƒÂ¤chenbrand'],
-                [141, 'FlÃƒÂ¤chenbrand']
+                [54, 'Brand in sporthal']
             ]
         },
-        8: {
-            'name': 'SperrmÃƒÂ¼llbrand',
-            'credits': 220,
-            'vehicles': {
-                'lf': 1
-            }
-        },
         9: {
-            'name': 'Strohballenbrand',
+            'name': 'Brandend hooi',
             'credits': 250,
             'vehicles': {
                 'lf': 1
             }
         },
         10: {
-            'name': 'Traktor Brand',
+            'name': 'Brandende traktor',
             'credits': 600,
             'vehicles': {
                 'lf': 1
-            }
+            },
+            'expansions': [
+                [28, 'Brand in landbouwschuur']
+            ]
         },
         11: {
-            'name': 'Brennende Telefonzelle',
+            'name': 'Brandende bromfiets',
             'credits': 240,
             'vehicles': {
                 'lf': 1
             }
         },
         12: {
-            'name': 'Baum auf StraÃƒÅ¸e',
+            'name': 'Boom op de weg',
             'credits': 310,
             'vehicles': {
-                'lfogkworw': 1
+                'lf': 1
+            }
+        },
+        13: {
+            'name': 'Brandende vrachtwagen',
+            'credits': 980,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'gwl2': 1
             },
-            'expansions': [
-                [25, 'Verkehrsunfall'],
-                [83, 'Gefahrgut-LKW verunglÃƒÂ¼ckt'],
-                [120, 'LKW umgestÃƒÂ¼rzt'],
-                [121, 'LKW umgestÃƒÂ¼rzt'],
-                [123, 'Verkehrsunfall'],
-                [124, 'Verkehrsunfall'],
-                [125, 'Verkehrsunfall'],
-                [126, 'Verkehrsunfall'],
-                [127, 'Verkehrsunfall'],
-                [178, 'Gefahrgut-LKW verunglÃƒÂ¼ckt'],
-                [238, 'Verkehrsunfall mit Linienbus'],
-                [239, 'Verkehrsunfall mit Linienbus'],
-            ]
+            'percentages': {
+                'gwl2': 10
+            },
+        },
+        14: {
+            'name': 'Heidebrand',
+            'credits': 1000,
+            'vehicles': {
+                'lf': 2
+            }
+        },
+        15: {
+            'name': 'Bosbrand',
+            'credits': 500,
+            'vehicles': {
+                'lf': 1,
+                'gwl2': 1
+            },
+            'percentages': {
+                'gwl2': 10
+            },
+        },
+        16: {
+            'name': 'Brand in woonwagen',
+            'credits': 1100,
+            'vehicles': {
+                'lf': 1,
+                'elw1': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 80
+            },
+            'patients': {
+                'max': 1,
+                'specialisation': 'Interne Geneeskunde'
+            }
         },
         17: {
             'name': 'Brandende Dixi',
