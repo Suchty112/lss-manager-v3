@@ -63,24 +63,27 @@ if (I18n.locale == "en") {
             ]
         },
         3: {
-            'name': 'Motorrad-Brand',
+            'name': 'Burning motorbike',
             'credits': 340,
             'vehicles': {
                 'lf': 1
-            }
+            },
+            'expansions': [
+                [26, 'Garage fire']
+            ]
         },
         4: {
-            'name': 'Brennendes Gras',
+            'name': 'Burning grasss',
             'credits': 200,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [14, 'Kleiner Feldbrand']
+                [14, 'Little field fire']
             ]
         },
         5: {
-            'name': 'Zimmerbrand',
+            'name': 'Room fire',
             'credits': 1400,
             'vehicles': {
                 'lf': 2,
@@ -93,138 +96,135 @@ if (I18n.locale == "en") {
                 'min': 0,
                 'max': 1,
                 'transport': 50,
-                'nef': 50,
-                'specialisation': 'Allgemeine Innere'
-            }
+                'specialisation': 'General Internal'
+            },
+            'expansions': [
+                [88, 'Building Collapse']
+            ]
         },
         6: {
-            'name': 'Gartenlaubenbrand',
+            'name': 'Garden shed fire',
             'credits': 600,
             'vehicles': {
                 'lf': 2
             }
         },
         7: {
-            'name': 'Brennendes Laub',
+            'name': 'Burning leaves',
             'credits': 210,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [6, 'Gartenlaubbrand'],
-                [138, 'FlÃ¤chenbrand'],
-                [139, 'FlÃ¤chenbrand'],
-                [140, 'FlÃ¤chenbrand'],
-                [141, 'FlÃ¤chenbrand']
+                [14, 'Little field fire']
             ]
         },
         8: {
-            'name': 'SperrmÃ¼llbrand',
+            'name': 'Bulk trash fire',
             'credits': 220,
             'vehicles': {
                 'lf': 1
-            }
+            },
+            'expansions': [
+                [20, 'Basement fire'],
+                [22, 'Roof fire'],
+                [99, 'Commercial Fire'],
+                [87, 'Industrial Fire'],
+                [6, 'Garden shed fire']
+            ]
         },
         9: {
-            'name': 'Strohballenbrand',
+            'name': 'Bale of straw fire',
             'credits': 250,
             'vehicles': {
                 'lf': 1
-            }
+            },
+            'expansions': [
+                [14, 'Little field fire'],
+                [6, 'Garden shed fire']
+            ]
         },
         10: {
-            'name': 'Traktor Brand',
+            'name': 'Tractor fire',
             'credits': 600,
             'vehicles': {
                 'lf': 1
-            }
+            },
+            'expansions': [
+                [29, 'Harvester fire']
+            ]
         },
         11: {
-            'name': 'Brennende Telefonzelle',
+            'name': 'Burning callbox',
             'credits': 240,
             'vehicles': {
                 'lf': 1
             }
         },
         12: {
-            'name': 'Baum auf StraÃŸe',
+            'name': 'Tree on the road',
             'credits': 310,
             'vehicles': {
-                'lfogkworw': 1
+                'lf': 1
             },
             'expansions': [
-                [25, 'Verkehrsunfall'],
-                [83, 'Gefahrgut-LKW verunglÃ¼ckt'],
-                [120, 'LKW umgestÃ¼rzt'],
-                [121, 'LKW umgestÃ¼rzt'],
-                [123, 'Verkehrsunfall'],
-                [124, 'Verkehrsunfall'],
-                [125, 'Verkehrsunfall'],
-                [126, 'Verkehrsunfall'],
-                [127, 'Verkehrsunfall'],
-                [178, 'Gefahrgut-LKW verunglÃ¼ckt'],
-                [238, 'Verkehrsunfall mit Linienbus'],
-                [239, 'Verkehrsunfall mit Linienbus'],
+                [25, 'Road accident']
             ]
         },
         13: {
-            'name': 'Brennender LKW',
+            'name': 'Burning truck',
             'credits': 980,
             'vehicles': {
                 'lf': 2
             }
         },
         14: {
-            'name': 'Kleiner Feldbrand',
+            'name': 'Little field fire',
             'credits': 1000,
             'vehicles': {
                 'lf': 2
             },
             'expansions': [
-                [131, 'Mittlerer Feldbrand']
+                [15, 'Little wildfire']
             ]
         },
         15: {
-            'name': 'Kleiner Waldbrand',
+            'name': 'Little wildfire',
             'credits': 1010,
             'vehicles': {
                 'lf': 1
-            },
-            'expansions': [
-                [134, 'GroÃŸer Waldbrand'],
-                [135, 'GroÃŸer Waldbrand']
-            ]
+            }
         },
         16: {
-            'name': 'Wohnwagenbrand',
+            'name': 'Caravan fire',
             'credits': 1100,
             'vehicles': {
                 'lf': 2
             }
         },
         17: {
-            'name': 'Brand in Briefkasten',
+            'name': 'Mailbox on fire',
             'credits': 340,
             'vehicles': {
                 'lf': 1
             }
         },
         18: {
-            'name': 'Brennendes GebÃ¼sch',
+            'name': 'Brush pile',
             'credits': 700,
             'vehicles': {
                 'lf': 1
             }
         },
         19: {
-            'name': 'Brennender AnhÃ¤nger',
+            'name': 'Burning trailer',
             'credits': 650,
             'vehicles': {
                 'lf': 1
             }
         },
         20: {
-            'name': 'Kellerbrand',
+            'name': 'Basement fire',
             'credits': 2500,
             'vehicles': {
                 'elw1': 1,
@@ -236,11 +236,11 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 0,
                 'max': 2,
-                'specialisation': 'Allgemeine Innere'
+                'specialisation': 'General Internal'
             }
         },
         21: {
-            'name': 'Schornsteinbrand',
+            'name': 'Chimney fire',
             'credits': 2400,
             'vehicles': {
                 'lf': 1,
@@ -248,11 +248,11 @@ if (I18n.locale == "en") {
                 'dlk': 1
             },
             'expansions': [
-                [22, 'Dachstuhlbrand']
+                [22, 'Roof fire']
             ]
         },
         22: {
-            'name': 'Dachstuhlbrand',
+            'name': 'Roof fire',
             'credits': 2700,
             'vehicles': {
                 'lf': 3,
@@ -261,14 +261,21 @@ if (I18n.locale == "en") {
             },
             'percentages': {
                 'elw1': 50
-            }
+            },
+            'expansions': [
+                [87, 'Industrial Fire'],
+                [99, 'Commercial Fire']
+            ]
         },
         23: {
-            'name': 'Fettbrand in Pommesbude',
+            'name': 'Grease Fire',
             'credits': 1200,
             'vehicles': {
                 'lf': 1
-            }
+            },
+            'expansions': [
+                [99, 'Commercial Fire']
+            ]
         },
         24: {
             'name': 'Brennendes Bus-HÃ¤uschen',

@@ -65,8 +65,8 @@
 			averageMinimumEmployeesPolice: 'Durchschnittlich mindestens benötigte Polizisten/Polizistinnen',
 			to: 'bis zu',
 			vehicles: {
-				lf: 'Fire Trucks',
-				dlk: 'Platform trucks',
+				lf: 'Fire Truck',
+				dlk: 'Platform truck',
 				rw: 'Heavy Rescue',
 				elw1: 'Battalion Chief unit',
 				elw2: 'Mobile Command Vehicle',
