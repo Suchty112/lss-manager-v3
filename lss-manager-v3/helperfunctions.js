@@ -431,20 +431,10 @@ if (I18n.locale == "en") {
             }
         },
         43: {
-            'vge': true,
-            'name': 'Massenkarambolage',
-            'credits': 10010,
-            'vehicles': {
-                'lf': 10,
-                'rw': 5,
-                'elw1': 2,
-                'oel': 2
-            },
-            'patients': {
-                'min': 10,
-                'max': 12,
-                'specialisation': 'Unfallchirugie'
-            }
+            'onlyRd': true,
+            'name': 'Diabetic problems',
+            'transport': 50,
+            'specialisation': 'General Internal',
         },
         44: {
             'onlyRd': true,
