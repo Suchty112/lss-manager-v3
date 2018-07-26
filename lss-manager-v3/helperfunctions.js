@@ -6,7 +6,7 @@
 // 2 = Polizei
 // 3 = THW
 // 4 = Wasserrettung
-if (I18n.locale == "en")
+if (I18n.locale == "en") {
     lssm.carsById = {
         "0": ["Type 1 fire engine", 0],
         "1": ["Type 2 fire engine", 0],
@@ -34,8 +34,151 @@ if (I18n.locale == "en")
         "23": ["Police Motorcycle", 2],
         "24": ["Large Fireboat", 0],
         "25": ["Large Rescue Boat", 1]
-    }
-else if (I18n.locale == "nl")
+    };
+    lssm.missions = {
+        0: {
+            'name': 'MÃƒÂ¼lleimerbrand',
+            'credits': 110,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [24, 'Brennendes Bus-HÃƒÂ¤uschen'],
+                [140, 'FlÃƒÂ¤chenbrand']
+            ]
+        },
+        1: {
+            'name': 'Containerbrand',
+            'credits': 170,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [5, 'Zimmerbrand'],
+                [2, 'Brennender PKW']
+            ]
+        },
+        2: {
+            'name': 'Brennender PKW',
+            'credits': 370,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [28, 'Garagenbrand'],
+                [138, 'FlÃƒÂ¤chenbrand'],
+                [141, 'FlÃƒÂ¤chenbrand'],
+                [146, 'Brennendes Reetdachhaus']
+            ]
+        },
+        3: {
+            'name': 'Motorrad-Brand',
+            'credits': 340,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        4: {
+            'name': 'Brennendes Gras (NL)',
+            'credits': 200,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [14, 'Kleiner Feldbrand']
+            ]
+        },
+        5: {
+            'name': 'Zimmerbrand',
+            'credits': 1400,
+            'vehicles': {
+                'lf': 2,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 30
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 50,
+                'nef': 50,
+                'specialisation': 'Allgemeine Innere'
+            }
+        },
+        6: {
+            'name': 'Gartenlaubenbrand',
+            'credits': 600,
+            'vehicles': {
+                'lf': 2
+            }
+        },
+        7: {
+            'name': 'Brennendes Laub',
+            'credits': 210,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [6, 'Gartenlaubbrand'],
+                [138, 'FlÃƒÂ¤chenbrand'],
+                [139, 'FlÃƒÂ¤chenbrand'],
+                [140, 'FlÃƒÂ¤chenbrand'],
+                [141, 'FlÃƒÂ¤chenbrand']
+            ]
+        },
+        8: {
+            'name': 'SperrmÃƒÂ¼llbrand',
+            'credits': 220,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        9: {
+            'name': 'Strohballenbrand',
+            'credits': 250,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        10: {
+            'name': 'Traktor Brand',
+            'credits': 600,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        11: {
+            'name': 'Brennende Telefonzelle',
+            'credits': 240,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        12: {
+            'name': 'Baum auf StraÃƒÅ¸e',
+            'credits': 310,
+            'vehicles': {
+                'lfogkworw': 1
+            },
+            'expansions': [
+                [25, 'Verkehrsunfall'],
+                [83, 'Gefahrgut-LKW verunglÃƒÂ¼ckt'],
+                [120, 'LKW umgestÃƒÂ¼rzt'],
+                [121, 'LKW umgestÃƒÂ¼rzt'],
+                [123, 'Verkehrsunfall'],
+                [124, 'Verkehrsunfall'],
+                [125, 'Verkehrsunfall'],
+                [126, 'Verkehrsunfall'],
+                [127, 'Verkehrsunfall'],
+                [178, 'Gefahrgut-LKW verunglÃƒÂ¼ckt'],
+                [238, 'Verkehrsunfall mit Linienbus'],
+                [239, 'Verkehrsunfall mit Linienbus'],
+            ]
+        }
+    };
+}
+else if (I18n.locale == "nl") {
     lssm.carsById = {
         "0": ["SIV | Snel Interventie Voertuig", 0],
         "1": ["TS 8/9 | Tankautospuit (8/9 personen)", 0],
@@ -84,204 +227,156 @@ else if (I18n.locale == "nl")
         "44": ["AFO/OSC | Airport Fire Officer / On Scene Commander", 0],
         "45": ["DBH | Dompelpomphaakarmbak", 0],
         "46": ["DM Noddhulp | Dienstmotorfiets Noodhulp", 2]
-    }
-lssm.missions = {
-    0: {
-        'name': 'MÃ¼lleimerbrand',
-        'credits': 110,
-        'vehicles': {
-            'lf': 1
+    };
+    lssm.missions = {
+        0: {
+            'name': 'MÃƒÂ¼lleimerbrand',
+            'credits': 110,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [24, 'Brennendes Bus-HÃƒÂ¤uschen'],
+                [140, 'FlÃƒÂ¤chenbrand']
+            ]
         },
-        'expansions': [
-            [24, 'Brennendes Bus-HÃ¤uschen'],
-            [140, 'FlÃ¤chenbrand']
-        ]
-    },
-    1: {
-        'name': 'Containerbrand',
-        'credits': 170,
-        'vehicles': {
-            'lf': 1
+        1: {
+            'name': 'Containerbrand',
+            'credits': 170,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [5, 'Zimmerbrand'],
+                [2, 'Brennender PKW']
+            ]
         },
-        'expansions': [
-            [5, 'Zimmerbrand'],
-            [2, 'Brennender PKW']
-        ]
-    },
-    2: {
-        'name': 'Brennender PKW',
-        'credits': 370,
-        'vehicles': {
-            'lf': 1
+        2: {
+            'name': 'Brennender PKW',
+            'credits': 370,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [28, 'Garagenbrand'],
+                [138, 'FlÃƒÂ¤chenbrand'],
+                [141, 'FlÃƒÂ¤chenbrand'],
+                [146, 'Brennendes Reetdachhaus']
+            ]
         },
-        'expansions': [
-            [28, 'Garagenbrand'],
-            [138, 'FlÃ¤chenbrand'],
-            [141, 'FlÃ¤chenbrand'],
-            [146, 'Brennendes Reetdachhaus']
-        ]
-    },
-    3: {
-        'name': 'Motorrad-Brand',
-        'credits': 340,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    4: {
-        'name': 'Brennendes Gras',
-        'credits': 200,
-        'vehicles': {
-            'lf': 1
+        3: {
+            'name': 'Motorrad-Brand',
+            'credits': 340,
+            'vehicles': {
+                'lf': 1
+            }
         },
-        'expansions': [
-            [14, 'Kleiner Feldbrand']
-        ]
-    },
-    5: {
-        'name': 'Zimmerbrand',
-        'credits': 1400,
-        'vehicles': {
-            'lf': 2,
-            'dlk': 1
+        4: {
+            'name': 'Brennendes Gras (NL)',
+            'credits': 200,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [14, 'Kleiner Feldbrand']
+            ]
         },
-        'percentages': {
-            'dlk': 30
+        5: {
+            'name': 'Zimmerbrand',
+            'credits': 1400,
+            'vehicles': {
+                'lf': 2,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 30
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 50,
+                'nef': 50,
+                'specialisation': 'Allgemeine Innere'
+            }
         },
-        'patients': {
-            'min': 0,
-            'max': 1,
-            'transport': 50,
-            'nef': 50,
-            'specialisation': 'Allgemeine Innere'
-        }
-    },
-    6: {
-        'name': 'Gartenlaubenbrand',
-        'credits': 600,
-        'vehicles': {
-            'lf': 2
-        }
-    },
-    7: {
-        'name': 'Brennendes Laub',
-        'credits': 210,
-        'vehicles': {
-            'lf': 1
+        6: {
+            'name': 'Gartenlaubenbrand',
+            'credits': 600,
+            'vehicles': {
+                'lf': 2
+            }
         },
-        'expansions': [
-            [6, 'Gartenlaubbrand'],
-            [138, 'FlÃ¤chenbrand'],
-            [139, 'FlÃ¤chenbrand'],
-            [140, 'FlÃ¤chenbrand'],
-            [141, 'FlÃ¤chenbrand']
-        ]
-    },
-    8: {
-        'name': 'SperrmÃ¼llbrand',
-        'credits': 220,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    9: {
-        'name': 'Strohballenbrand',
-        'credits': 250,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    10: {
-        'name': 'Traktor Brand',
-        'credits': 600,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    11: {
-        'name': 'Brennende Telefonzelle',
-        'credits': 240,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    12: {
-        'name': 'Baum auf StraÃŸe',
-        'credits': 310,
-        'vehicles': {
-            'lfogkworw': 1
+        7: {
+            'name': 'Brennendes Laub',
+            'credits': 210,
+            'vehicles': {
+                'lf': 1
+            },
+            'expansions': [
+                [6, 'Gartenlaubbrand'],
+                [138, 'FlÃƒÂ¤chenbrand'],
+                [139, 'FlÃƒÂ¤chenbrand'],
+                [140, 'FlÃƒÂ¤chenbrand'],
+                [141, 'FlÃƒÂ¤chenbrand']
+            ]
         },
-        'expansions': [
-            [25, 'Verkehrsunfall'],
-            [83, 'Gefahrgut-LKW verunglÃ¼ckt'],
-            [120, 'LKW umgestÃ¼rzt'],
-            [121, 'LKW umgestÃ¼rzt'],
-            [123, 'Verkehrsunfall'],
-            [124, 'Verkehrsunfall'],
-            [125, 'Verkehrsunfall'],
-            [126, 'Verkehrsunfall'],
-            [127, 'Verkehrsunfall'],
-            [178, 'Gefahrgut-LKW verunglÃ¼ckt'],
-            [238, 'Verkehrsunfall mit Linienbus'],
-            [239, 'Verkehrsunfall mit Linienbus'],
-        ]
-    },
-    13: {
-        'name': 'Brennender LKW',
-        'credits': 980,
-        'vehicles': {
-            'lf': 2
-        }
-    },
-    14: {
-        'name': 'Kleiner Feldbrand',
-        'credits': 1000,
-        'vehicles': {
-            'lf': 2
+        8: {
+            'name': 'SperrmÃƒÂ¼llbrand',
+            'credits': 220,
+            'vehicles': {
+                'lf': 1
+            }
         },
-        'expansions': [
-            [131, 'Mittlerer Feldbrand']
-        ]
-    },
-    15: {
-        'name': 'Kleiner Waldbrand',
-        'credits': 1010,
-        'vehicles': {
-            'lf': 1
+        9: {
+            'name': 'Strohballenbrand',
+            'credits': 250,
+            'vehicles': {
+                'lf': 1
+            }
         },
-        'expansions': [
-            [134, 'GroÃŸer Waldbrand'],
-            [135, 'GroÃŸer Waldbrand']
-        ]
-    },
-    16: {
-        'name': 'Wohnwagenbrand',
-        'credits': 1100,
-        'vehicles': {
-            'lf': 2
+        10: {
+            'name': 'Traktor Brand',
+            'credits': 600,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        11: {
+            'name': 'Brennende Telefonzelle',
+            'credits': 240,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        12: {
+            'name': 'Baum auf StraÃƒÅ¸e',
+            'credits': 310,
+            'vehicles': {
+                'lfogkworw': 1
+            },
+            'expansions': [
+                [25, 'Verkehrsunfall'],
+                [83, 'Gefahrgut-LKW verunglÃƒÂ¼ckt'],
+                [120, 'LKW umgestÃƒÂ¼rzt'],
+                [121, 'LKW umgestÃƒÂ¼rzt'],
+                [123, 'Verkehrsunfall'],
+                [124, 'Verkehrsunfall'],
+                [125, 'Verkehrsunfall'],
+                [126, 'Verkehrsunfall'],
+                [127, 'Verkehrsunfall'],
+                [178, 'Gefahrgut-LKW verunglÃƒÂ¼ckt'],
+                [238, 'Verkehrsunfall mit Linienbus'],
+                [239, 'Verkehrsunfall mit Linienbus'],
+            ]
+        },
+        17: {
+            'name': 'Brandende Dixi',
+            'credits': 340,
+            'vehicles': {
+                'lf': 1
+            },
         }
-    },
-    17: {
-        'name': 'Brand in Briefkasten',
-        'credits': 340,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    18: {
-        'name': 'Brennendes GebÃ¼sch',
-        'credits': 700,
-        'vehicles': {
-            'lf': 1
-        }
-    },
-    19: {
-        'name': 'Brennender AnhÃ¤nger',
-        'credits': 650,
-        'vehicles': {
-            'lf': 1
-        }
-    }
+    };
 }
 else if (I18n.locale == "de") {
     lssm.carsById = {
