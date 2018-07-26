@@ -375,6 +375,13 @@ else if (I18n.locale == "nl") {
             'vehicles': {
                 'lf': 1
             },
+        },
+        135: {
+            'name': 'Brandende papiercontainer',
+            'credits': 300,
+            'vehicles': {
+                'lf': 1
+            },
         }
     };
 }
