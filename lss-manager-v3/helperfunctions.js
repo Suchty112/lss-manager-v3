@@ -1354,9 +1354,6 @@ if (I18n.locale == "en") {
                 'elw1': 1,
                 'fustw': 2
             },
-            'percentages': {
-                'rw': 50
-            },
             'patients': {
                 'min': 0,
                 'max': 4,
@@ -1365,240 +1362,203 @@ if (I18n.locale == "en") {
             }
         },
         126: {
-            'name': 'Verkehrsunfall',
-            'credits': 2000,
+            'name': 'Overdose',
             'vehicles': {
-                'lf': 2,
-                'rw': 1
-            },
-            'patients': {
-                'min': 2,
-                'max': 4,
-                'nef': 50,
-                'transport': 70,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        127: {
-            'name': 'Verkehrsunfall',
-            'credits': 2200,
-            'vehicles': {
-                'lf': 2,
-                'rw': 1,
-                'fustw': 2
-            },
-            'patients': {
-                'min': 2,
-                'max': 4,
-                'nef': 50,
-                'transport': 70,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        128: {
-            'name': 'Auffahrunfall',
-            'credits': 700,
-            'vehicles': {
-                'lf': 1,
                 'fustw': 1
-            },
-            'percentages': {
-                'lf': 10
             },
             'patients': {
                 'min': 0,
                 'max': 1,
-                'transport': 10,
-                'specialisation': 'Unfallchirugie'
+                'transport': 100,
+                'specialisation': 'General Internal'
+            }
+        },
+        127: {
+            'name': 'Fire in an Office Building',
+            'credits': 7000,
+            'vehicles': {
+                'lf': 10,
+                'rw': 2,
+                'dlk': 4,
+                'elw1': 2,
+                'elw2': 1,
+                'atem': 1,
+                'gwl2': 1,
+                'fustw': 3
             },
-            'expansions': [
-                [25, 'Verkehrsunfall'],
-                [123, 'Verkehrsunfall'],
-                [124, 'Verkehrsunfall'],
-                [125, 'Verkehrsunfall'],
-                [126, 'Verkehrsunfall'],
-                [127, 'Verkehrsunfall'],
-                [89, 'LKW Auffahrunfall']
-            ]
+            'percentages': {
+                'atem': 50
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'transport': 100,
+                'specialisation': 'General Internal'
+            }
+        },
+        128: {
+            'name': 'Aggressive Passenger',
+            'credits': 600,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
         },
         129: {
-            'name': 'Brennender Adventskranz',
-            'credits': 800,
+            'name': 'Aggressive Passenger',
+            'credits': 600,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        130: {
+            'name': 'Powerline Down',
+            'credits': 400,
             'vehicles': {
                 'lf': 1
             }
         },
-        130: {
-            'name': 'Rangelei auf Weihnachtsmarkt',
-            'credits': 600,
-            'vehicles': {
-                'fustw': 2
-            },
-            'patients': {
-                'min': 0,
-                'max': 2,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
         131: {
-            'name': 'Mittlerer Feldbrand',
-            'credits': 2000,
+            'name': 'Parole Violation',
+            'credits': 400,
             'vehicles': {
-                'lf': 3,
-                'gwl2': 1,
-                'elw1': 1
+                'fustw': 1
             },
-            'percentages': {
-                'gwl2': 20,
-                'elw1': 50
-            },
-            'expansions': [
-                [132, 'GroÃŸer Feldbrand'],
-                [133, 'GroÃŸer Feldbrand']
-            ],
-            'special': {
-                'averageMinimumEmployeesFire': 25
+            'prisoners': {
+                'min': 0,
+                'max': 1
             }
         },
         132: {
-            'name': 'GroÃŸer Feldbrand',
-            'credits': 5000,
-            'vehicles': {
-                'lf': 5,
-                'gwl2': 1,
-                'elw1': 1
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 40
-            }
+            'onlyRd': true,
+            'name': 'Allergic Reaction',
+            'transport': 30,
+            'specialisation': 'Cardiology',
         },
         133: {
-            'name': 'GroÃŸer Feldbrand',
-            'credits': 5100,
+            'name': 'Stolen Credit Card',
+            'credits': 400,
             'vehicles': {
-                'lf': 5,
-                'gwl2': 1,
-                'elw1': 1,
                 'fustw': 1
             },
-            'special': {
-                'averageMinimumEmployeesFire': 40
+            'prisoners': {
+                'min': 0,
+                'max': 1
             }
         },
         134: {
-            'name': 'GroÃŸer Waldbrand',
-            'credits': 4000,
+            'name': 'Search of a vehicle',
+            'credits': 1000,
             'vehicles': {
-                'lf': 3,
-                'gwl2': 1,
-                'elw1': 1
-            },
-            'percentages': {
-                'gwl2': 70
-            },
-            'expansions': [
-                [136, 'GroÃŸfeuer im Wald'],
-                [137, 'GroÃŸfeuer im Wald']
-            ]
+                'fustw': 2,
+                'k9': 1
+            }
         },
         135: {
-            'name': 'GroÃŸer Waldbrand',
-            'credits': 4100,
+            'name': 'Small Violent Protest',
+            'credits': 2200,
             'vehicles': {
-                'lf': 3,
-                'gwl2': 1,
-                'elw1': 1,
-                'fustw': 1
+                'fustw': 4,
+                'k9': 1
             },
-            'percentages': {
-                'gwl2': 70
+            'prisoners': {
+                'min': 0,
+                'max': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 3,
+                'transport': 100,
+                'specialisation': 'Traumatology'
             },
             'expansions': [
-                [136, 'GroÃŸfeuer im Wald'],
-                [137, 'GroÃŸfeuer im Wald']
+                [136, 'Medium Violent Protest']
             ]
         },
         136: {
-            'name': 'GroÃŸfeuer im Wald',
-            'credits': 8000,
+            'name': 'Medium Violent Protest',
+            'credits': 3000,
             'vehicles': {
-                'lf': 10,
-                'gwl2': 1,
-                'elw1': 2,
-                'atem': 1,
-                'elw2': 1,
-                'dlk': 1,
-                'fustw': 1
+                'fustw': 7,
+                'k9': 1,
+                'polheli': 1
             },
-            'percentages': {
-                'elw2': 30,
-                'dlk': 10
+            'prisoners': {
+                'min': 0,
+                'max': 4
             },
             'patients': {
                 'min': 0,
-                'max': 1,
-                'transport': 50,
-                'specialisation': 'Allgemeine Innere'
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 80
+                'max': 5,
+                'transport': 100,
+                'specialisation': 'Traumatology'
             }
         },
         137: {
-            'name': 'GroÃŸfeuer im Wald',
-            'credits': 8100,
+            'name': 'Drug Deal',
+            'credits': 1500,
             'vehicles': {
-                'lf': 10,
-                'gwl2': 1,
-                'elw1': 2,
-                'atem': 1,
-                'elw2': 1,
-                'dlk': 1,
-                'fustw': 3
+                'fustw': 4,
+                'k9': 1
             },
-            'percentages': {
-                'elw2': 30,
-                'dlk': 10
-            },
-            'patients': {
+            'prisoners': {
                 'min': 0,
-                'max': 1,
-                'transport': 50,
-                'specialisation': 'Allgemeine Innere'
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 80
+                'max': 2
             }
         },
         138: {
-            'name': 'FlÃ¤chenbrand',
-            'credits': 1500,
+            'name': 'Smoke Investigation',
+            'credits': 700,
             'vehicles': {
-                'lf': 2
-            }
-        },
-        139: {
-            'name': 'FlÃ¤chenbrand',
-            'credits': 3500,
-            'vehicles': {
-                'lf': 4,
-                'gwl2': 1,
+                'lf': 1,
+                'dlk': 1,
                 'elw1': 1
             },
-            'percentages': {
-                'gwl2': 20,
-                'elw1': 20
+            'expansions': [
+                [110, 'Residential Fire']
+            ]
+        },
+        139: {
+            'name': 'Drug Lab Fire',
+            'credits': 3000,
+            'vehicles': {
+                'lf': 4,
+                'dlk': 2,
+                'elw1': 2,
+                'gefahr': 2,
+                'fustw': 4
             },
-            'special': {
-                'averageMinimumEmployeesFire': 30
+            'prisoners': {
+                'min': 0,
+                'max': 5
+            },
+            'patients': {
+                'min': 1,
+                'max': 10,
+                'transport': 100,
+                'specialisation': 'General Internal'
             }
         },
         140: {
-            'name': 'FlÃ¤chenbrand',
-            'credits': 1600,
+            'name': 'Gas Station Robbery',
+            'credits': 1250,
             'vehicles': {
-                'lf': 2,
-                'fustw': 2
+                'fustw': 4,
+                'polheli': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 3
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 12
             }
         },
         141: {
