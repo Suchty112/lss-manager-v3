@@ -300,7 +300,7 @@ if (I18n.locale == "en") {
                 [2, 'Burning car'],
                 [24, 'Burning bus shelter'],
                 [47, 'Dangerous goods truck accident'],
-                [98, 'Unknown Tanker Spill']            
+                [98, 'Unknown Tanker Spill']
             ]
         },
         26: {
@@ -427,7 +427,7 @@ if (I18n.locale == "en") {
             'credits': 210,
             'vehicles': {
                 'lf': 2,
-                'elw1': 1    
+                'elw1': 1
             }
         },
         43: {
@@ -545,7 +545,280 @@ if (I18n.locale == "en") {
             }
         },
         52: {
-            'name': 'Brand auf Weihnachtsmarkt',
+            'name': 'Metal burglary',
+            'credits': 150,
+            'vehicles': {
+                'fustw': 1
+          },
+          'prisoners': {
+              'min': 0,
+              'max': 1
+          }
+        },
+        53: {
+            'name': 'Pickpocketing',
+            'credits': 150,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        54: {
+            'name': 'Fare dodger',
+            'credits': 120,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        55: {
+            'name': 'Fare dodger',
+            'credits': 120,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        56: {
+            'name': 'Fare dodger',
+            'credits': 120,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        57: {
+            'name': 'Fare dodger',
+            'credits': 120,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        58: {
+            'name': 'Parked car accident',
+            'credits': 120,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        59: {
+            'name': 'Brawl',
+            'credits': 700,
+            'vehicles': {
+                'fustw': 3
+            },
+            'patients': {
+                'min': 0,
+                'max': 3,
+                'specialisation': 'Traumatology'
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 2
+            }
+        },
+        60: {
+            'name': 'Rioter',
+            'credits': 500,
+            'vehicles': {
+                'fustw': 2
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            },
+            'expansions': [
+                [59, 'Brawl'],
+                [90, 'Officer Down']
+            ]
+        },
+        61: {
+            'vge': true,
+            'name': 'Unannounced demonstration',
+            'credits': 10020,
+            'vehicles': {
+                'fustw': 7
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        62: {
+            'vge': true,
+            'name': 'Pile - up',
+            'credits': 10010,
+            'vehicles': {
+                'lf': 10,
+                'rw': 5,
+                'elw1': 2,
+                'gefahr': 2
+            },
+            'patients': {
+                'min': 10,
+                'max': 12,
+                'specialisation': 'Traumatology'
+            }
+        },
+        63: {
+            'name': 'Burning bogle',
+            'credits': 350,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        64: {
+            'name': 'Burning pumpkin field',
+            'credits': 850,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        65: {
+            'name': 'Pumpkin soup overcooked',
+            'credits': 1500,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'atem': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'specialisation': 'Neurology'
+            },
+            'percentages': {
+                'atem': 50
+            }
+        },
+        66: {
+            'name': 'Witch in tree',
+            'credits': 900,
+            'vehicles': {
+                'lf': 1,
+                'dlk': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 50,
+                'specialisation': 'Traumatology'
+            }
+        },
+        67: {
+          'onlyRd': true,
+          'name': 'Zombie bite',
+          'specialisation': 'Neurology',
+        },
+        68: {
+            'name': 'Erupted Monster',
+            'credits': 1600,
+            'vehicles': {
+                'fustw': 4
+            }
+        },
+        69: {
+            'name': 'Pumpkin stolen',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        70: {
+            'name': 'Frankenstein sighted',
+            'credits': 550,
+            'vehicles': {
+                'fustw': 3
+            }
+        },
+        71: {
+            'name': 'candy theft',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        72: {
+            'name': 'Person check',
+            'credits': 100,
+            'vehicles': {
+                'fustw': 1
+            },
+            'expansions': [
+                [90, 'Officer Down']
+            ]
+        },
+        73: {
+            'name': 'Obstruction of traffic',
+            'credits': 80,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        74: {
+            'name': 'Theft of property from vehicles',
+            'credits': 150,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        75: {
+            'name': 'Tree on bikeway',
+            'credits': 310,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        76: {
+            'name': 'Burning substation',
+            'credits': 1900,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1
+            }
+        },
+        77: {
+            'name': 'Burning substation',
+            'credits': 2000,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'fustw': 1
+            }
+        },
+        78: {
+            'name': 'Person under tree',
+            'credits': 1000,
+            'vehicles': {
+                'lf': 1
+            },
+            'patients': {
+                'min': 1,
+                'max': 1,
+                'specialisation': 'Traumatology'
+            }
+        },
+        79: {
+            'name': 'Theft at christmas market',
+            'credits': 300,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        80: {
+            'name': 'Burning christmas market stall',
+            'credits': 610,
+            'vehicles': {
+                'lf': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'specialisation': 'General Internal'
+            }
+        },
+        81: {
+            'name': 'Fire at christmas market',
             'credits': 310,
             'vehicles': {
                 'lf': 1
@@ -553,12 +826,11 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 0,
                 'max': 1,
-                'nef': 10,
-                'specialisation': 'Allgemeine Innere'
+                'specialisation': 'General Internal'
             }
         },
-        53: {
-            'name': 'Verkehrsunfall durch Glatteis',
+        82: {
+            'name': 'Traffic accident - ice',
             'credits': 1410,
             'vehicles': {
                 'lf': 1,
@@ -567,547 +839,221 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 0,
                 'max': 3,
-                'specialisation': 'Unfallchirugie'
-            }
+                'specialisation': 'Traumatology'
+            },
         },
-        54: {
-            'onlyRd': true,
-            'name': 'Personenschaden durch Verbrennung',
-            'transport': 20,
-            'nef': 40,
-            'specialisation': 'Unfallchirugie'
-        },
-        55: {
-            'name': 'Brennender Tannenbaum',
+        83: {
+            'name': 'Burning christmas tree',
             'credits': 870,
             'vehicles': {
                 'lf': 1
             }
         },
-        56: {
-            'onlyRd': true,
-            'name': 'Betrunkene Person auf Weihnachtsmarkt',
-            'specialisation': 'Allgemeine Innere'
-        },
-        57: {
-            'onlyRd': true,
-            'name': 'GestÃ¼rzter FuÃŸgÃ¤nger',
-            'transport': 20,
-            'specialisation': 'Unfallchirugie'
-        },
-        58: {
-            'onlyRd': true,
-            'name': 'GestÃ¼rzter Radfahrer',
-            'transport': 40,
-            'specialisation': 'Unfallchirugie'
-        },
-        59: {
-            'vge': true,
-            'name': 'Gefahrgutunfall',
-            'credits': 14010,
-            'vehicles': {
-                'lf': 20,
-                'mess': 4,
-                'gefahr': 4,
-                'elw1': 2,
-                'elw2': 1,
-                'rw': 5,
-                'dlk': 2,
-                'atem': 3
-            },
-            'percentages': {
-                'elw2': 80
-            },
-            'patients': {
-                'min': 10,
-                'max': 20,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        60: {
-            'name': 'Ladendiebstahl',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            },
-            'expansions': [
-                [74, 'Randalierende Person']
-            ]
-        },
-        61: {
-            'name': 'Ladendiebstahl',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            },
-            'expansions': [
-                [74, 'Randalierende Person']
-            ]
-        },
-        62: {
-            'name': 'Parkendes Auto gerammt',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        63: {
-            'name': 'Parkendes Auto gerammt',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        64: {
-            'name': 'Metalldiebstahl',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        65: {
-            'name': 'Taschendiebstahl',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        66: {
-            'name': 'Notebook aus Schule entwendet',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        67: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        68: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        69: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        70: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        71: {
-            'name': 'Parkendes Auto gerammt',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        72: {
-            'name': 'Bewusstloser KranfÃ¼hrer',
-            'credits': 2000,
-            'vehicles': {
-                'hoehen': 1,
-                'elw1': 1,
-                'fustw': 1,
-                'lf': 1
-            },
-            'patients': {
-                'min': 1,
-                'max': 1,
-                'nef': 80,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        73: {
-            'name': 'SchlÃ¤gerei',
-            'credits': 700,
-            'vehicles': {
-                'fustw': 3
-            },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'specialisation': 'Unfallchirugie'
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 2
-            },
-            'expansions': [
-                [106, 'MassenschlÃ¤gerei'],
-                [107, 'MassenschlÃ¤gerei']
-            ]
-        },
-        74: {
-            'name': 'Randalierende Person',
-            'credits': 500,
-            'vehicles': {
-                'fustw': 2
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            },
-            'expansions': [
-                [73, 'SchlÃ¤gerei']
-            ]
-        },
-        75: {
-            'vge': true,
-            'name': 'Unangemeldete Demonstration',
-            'credits': 10020,
-            'vehicles': {
-                'fustw': 7
-            }
-        },
-        76: {
-            'name': 'KÃ¼chenbrand',
+        84: {
+            'name': 'Burning advent wreath',
             'credits': 800,
             'vehicles': {
-                'lf': 2
-            },
-            'expansions': [
-                [102, 'Feuer in Einfamilienhaus'],
-                [103, 'Feuer in Einfamilienhaus'],
-                [104, 'Feuer in Einfamilienhaus'],
-                [105, 'Feuer in Einfamilienhaus']
-            ]
-        },
-        77: {
-            'name': 'Person hinter TÃ¼r',
-            'credits': 500,
-            'vehicles': {
-                'fustw': 1,
                 'lf': 1
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'nef': 50,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        78: {
-            'name': 'Kleintier in Not',
-            'credits': 130,
-            'vehicles': {
-                'lf': 1,
-                'dlk': 1
-            },
-            'percentages': {
-                'dlk': 20
-            }
-        },
-        79: {
-            'name': 'Verletzte Person auf BaugerÃ¼st',
-            'credits': 1800,
-            'vehicles': {
-                'elw1': 1,
-                'dlk': 1,
-                'hoehen': 1,
-                'lf': 1
-            },
-            'percentages': {
-                'dlk': 30
-            },
-            'patients': {
-                'min': 1,
-                'max': 1,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        80: {
-            'name': 'Rauchentwicklung in Museum',
-            'credits': 2000,
-            'vehicles': {
-                'lf': 3,
-                'elw1': 1,
-                'dlk': 1,
-                'atem': 1,
-                'fustw': 2
-            },
-            'patients': {
-                'min': 0,
-                'max': 8,
-                'nef': 75,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        81: {
-            'name': 'Einbruch in Keller',
-            'credits': 400,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        82: {
-            'name': 'Einbruch in Wohnung',
-            'credits': 400,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        83: {
-            'name': 'Gefahrgut-LKW verunglÃ¼ckt',
-            'credits': 2500,
-            'vehicles': {
-                'lf': 3,
-                'elw1': 1,
-                'elw2': 1,
-                'rw': 1,
-                'mess': 1,
-                'dekon': 1,
-                'gefahr': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'elw2': 40,
-                'rw': 50,
-                'mess': 30,
-                'dekon': 10
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'specialisation': 'Unfallchirugie'
-            },
-            'expansions': [
-                [213, 'Gasexplosion']
-            ]
-        },
-        84: {
-            'name': 'Brennende Lok',
-            'credits': 1800,
-            'vehicles': {
-                'lf': 4,
-                'gwl2': 1,
-                'atem': 1,
-                'rw': 1,
-                'elw1': 1,
-                'elw2': 1
-            },
-            'percentages': {
-                'atem': 30,
-                'rw': 50,
-                'elw2': 10
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'transport': 40,
-                'specialisation': 'Allgemeine Chirugie'
             }
         },
         85: {
-            'name': 'SachbeschÃ¤digung',
-            'credits': 200,
+            'name': 'Brawl at christmas market',
+            'credits': 600,
             'vehicles': {
-                'fustw': 1
+                'fustw': 2
             },
-            'prisoners': {
+            'patients': {
                 'min': 0,
-                'max': 1
+                'max': 2
+                'specialisation': 'Traumatology'
             }
         },
         86: {
-            'name': 'Sporthallenbrand',
-            'credits': 3000,
-            'vehicles': {
-                'lf': 7,
-                'elw1': 1,
-                'elw2': 1,
-                'dlk': 2,
-                'gwl2': 1,
-                'atem': 1
-            },
-            'percentages': {
-                'elw2': 30,
-                'gwl2': 30,
-                'atem': 50
-            }
-        },
-        87: {
-            'name': 'Kleinflugzeug abgestÃ¼rzt',
+            'name': 'MVA Rollover',
             'credits': 3000,
             'vehicles': {
                 'lf': 3,
-                'elw1': 1,
-                'elw2': 1,
+                'elw1': 2,
+                'dlk': 1,
                 'rw': 1,
                 'fustw': 2
             },
-            'percentages': {
-                'elw2': 10
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'transport': 100,
+                'specialisation': 'General Internal'
+            },
+            'expansions': [
+                [25, 'Road accident']
+            ]
+        },
+        87: {
+            'name': 'Industrial Fire',
+            'credits': 5300,
+            'vehicles': {
+                'lf': 5,
+                'elw1': 2,
+                'elw2': 1,
+                'dlk': 2,
+                'gefahr': 1
             },
             'patients': {
-                'min': 1,
-                'max': 5,
+                'min': 0,
+                'max': 4,
                 'transport': 100,
-                'nef': 80,
-                'specialisation': 'Unfallchirugie'
+                'specialisation': 'General Surgeon'
             }
         },
         88: {
-            'name': 'Brennender Bollerwagen',
-            'credits': 500,
+            'name': 'Building Collapse',
+            'credits': 7300,
             'vehicles': {
-                'lf': 1
-            }
-        },
-        89: {
-            'name': 'LKW Auffahrunfall',
-            'credits': 2500,
-            'vehicles': {
-                'lf': 3,
-                'elw1': 1,
-                'rw': 1,
-                'oel': 1,
-                'gefahr': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'elw1': 75,
-                'oel': 25,
-                'gefahr': 10
+                'lf': 2,
+                'dlk': 2,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 2
             },
             'patients': {
                 'min': 0,
                 'max': 2,
-                'transport': 90,
-                'nef': 70,
-                'specialisation': 'Unfallchirugie'
+                'transport': 100,
+                'specialisation': 'General Surgeon'
+            },
+        },
+        89: {
+            'name': 'Trench Rescue',
+            'credits': 2500,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 1,
+                'rw': 2,
+                'fustw': 1
+            },
+            'patients': {
+                'min': 2,
+                'max': 4,
+                'transport': 100,
+                'specialisation': 'General Surgeon'
             }
         },
         90: {
-            'name': 'RuhestÃ¶rung',
-            'credits': 250,
+            'name': 'Officer Dow',
+            'credits': 1500,
             'vehicles': {
-                'fustw': 1
+                'fustw': 6
+            },
+            'prisoners': {
+                'min': 1,
+                'max': 1,
+                'transport': 100,
+                'specialisation': 'General Surgeon'
+            }
+        },
+        91: {
+            'siwa': true,
+            'name': 'Concert',
+            'credits': 4400
+        },
+        92: {
+            'siwa': true,
+            'name': 'Soccer Game',
+            'credits': 3400
+        },
+        93: {
+            'siwa': true,
+            'name': 'Baseball Game',
+            'credits': 4400
+        },
+        94: {
+            'name': 'Prisoner Escape',
+            'credits': 4000,
+            'vehicles': {
+                'fustw': 10,
+                'k9': 1,
+                'polheli': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        95: {
+            'name': 'Fleeing Suspect',
+            'credits': 3000,
+            'vehicles': {
+                'fustw': 5,
+                'polheli': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        96: {
+            'name': 'Missing Person"',
+            'credits': 4500,
+            'vehicles': {
+                'fustw': 5,
+                'lf': 2,
+                'elw1': 1,
+                'polheli': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 100,
+                'specialisation': 'General Internal'
+            }
+        },
+        97: {
+            'name': 'Warrant Standby',
+            'credits': 2000,
+            'vehicles': {
+                'fustw': 3,
+                'polheli': 1
             },
             'prisoners': {
                 'min': 0,
                 'max': 1
             },
             'expansions': [
-                [74, 'Randalierende Person']
+                [90, 'Officer Down']
             ]
         },
-        91: {
-            'name': 'Keller unter Wasser',
-            'credits': 370,
+        98: {
+            'name': 'Unknown Tanker Spill',
+            'credits': 5300,
             'vehicles': {
-                'lf': 1
-            }
-        },
-        92: {
-            'onlyRd': true,
-            'name': 'Schlaganfall',
-            'transport': 90,
-            'nef': 45,
-            'specialisation': 'Neurologie',
-            'tragehilfe': 20
-        },
-        93: {
-            'name': 'Brennender Bus',
-            'credits': 3000,
-            'vehicles': {
-                'lf': 5,
-                'elw1': 1,
+                'lf': 4,
+                'rw': 2,
+                'elw1': 2,
                 'elw2': 1,
-                'rw': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'elw2': 75
-            },
-            'patients': {
-                'min': 4,
-                'max': 11,
-                'nef': 30,
-                'specialisation': 'Allgemeine Innere'
+                'fustw': 3,
+                'gefahr': 2
             }
         },
-        94: {
-            'name': 'Kleine Ã–lspur',
-            'credits': 400,
-            'vehicles': {
-                'lf': 1
-            },
-            'expansions': [
-                [30, 'GroÃŸe Ã–lspur'],
-                [95, 'Ausgedehnte Ã–lspur']
-            ]
-        },
-        95: {
-            'name': 'Ausgedehnte Ã–lspur',
+        99: {
+            'name': 'Commercial Fire',
             'credits': 4000,
             'vehicles': {
                 'lf': 6,
-                'oel': 1,
-                'elw1': 1,
+                'dlk': 2,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 2,
                 'fustw': 2
-            }
-        },
-        96: {
-            'name': 'Feuer in Schnellrestaurant',
-            'credits': 2900,
-            'vehicles': {
-                'lf': 3
             },
             'patients': {
                 'min': 0,
-                'max': 1,
-                'transport': 90,
-                'specialisation': 'Allgemeine Innere'
+                'max': 4,
+                'transport': 25,
+                'specialisation': 'General Internal'
             }
         },
-        97: {
-            'name': 'Aufgerissener Ã–ltank',
-            'credits': 2500,
-            'vehicles': {
-                'lf': 3,
-                'oel': 1,
-                'elw1': 1,
-            },
-            'percentages': {
-                'elw1': 60,
-                'oel': 80
-            }
-        },
-        98: {
-            'name': 'Angefahrene Person',
+        100: {
+            'name': 'Animal Attack',
             'credits': 300,
             'vehicles': {
                 'fustw': 1
@@ -1115,47 +1061,12 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 1,
                 'max': 1,
-                'transport': 38,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        99: {
-            'vge': true,
-            'name': 'Flugzeug abgestÃ¼rzt',
-            'credits': 17000,
-            'vehicles': {
-                'lf': 22,
-                'atem': 1,
-                'oel': 1,
-                'mess': 1,
-                'dlk': 1,
-                'elw1': 2,
-                'elw2': 2,
-                'rw': 6,
-                'fustw': 10
+                'transport': 60,
+                'specialisation': 'Traumatology'
             },
-            'percentages': {
-                'atem': 45,
-                'oel': 25
-            },
-            'patients': {
-                'min': 10,
-                'max': 25,
-                'transport': 85,
-                'nef': 80,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        100: {
-            'name': 'KÃ¼chenbrand',
-            'credits': 900,
-            'vehicles': {
-                'lf': 1,
-                'fustw': 1
-            },
-            'percentages': {
-                'fustw': 50
-            }
+            'expansions': [
+                [90, 'Officer Down']
+            ]
         },
         101: {
             'name': 'Zimmerbrand',
@@ -2466,7 +2377,7 @@ else if (I18n.locale == "nl") {
             'name': 'Brandende boom',
             'credits': 210,
             'vehicles': {
-                'lf': 1 
+                'lf': 1
             },
         },
         8: {
