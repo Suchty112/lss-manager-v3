@@ -62,7 +62,7 @@
 			transport: 'Transport',
 			prisoners: 'Gefangene',
 			averageMinimumEmployeesFire: 'Durchschnittlich mindestens benötigte Feuerwehrleute',
-			averageMinimumEmployeesPolice: 'Durchschnittlich mindestens benötigte Polizisten/Polizistinnen',
+			averageMinimumEmployeesSwat: 'Benötigtes SWAT Personal',
 			to: 'bis zu',
 			vehicles: {
 				lf: 'Fire Truck',
@@ -80,7 +80,7 @@
 				rth: 'Helicopter',
 				rescueboat: 'Large Rescue Boat',
 				fireboat: 'Large Fireboat',
-				ktw: 'nAmbulances',
+				ktw: 'Ambulances',
 				polheli: 'Police helicopter',
 				gkw: 'Utility Truck',
 				flf: 'ARFF (Airport Fire Truck)',

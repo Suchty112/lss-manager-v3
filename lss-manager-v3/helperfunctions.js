@@ -1069,340 +1069,299 @@ if (I18n.locale == "en") {
             ]
         },
         101: {
-            'name': 'Zimmerbrand',
-            'credits': 1500,
+            'name': 'Unknown Tanker Spill',
+            'credits': 4300,
             'vehicles': {
-                'lf': 2,
-                'dlk': 1,
-                'fustw': 1
-            },
-            'percentages': {
-                'dlk': 30,
-                'fustw': 50
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'nef': 50,
-                'transport': 50,
-                'specialisation': 'Allgemeine Innere'
-            },
-            'expansions': [
-                [102, 'Feuer in Einfamilienhaus'],
-                [103, 'Feuer in Einfamilienhaus'],
-                [104, 'Feuer in Einfamilienhaus'],
-                [105, 'Feuer in Einfamilienhaus']
-            ]
+                'lf': 4,
+                'rw': 2,
+                'elw1': 2,
+                'elw2': 1,
+                'gefahr': 1,
+                'fustw': 3
+            }
         },
         102: {
-            'name': 'Feuer in Einfamilienhaus',
-            'credits': 2000,
+            'name': 'High Rise Fire',
+            'credits': 4000,
             'vehicles': {
-                'lf': 3,
-                'dlk': 1,
-                'elw1': 1
-            },
-            'percentages': {
-                'dlk': 50,
-                'elw1': 70
-            }
-        },
-        103: {
-            'name': 'Feuer in Einfamilienhaus',
-            'credits': 2200,
-            'vehicles': {
-                'lf': 3,
-                'dlk': 1,
-                'elw1': 1,
-                'fustw': 1
-            },
-            'percentages': {
-                'dlk': 50,
-                'elw1': 70
-            },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'nef': 20,
-                'transport': 30,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        104: {
-            'name': 'Feuer in Einfamilienhaus',
-            'credits': 2200,
-            'vehicles': {
-                'lf': 3,
-                'dlk': 1,
-                'elw1': 1
-            },
-            'percentages': {
-                'dlk': 50,
-                'elw1': 70
-            },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'nef': 20,
-                'transport': 30,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        105: {
-            'name': 'Feuer in Einfamilienhaus',
-            'credits': 2200,
-            'vehicles': {
-                'lf': 3,
-                'dlk': 1,
-                'elw1': 1,
-                'fustw': 1
-            },
-            'percentages': {
-                'dlk': 50,
-                'elw1': 70
-            }
-        },
-        106: {
-            'name': 'MassenschlÃ¤gerei',
-            'credits': 1800,
-            'vehicles': {
-                'fustw': 5
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 5
-            }
-        },
-        107: {
-            'name': 'MassenschlÃ¤gerei',
-            'credits': 1800,
-            'vehicles': {
-                'fustw': 5
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 5
-            },
-            'patients': {
-                'min': 1,
-                'max': 6,
-                'nef': 10,
-                'transport': 30,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        108: {
-            'onlyRd': true,
-            'name': 'Schwangere in Notsituation',
-            'transport': 100,
-            'nef': 100,
-            'specialisation': 'GynÃ¤kologie',
-            'tragehilfe': 30
-        },
-        109: {
-            'onlyRd': true,
-            'name': 'Beginnende Geburt',
-            'transport': 100,
-            'nef': 95,
-            'specialisation': 'GynÃ¤kologie',
-            'tragehilfe': 20
-        },
-        110: {
-            'onlyRd': true,
-            'name': 'Vaginale Blutung',
-            'transport': 50,
-            'nef': 20,
-            'specialisation': 'GynÃ¤kologie',
-            'tragehilfe': 10
-        },
-        111: {
-            'name': 'Brennende Vogelscheuche',
-            'credits': 350,
-            'vehicles': {
-                'lf': 1
-            }
-        },
-        112: {
-            'name': 'Brennendes KÃ¼rbisfeld',
-            'credits': 850,
-            'vehicles': {
-                'lf': 1
-            }
-        },
-        113: {
-            'name': 'KÃ¼rbissuppe Ã¼bergekocht',
-            'credits': 1500,
-            'vehicles': {
-                'lf': 2,
-                'elw1': 1,
-                'atem': 1
+                'lf': 5,
+                'dlk': 2,
+                'elw1': 2,
+                'rw': 1,
+                'atem': 2,
+                'gwl2': 1,
+                'elw2': 1
             },
             'percentages': {
                 'atem': 50
             },
             'patients': {
+                'min': 4,
+                'max': 7,
+                'transport': 55,
+                'specialisation': 'General Internal'
+            }
+        },
+        103: {
+            'name': 'Domestic Dispute',
+            'credits': 300,
+            'vehicles': {
+                'fustw': 2
+            },
+            'expansions': [
+                [90, 'Officer Down']
+            ]
+        },
+        104: {
+            'name': 'Hostage Taken',
+            'credits': 2000,
+            'vehicles': {
+                'fustw': 4
+            },
+            'patients': {
+                'min': 1,
+                'max': 2,
+                'transport': 100,
+                'specialisation': 'General Surgeon'
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 12
+            }
+        },
+        105: {
+            'name': 'Active Shooter',
+            'credits': 2800,
+            'vehicles': {
+                'fustw': 4,
+                'polheli': 1
+            },
+            'patients': {
+                'min': 1,
+                'max': 10,
+                'transport': 100,
+                'specialisation': 'General Surgeon'
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 24
+            }
+        },
+        106: {
+            'name': 'High-Risk Warrant',
+            'credits': 1400,
+            'vehicles': {
+                'fustw': 1
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 18
+            }
+        },
+        107: {
+            'name': 'Drug Warrant',
+            'credits': 1000,
+            'vehicles': {
+                'fustw': 1
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 6
+            }
+        },
+        108: {
+            'onlyRd': true,
+            'name': 'Anaphylaxis',
+            'transport': 70,
+            'specialisation': 'General Internal'
+        },
+        109: {
+            'name': 'Noise Complaint',
+            'credits': 300,
+            'vehicles': {
+                'fustw': 1
+            }
+        },
+        110: {
+            'name': 'Residential Fire',
+            'credits': 1750,
+            'vehicles': {
+                'lf': 3,
+                'dlk': 1,
+                'elw1': 1,
+                'fustw': 2
+            },
+            'patients': {
                 'min': 0,
-                'max': 1,
-                'specialisation': 'Neurologie'
+                'max': 4,
+                'transport': 50,
+                'specialisation': 'General Surgeon'
+            }
+        },
+        111: {
+            'name': 'Stabbing',
+            'credits': 1500,
+            'vehicles': {
+                'fustw': 5
+            },
+            'patients': {
+                'min': 1,
+                'max': 6,
+                'transport': 100,
+                'specialisation': 'General Surgeon'
+            }
+        },
+        112: {
+            'vge': true,
+            'name': 'Bomb Explosion',
+            'credits': 14000,
+            'vehicles': {
+                'lf': 6,
+                'dlk': 2,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 2,
+                'polheli': 1,
+                'fustw': 14
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 24
+            }
+        },
+        113: {
+            'name': 'Smoke in Cabin',
+            'credits': 1200,
+            'vehicles': {
+                'lf': 2,
+                'flf': 1
             }
         },
         114: {
-            'name': 'Hexe hÃ¤ngt in Baum',
-            'credits': 900,
+            'name': 'Smoke in Cabin',
+            'credits': 1200,
             'vehicles': {
-                'lf': 1,
-                'dlk': 1,
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'transport': 50,
-                'specialisation': 'Unfallchirugie'
+                'lf': 2,
+                'flf': 1
             }
         },
         115: {
-            'onlyRd': true,
-            'name': 'Zombiebiss',
-            'transport': 100,
-            'specialisation': 'Neurologie',
+            'name': 'Braking Overheat',
+            'credits': 900,
+            'vehicles': {
+                'flf': 1,
+                'lf': 1,
+                'elw1': 1
+            }
         },
         116: {
-            'name': 'Monster ausgebrochen',
-            'credits': 1600,
+            'name': 'Braking Overheat',
+            'credits': 900,
             'vehicles': {
-                'fustw': 4
+                'flf': 1,
+                'lf': 1,
+                'elw1': 1
             }
         },
         117: {
-            'name': 'KÃ¼rbisse geklaut',
-            'credits': 100,
+            'name': 'Engine Fire',
+            'credits': 1200,
             'vehicles': {
-                'fustw': 1
+                'flf': 2,
+                'elw1': 1,
+                'lf': 1
             }
         },
         118: {
-            'name': 'Frankenstein gesichtet',
-            'credits': 550,
+            'name': 'Engine Fire',
+            'credits': 1900,
             'vehicles': {
-                'fustw': 2
+                'flf': 3,
+                'elw1': 1,
+                'lf': 1
             }
         },
         119: {
-            'name': 'Süßigkeitendiebstahl',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            }
+            'onlyRd': true,
+            'name': 'Food Poisoning',
+            'transport': 100,
+            'specialisation': 'General Surgeon',
         },
         120: {
-            'name': 'LKW umgestÃ¼rzt',
-            'credits': 2200,
+            'name': 'Large Aircraft Crasht',
+            'credits': 6000,
             'vehicles': {
-                'lf': 2,
-                'rw': 1,
-                'elw1': 1,
-                'fwk': 1
-            },
-            'percentages': {
-                'fwk': 75
+                'flf': 4,
+                'lf': 3,
+                'elw1': 2,
+                'fustw': 5
             },
             'patients': {
                 'min': 1,
-                'max': 2,
-                'transport': 50,
-                'nef': 50,
-                'specialisation': 'Unfallchirugie'
+                'max': 25,
+                'transport': 100
+                'specialisation': 'General Internal'
             }
         },
         121: {
-            'name': 'LKW umgestÃ¼rzt',
-            'credits': 2500,
+            'name': 'Aircraft Hijack',
+            'credits': 5000,
             'vehicles': {
-                'lf': 2,
-                'rw': 1,
                 'elw1': 1,
-                'fwk': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'fwk': 75
+                'fustw': 10
             },
             'patients': {
                 'min': 1,
-                'max': 2,
-                'transport': 50,
-                'nef': 50,
-                'specialisation': 'Unfallchirugie'
+                'max': 10,
+                'transport': 100,
+                'specialisation': 'General Surgeon'
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 18
             }
         },
         122: {
-            'name': 'Motorradunfall',
-            'credits': 600,
+            'name': 'Carbon Monoxide Alarm',
+            'credits': 100,
             'vehicles': {
-                'lf': 1,
-                'fustw': 1
-            },
-            'percentages': {
-                'lf': 10
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'nef': 70,
-                'transport': 100,
-                'specialisation': 'Unfallchirugie'
+                'lf': 1
             }
         },
         123: {
-            'name': 'Verkehrsunfall',
-            'credits': 1100,
+            'name': 'Bank Robbery',
+            'credits': 1600,
             'vehicles': {
-                'lf': 1,
-                'fustw': 1
+                'fustw': 6
             },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'nef': 20,
-                'transport': 40,
-                'specialisation': 'Unfallchirugie'
+            'special': {
+                'averageMinimumEmployeesSwat': 12
             }
         },
         124: {
-            'name': 'Verkehrsunfall',
-            'credits': 1600,
+            'name': 'Shooting',
+            'credits': 1750,
             'vehicles': {
-                'lf': 1,
-                'rw': 1
-            },
-            'percentages': {
-                'rw': 50
+                'fustw': 7
             },
             'patients': {
-                'min': 2,
-                'max': 3,
-                'nef': 50,
-                'transport': 70,
-                'specialisation': 'Unfallchirugie'
+                'min': 1,
+                'max': 6,
+                'transport': 100,
+                'specialisation': 'Traumatology'
             }
         },
         125: {
-            'name': 'Verkehrsunfall',
-            'credits': 1700,
+            'name': 'Vehicle Accident - Entrapment',
+            'credits': 1500,
             'vehicles': {
-                'lf': 1,
-                'rw': 1,
-                'fustw': 1
+                'lf': 2,
+                'rw': 2,
+                'elw1': 1,
+                'fustw': 2
             },
             'percentages': {
                 'rw': 50
             },
             'patients': {
-                'min': 2,
-                'max': 3,
-                'nef': 50,
-                'transport': 70,
-                'specialisation': 'Unfallchirugie'
+                'min': 0,
+                'max': 4,
+                'transport': 95,
+                'specialisation': 'Traumatology'
             }
         },
         126: {
