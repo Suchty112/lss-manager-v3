@@ -1756,15 +1756,15 @@ if (I18n.locale == "en") {
         },
         156: {
             'onlyRd': true,
-            'name': 'Turbulence Injury"',
+            'name': 'Turbulence Injury',
             'specialisation': 'Traumatology',
-            'transport': 40,
+            'transport': 40
         },
         157: {
             'onlyRd': true,
-            'name': 'Turbulence Injury"',
+            'name': 'Turbulence Injury',
             'specialisation': 'Traumatology',
-            'transport': 40,
+            'transport': 40
         },
         158: {
             'name': 'Accident Involving a Bus',
@@ -1850,259 +1850,356 @@ if (I18n.locale == "en") {
             }
         },
         164: {
-            'onlyRd': true,
-            'name': 'Kopfplatzwunde',
-            'specialisation': 'Allgemeine Chirugie',
-            'tragehilfe': 5,
-            'transport': 90
+            'name': 'Cable theft',
+            'credits': 550,
+            'vehicles': {
+                'fustw': 3,
+                'k9': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
         },
         165: {
-            'onlyRd': true,
-            'name': 'GehirnerschÃ¼tterung',
-            'specialisation': 'Neurologie',
-            'tragehilfe': 5,
-            'transport': 90,
-            'nef': 20
+            'name': 'Drowning',
+            'credits': 1250,
+            'vehicles': {
+                'lf': 1,
+                'elw1': 1,
+                'rw': 1,
+                'boot': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 2,
+                'transport': 80,
+                'specialisation': 'Traumatology'
+            }
         },
         166: {
             'name': 'Fassadenteile drohen zu fallen',
-            'credits': 1200,
+            'credits': 1250,
             'vehicles': {
                 'lf': 1,
-                'dlk': 1,
                 'elw1': 1,
-                'hoehen': 1,
-                'fustw': 1
+                'rw': 1,
+                'boot': 1
             },
-            'percentages': {
-                'dlk': 40,
-                'hoehen': 40
+            'patients': {
+                'min': 0,
+                'max': 2,
+                'transport': 80,,
+                'specialisation': 'Traumatology'
             }
         },
         167: {
-            'name': 'BeschÃ¤digter Dachbereich',
+            'name': 'Car in river',
             'credits': 1400,
             'vehicles': {
                 'lf': 2,
-                'dlk': 1,
+                'rw': 1,
                 'elw1': 1,
-                'hoehen': 1,
-                'fustw': 1
+                'boot': 1
             },
-            'percentages': {
-                'dlk': 50,
-                'hoehen': 20
+            'patients': {
+                'min': 1,
+                'max': 2,
+                'transport': 20,
+                'specialisation': 'General Internal'
             }
         },
         168: {
             'name': 'Baum auf Gleisen',
-            'credits': 600,
+            'credits': 1400,
             'vehicles': {
-                'lf': 1,
-                'fustw': 1
-            },
-            'expansions': [
-                [237, 'Verkehrsunfall mit Zug']
-            ]
-        },
-        169: {
-            'name': 'Baum auf Gleisen',
-            'credits': 600,
-            'vehicles': {
-                'lf': 1,
-                'fustw': 1
-            },
-            'expansions': [
-                [237, 'Verkehrsunfall mit Zug']
-            ]
-        },
-        170: {
-            'name': 'Baum auf Gleisen',
-            'credits': 600,
-            'vehicles': {
-                'lf': 1,
-                'fustw': 1
-            },
-            'expansions': [
-                [237, 'Verkehrsunfall mit Zug']
-            ]
-        },
-        171: {
-            'name': 'Parkdeck voll Wasser gelaufen',
-            'credits': 4000,
-            'vehicles': {
-                'lf': 1,
-                'gwl2': 1,
-                'oel': 1,
-                'elw2': 1,
-                'fustw': 2
-            }
-        },
-        172: {
-            'name': 'StraÃŸe unter Wasser',
-            'credits': 600,
-            'vehicles': {
-                'lf': 1
-            }
-        },
-        173: {
-            'name': 'StraÃŸe unter Wasser',
-            'credits': 600,
-            'vehicles': {
-                'lf': 1,
-                'fustw': 2
-            }
-        },
-        174: {
-            'name': 'Erdrutsch',
-            'credits': 1020,
-            'vehicles': {
-                'fustw': 2,
-                'gkw': 1,
-                'mtwtz': 1,
-                'radlader': 1
-            }
-        },
-        175: {
-            'name': 'Erdrutsch',
-            'credits': 900,
-            'vehicles': {
-                'gkw': 1,
-                'mtwtz': 1,
-                'radlader': 1
-            }
-        },
-        176: {
-            'name': 'LKW in Hauswand',
-            'credits': 2100,
-            'vehicles': {
-                'gkw': 1,
-                'mtwtz': 1,
-                'mzkw': 1,
-                'fwk': 1,
-                'dlk': 1,
                 'lf': 2,
-                'elw1': 1
-            },
-            'percentages': {
-                'fwk': 75,
-                'dlk': 70
-            },
-            'expansions': [
-                [177, 'EingestÃ¼rztes Wohnhaus'],
-                [213, 'Gasexplosion']
-            ]
-        },
-        177: {
-            'name': 'EingestÃ¼rztes Wohnhaus',
-            'credits': 4600,
-            'vehicles': {
-                'gkw': 2,
-                'radlader': 2,
-                'mtwtz': 1,
-                'mzkw': 1,
-                'lf': 3,
-                'dlk': 1,
-                'elw1': 1,
                 'rw': 1,
-                'fwk': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'dlk': 30,
-                'fwk': 75
+                'elw1': 1,
+                'boot': 1
             },
             'patients': {
-                'min': 0,
-                'max': 7,
-                'specialisation': 'Allgemeine Innere'
+                'min': 1,
+                'max': 2,
+                'transport': 20,
+                'specialisation': 'General Internal'
             }
         },
-        178: {
-            'name': 'Gefahrgut-LKW verunglÃ¼ckt',
-            'credits': 2900,
+        169: {
+            'name': 'Small flooding',
+            'credits': 550,
             'vehicles': {
-                'gkw': 1,
-                'radlader': 1,
-                'lf': 3,
-                'elw1': 1,
-                'elw2': 1,
-                'rw': 1,
-                'mess': 1,
-                'dekon': 1,
-                'gefahr': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'elw2': 40,
-                'rw': 50,
-                'mess': 30,
-                'dekon': 10
+                'lf': 2
             },
             'patients': {
                 'min': 0,
                 'max': 1,
-                'specialisation': 'Unfallchirugie'
+                'transport': 40,
+                'specialisation': 'Traumatology'
             },
             'expansions': [
-                [213, 'Gasexplosion']
+                [170, 'Medium flooding']
             ]
         },
-        179: {
+        170: {
+            'name': 'Medium flooding',
+            'credits': 1550,
+            'vehicles': {
+                'lf': 4,
+                'elw1': 1,
+                'boot': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 3,
+                'transport': 40,
+                'specialisation': 'General Internal'
+            },
+            'expansions': [
+                [171, 'Large flooding']
+            ]
+        },
+        171: {
+            'name': 'Large flooding',
+            'credits': 2500,
+            'vehicles': {
+                'lf': 6,
+                'elw1': 2,
+                'rw': 1,
+                'boot': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 6,
+                'transport': 40,
+                'specialisation': 'General Internal'
+            },
+            'expansions': [
+                [172, 'Giant flooding']
+            ]
+        },
+        172: {
+            'name': 'Giant flooding',
+            'credits': 4000,
+            'vehicles': {
+                'lf': 8,
+                'elw1': 2,
+                'elw2': 1,
+                'fustw': 3,
+                'rw': 2,
+                'boot': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 10,
+                'transport': 40,
+                'specialisation': 'General Internal'
+            }
+        },
+        173: {
+            'name': 'Light aircraft crash in water',
+            'credits': 4000,
+            'vehicles': {
+                'lf': 4,
+                'elw1': 1,
+                'rw': 1,
+                'gefahr': 1,
+                'boot': 1
+            },
+            'percentages': {
+                'gefahr': 50
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 60,
+                'specialisation': 'Traumatology'
+            }
+        },
+        174: {
+            'name': 'Light aircraft crash in water',
+            'credits': 4000,
+            'vehicles': {
+                'lf': 4,
+                'elw1': 1,
+                'rw': 1,
+                'gefahr': 1,
+                'boot': 1
+            },
+            'percentages': {
+                'gefahr': 50
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 60,
+                'specialisation': 'Traumatology'
+            }
+        },
+        175: {
+            'name': 'Bridge collapse',
+            'credits': 7000,
+            'vehicles': {
+                'lf': 5,
+                'elw1': 2,
+                'dlk': 1,
+                'rw': 2,
+                'atem': 1,
+                'elw2': 1,
+                'boot': 2,
+                'fustw': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 20,
+                'transport': 50,
+                'specialisation': 'Traumatology'
+            }
+        },
+        176: {
             'onlyRd': true,
-            'name': 'SchÃ¤delverletzung',
-            'specialisation': 'Neurochirugie',
-            'tragehilfe': 5,
-            'transport': 100,
-            'nef': 100
+            'name': 'Stroke"',
+            'specialisation': 'Neurology',
+            'transport': 100
+        },
+        177: {
+            'onlyRd': true,
+            'name': 'Unconscious Person',
+            'specialisation': 'General Surgeon',
+            'transport': 50
+        },
+        178: {
+            'onlyRd': true,
+            'name': 'Hemorrhage',
+            'specialisation': 'Traumatology',
+            'transport': 100
+        },
+        179: {
+            'name': 'Burst water main',
+            'credits': 1200,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 1,
+                'rw': 2,
+                'fustw': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'transport': 25,
+                'specialisation': 'General Internal'
+            },
+            'expansions': [
+                [170, 'Medium flooding']
+            ]
         },
         180: {
-            'onlyRd': true,
-            'name': 'WirbelsÃ¤ulenverlÃ¤tzung',
-            'specialisation': 'Neurochirugie',
-            'tragehilfe': 5,
-            'transport': 100,
-            'nef': 100,
-            'rth': 100
+            'name': 'Shots fired at Officer',
+            'credits': 4100,
+            'vehicles': {
+                'fustw': 8,
+                'polheli': 1,
+                'k9': 2
+            },
+            'patients': {
+                'min': 1,
+                'max': 2,
+                'transport': 100,
+                'specialisation': 'Traumatology'
+            },
+            'special': {
+                'averageMinimumEmployeesSwat': 6
+            }
         },
         181: {
-            'onlyRd': true,
-            'name': 'Sturz aus HÃ¶he',
-            'specialisation': 'Neurochirugie',
-            'tragehilfe': 5,
-            'transport': 100,
-            'nef': 100,
-            'rth': 100
+            'name': 'School fire',
+            'credits': 6000,
+            'vehicles': {
+                'lf': 5,
+                'elw1': 1,
+                'dlk': 1,
+                'rw': 1,
+                'atem': 1,
+                'elw2': 1,
+                'gwl2': 1,
+                'fustw': 2
+            },
+            'percentages': {
+                'gwl2': 25,
+                'atem': 50,
+                'elw2': 20
+            },
+            'patients': {
+                'min': 0,
+                'max': 6,
+                'transport': 50,
+                'specialisation': 'General Internal'
+            }
         },
         182: {
-            'onlyRd': true,
-            'name': 'Sturz aus HÃ¶he',
-            'specialisation': 'Neurochirugie',
-            'tragehilfe': 5,
-            'transport': 100,
-            'nef': 50
+            'name': 'Cafeteria fire',
+            'credits': 1300,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 2,
+                'transport': 50,
+                'specialisation': 'General Internal'
+            }
         },
         183: {
-            'onlyRd': true,
-            'name': 'Sonnenstich',
-            'specialisation': 'Allgemeine Innere',
-            'tragehilfe': 5,
-            'transport': 10
+            'name': 'Fire in fast food restaurant',
+            'credits': 1850,
+            'vehicles': {
+                'lf': 5,
+                'elw1': 1,
+                'dlk': 1,
+                'atem': 1
+            }
         },
         184: {
-            'onlyRd': true,
-            'name': 'Hitzschlag',
-            'specialisation': 'Allgemeine Innere',
-            'tragehilfe': 2,
-            'transport': 60,
-            'nef': 40
+            'name': 'Container Ship Fire',
+            'credits': 10000,
+            'vehicles': {
+                'lf': 4,
+                'elw1': 1,
+                'dlk': 1,
+                'rw': 1,
+                'atem': 2,
+                'gefahr': 1,
+                'elw2': 1,
+                'rdboot': 1,
+                'fdboot': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 6,
+                'transport': 50,
+                'specialisation': 'General Internal'
+            }
         },
         185: {
-            'onlyRd': true,
-            'name': 'Hitzekrampf',
-            'specialisation': 'Allgemeine Innere',
-            'transport': 80,
-            'nef': 50
+            'name': 'Bridge collapse',
+            'credits': 7000,
+            'vehicles': {
+                'lf': 5,
+                'elw1': 2,
+                'dlk': 1,
+                'rw': 2,
+                'atem': 1,
+                'elw2': 1,
+                'boot': 2,
+                'fustw': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 20,
+                'transport': 50,
+                'specialisation': 'Traumatology'
+            }
         },
         186: {
             'name': 'Lagerhallenbrand',
