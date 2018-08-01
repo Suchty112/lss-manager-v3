@@ -1562,146 +1562,160 @@ if (I18n.locale == "en") {
             }
         },
         141: {
-            'name': 'FlÃ¤chenbrand',
-            'credits': 3600,
+            'name': 'Elevator Rescue',
+            'credits': 400,
             'vehicles': {
-                'lf': 4,
-                'gwl2': 1,
-                'elw1': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'gwl2': 20,
-                'elw1': 20
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 30
+                'lf': 1
             }
         },
         142: {
-            'name': 'Feuer auf Balkon',
-            'credits': 1500,
+            'name': 'Warehouse Fire',
+            'credits': 10000,
             'vehicles': {
-                'lf': 2,
-                'dlk': 1
+                'lf': 10,
+                'dlk': 4,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 4,
+                'gwl2': 3,
+                'atem': 4,
+                'fustw': 2
             },
-            'percentages': {
-                'dlk': 30
+            'patients': {
+                'min': 0,
+                'max': 2,
+                'transport': 100,
+                'specialisation': 'General Internal'
             }
         },
         143: {
-            'name': 'Brennende Papiercontainer',
-            'credits': 400,
-            'vehicles': {
-                'lf': 1
-            }
+            'siwa': true,
+            'name': 'Assassination Threat',
+            'credits': 4400
         },
         144: {
-            'name': 'Brennende Hecke',
-            'credits': 400,
+            'name': 'Truck in House Wall',
+            'credits': 4400,
             'vehicles': {
-                'lf': 1
+                'lf': 3,
+                'rw': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 3,
+                'transport': 100,
+                'specialisation': 'Traumatology'
             }
         },
         145: {
-            'name': 'Trunkenheitsfahrt',
-            'credits': 150,
+            'name': 'Burning Garbage Truck',
+            'credits': 600,
             'vehicles': {
-                'fustw': 1
+                'lf': 2
             }
         },
         146: {
-            'name': 'Brennendes Reetdachhaus',
-            'credits': 4200,
-            'vehicles': {
-                'lf': 5,
-                'dlk': 1,
-                'elw1': 1,
-                'atem': 1,
-                'fustw': 2
-            },
-            'percentages': {
-                'atem': 30
-            },
-            'patients': {
-                'min': 1,
-                'max': 2,
-                'nef': 50,
-                'transport': 50,
-                'specialisation': 'Allgemeine Innere'
-            }
+            'onlyRd': true,
+            'name': 'Child Birth',
+            'transport': 100,
+            'specialisation': 'Gynecology'
         },
         147: {
-            'name': 'Krankentransport',
-            'credits': 130,
+            'name': 'Keys Locked in Vehicle',
+            'credits': 300,
             'vehicles': {
-                'ktw': 1
+                'fustw': 1
             }
         },
         148: {
-            'name': 'Ampelausfall',
-            'credits': 100,
+            'name': 'Stuck Climber',
+            'credits': 650,
             'vehicles': {
-                'fustw': 1
+                'lf': 1,
+                'rw': 1,
+                'dlk': 1
             },
-            'expansions': [
-                [128, 'Auffahrunfall']
-            ]
+            'percentages': {
+                'dlk': 50
+            },
+            'patients': {
+                'min': 1,
+                'max': 1,
+                'transport': 100,
+                'specialisation': 'General Internal'
+            }
         },
         149: {
-            'name': 'Pannenfahrzeug',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            }
+            'siwa': true,
+            'name': 'Smoke Detector Check',
+            'credits': 400
         },
         150: {
-            'name': 'Hausfriedensbruch',
-            'credits': 150,
+            'name': 'Freight Train Derailment',
+            'credits': 10000,
             'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        151: {
-            'name': 'Raub',
-            'credits': 1200,
-            'vehicles': {
-                'fustw': 3
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 3
-            }
-        },
-        152: {
-            'name': 'HÃ¤usliche Gewalt',
-            'credits': 750,
-            'vehicles': {
+                'lf': 10,
+                'dlk': 4,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 4,
+                'atem': 2,
+                'gefahr': 2,
                 'fustw': 2
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
             },
             'patients': {
                 'min': 0,
-                'max': 1,
-                'specialisation': 'Unfallchirugie'
+                'max': 4,
+                'specialisation': 'Traumatology'
+            }
+        },
+        151: {
+            'name': 'Freight Train Derailment',
+            'credits': 10000,
+            'vehicles': {
+                'lf': 10,
+                'dlk': 4,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 4,
+                'atem': 2,
+                'gefahr': 2,
+                'fustw': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'specialisation': 'Traumatology'
+            }
+        },
+        152: {
+            'name': 'Freight Train Derailment',
+            'credits': 10000,
+            'vehicles': {
+                'lf': 10,
+                'dlk': 4,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 4,
+                'atem': 2,
+                'gefahr': 2,
+                'fustw': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'specialisation': 'Traumatology'
             }
         },
         153: {
-            'name': 'Hilflose Person',
-            'credits': 100,
+            'name': 'Barn Fire',
+            'credits': 1800,
             'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
+                'lf': 6,
+                'elw1': 1,
+                'dlk': 1,
+                'atem': 1,
+                'gwl2': 1
             }
         },
         154: {
