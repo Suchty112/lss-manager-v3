@@ -2182,23 +2182,19 @@ if (I18n.locale == "en") {
             }
         },
         185: {
-            'name': 'Bridge collapse',
-            'credits': 7000,
+            'name': 'Dock Crane fire',
+            'credits': 6000,
             'vehicles': {
-                'lf': 5,
-                'elw1': 2,
+                'lf': 3,
+                'elw1': 1,
                 'dlk': 1,
-                'rw': 2,
-                'atem': 1,
-                'elw2': 1,
-                'boot': 2,
-                'fustw': 2
+                'fdboot': 1
             },
             'patients': {
                 'min': 0,
-                'max': 20,
-                'transport': 50,
-                'specialisation': 'Traumatology'
+                'max': 1,
+                'transport': 20,
+                'specialisation': 'General Internal'
             }
         },
         186: {
