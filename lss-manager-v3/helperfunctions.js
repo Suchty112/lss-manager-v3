@@ -1719,100 +1719,134 @@ if (I18n.locale == "en") {
             }
         },
         154: {
-            'name': 'Hilflose Person',
-            'credits': 100,
+            'name': 'Chlorine leak',
+            'credits': 3500,
             'vehicles': {
-                'fustw': 1
+                'lf': 3,
+                'elw1': 1,
+                'rw': 1,
+                'gefahr': 1,
+                'elw2': 1
             },
             'patients': {
                 'min': 1,
-                'max': 1,
-                'tragehilfe': 10,
+                'max': 15,
                 'transport': 100,
-                'specialisation': 'Allgemeine Innere'
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
+                'specialisation': 'General Internal'
             }
         },
         155: {
-            'onlyRd': true,
-            'name': 'Akuter Harnstau',
-            'specialisation': 'Urologie',
-            'tragehilfe': 5,
-            'transport': 100
-        },
-        156: {
-            'onlyRd': true,
-            'name': 'Haarnleiter Blutung',
-            'specialisation': 'Urologie',
-            'tragehilfe': 5,
-            'transport': 100,
-            'nef': 20
-        },
-        157: {
-            'onlyRd': true,
-            'name': 'HerzrhytmusstÃ¶rungen',
-            'specialisation': 'Kardiologie',
-            'tragehilfe': 20,
-            'transport': 100,
-            'nef': 60
-        },
-        158: {
-            'name': 'Tiefgarage unter Wasser',
-            'credits': 370,
+            'name': 'Fire in Hospital',
+            'credits': 6000,
             'vehicles': {
-                'lf': 1
-            }
-        },
-        159: {
-            'name': 'Ã„ste auf Fahrbahn',
-            'credits': 120,
-            'vehicles': {
-                'lfogkworw': 1
-            }
-        },
-        160: {
-            'name': 'Umherfliegendes Baumaterial',
-            'credits': 150,
-            'vehicles': {
-                'lf': 1
-            }
-        },
-        161: {
-            'name': 'PKW auf Baum',
-            'credits': 900,
-            'vehicles': {
-                'lf': 1
-            }
-        },
-        162: {
-            'name': 'Baum auf PKW',
-            'credits': 1400,
-            'vehicles': {
-                'lf': 1,
-                'fustw': 1
+                'lf': 10,
+                'elw1': 2,
+                'rw': 2,
+                'gwl2': 1,
+                'atem': 1,
+                'dlk': 3,
+                'elw2': 1
             },
             'patients': {
                 'min': 1,
-                'max': 1,
+                'max': 25,
                 'transport': 50,
-                'nef': 50,
-                'specialisation': 'Unfallchirugie'
+                'specialisation': 'General Internal'
+            }
+        },
+        156: {
+            'onlyRd': true,
+            'name': 'Turbulence Injury"',
+            'specialisation': 'Traumatology',
+            'transport': 40,
+        },
+        157: {
+            'onlyRd': true,
+            'name': 'Turbulence Injury"',
+            'specialisation': 'Traumatology',
+            'transport': 40,
+        },
+        158: {
+            'name': 'Accident Involving a Bus',
+            'credits': 1000,
+            'vehicles': {
+                'lf': 2,
+                'rw': 1
+            },
+            'patients': {
+                'min': 1,
+                'max': 12,
+                'transport': 50,
+                'specialisation': 'General Internal'
+            }
+        },
+        159: {
+            'name': 'Serious Accident Involving a Bus',
+            'credits': 2000,
+            'vehicles': {
+                'lf': 4,
+                'rw': 2,
+                'elw1': 1,
+                'dlk': 1
+                'fustw': 2
+            },
+            'patients': {
+                'min': 1,
+                'max': 12,
+                'transport': 80,
+                'specialisation': 'General Surgeon'
+            }
+        },
+        160: {
+            'name': 'Lost Child"',
+            'credits': 700,
+            'vehicles': {
+                'fustw': 3
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 78,
+                'specialisation': 'General Internal'
+            }
+        },
+        161: {
+            'siwa': true,
+            'name': 'DUI Checkpoint',
+            'credits': 3500
+        },
+        162: {
+            'name': 'Light Aircraft Crash (Airfield)',
+            'credits': 2000,
+            'vehicles': {
+                'lf': 1,
+                'flf': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'transport': 60,
+                'specialisation': 'Traumatology'
             }
         },
         163: {
-            'name': 'Baum auf Dach',
-            'credits': 1400,
+            'name': 'Light Aircraft Crash',
+            'credits': 4000,
             'vehicles': {
-                'lf': 1,
-                'dlk': 1,
-                'fwk': 1
+                'lf': 4,
+                'elw1': 1,
+                'rw': 1,
+                'gwl2': 1,
+                'gefahr': 1
             },
             'percentages': {
-                'dlk': 10,
-                'fwk': 10
+                'gefahr': 50
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'transport': 60,
+                'specialisation': 'Traumatology'
             }
         },
         164: {
