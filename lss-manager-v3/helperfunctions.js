@@ -865,7 +865,7 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 0,
                 'max': 2,
-                'specialisation': Traumatology
+                'specialisation': 'Traumatology'
             }
         },
         86: {
@@ -1294,7 +1294,7 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 1,
                 'max': 25,
-                'transport': 100
+                'transport': 100,
                 'specialisation': 'General Internal'
             }
         },
