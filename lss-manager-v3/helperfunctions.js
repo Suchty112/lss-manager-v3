@@ -2198,128 +2198,171 @@ if (I18n.locale == "en") {
             }
         },
         186: {
-            'name': 'Lagerhallenbrand',
-            'credits': 5630,
+            'name': 'Recycling Centre fire',
+            'credits': 10000,
             'vehicles': {
-                'gkw': 1,
-                'mtwtz': 1,
-                'radlader': 1,
-                'anhdle': 1,
-                'rw': 1,
-                'lf': 5,
-                'elw1': 1,
+                'rw': 3,
+                'lf': 12,
+                'elw1': 2,
                 'elw2': 1,
-                'fwk': 1,
                 'dlk': 2,
                 'atem': 1,
-                'mess': 1,
-                'gwl2': 1,
+                'gwl2': 3,
                 'fustw': 2
             },
-            'percentages': {
-                'fwk': 15
+            'patients': {
+                'min': 0,
+                'max': 2,
+                'specialisation': 'General Internal',
+                'transport': 20
+            }
+        },
+        187: {
+            'name': 'Kidnaping',
+            'credits': 2000,
+            'vehicles': {
+                'fustw': 4,
+                'polheli': 1,
+                'k9': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 80,
+                'specialisation': 'General Internal'
+            },
+            'expansions': [
+                [104, 'Hostage Taken']
+            ]
+        },
+        188: {
+            'name': 'Cruise ship sinking',
+            'credits': 15000,
+            'vehicles': {
+                'lf': 7,
+                'elw1': 2,
+                'rw': 2,
+                'elw2': 1,
+                'boot': 2,
+                'fdboot': 1,
+                'rdboot': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 20,
+                'transport': 50,
+                'specialisation': 'General Internal'
+            }
+        },
+        189: {
+            'name': 'Sinking boat',
+            'credits': 1500,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'rw': 2,
+                'boot': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 6,
+                'transport': 40,
+                'specialisation': 'General Internal'
+            }
+        },
+        190: {
+            'name': 'Sinking boat',
+            'credits': 1500,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'rw': 2,
+                'boot': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 6,
+                'transport': 40,
+                'specialisation': 'General Internal'
+            }
+        },
+        191: {
+            'name': 'Sinking boat',
+            'credits': 1500,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'rw': 2,
+                'boot': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 6,
+                'transport': 40,
+                'specialisation': 'General Internal'
+            }
+        },
+        192: {
+            'name': 'Traffic accident with train',
+            'credits': 3000,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 1,
+                'rw': 2,
+                'fustw': 2
+            },
+            'patients': {
+                'min': 0,
+                'max': 4,
+                'transport': 70,
+                'specialisation': 'Traumatology'
+            },
+            'expansions': [
+                [150, 'Freight Train Derailment'],
+                [151, 'Freight Train Derailment'],
+                [152, 'Freight Train Derailment']
+            ]
+        },
+        193: {
+            'name': 'Animal Rescue',
+            'credits': 900,
+            'vehicles': {
+                'lf': 1,
+                'rw': 1
+            }
+        },
+        194: {
+            'name': 'Large MVA in tunnel',
+            'credits': 7000,
+            'vehicles': {
+                'lf': 6,
+                'elw1': 2,
+                'rw': 3,
+                'gwl2': 1,
+                'atem': 1,
+                'gefahr': 1,
+                'elw2': 1,
+                'fustw': 3
+            },
+            'patients': {
+                'min': 0,
+                'max': 14,
+                'transport': 25,
+                'specialisation': 'General Internal'
+            }
+        },
+        195: {
+            'name': 'Single vehicle fire in tunnel',
+            'credits': 1500,
+            'vehicles': {
+                'lf': 3,
+                'elw1': 1
             },
             'patients': {
                 'min': 1,
                 'max': 4,
-                'specialisation': 'Allgemeine Innere',
-                'transport': 65,
-                'nef': 20
-            }
-        },
-        187: {
-            'name': 'Feuer im Lagerraum',
-            'credits': 2230,
-            'vehicles': {
-                'lf': 2,
-                'elw1': 1,
-                'dlk': 1,
-                'mess': 1,
-            },
-            'percentages': {
-                'dlk': 50,
-                'mess': 20
-            },
-            'expansions': [
-                [186, 'Lagerhallenbrand']
-            ]
-        },
-        188: {
-            'name': 'Personenkontrolle',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        189: {
-            'name': 'Verkehrbehinderung',
-            'credits': 80,
-            'vehicles': {
-                'fustw': 1
-            },
-            'expansions': [
-                [73, 'SchlÃ¤gerei']
-            ]
-        },
-        190: {
-            'name': 'Diebstahl aus Kfz',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        191: {
-            'name': 'Radweg auf Baum',
-            'credits': 310,
-            'vehicles': {
-                'lfogkworw': 1
-            },
-            'expansions': [
-                [194, 'Baum unter Person eingeklemmt']
-            ]
-        },
-        192: {
-            'name': 'Brennende Trafostation',
-            'credits': 1900,
-            'vehicles': {
-                'lf': 2,
-                'elw1': 1
-            }
-        },
-        193: {
-            'name': 'Brennende Trafostation',
-            'credits': 2000,
-            'vehicles': {
-                'lf': 2,
-                'elw1': 1,
-                'fustw': 1
-            }
-        },
-        194: {
-            'name': 'Baum unter Person eingeklemmt',
-            'credits': 1000,
-            'vehicles': {
-                'lf': 1,
-                'fustw': 1
-            },
-            'patients': {
-                'min': 1,
-                'max': 1,
-                'transport': 100,
-                'nef': 100,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        195: {
-            'name': 'Schwerpunkteinsatz TageswohnungseinbrÃ¼che',
-            'credits': 1000,
-            'vehicles': {
-                'grukw': 3,
-                'lebefkw': 1
+                'transport': 60,
+                'specialisation': 'General Internal'
             }
         }
     };
@@ -2555,7 +2598,7 @@ else if (I18n.locale == "de") {
         "7": ["LF 20/16", 0],
         "8": ["LF 10/6", 0],
         "9": ["LF 16-TS", 0],
-        "10": ["GW-Ã–l", 0],
+        "10": ["GW-Öl", 0],
         "11": ["GW-L2-Wasser", 0],
         "12": ["GW-Messtechnik", 0],
         "13": ["SW 1000", 0],
@@ -2578,7 +2621,7 @@ else if (I18n.locale == "de") {
         "30": ["HLF 20", 0],
         "31": ["RTH", 1],
         "32": ["FuStW", 2],
-        "33": ["GW-HÃ¶henrettung", 0],
+        "33": ["GW-Höenrettung", 0],
         "34": ["ELW 2", 0],
         "35": ["leBefKw", 2],
         "36": ["MTW", 0],
@@ -2592,11 +2635,11 @@ else if (I18n.locale == "de") {
         "44": ["Anh DLE", 3],
         "45": ["MLW 5", 3],
         "46": ["WLF", 0],
-        "47": ["AB-RÃ¼st", 0],
+        "47": ["AB-Rüst", 0],
         "48": ["AB-Atemschutz", 0],
-        "49": ["AB-Ã–l", 0],
+        "49": ["AB-Öl", 0],
         "50": ["GruKw", 2],
-        "51": ["FÃ¼Kw", 2],
+        "51": ["FüKw", 2],
         "52": ["GefKw", 2],
         "53": ["Dekon-P", 0],
         "54": ["AB-Dekon-P", 0],
@@ -2631,14 +2674,14 @@ else if (I18n.locale == "de") {
     };
     lssm.missions = {
         0: {
-            'name': 'MÃ¼lleimerbrand',
+            'name': 'Mülleimerbrand',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [24, 'Brennendes Bus-HÃ¤uschen'],
-                [140, 'FlÃ¤chenbrand']
+                [24, 'Brennendes Bus-Häuschen'],
+                [140, 'Flächenbrand']
             ]
         },
         1: {
@@ -2660,8 +2703,8 @@ else if (I18n.locale == "de") {
             },
             'expansions': [
                 [28, 'Garagenbrand'],
-                [138, 'FlÃ¤chenbrand'],
-                [141, 'FlÃ¤chenbrand'],
+                [138, 'Flächenbrand'],
+                [141, 'Flächenbrand'],
                 [146, 'Brennendes Reetdachhaus']
             ]
         },
@@ -2715,14 +2758,14 @@ else if (I18n.locale == "de") {
             },
             'expansions': [
                 [6, 'Gartenlaubbrand'],
-                [138, 'FlÃ¤chenbrand'],
-                [139, 'FlÃ¤chenbrand'],
-                [140, 'FlÃ¤chenbrand'],
-                [141, 'FlÃ¤chenbrand']
+                [138, 'Flächenbrand'],
+                [139, 'Flächenbrand'],
+                [140, 'Flächenbrand'],
+                [141, 'Flächenbrand']
             ]
         },
         8: {
-            'name': 'SperrmÃ¼llbrand',
+            'name': 'Sperrmüllbrand',
             'credits': 220,
             'vehicles': {
                 'lf': 1
@@ -2750,22 +2793,22 @@ else if (I18n.locale == "de") {
             }
         },
         12: {
-            'name': 'Baum auf StraÃŸe',
+            'name': 'Baum auf Straße',
             'credits': 310,
             'vehicles': {
                 'lfogkworw': 1
             },
             'expansions': [
                 [25, 'Verkehrsunfall'],
-                [83, 'Gefahrgut-LKW verunglÃ¼ckt'],
-                [120, 'LKW umgestÃ¼rzt'],
-                [121, 'LKW umgestÃ¼rzt'],
+                [83, 'Gefahrgut-LKW verunglückt'],
+                [120, 'LKW umgestürzt'],
+                [121, 'LKW umgestürzt'],
                 [123, 'Verkehrsunfall'],
                 [124, 'Verkehrsunfall'],
                 [125, 'Verkehrsunfall'],
                 [126, 'Verkehrsunfall'],
                 [127, 'Verkehrsunfall'],
-                [178, 'Gefahrgut-LKW verunglÃ¼ckt'],
+                [178, 'Gefahrgut-LKW verunglückt'],
                 [238, 'Verkehrsunfall mit Linienbus'],
                 [239, 'Verkehrsunfall mit Linienbus'],
             ]
@@ -2794,8 +2837,8 @@ else if (I18n.locale == "de") {
                 'lf': 1
             },
             'expansions': [
-                [134, 'GroÃŸer Waldbrand'],
-                [135, 'GroÃŸer Waldbrand']
+                [134, 'Großer Waldbrand'],
+                [135, 'Großer Waldbrand']
             ]
         },
         16: {
@@ -2813,14 +2856,14 @@ else if (I18n.locale == "de") {
             }
         },
         18: {
-            'name': 'Brennendes GebÃ¼sch',
+            'name': 'Brennendes Gebüsch',
             'credits': 700,
             'vehicles': {
                 'lf': 1
             }
         },
         19: {
-            'name': 'Brennender AnhÃ¤nger',
+            'name': 'Brennender Anhänger',
             'credits': 650,
             'vehicles': {
                 'lf': 1
@@ -2874,7 +2917,7 @@ else if (I18n.locale == "de") {
             }
         },
         24: {
-            'name': 'Brennendes Bus-HÃ¤uschen',
+            'name': 'Brennendes Bus-Häuschen',
             'credits': 900,
             'vehicles': {
                 'lf': 1
@@ -2953,7 +2996,7 @@ else if (I18n.locale == "de") {
             }
         },
         30: {
-            'name': 'GroÃŸe Ã–lspur',
+            'name': 'Große Ölspur',
             'credits': 1900,
             'vehicles': {
                 'lf': 1,
@@ -2963,7 +3006,7 @@ else if (I18n.locale == "de") {
                 'oel': 75
             },
             'expansions': [
-                [95, 'Ausgedehnte Ã–lspur']
+                [95, 'Ausgedehnte Ölspur']
             ]
         },
         31: {
@@ -2973,9 +3016,9 @@ else if (I18n.locale == "de") {
                 'lf': 1
             },
             'expansions': [
-                [30, 'GroÃŸe Ã–lspur'],
-                [95, 'Ausgedehnte Ã–lspur'],
-                [94, 'Kleine Ã–lspur']
+                [30, 'Große Ölspur'],
+                [95, 'Ausgedehnte Ölspur'],
+                [94, 'Kleine Ölspur']
             ]
         },
         32: {
@@ -2988,7 +3031,7 @@ else if (I18n.locale == "de") {
             }
         },
         33: {
-            'name': 'MÃ¤hdrescher Brand',
+            'name': 'Mähdrescher Brand',
             'credits': 1200,
             'vehicles': {
                 'lf': 2
@@ -3035,11 +3078,11 @@ else if (I18n.locale == "de") {
                 'elw2': 30
             },
             'expansions': [
-                [320, 'GroÃŸfeuer im Krankenhaus']
+                [320, 'Großfeuer im Krankenhaus']
             ]
         },
         36: {
-            'name': 'Brennender GÃ¼terwaggon',
+            'name': 'Brennender Güterwaggon',
             'credits': 3310,
             'vehicles': {
                 'rw': 2,
@@ -3056,28 +3099,28 @@ else if (I18n.locale == "de") {
             }
         },
         37: {
-            'name': 'MÃ¼lleimerbrand',
+            'name': 'Mülleimerbrand',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             }
         },
         38: {
-            'name': 'MÃ¼lleimerbrand',
+            'name': 'Mülleimerbrand',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             }
         },
         39: {
-            'name': 'MÃ¼lleimerbrand',
+            'name': 'Mülleimerbrand',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             }
         },
         40: {
-            'name': 'MÃ¼lleimerbrand',
+            'name': 'Mülleimerbrand',
             'credits': 110,
             'vehicles': {
                 'lf': 1
@@ -3088,7 +3131,7 @@ else if (I18n.locale == "de") {
         },
         41: {
             'vge': true,
-            'name': 'GroÃŸbrand',
+            'name': 'Großbrand',
             'credits': 10010,
             'vehicles': {
                 'lf': 6,
@@ -3182,7 +3225,7 @@ else if (I18n.locale == "de") {
         },
         50: {
             'onlyRd': true,
-            'name': 'GestÃ¼rzte Person',
+            'name': 'Gestürzte Person',
             'transport': 30,
             'nef': 10,
             'specialisation': 'Unfallchirugie',
@@ -3256,13 +3299,13 @@ else if (I18n.locale == "de") {
         },
         57: {
             'onlyRd': true,
-            'name': 'GestÃ¼rzter FuÃŸgÃ¤nger',
+            'name': 'Gestürzter Fußgänger',
             'transport': 20,
             'specialisation': 'Unfallchirugie'
         },
         58: {
             'onlyRd': true,
-            'name': 'GestÃ¼rzter Radfahrer',
+            'name': 'Gestürzter Radfahrer',
             'transport': 40,
             'specialisation': 'Unfallchirugie'
         },
@@ -3400,7 +3443,7 @@ else if (I18n.locale == "de") {
             }
         },
         72: {
-            'name': 'Bewusstloser KranfÃ¼hrer',
+            'name': 'Bewusstloser Kranführer',
             'credits': 2000,
             'vehicles': {
                 'hoehen': 1,
@@ -3416,7 +3459,7 @@ else if (I18n.locale == "de") {
             }
         },
         73: {
-            'name': 'SchlÃ¤gerei',
+            'name': 'Schlägerei',
             'credits': 700,
             'vehicles': {
                 'fustw': 3
@@ -3431,8 +3474,8 @@ else if (I18n.locale == "de") {
                 'max': 2
             },
             'expansions': [
-                [106, 'MassenschlÃ¤gerei'],
-                [107, 'MassenschlÃ¤gerei']
+                [106, 'Massenschlägerei'],
+                [107, 'Massenschlägerei']
             ]
         },
         74: {
@@ -3446,7 +3489,7 @@ else if (I18n.locale == "de") {
                 'max': 1
             },
             'expansions': [
-                [73, 'SchlÃ¤gerei']
+                [73, 'Schlägerei']
             ]
         },
         75: {
@@ -3458,7 +3501,7 @@ else if (I18n.locale == "de") {
             }
         },
         76: {
-            'name': 'KÃ¼chenbrand',
+            'name': 'Küchenbrand',
             'credits': 800,
             'vehicles': {
                 'lf': 2
@@ -3471,7 +3514,7 @@ else if (I18n.locale == "de") {
             ]
         },
         77: {
-            'name': 'Person hinter TÃ¼r',
+            'name': 'Person hinter Tür',
             'credits': 500,
             'vehicles': {
                 'fustw': 1,
@@ -3496,7 +3539,7 @@ else if (I18n.locale == "de") {
             }
         },
         79: {
-            'name': 'Verletzte Person auf BaugerÃ¼st',
+            'name': 'Verletzte Person auf Baugerüst',
             'credits': 1800,
             'vehicles': {
                 'elw1': 1,
@@ -3545,7 +3588,7 @@ else if (I18n.locale == "de") {
             }
         },
         83: {
-            'name': 'Gefahrgut-LKW verunglÃ¼ckt',
+            'name': 'Gefahrgut-LKW verunglückt',
             'credits': 2500,
             'vehicles': {
                 'lf': 3,
@@ -3596,7 +3639,7 @@ else if (I18n.locale == "de") {
             }
         },
         85: {
-            'name': 'SachbeschÃ¤digung',
+            'name': 'Sachbeschädigung',
             'credits': 200,
             'vehicles': {
                 'fustw': 1
@@ -3624,7 +3667,7 @@ else if (I18n.locale == "de") {
             }
         },
         87: {
-            'name': 'Kleinflugzeug abgestÃ¼rzt',
+            'name': 'Kleinflugzeug abgestürzt',
             'credits': 3000,
             'vehicles': {
                 'lf': 3,
@@ -3725,18 +3768,18 @@ else if (I18n.locale == "de") {
             }
         },
         94: {
-            'name': 'Kleine Ã–lspur',
+            'name': 'Kleine Ölspur',
             'credits': 400,
             'vehicles': {
                 'lf': 1
             },
             'expansions': [
-                [30, 'GroÃŸe Ã–lspur'],
-                [95, 'Ausgedehnte Ã–lspur']
+                [30, 'Große Ölspur'],
+                [95, 'Ausgedehnte Ölspur']
             ]
         },
         95: {
-            'name': 'Ausgedehnte Ã–lspur',
+            'name': 'Ausgedehnte Ölspur',
             'credits': 4000,
             'vehicles': {
                 'lf': 6,
@@ -3759,7 +3802,7 @@ else if (I18n.locale == "de") {
             }
         },
         97: {
-            'name': 'Aufgerissener Ã–ltank',
+            'name': 'Aufgerissener Öltank',
             'credits': 2500,
             'vehicles': {
                 'lf': 3,
@@ -3786,7 +3829,7 @@ else if (I18n.locale == "de") {
         },
         99: {
             'vge': true,
-            'name': 'Flugzeug abgestÃ¼rzt',
+            'name': 'Flugzeug abgestürzt',
             'credits': 17000,
             'vehicles': {
                 'lf': 22,
@@ -3812,7 +3855,7 @@ else if (I18n.locale == "de") {
             }
         },
         100: {
-            'name': 'KÃ¼chenbrand',
+            'name': 'Küchenbrand',
             'credits': 900,
             'vehicles': {
                 'lf': 1,
@@ -3917,7 +3960,7 @@ else if (I18n.locale == "de") {
             }
         },
         106: {
-            'name': 'MassenschlÃ¤gerei',
+            'name': 'Massenschlägerei',
             'credits': 1800,
             'vehicles': {
                 'fustw': 5
@@ -3928,7 +3971,7 @@ else if (I18n.locale == "de") {
             }
         },
         107: {
-            'name': 'MassenschlÃ¤gerei',
+            'name': 'Massenschlägerei',
             'credits': 1800,
             'vehicles': {
                 'fustw': 5
@@ -3950,7 +3993,7 @@ else if (I18n.locale == "de") {
             'name': 'Schwangere in Notsituation',
             'transport': 100,
             'nef': 100,
-            'specialisation': 'GynÃ¤kologie',
+            'specialisation': 'Gynäkologie',
             'tragehilfe': 30
         },
         109: {
@@ -3958,7 +4001,7 @@ else if (I18n.locale == "de") {
             'name': 'Beginnende Geburt',
             'transport': 100,
             'nef': 95,
-            'specialisation': 'GynÃ¤kologie',
+            'specialisation': 'Gynäkologie',
             'tragehilfe': 20
         },
         110: {
@@ -3966,7 +4009,7 @@ else if (I18n.locale == "de") {
             'name': 'Vaginale Blutung',
             'transport': 50,
             'nef': 20,
-            'specialisation': 'GynÃ¤kologie',
+            'specialisation': 'Gynäkologie',
             'tragehilfe': 10
         },
         111: {
@@ -3977,14 +4020,14 @@ else if (I18n.locale == "de") {
             }
         },
         112: {
-            'name': 'Brennendes KÃ¼rbisfeld',
+            'name': 'Brennendes Kürbisfeld',
             'credits': 850,
             'vehicles': {
                 'lf': 1
             }
         },
         113: {
-            'name': 'KÃ¼rbissuppe Ã¼bergekocht',
+            'name': 'Kürbissuppe übergekocht',
             'credits': 1500,
             'vehicles': {
                 'lf': 2,
@@ -4001,7 +4044,7 @@ else if (I18n.locale == "de") {
             }
         },
         114: {
-            'name': 'Hexe hÃ¤ngt in Baum',
+            'name': 'Hexe hängt in Baum',
             'credits': 900,
             'vehicles': {
                 'lf': 1,
@@ -4028,7 +4071,7 @@ else if (I18n.locale == "de") {
             }
         },
         117: {
-            'name': 'KÃ¼rbisse geklaut',
+            'name': 'Kürbisse geklaut',
             'credits': 100,
             'vehicles': {
                 'fustw': 1
@@ -4049,7 +4092,7 @@ else if (I18n.locale == "de") {
             }
         },
         120: {
-            'name': 'LKW umgestÃ¼rzt',
+            'name': 'LKW umgestürzt',
             'credits': 2200,
             'vehicles': {
                 'lf': 2,
@@ -4069,7 +4112,7 @@ else if (I18n.locale == "de") {
             }
         },
         121: {
-            'name': 'LKW umgestÃ¼rzt',
+            'name': 'LKW umgestürzt',
             'credits': 2500,
             'vehicles': {
                 'lf': 2,
@@ -4248,15 +4291,15 @@ else if (I18n.locale == "de") {
                 'elw1': 50
             },
             'expansions': [
-                [132, 'GroÃŸer Feldbrand'],
-                [133, 'GroÃŸer Feldbrand']
+                [132, 'Großer Feldbrand'],
+                [133, 'Großer Feldbrand']
             ],
             'special': {
                 'averageMinimumEmployeesFire': 25
             }
         },
         132: {
-            'name': 'GroÃŸer Feldbrand',
+            'name': 'Großer Feldbrand',
             'credits': 5000,
             'vehicles': {
                 'lf': 5,
@@ -4268,7 +4311,7 @@ else if (I18n.locale == "de") {
             }
         },
         133: {
-            'name': 'GroÃŸer Feldbrand',
+            'name': 'Großer Feldbrand',
             'credits': 5100,
             'vehicles': {
                 'lf': 5,
@@ -4281,7 +4324,7 @@ else if (I18n.locale == "de") {
             }
         },
         134: {
-            'name': 'GroÃŸer Waldbrand',
+            'name': 'Großer Waldbrand',
             'credits': 4000,
             'vehicles': {
                 'lf': 3,
@@ -4292,12 +4335,12 @@ else if (I18n.locale == "de") {
                 'gwl2': 70
             },
             'expansions': [
-                [136, 'GroÃŸfeuer im Wald'],
-                [137, 'GroÃŸfeuer im Wald']
+                [136, 'Großfeuer im Wald'],
+                [137, 'Großfeuer im Wald']
             ]
         },
         135: {
-            'name': 'GroÃŸer Waldbrand',
+            'name': 'Großer Waldbrand',
             'credits': 4100,
             'vehicles': {
                 'lf': 3,
@@ -4309,12 +4352,12 @@ else if (I18n.locale == "de") {
                 'gwl2': 70
             },
             'expansions': [
-                [136, 'GroÃŸfeuer im Wald'],
-                [137, 'GroÃŸfeuer im Wald']
+                [136, 'Großfeuer im Wald'],
+                [137, 'Großfeuer im Wald']
             ]
         },
         136: {
-            'name': 'GroÃŸfeuer im Wald',
+            'name': 'Großfeuer im Wald',
             'credits': 8000,
             'vehicles': {
                 'lf': 10,
@@ -4340,7 +4383,7 @@ else if (I18n.locale == "de") {
             }
         },
         137: {
-            'name': 'GroÃŸfeuer im Wald',
+            'name': 'Großfeuer im Wald',
             'credits': 8100,
             'vehicles': {
                 'lf': 10,
@@ -4366,14 +4409,14 @@ else if (I18n.locale == "de") {
             }
         },
         138: {
-            'name': 'FlÃ¤chenbrand',
+            'name': 'Flächenbrand',
             'credits': 1500,
             'vehicles': {
                 'lf': 2
             }
         },
         139: {
-            'name': 'FlÃ¤chenbrand',
+            'name': 'Flächenbrand',
             'credits': 3500,
             'vehicles': {
                 'lf': 4,
@@ -4389,7 +4432,7 @@ else if (I18n.locale == "de") {
             }
         },
         140: {
-            'name': 'FlÃ¤chenbrand',
+            'name': 'Flächenbrand',
             'credits': 1600,
             'vehicles': {
                 'lf': 2,
@@ -4397,7 +4440,7 @@ else if (I18n.locale == "de") {
             }
         },
         141: {
-            'name': 'FlÃ¤chenbrand',
+            'name': 'Flächenbrand',
             'credits': 3600,
             'vehicles': {
                 'lf': 4,
@@ -4513,7 +4556,7 @@ else if (I18n.locale == "de") {
             }
         },
         152: {
-            'name': 'HÃ¤usliche Gewalt',
+            'name': 'Häusliche Gewalt',
             'credits': 750,
             'vehicles': {
                 'fustw': 2
@@ -4645,7 +4688,7 @@ else if (I18n.locale == "de") {
         },
         165: {
             'onlyRd': true,
-            'name': 'GehirnerschÃ¼tterung',
+            'name': 'Gehirnerschütterung',
             'specialisation': 'Neurologie',
             'tragehilfe': 5,
             'transport': 90,
@@ -4667,7 +4710,7 @@ else if (I18n.locale == "de") {
             }
         },
         167: {
-            'name': 'BeschÃ¤digter Dachbereich',
+            'name': 'Beschädigter Dachbereich',
             'credits': 1400,
             'vehicles': {
                 'lf': 2,
@@ -4726,14 +4769,14 @@ else if (I18n.locale == "de") {
             }
         },
         172: {
-            'name': 'StraÃŸe unter Wasser',
+            'name': 'Straße unter Wasser',
             'credits': 600,
             'vehicles': {
                 'lf': 1
             }
         },
         173: {
-            'name': 'StraÃŸe unter Wasser',
+            'name': 'Straße unter Wasser',
             'credits': 600,
             'vehicles': {
                 'lf': 1,
@@ -4776,12 +4819,12 @@ else if (I18n.locale == "de") {
                 'dlk': 70
             },
             'expansions': [
-                [177, 'EingestÃ¼rztes Wohnhaus'],
+                [177, 'Eingestürztes Wohnhaus'],
                 [213, 'Gasexplosion']
             ]
         },
         177: {
-            'name': 'EingestÃ¼rztes Wohnhaus',
+            'name': 'Eingestürztes Wohnhaus',
             'credits': 4600,
             'vehicles': {
                 'gkw': 2,
@@ -4806,7 +4849,7 @@ else if (I18n.locale == "de") {
             }
         },
         178: {
-            'name': 'Gefahrgut-LKW verunglÃ¼ckt',
+            'name': 'Gefahrgut-LKW verunglückt',
             'credits': 2900,
             'vehicles': {
                 'gkw': 1,
@@ -4837,7 +4880,7 @@ else if (I18n.locale == "de") {
         },
         179: {
             'onlyRd': true,
-            'name': 'SchÃ¤delverletzung',
+            'name': 'Schädelverletzung',
             'specialisation': 'Neurochirugie',
             'tragehilfe': 5,
             'transport': 100,
@@ -4845,7 +4888,7 @@ else if (I18n.locale == "de") {
         },
         180: {
             'onlyRd': true,
-            'name': 'WirbelsÃ¤ulenverlÃ¤tzung',
+            'name': 'Wirbelsäulenverlätzung',
             'specialisation': 'Neurochirugie',
             'tragehilfe': 5,
             'transport': 100,
@@ -4854,7 +4897,7 @@ else if (I18n.locale == "de") {
         },
         181: {
             'onlyRd': true,
-            'name': 'Sturz aus HÃ¶he',
+            'name': 'Sturz aus Höe',
             'specialisation': 'Neurochirugie',
             'tragehilfe': 5,
             'transport': 100,
@@ -4863,7 +4906,7 @@ else if (I18n.locale == "de") {
         },
         182: {
             'onlyRd': true,
-            'name': 'Sturz aus HÃ¶he',
+            'name': 'Sturz aus Höe',
             'specialisation': 'Neurochirugie',
             'tragehilfe': 5,
             'transport': 100,
@@ -4956,7 +4999,7 @@ else if (I18n.locale == "de") {
                 'fustw': 1
             },
             'expansions': [
-                [73, 'SchlÃ¤gerei']
+                [73, 'Schlägerei']
             ]
         },
         190: {
@@ -5009,7 +5052,7 @@ else if (I18n.locale == "de") {
             }
         },
         195: {
-            'name': 'Schwerpunkteinsatz TageswohnungseinbrÃ¼che',
+            'name': 'Schwerpunkteinsatz Tageswohnungseinbrüche',
             'credits': 1000,
             'vehicles': {
                 'grukw': 3,
@@ -5017,7 +5060,7 @@ else if (I18n.locale == "de") {
             }
         },
         196: {
-            'name': 'Schwerpunkteinsatz VerkehrsÃ¼berwachung',
+            'name': 'Schwerpunkteinsatz Verkehrsüberwachung',
             'credits': 1000,
             'vehicles': {
                 'grukw': 3,
@@ -5025,7 +5068,7 @@ else if (I18n.locale == "de") {
             }
         },
         197: {
-            'name': 'PrÃ¤senzeinsatz Volksfest',
+            'name': 'Präsenzeinsatz Volksfest',
             'credits': 2000,
             'vehicles': {
                 'grukw': 3,
@@ -5042,7 +5085,7 @@ else if (I18n.locale == "de") {
             }
         },
         199: {
-            'name': 'GelÃ¤ndedurchsuchung nach Beweismittel',
+            'name': 'Geländedurchsuchung nach Beweismittel',
             'credits': 750,
             'vehicles': {
                 'grukw': 3,
@@ -5064,7 +5107,7 @@ else if (I18n.locale == "de") {
             }
         },
         201: {
-            'name': 'FuÃŸball Bundesliga-Spiel',
+            'name': 'Fußball Bundesliga-Spiel',
             'credits': 9000,
             'vehicles': {
                 'grukw': 9,
@@ -5151,11 +5194,11 @@ else if (I18n.locale == "de") {
                 'averageMinimumEmployeesFire': 60
             },
             'expansions': [
-                [206, 'Feuer auf Bauernhof - GroÃŸ']
+                [206, 'Feuer auf Bauernhof - Groß']
             ]
         },
         206: {
-            'name': 'Feuer auf Bauernhof - GroÃŸ',
+            'name': 'Feuer auf Bauernhof - Groß',
             'credits': 10200,
             'vehicles': {
                 'lf': 15,
@@ -5187,7 +5230,7 @@ else if (I18n.locale == "de") {
         },
         207: {
             'vge': true,
-            'name': 'Gefahrgutunfall - GroÃŸ',
+            'name': 'Gefahrgutunfall - Groß',
             'credits': 16010,
             'vehicles': {
                 'lf': 20,
@@ -5249,7 +5292,7 @@ else if (I18n.locale == "de") {
         },
         210: {
             'onlyRd': true,
-            'name': 'Unfall mit MotorsÃ¤ge',
+            'name': 'Unfall mit Motorsäge',
             'transport': 50,
             'nef': 95,
             'specialisation': 'Unfallchirugie'
@@ -5304,7 +5347,7 @@ else if (I18n.locale == "de") {
             }
         },
         214: {
-            'name': 'BÃ¼robrand',
+            'name': 'Bürobrand',
             'credits': 3000,
             'vehicles': {
                 'lf': 6,
@@ -5384,7 +5427,7 @@ else if (I18n.locale == "de") {
         },
         221: {
             'vge': true,
-            'name': 'ZugunglÃ¼ck (GroÃŸ)',
+            'name': 'Zugunglück (Groß)',
             'credits': 17000,
             'vehicles': {
                 'lf': 30,
@@ -5411,7 +5454,7 @@ else if (I18n.locale == "de") {
         },
         222: {
             'vge': true,
-            'name': 'ZugunglÃ¼ck (Klein)',
+            'name': 'Zugunglück (Klein)',
             'credits': 14000,
             'vehicles': {
                 'lf': 20,
@@ -5514,7 +5557,7 @@ else if (I18n.locale == "de") {
         },
         234: {
             'siwa': true,
-            'name': 'EntschÃ¤rfung von Weltkriegsbombe',
+            'name': 'Entschärfung von Weltkriegsbombe',
             'credits': 4000
         },
         235: {
@@ -5871,7 +5914,7 @@ else if (I18n.locale == "de") {
         },
         256: {
             'vge': true,
-            'name': 'ZusammenstoÃŸ zweier Boote',
+            'name': 'Zusammenstoß zweier Boote',
             'credits': 10010,
             'vehicles': {
                 'lf': 6,
@@ -5891,11 +5934,11 @@ else if (I18n.locale == "de") {
         },
         257: {
             'siwa': true,
-            'name': 'VerkehrsÃ¼berwachung',
+            'name': 'Verkehrsüberwachung',
             'credits': 2500
         },
         258: {
-            'name': 'Baumaschine umgestÃ¼rzt',
+            'name': 'Baumaschine umgestürzt',
             'credits': 2800,
             'vehicles': {
                 'lf': 4,
@@ -5923,13 +5966,13 @@ else if (I18n.locale == "de") {
             },
             'expansions': [
                 [28, 'Garagenbrand'],
-                [138, 'FlÃ¤chenbrand'],
-                [141, 'FlÃ¤chenbrand'],
+                [138, 'Flächenbrand'],
+                [141, 'Flächenbrand'],
                 [146, 'Brennendes Reetdachhaus']
             ]
         },
         260: {
-            'name': 'SperrmÃ¼llbrand durch FeuerwerkskÃ¶rper',
+            'name': 'Sperrmüllbrand durch FeuerwerkskÃ¶rper',
             'credits': 220,
             'vehicles': {
                 'lf': 1
@@ -5959,7 +6002,7 @@ else if (I18n.locale == "de") {
             }
         },
         263: {
-            'name': 'Brennendes Bus-HÃ¤uschen durch FeuerwerkskÃ¶rper',
+            'name': 'Brennendes Bus-Häuschen durch FeuerwerkskÃ¶rper',
             'credits': 1000,
             'vehicles': {
                 'lf': 2
@@ -6019,21 +6062,21 @@ else if (I18n.locale == "de") {
             }
         },
         269: {
-            'name': 'Kfz durch FeuerwerkskÃ¶rper beschÃ¤digt',
+            'name': 'Kfz durch FeuerwerkskÃ¶rper beschädigt',
             'credits': 200,
             'vehicles': {
                 'fustw': 1
             }
         },
         270: {
-            'name': 'VerstoÃŸ gegen Sprengstoffverordnung',
+            'name': 'Verstoß gegen Sprengstoffverordnung',
             'credits': 200,
             'vehicles': {
                 'fustw': 1
             }
         },
         271: {
-            'name': 'BeschÃ¤digter Kesselwagen',
+            'name': 'Beschädigter Kesselwagen',
             'credits': 6050,
             'vehicles': {
                 'gkw': 1,
@@ -6049,7 +6092,7 @@ else if (I18n.locale == "de") {
             }
         },
         272: {
-            'name': 'GewÃ¤sserverschmutzung durch Ã–l',
+            'name': 'Gewässerverschmutzung durch Öl',
             'credits': 1600,
             'vehicles': {
                 'boot': 1,
@@ -6060,7 +6103,7 @@ else if (I18n.locale == "de") {
             }
         },
         273: {
-            'name': 'GewÃ¤sserverschmutzung durch Ã–l',
+            'name': 'Gewässerverschmutzung durch Öl',
             'credits': 1600,
             'vehicles': {
                 'boot': 1,
@@ -6183,7 +6226,7 @@ else if (I18n.locale == "de") {
             }
         },
         283: {
-            'name': 'BÃ¼robrand (GroÃŸ)',
+            'name': 'Bürobrand (Groß)',
             'credits': 4000,
             'vehicles': {
                 'rw': 2,
@@ -6220,7 +6263,7 @@ else if (I18n.locale == "de") {
             }
         },
         286: {
-            'name': 'EingestÃ¼rzter Hasenbau',
+            'name': 'Eingestürzter Hasenbau',
             'credits': 1020,
             'vehicles': {
                 'gkw': 1,
@@ -6250,7 +6293,7 @@ else if (I18n.locale == "de") {
             }
         },
         289: {
-            'name': 'Schokoladenspur auf StraÃŸe',
+            'name': 'Schokoladenspur auf Straße',
             'credits': 400,
             'vehicles': {
                 'lfogkworw': 1
@@ -6289,11 +6332,11 @@ else if (I18n.locale == "de") {
         },
         294: {
             'siwa': true,
-            'name': 'FuÃŸball Bundesliga-Risikospiel',
+            'name': 'Fußball Bundesliga-Risikospiel',
             'credits': 12000
         },
         295: {
-            'name': 'TankstellenÃ¼berfall',
+            'name': 'Tankstellenüberfall',
             'credits': 1100,
             'vehicles': {
                 'fustw': 6
@@ -6365,7 +6408,7 @@ else if (I18n.locale == "de") {
             }
         },
         300: {
-            'name': 'AbgestÃ¼rzter Kletterer',
+            'name': 'Abgestürzter Kletterer',
             'credits': 1500,
             'vehicles': {
                 'lf': 2,
@@ -6396,8 +6439,8 @@ else if (I18n.locale == "de") {
             'expansions': [
                 [25, 'Verkehrsunfall'],
                 [27, 'Auffahrunfall'],
-                [120, 'LKW umgestÃ¼rzt'],
-                [121, 'LKW umgestÃ¼rzt'],
+                [120, 'LKW umgestürzt'],
+                [121, 'LKW umgestürzt'],
                 [122, 'Motorradunfall'],
                 [123, 'Verkehrsunfall'],
                 [124, 'Verkehrsunfall'],
@@ -6461,7 +6504,7 @@ else if (I18n.locale == "de") {
         },
         305: {
             'siwa': true,
-            'name': 'FuÃŸball Bundesliga-Risikospiel',
+            'name': 'Fußball Bundesliga-Risikospiel',
             'credits': 13000
         },
         306: {
@@ -6486,7 +6529,7 @@ else if (I18n.locale == "de") {
             }
         },
         308: {
-            'name': 'Brennender MÃ¼llwagen',
+            'name': 'Brennender Müllwagen',
             'credits': 1000,
             'vehicles': {
                 'lf': 2
@@ -6540,13 +6583,13 @@ else if (I18n.locale == "de") {
         },
         312: {
             'onlyRd': true,
-            'name': 'VerunglÃ¼ckter Fallschirmspringer',
+            'name': 'Verunglückter Fallschirmspringer',
             'transport': 100,
             'nef': 100,
             'specialisation': 'Unfallchirugie'
         },
         313: {
-            'name': 'VerunglÃ¼ckter Fallschirmspringer',
+            'name': 'Verunglückter Fallschirmspringer',
             'credits': 900,
             'vehicles': {
                 'lf': 2,
@@ -6561,7 +6604,7 @@ else if (I18n.locale == "de") {
             }
         },
         314: {
-            'name': 'VerunglÃ¼ckter Fallschirmspringer',
+            'name': 'Verunglückter Fallschirmspringer',
             'credits': 1900,
             'vehicles': {
                 'lf': 3,
@@ -6654,7 +6697,7 @@ else if (I18n.locale == "de") {
                 [22, 'Dachstuhlbrand'],
                 [28, 'Garagenbrand'],
                 [32, 'Kaminbrand'],
-                [76, 'KÃ¼chenbrand'],
+                [76, 'Küchenbrand'],
                 [102, 'Feuer in Einfamilienhaus'],
                 [103, 'Feuer in Einfamilienhaus'],
                 [104, 'Feuer in Einfamilienhaus'],
@@ -6682,7 +6725,7 @@ else if (I18n.locale == "de") {
             }
         },
         320: {
-            'name': 'GroÃŸfeuer im Krankenhaus',
+            'name': 'Großfeuer im Krankenhaus',
             'credits': 11500,
             'vehicles': {
                 'lf': 20,
@@ -6832,7 +6875,7 @@ else if (I18n.locale == "de") {
             }
         },
         331: {
-            'name': 'FlugzeugzusammentsoÃŸ am Boden',
+            'name': 'Flugzeugzusammentsoß am Boden',
             'credits': 3000,
             'vehicles': {
                 'flf': 2,
@@ -7008,7 +7051,7 @@ else if (I18n.locale == "de") {
             },
         },
         345: {
-            'name': 'HÃ¶henrettung am FahrgeschÃ¤ft',
+            'name': 'Höenrettung am Fahrgeschäft',
             'credits': 1200,
             'vehicles': {
                 'lf': 2,
@@ -7026,7 +7069,7 @@ else if (I18n.locale == "de") {
         },
         346: {
             'siwa': true,
-            'name': 'GebÃ¤udesprengung',
+            'name': 'Gebäudesprengung',
             'credits': 6500
         },
         347: {
@@ -7090,7 +7133,7 @@ else if (I18n.locale == "de") {
             'expansions': [
                 [2, 'Brennender PKW'],
                 [6, 'Gartenlaubbrand'],
-                [8, 'SperrmÃ¼llbrand'],
+                [8, 'Sperrmüllbrand'],
                 [9, 'Strohballenbrand'],
                 [5, 'Zimmerbrand'],
                 [11, 'Brennende Telefonzelle'],
@@ -7101,13 +7144,13 @@ else if (I18n.locale == "de") {
                 [26, 'Brand im Supermarkt'],
                 [28, 'Garagenbrand'],
                 [32, 'Kaminbrand'],
-                [76, 'KÃ¼chenbrand'],
+                [76, 'Küchenbrand'],
                 [102, 'Feuer in Einfamilienhaus'],
                 [103, 'Feuer in Einfamilienhaus'],
                 [104, 'Feuer in Einfamilienhaus'],
                 [105, 'Feuer in Einfamilienhaus'],
                 [213, 'Gasexplosion'],
-                [214, 'BÃ¼robrand']
+                [214, 'Bürobrand']
             ]
         },
         350: {
@@ -7181,7 +7224,7 @@ else if (I18n.locale == "de") {
         },
         353: {
             'siwa': true,
-            'name': 'GroÃŸkontrolle BetÃ¤ubungsmittel',
+            'name': 'Großkontrolle Betäubungsmittel',
             'credits': 4500
         },
         354: {
@@ -7207,7 +7250,7 @@ else if (I18n.locale == "de") {
             }
         },
         356: {
-            'name': 'HÃ¤usliche Gewalt - eskaliert',
+            'name': 'Häusliche Gewalt - eskaliert',
             'credits': 1700,
             'vehicles': {
                 'sek': 4,
@@ -7231,11 +7274,11 @@ else if (I18n.locale == "de") {
                 'fustw': 2,
             },
             'expansions': [
-                [358, 'BankÃ¼berfall']
+                [358, 'Banküberfall']
             ]
         },
         358: {
-            'name': 'BankÃ¼berfall',
+            'name': 'Banküberfall',
             'credits': 4000,
             'vehicles': {
                 'sek': 4,
@@ -7257,7 +7300,7 @@ else if (I18n.locale == "de") {
             }
         },
         359: {
-            'name': 'Geplante Razzia - VerdÃ¤chtiger flÃ¼chtig',
+            'name': 'Geplante Razzia - Verdächtiger flüchtig',
             'credits': 9000,
             'vehicles': {
                 'polheli': 1,
@@ -7274,42 +7317,42 @@ else if (I18n.locale == "de") {
             }
         },
         360: {
-            'name': 'Brennender BlumenstrauÃŸ',
+            'name': 'Brennender Blumenstrauß',
             'credits': 500,
             'vehicles': {
                 'lf': 1
             }
         },
         361: {
-            'name': 'Brennender BlumenstrauÃŸ',
+            'name': 'Brennender Blumenstrauß',
             'credits': 500,
             'vehicles': {
                 'lf': 1
             }
         },
         362: {
-            'name': 'Brennender BlumenstrauÃŸ',
+            'name': 'Brennender Blumenstrauß',
             'credits': 500,
             'vehicles': {
                 'lf': 1
             }
         },
         363: {
-            'name': 'Brennender BlumenstrauÃŸ',
+            'name': 'Brennender Blumenstrauß',
             'credits': 500,
             'vehicles': {
                 'lf': 1
             }
         },
         364: {
-            'name': 'Brennender BlumenstrauÃŸ',
+            'name': 'Brennender Blumenstrauß',
             'credits': 500,
             'vehicles': {
                 'lf': 1
             }
         },
         365: {
-            'name': 'Brennender BlumenstrauÃŸ',
+            'name': 'Brennender Blumenstrauß',
             'credits': 500,
             'vehicles': {
                 'lf': 1
@@ -7409,7 +7452,7 @@ else if (I18n.locale == "de") {
                 'fustw': 4
             },
             'expansions': [
-                [83, 'Gefahrgut-LKW verungkÃ¼ckt'],
+                [83, 'Gefahrgut-LKW verungkückt'],
                 [89, 'LKW-Auffahrunfall'],
                 [125, 'Verkehrsunfall'],
                 [126, 'Verkehrsunfall'],
@@ -7417,7 +7460,7 @@ else if (I18n.locale == "de") {
             ]
         },
         371: {
-            'name': 'FuÃŸball aufpumpen',
+            'name': 'Fußball aufpumpen',
             'credits': 300,
             'vehicles': {
                 'lf': 1
@@ -7549,7 +7592,7 @@ lssm.getVehicleNameById = function (vehicleId) {
 }
 
 lssm.car_list = function (building) {
-    // liefert die Fahrzeuge einer Wache zurÃ¼ck
+    // liefert die Fahrzeuge einer Wache zurück
     var data = [];
     $('#vehicle_building_' + building).find('li').each(function (index, element) {
         data.push({
@@ -7607,7 +7650,7 @@ lssm.get_buildings = function () {
     });
     return data;
 };
-// liefert ein Div zurÃ¼ck welches auf der Karte verschoben werden kann und seine Position speichert und beim laden wieder annimmt.
+// liefert ein Div zurück welches auf der Karte verschoben werden kann und seine Position speichert und beim laden wieder annimmt.
 lssm.newDragableDivOnMap = function (id, classe, pos) {
     function changeX(p, m) {
         if (p <= -m + info._div.offsetWidth + 20)
@@ -7685,7 +7728,7 @@ lssm.notification = function (msg, type, duration) {
 /*! Select2 4.0.3 | https://github.com/select2/select2/blob/master/LICENSE.md */
 -!function (a) { "function" == typeof define && define.amd ? define(["jquery"], a) : a("object" == typeof exports ? require("jquery") : jQuery) }(function (a) {
     var b = function () {
-        if (a && a.fn && a.fn.select2 && a.fn.select2.amd) var b = a.fn.select2.amd; var b; return function () { if (!b || !b.requirejs) { b ? c = b : b = {}; var a, c, d; !function (b) { function e(a, b) { return u.call(a, b) } function f(a, b) { var c, d, e, f, g, h, i, j, k, l, m, n = b && b.split("/"), o = s.map, p = o && o["*"] || {}; if (a && "." === a.charAt(0)) if (b) { for (a = a.split("/"), g = a.length - 1, s.nodeIdCompat && w.test(a[g]) && (a[g] = a[g].replace(w, "")), a = n.slice(0, n.length - 1).concat(a), k = 0; k < a.length; k += 1)if (m = a[k], "." === m) a.splice(k, 1), k -= 1; else if (".." === m) { if (1 === k && (".." === a[2] || ".." === a[0])) break; k > 0 && (a.splice(k - 1, 2), k -= 2) } a = a.join("/") } else 0 === a.indexOf("./") && (a = a.substring(2)); if ((n || p) && o) { for (c = a.split("/"), k = c.length; k > 0; k -= 1) { if (d = c.slice(0, k).join("/"), n) for (l = n.length; l > 0; l -= 1)if (e = o[n.slice(0, l).join("/")], e && (e = e[d])) { f = e, h = k; break } if (f) break; !i && p && p[d] && (i = p[d], j = k) } !f && i && (f = i, h = j), f && (c.splice(0, h, f), a = c.join("/")) } return a } function g(a, c) { return function () { var d = v.call(arguments, 0); return "string" != typeof d[0] && 1 === d.length && d.push(null), n.apply(b, d.concat([a, c])) } } function h(a) { return function (b) { return f(b, a) } } function i(a) { return function (b) { q[a] = b } } function j(a) { if (e(r, a)) { var c = r[a]; delete r[a], t[a] = !0, m.apply(b, c) } if (!e(q, a) && !e(t, a)) throw new Error("No " + a); return q[a] } function k(a) { var b, c = a ? a.indexOf("!") : -1; return c > -1 && (b = a.substring(0, c), a = a.substring(c + 1, a.length)), [b, a] } function l(a) { return function () { return s && s.config && s.config[a] || {} } } var m, n, o, p, q = {}, r = {}, s = {}, t = {}, u = Object.prototype.hasOwnProperty, v = [].slice, w = /\.js$/; o = function (a, b) { var c, d = k(a), e = d[0]; return a = d[1], e && (e = f(e, b), c = j(e)), e ? a = c && c.normalize ? c.normalize(a, h(b)) : f(a, b) : (a = f(a, b), d = k(a), e = d[0], a = d[1], e && (c = j(e))), { f: e ? e + "!" + a : a, n: a, pr: e, p: c } }, p = { require: function (a) { return g(a) }, exports: function (a) { var b = q[a]; return "undefined" != typeof b ? b : q[a] = {} }, module: function (a) { return { id: a, uri: "", exports: q[a], config: l(a) } } }, m = function (a, c, d, f) { var h, k, l, m, n, s, u = [], v = typeof d; if (f = f || a, "undefined" === v || "function" === v) { for (c = !c.length && d.length ? ["require", "exports", "module"] : c, n = 0; n < c.length; n += 1)if (m = o(c[n], f), k = m.f, "require" === k) u[n] = p.require(a); else if ("exports" === k) u[n] = p.exports(a), s = !0; else if ("module" === k) h = u[n] = p.module(a); else if (e(q, k) || e(r, k) || e(t, k)) u[n] = j(k); else { if (!m.p) throw new Error(a + " missing " + k); m.p.load(m.n, g(f, !0), i(k), {}), u[n] = q[k] } l = d ? d.apply(q[a], u) : void 0, a && (h && h.exports !== b && h.exports !== q[a] ? q[a] = h.exports : l === b && s || (q[a] = l)) } else a && (q[a] = d) }, a = c = n = function (a, c, d, e, f) { if ("string" == typeof a) return p[a] ? p[a](c) : j(o(a, c).f); if (!a.splice) { if (s = a, s.deps && n(s.deps, s.callback), !c) return; c.splice ? (a = c, c = d, d = null) : a = b } return c = c || function () { }, "function" == typeof d && (d = e, e = f), e ? m(b, a, c, d) : setTimeout(function () { m(b, a, c, d) }, 4), n }, n.config = function (a) { return n(a) }, a._defined = q, d = function (a, b, c) { if ("string" != typeof a) throw new Error("See almond README: incorrect module build, no module name"); b.splice || (c = b, b = []), e(q, a) || e(r, a) || (r[a] = [a, b, c]) }, d.amd = { jQuery: !0 } }(), b.requirejs = a, b.require = c, b.define = d } }(), b.define("almond", function () { }), b.define("jquery", [], function () { var b = a || $; return null == b && console && console.error && console.error("Select2: An instance of jQuery or a jQuery-compatible library was not found. Make sure that you are including jQuery before Select2 on your web page."), b }), b.define("select2/utils", ["jquery"], function (a) { function b(a) { var b = a.prototype, c = []; for (var d in b) { var e = b[d]; "function" == typeof e && "constructor" !== d && c.push(d) } return c } var c = {}; c.Extend = function (a, b) { function c() { this.constructor = a } var d = {}.hasOwnProperty; for (var e in b) d.call(b, e) && (a[e] = b[e]); return c.prototype = b.prototype, a.prototype = new c, a.__super__ = b.prototype, a }, c.Decorate = function (a, c) { function d() { var b = Array.prototype.unshift, d = c.prototype.constructor.length, e = a.prototype.constructor; d > 0 && (b.call(arguments, a.prototype.constructor), e = c.prototype.constructor), e.apply(this, arguments) } function e() { this.constructor = d } var f = b(c), g = b(a); c.displayName = a.displayName, d.prototype = new e; for (var h = 0; h < g.length; h++) { var i = g[h]; d.prototype[i] = a.prototype[i] } for (var j = (function (a) { var b = function () { }; a in d.prototype && (b = d.prototype[a]); var e = c.prototype[a]; return function () { var a = Array.prototype.unshift; return a.call(arguments, b), e.apply(this, arguments) } }), k = 0; k < f.length; k++) { var l = f[k]; d.prototype[l] = j(l) } return d }; var d = function () { this.listeners = {} }; return d.prototype.on = function (a, b) { this.listeners = this.listeners || {}, a in this.listeners ? this.listeners[a].push(b) : this.listeners[a] = [b] }, d.prototype.trigger = function (a) { var b = Array.prototype.slice, c = b.call(arguments, 1); this.listeners = this.listeners || {}, null == c && (c = []), 0 === c.length && c.push({}), c[0]._type = a, a in this.listeners && this.invoke(this.listeners[a], b.call(arguments, 1)), "*" in this.listeners && this.invoke(this.listeners["*"], arguments) }, d.prototype.invoke = function (a, b) { for (var c = 0, d = a.length; d > c; c++)a[c].apply(this, b) }, c.Observable = d, c.generateChars = function (a) { for (var b = "", c = 0; a > c; c++) { var d = Math.floor(36 * Math.random()); b += d.toString(36) } return b }, c.bind = function (a, b) { return function () { a.apply(b, arguments) } }, c._convertData = function (a) { for (var b in a) { var c = b.split("-"), d = a; if (1 !== c.length) { for (var e = 0; e < c.length; e++) { var f = c[e]; f = f.substring(0, 1).toLowerCase() + f.substring(1), f in d || (d[f] = {}), e == c.length - 1 && (d[f] = a[b]), d = d[f] } delete a[b] } } return a }, c.hasScroll = function (b, c) { var d = a(c), e = c.style.overflowX, f = c.style.overflowY; return e !== f || "hidden" !== f && "visible" !== f ? "scroll" === e || "scroll" === f ? !0 : d.innerHeight() < c.scrollHeight || d.innerWidth() < c.scrollWidth : !1 }, c.escapeMarkup = function (a) { var b = { "\\": "&#92;", "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;", "/": "&#47;" }; return "string" != typeof a ? a : String(a).replace(/[&<>"'\/\\]/g, function (a) { return b[a] }) }, c.appendMany = function (b, c) { if ("1.7" === a.fn.jquery.substr(0, 3)) { var d = a(); a.map(c, function (a) { d = d.add(a) }), c = d } b.append(c) }, c }), b.define("select2/results", ["jquery", "./utils"], function (a, b) { function c(a, b, d) { this.$element = a, this.data = d, this.options = b, c.__super__.constructor.call(this) } return b.Extend(c, b.Observable), c.prototype.render = function () { var b = a('<ul class="select2-results__options" role="tree"></ul>'); return this.options.get("multiple") && b.attr("aria-multiselectable", "true"), this.$results = b, b }, c.prototype.clear = function () { this.$results.empty() }, c.prototype.displayMessage = function (b) { var c = this.options.get("escapeMarkup"); this.clear(), this.hideLoading(); var d = a('<li role="treeitem" aria-live="assertive" class="select2-results__option"></li>'), e = this.options.get("translations").get(b.message); d.append(c(e(b.args))), d[0].className += " select2-results__message", this.$results.append(d) }, c.prototype.hideMessages = function () { this.$results.find(".select2-results__message").remove() }, c.prototype.append = function (a) { this.hideLoading(); var b = []; if (null == a.results || 0 === a.results.length) return void (0 === this.$results.children().length && this.trigger("results:message", { message: "noResults" })); a.results = this.sort(a.results); for (var c = 0; c < a.results.length; c++) { var d = a.results[c], e = this.option(d); b.push(e) } this.$results.append(b) }, c.prototype.position = function (a, b) { var c = b.find(".select2-results"); c.append(a) }, c.prototype.sort = function (a) { var b = this.options.get("sorter"); return b(a) }, c.prototype.highlightFirstItem = function () { var a = this.$results.find(".select2-results__option[aria-selected]"), b = a.filter("[aria-selected=true]"); b.length > 0 ? b.first().trigger("mouseenter") : a.first().trigger("mouseenter"), this.ensureHighlightVisible() }, c.prototype.setClasses = function () { var b = this; this.data.current(function (c) { var d = a.map(c, function (a) { return a.id.toString() }), e = b.$results.find(".select2-results__option[aria-selected]"); e.each(function () { var b = a(this), c = a.data(this, "data"), e = "" + c.id; null != c.element && c.element.selected || null == c.element && a.inArray(e, d) > -1 ? b.attr("aria-selected", "true") : b.attr("aria-selected", "false") }) }) }, c.prototype.showLoading = function (a) { this.hideLoading(); var b = this.options.get("translations").get("searching"), c = { disabled: !0, loading: !0, text: b(a) }, d = this.option(c); d.className += " loading-results", this.$results.prepend(d) }, c.prototype.hideLoading = function () { this.$results.find(".loading-results").remove() }, c.prototype.option = function (b) { var c = document.createElement("li"); c.className = "select2-results__option"; var d = { role: "treeitem", "aria-selected": "false" }; b.disabled && (delete d["aria-selected"], d["aria-disabled"] = "true"), null == b.id && delete d["aria-selected"], null != b._resultId && (c.id = b._resultId), b.title && (c.title = b.title), b.children && (d.role = "group", d["aria-label"] = b.text, delete d["aria-selected"]); for (var e in d) { var f = d[e]; c.setAttribute(e, f) } if (b.children) { var g = a(c), h = document.createElement("strong"); h.className = "select2-results__group"; a(h); this.template(b, h); for (var i = [], j = 0; j < b.children.length; j++) { var k = b.children[j], l = this.option(k); i.push(l) } var m = a("<ul></ul>", { "class": "select2-results__options select2-results__options--nested" }); m.append(i), g.append(h), g.append(m) } else this.template(b, c); return a.data(c, "data", b), c }, c.prototype.bind = function (b, c) { var d = this, e = b.id + "-results"; this.$results.attr("id", e), b.on("results:all", function (a) { d.clear(), d.append(a.data), b.isOpen() && (d.setClasses(), d.highlightFirstItem()) }), b.on("results:append", function (a) { d.append(a.data), b.isOpen() && d.setClasses() }), b.on("query", function (a) { d.hideMessages(), d.showLoading(a) }), b.on("select", function () { b.isOpen() && (d.setClasses(), d.highlightFirstItem()) }), b.on("unselect", function () { b.isOpen() && (d.setClasses(), d.highlightFirstItem()) }), b.on("open", function () { d.$results.attr("aria-expanded", "true"), d.$results.attr("aria-hidden", "false"), d.setClasses(), d.ensureHighlightVisible() }), b.on("close", function () { d.$results.attr("aria-expanded", "false"), d.$results.attr("aria-hidden", "true"), d.$results.removeAttr("aria-activedescendant") }), b.on("results:toggle", function () { var a = d.getHighlightedResults(); 0 !== a.length && a.trigger("mouseup") }), b.on("results:select", function () { var a = d.getHighlightedResults(); if (0 !== a.length) { var b = a.data("data"); "true" == a.attr("aria-selected") ? d.trigger("close", {}) : d.trigger("select", { data: b }) } }), b.on("results:previous", function () { var a = d.getHighlightedResults(), b = d.$results.find("[aria-selected]"), c = b.index(a); if (0 !== c) { var e = c - 1; 0 === a.length && (e = 0); var f = b.eq(e); f.trigger("mouseenter"); var g = d.$results.offset().top, h = f.offset().top, i = d.$results.scrollTop() + (h - g); 0 === e ? d.$results.scrollTop(0) : 0 > h - g && d.$results.scrollTop(i) } }), b.on("results:next", function () { var a = d.getHighlightedResults(), b = d.$results.find("[aria-selected]"), c = b.index(a), e = c + 1; if (!(e >= b.length)) { var f = b.eq(e); f.trigger("mouseenter"); var g = d.$results.offset().top + d.$results.outerHeight(!1), h = f.offset().top + f.outerHeight(!1), i = d.$results.scrollTop() + h - g; 0 === e ? d.$results.scrollTop(0) : h > g && d.$results.scrollTop(i) } }), b.on("results:focus", function (a) { a.element.addClass("select2-results__option--highlighted") }), b.on("results:message", function (a) { d.displayMessage(a) }), a.fn.mousewheel && this.$results.on("mousewheel", function (a) { var b = d.$results.scrollTop(), c = d.$results.get(0).scrollHeight - b + a.deltaY, e = a.deltaY > 0 && b - a.deltaY <= 0, f = a.deltaY < 0 && c <= d.$results.height(); e ? (d.$results.scrollTop(0), a.preventDefault(), a.stopPropagation()) : f && (d.$results.scrollTop(d.$results.get(0).scrollHeight - d.$results.height()), a.preventDefault(), a.stopPropagation()) }), this.$results.on("mouseup", ".select2-results__option[aria-selected]", function (b) { var c = a(this), e = c.data("data"); return "true" === c.attr("aria-selected") ? void (d.options.get("multiple") ? d.trigger("unselect", { originalEvent: b, data: e }) : d.trigger("close", {})) : void d.trigger("select", { originalEvent: b, data: e }) }), this.$results.on("mouseenter", ".select2-results__option[aria-selected]", function (b) { var c = a(this).data("data"); d.getHighlightedResults().removeClass("select2-results__option--highlighted"), d.trigger("results:focus", { data: c, element: a(this) }) }) }, c.prototype.getHighlightedResults = function () { var a = this.$results.find(".select2-results__option--highlighted"); return a }, c.prototype.destroy = function () { this.$results.remove() }, c.prototype.ensureHighlightVisible = function () { var a = this.getHighlightedResults(); if (0 !== a.length) { var b = this.$results.find("[aria-selected]"), c = b.index(a), d = this.$results.offset().top, e = a.offset().top, f = this.$results.scrollTop() + (e - d), g = e - d; f -= 2 * a.outerHeight(!1), 2 >= c ? this.$results.scrollTop(0) : (g > this.$results.outerHeight() || 0 > g) && this.$results.scrollTop(f) } }, c.prototype.template = function (b, c) { var d = this.options.get("templateResult"), e = this.options.get("escapeMarkup"), f = d(b, c); null == f ? c.style.display = "none" : "string" == typeof f ? c.innerHTML = e(f) : a(c).append(f) }, c }), b.define("select2/keys", [], function () { var a = { BACKSPACE: 8, TAB: 9, ENTER: 13, SHIFT: 16, CTRL: 17, ALT: 18, ESC: 27, SPACE: 32, PAGE_UP: 33, PAGE_DOWN: 34, END: 35, HOME: 36, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40, DELETE: 46 }; return a }), b.define("select2/selection/base", ["jquery", "../utils", "../keys"], function (a, b, c) { function d(a, b) { this.$element = a, this.options = b, d.__super__.constructor.call(this) } return b.Extend(d, b.Observable), d.prototype.render = function () { var b = a('<span class="select2-selection" role="combobox"  aria-haspopup="true" aria-expanded="false"></span>'); return this._tabindex = 0, null != this.$element.data("old-tabindex") ? this._tabindex = this.$element.data("old-tabindex") : null != this.$element.attr("tabindex") && (this._tabindex = this.$element.attr("tabindex")), b.attr("title", this.$element.attr("title")), b.attr("tabindex", this._tabindex), this.$selection = b, b }, d.prototype.bind = function (a, b) { var d = this, e = (a.id + "-container", a.id + "-results"); this.container = a, this.$selection.on("focus", function (a) { d.trigger("focus", a) }), this.$selection.on("blur", function (a) { d._handleBlur(a) }), this.$selection.on("keydown", function (a) { d.trigger("keypress", a), a.which === c.SPACE && a.preventDefault() }), a.on("results:focus", function (a) { d.$selection.attr("aria-activedescendant", a.data._resultId) }), a.on("selection:update", function (a) { d.update(a.data) }), a.on("open", function () { d.$selection.attr("aria-expanded", "true"), d.$selection.attr("aria-owns", e), d._attachCloseHandler(a) }), a.on("close", function () { d.$selection.attr("aria-expanded", "false"), d.$selection.removeAttr("aria-activedescendant"), d.$selection.removeAttr("aria-owns"), d.$selection.focus(), d._detachCloseHandler(a) }), a.on("enable", function () { d.$selection.attr("tabindex", d._tabindex) }), a.on("disable", function () { d.$selection.attr("tabindex", "-1") }) }, d.prototype._handleBlur = function (b) { var c = this; window.setTimeout(function () { document.activeElement == c.$selection[0] || a.contains(c.$selection[0], document.activeElement) || c.trigger("blur", b) }, 1) }, d.prototype._attachCloseHandler = function (b) { a(document.body).on("mousedown.select2." + b.id, function (b) { var c = a(b.target), d = c.closest(".select2"), e = a(".select2.select2-container--open"); e.each(function () { var b = a(this); if (this != d[0]) { var c = b.data("element"); c.select2("close") } }) }) }, d.prototype._detachCloseHandler = function (b) { a(document.body).off("mousedown.select2." + b.id) }, d.prototype.position = function (a, b) { var c = b.find(".selection"); c.append(a) }, d.prototype.destroy = function () { this._detachCloseHandler(this.container) }, d.prototype.update = function (a) { throw new Error("The `update` method must be defined in child classes.") }, d }), b.define("select2/selection/single", ["jquery", "./base", "../utils", "../keys"], function (a, b, c, d) { function e() { e.__super__.constructor.apply(this, arguments) } return c.Extend(e, b), e.prototype.render = function () { var a = e.__super__.render.call(this); return a.addClass("select2-selection--single"), a.html('<span class="select2-selection__rendered"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>'), a }, e.prototype.bind = function (a, b) { var c = this; e.__super__.bind.apply(this, arguments); var d = a.id + "-container"; this.$selection.find(".select2-selection__rendered").attr("id", d), this.$selection.attr("aria-labelledby", d), this.$selection.on("mousedown", function (a) { 1 === a.which && c.trigger("toggle", { originalEvent: a }) }), this.$selection.on("focus", function (a) { }), this.$selection.on("blur", function (a) { }), a.on("focus", function (b) { a.isOpen() || c.$selection.focus() }), a.on("selection:update", function (a) { c.update(a.data) }) }, e.prototype.clear = function () { this.$selection.find(".select2-selection__rendered").empty() }, e.prototype.display = function (a, b) { var c = this.options.get("templateSelection"), d = this.options.get("escapeMarkup"); return d(c(a, b)) }, e.prototype.selectionContainer = function () { return a("<span></span>") }, e.prototype.update = function (a) { if (0 === a.length) return void this.clear(); var b = a[0], c = this.$selection.find(".select2-selection__rendered"), d = this.display(b, c); c.empty().append(d), c.prop("title", b.title || b.text) }, e }), b.define("select2/selection/multiple", ["jquery", "./base", "../utils"], function (a, b, c) { function d(a, b) { d.__super__.constructor.apply(this, arguments) } return c.Extend(d, b), d.prototype.render = function () { var a = d.__super__.render.call(this); return a.addClass("select2-selection--multiple"), a.html('<ul class="select2-selection__rendered"></ul>'), a }, d.prototype.bind = function (b, c) { var e = this; d.__super__.bind.apply(this, arguments), this.$selection.on("click", function (a) { e.trigger("toggle", { originalEvent: a }) }), this.$selection.on("click", ".select2-selection__choice__remove", function (b) { if (!e.options.get("disabled")) { var c = a(this), d = c.parent(), f = d.data("data"); e.trigger("unselect", { originalEvent: b, data: f }) } }) }, d.prototype.clear = function () { this.$selection.find(".select2-selection__rendered").empty() }, d.prototype.display = function (a, b) { var c = this.options.get("templateSelection"), d = this.options.get("escapeMarkup"); return d(c(a, b)) }, d.prototype.selectionContainer = function () { var b = a('<li class="select2-selection__choice"><span class="select2-selection__choice__remove" role="presentation">&times;</span></li>'); return b }, d.prototype.update = function (a) { if (this.clear(), 0 !== a.length) { for (var b = [], d = 0; d < a.length; d++) { var e = a[d], f = this.selectionContainer(), g = this.display(e, f); f.append(g), f.prop("title", e.title || e.text), f.data("data", e), b.push(f) } var h = this.$selection.find(".select2-selection__rendered"); c.appendMany(h, b) } }, d }), b.define("select2/selection/placeholder", ["../utils"], function (a) { function b(a, b, c) { this.placeholder = this.normalizePlaceholder(c.get("placeholder")), a.call(this, b, c) } return b.prototype.normalizePlaceholder = function (a, b) { return "string" == typeof b && (b = { id: "", text: b }), b }, b.prototype.createPlaceholder = function (a, b) { var c = this.selectionContainer(); return c.html(this.display(b)), c.addClass("select2-selection__placeholder").removeClass("select2-selection__choice"), c }, b.prototype.update = function (a, b) { var c = 1 == b.length && b[0].id != this.placeholder.id, d = b.length > 1; if (d || c) return a.call(this, b); this.clear(); var e = this.createPlaceholder(this.placeholder); this.$selection.find(".select2-selection__rendered").append(e) }, b }), b.define("select2/selection/allowClear", ["jquery", "../keys"], function (a, b) { function c() { } return c.prototype.bind = function (a, b, c) { var d = this; a.call(this, b, c), null == this.placeholder && this.options.get("debug") && window.console && console.error && console.error("Select2: The `allowClear` option should be used in combination with the `placeholder` option."), this.$selection.on("mousedown", ".select2-selection__clear", function (a) { d._handleClear(a) }), b.on("keypress", function (a) { d._handleKeyboardClear(a, b) }) }, c.prototype._handleClear = function (a, b) { if (!this.options.get("disabled")) { var c = this.$selection.find(".select2-selection__clear"); if (0 !== c.length) { b.stopPropagation(); for (var d = c.data("data"), e = 0; e < d.length; e++) { var f = { data: d[e] }; if (this.trigger("unselect", f), f.prevented) return } this.$element.val(this.placeholder.id).trigger("change"), this.trigger("toggle", {}) } } }, c.prototype._handleKeyboardClear = function (a, c, d) { d.isOpen() || (c.which == b.DELETE || c.which == b.BACKSPACE) && this._handleClear(c) }, c.prototype.update = function (b, c) { if (b.call(this, c), !(this.$selection.find(".select2-selection__placeholder").length > 0 || 0 === c.length)) { var d = a('<span class="select2-selection__clear">&times;</span>'); d.data("data", c), this.$selection.find(".select2-selection__rendered").prepend(d) } }, c }), b.define("select2/selection/search", ["jquery", "../utils", "../keys"], function (a, b, c) { function d(a, b, c) { a.call(this, b, c) } return d.prototype.render = function (b) { var c = a('<li class="select2-search select2-search--inline"><input class="select2-search__field" type="text" tabindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" /></li>'); this.$searchContainer = c, this.$search = c.find("input"); var d = b.call(this); return this._transferTabIndex(), d }, d.prototype.bind = function (a, b, d) { var e = this; a.call(this, b, d), b.on("open", function () { e.$search.trigger("focus") }), b.on("close", function () { e.$search.val(""), e.$search.removeAttr("aria-activedescendant"), e.$search.trigger("focus") }), b.on("enable", function () { e.$search.prop("disabled", !1), e._transferTabIndex() }), b.on("disable", function () { e.$search.prop("disabled", !0) }), b.on("focus", function (a) { e.$search.trigger("focus") }), b.on("results:focus", function (a) { e.$search.attr("aria-activedescendant", a.id) }), this.$selection.on("focusin", ".select2-search--inline", function (a) { e.trigger("focus", a) }), this.$selection.on("focusout", ".select2-search--inline", function (a) { e._handleBlur(a) }), this.$selection.on("keydown", ".select2-search--inline", function (a) { a.stopPropagation(), e.trigger("keypress", a), e._keyUpPrevented = a.isDefaultPrevented(); var b = a.which; if (b === c.BACKSPACE && "" === e.$search.val()) { var d = e.$searchContainer.prev(".select2-selection__choice"); if (d.length > 0) { var f = d.data("data"); e.searchRemoveChoice(f), a.preventDefault() } } }); var f = document.documentMode, g = f && 11 >= f; this.$selection.on("input.searchcheck", ".select2-search--inline", function (a) { return g ? void e.$selection.off("input.search input.searchcheck") : void e.$selection.off("keyup.search") }), this.$selection.on("keyup.search input.search", ".select2-search--inline", function (a) { if (g && "input" === a.type) return void e.$selection.off("input.search input.searchcheck"); var b = a.which; b != c.SHIFT && b != c.CTRL && b != c.ALT && b != c.TAB && e.handleSearch(a) }) }, d.prototype._transferTabIndex = function (a) { this.$search.attr("tabindex", this.$selection.attr("tabindex")), this.$selection.attr("tabindex", "-1") }, d.prototype.createPlaceholder = function (a, b) { this.$search.attr("placeholder", b.text) }, d.prototype.update = function (a, b) { var c = this.$search[0] == document.activeElement; this.$search.attr("placeholder", ""), a.call(this, b), this.$selection.find(".select2-selection__rendered").append(this.$searchContainer), this.resizeSearch(), c && this.$search.focus() }, d.prototype.handleSearch = function () { if (this.resizeSearch(), !this._keyUpPrevented) { var a = this.$search.val(); this.trigger("query", { term: a }) } this._keyUpPrevented = !1 }, d.prototype.searchRemoveChoice = function (a, b) { this.trigger("unselect", { data: b }), this.$search.val(b.text), this.handleSearch() }, d.prototype.resizeSearch = function () { this.$search.css("width", "25px"); var a = ""; if ("" !== this.$search.attr("placeholder")) a = this.$selection.find(".select2-selection__rendered").innerWidth(); else { var b = this.$search.val().length + 1; a = .75 * b + "em" } this.$search.css("width", a) }, d }), b.define("select2/selection/eventRelay", ["jquery"], function (a) { function b() { } return b.prototype.bind = function (b, c, d) { var e = this, f = ["open", "opening", "close", "closing", "select", "selecting", "unselect", "unselecting"], g = ["opening", "closing", "selecting", "unselecting"]; b.call(this, c, d), c.on("*", function (b, c) { if (-1 !== a.inArray(b, f)) { c = c || {}; var d = a.Event("select2:" + b, { params: c }); e.$element.trigger(d), -1 !== a.inArray(b, g) && (c.prevented = d.isDefaultPrevented()) } }) }, b }), b.define("select2/translation", ["jquery", "require"], function (a, b) { function c(a) { this.dict = a || {} } return c.prototype.all = function () { return this.dict }, c.prototype.get = function (a) { return this.dict[a] }, c.prototype.extend = function (b) { this.dict = a.extend({}, b.all(), this.dict) }, c._cache = {}, c.loadPath = function (a) { if (!(a in c._cache)) { var d = b(a); c._cache[a] = d } return new c(c._cache[a]) }, c }), b.define("select2/diacritics", [], function () { var a = { "â’¶": "A", "ï¼¡": "A", "Ã€": "A", "Ã": "A", "Ã‚": "A", "áº¦": "A", "áº¤": "A", "áºª": "A", "áº¨": "A", "Ãƒ": "A", "Ä€": "A", "Ä‚": "A", "áº°": "A", "áº®": "A", "áº´": "A", "áº²": "A", "È¦": "A", "Ç ": "A", "Ã„": "A", "Çž": "A", "áº¢": "A", "Ã…": "A", "Çº": "A", "Ç": "A", "È€": "A", "È‚": "A", "áº ": "A", "áº¬": "A", "áº¶": "A", "á¸€": "A", "Ä„": "A", "Èº": "A", "â±¯": "A", "êœ²": "AA", "Ã†": "AE", "Ç¼": "AE", "Ç¢": "AE", "êœ´": "AO", "êœ¶": "AU", "êœ¸": "AV", "êœº": "AV", "êœ¼": "AY", "â’·": "B", "ï¼¢": "B", "á¸‚": "B", "á¸„": "B", "á¸†": "B", "Éƒ": "B", "Æ‚": "B", "Æ": "B", "â’¸": "C", "ï¼£": "C", "Ä†": "C", "Äˆ": "C", "ÄŠ": "C", "ÄŒ": "C", "Ã‡": "C", "á¸ˆ": "C", "Æ‡": "C", "È»": "C", "êœ¾": "C", "â’¹": "D", "ï¼¤": "D", "á¸Š": "D", "ÄŽ": "D", "á¸Œ": "D", "á¸": "D", "á¸’": "D", "á¸Ž": "D", "Ä": "D", "Æ‹": "D", "ÆŠ": "D", "Æ‰": "D", "ê¹": "D", "Ç±": "DZ", "Ç„": "DZ", "Ç²": "Dz", "Ç…": "Dz", "â’º": "E", "ï¼¥": "E", "Ãˆ": "E", "Ã‰": "E", "ÃŠ": "E", "á»€": "E", "áº¾": "E", "á»„": "E", "á»‚": "E", "áº¼": "E", "Ä’": "E", "á¸”": "E", "á¸–": "E", "Ä”": "E", "Ä–": "E", "Ã‹": "E", "áºº": "E", "Äš": "E", "È„": "E", "È†": "E", "áº¸": "E", "á»†": "E", "È¨": "E", "á¸œ": "E", "Ä˜": "E", "á¸˜": "E", "á¸š": "E", "Æ": "E", "ÆŽ": "E", "â’»": "F", "ï¼¦": "F", "á¸ž": "F", "Æ‘": "F", "ê»": "F", "â’¼": "G", "ï¼§": "G", "Ç´": "G", "Äœ": "G", "á¸ ": "G", "Äž": "G", "Ä ": "G", "Ç¦": "G", "Ä¢": "G", "Ç¤": "G", "Æ“": "G", "êž ": "G", "ê½": "G", "ê¾": "G", "â’½": "H", "ï¼¨": "H", "Ä¤": "H", "á¸¢": "H", "á¸¦": "H", "Èž": "H", "á¸¤": "H", "á¸¨": "H", "á¸ª": "H", "Ä¦": "H", "â±§": "H", "â±µ": "H", "êž": "H", "â’¾": "I", "ï¼©": "I", "ÃŒ": "I", "Ã": "I", "ÃŽ": "I", "Ä¨": "I", "Äª": "I", "Ä¬": "I", "Ä°": "I", "Ã": "I", "á¸®": "I", "á»ˆ": "I", "Ç": "I", "Èˆ": "I", "ÈŠ": "I", "á»Š": "I", "Ä®": "I", "á¸¬": "I", "Æ—": "I", "â’¿": "J", "ï¼ª": "J", "Ä´": "J", "Éˆ": "J", "â“€": "K", "ï¼«": "K", "á¸°": "K", "Ç¨": "K", "á¸²": "K", "Ä¶": "K", "á¸´": "K", "Æ˜": "K", "â±©": "K", "ê€": "K", "ê‚": "K", "ê„": "K", "êž¢": "K", "â“": "L", "ï¼¬": "L", "Ä¿": "L", "Ä¹": "L", "Ä½": "L", "á¸¶": "L", "á¸¸": "L", "Ä»": "L", "á¸¼": "L", "á¸º": "L", "Å": "L", "È½": "L", "â±¢": "L", "â± ": "L", "êˆ": "L", "ê†": "L", "êž€": "L", "Ç‡": "LJ", "Çˆ": "Lj", "â“‚": "M", "ï¼­": "M", "á¸¾": "M", "á¹€": "M", "á¹‚": "M", "â±®": "M", "Æœ": "M", "â“ƒ": "N", "ï¼®": "N", "Ç¸": "N", "Åƒ": "N", "Ã‘": "N", "á¹„": "N", "Å‡": "N", "á¹†": "N", "Å…": "N", "á¹Š": "N", "á¹ˆ": "N", "È ": "N", "Æ": "N", "êž": "N", "êž¤": "N", "ÇŠ": "NJ", "Ç‹": "Nj", "â“„": "O", "ï¼¯": "O", "Ã’": "O", "Ã“": "O", "Ã”": "O", "á»’": "O", "á»": "O", "á»–": "O", "á»”": "O", "Ã•": "O", "á¹Œ": "O", "È¬": "O", "á¹Ž": "O", "ÅŒ": "O", "á¹": "O", "á¹’": "O", "ÅŽ": "O", "È®": "O", "È°": "O", "Ã–": "O", "Èª": "O", "á»Ž": "O", "Å": "O", "Ç‘": "O", "ÈŒ": "O", "ÈŽ": "O", "Æ ": "O", "á»œ": "O", "á»š": "O", "á» ": "O", "á»ž": "O", "á»¢": "O", "á»Œ": "O", "á»˜": "O", "Çª": "O", "Ç¬": "O", "Ã˜": "O", "Ç¾": "O", "Æ†": "O", "ÆŸ": "O", "êŠ": "O", "êŒ": "O", "Æ¢": "OI", "êŽ": "OO", "È¢": "OU", "â“…": "P", "ï¼°": "P", "á¹”": "P", "á¹–": "P", "Æ¤": "P", "â±£": "P", "ê": "P", "ê’": "P", "ê”": "P", "â“†": "Q", "ï¼±": "Q", "ê–": "Q", "ê˜": "Q", "ÉŠ": "Q", "â“‡": "R", "ï¼²": "R", "Å”": "R", "á¹˜": "R", "Å˜": "R", "È": "R", "È’": "R", "á¹š": "R", "á¹œ": "R", "Å–": "R", "á¹ž": "R", "ÉŒ": "R", "â±¤": "R", "êš": "R", "êž¦": "R", "êž‚": "R", "â“ˆ": "S", "ï¼³": "S", "áºž": "S", "Åš": "S", "á¹¤": "S", "Åœ": "S", "á¹ ": "S", "Å ": "S", "á¹¦": "S", "á¹¢": "S", "á¹¨": "S", "È˜": "S", "Åž": "S", "â±¾": "S", "êž¨": "S", "êž„": "S", "â“‰": "T", "ï¼´": "T", "á¹ª": "T", "Å¤": "T", "á¹¬": "T", "Èš": "T", "Å¢": "T", "á¹°": "T", "á¹®": "T", "Å¦": "T", "Æ¬": "T", "Æ®": "T", "È¾": "T", "êž†": "T", "êœ¨": "TZ", "â“Š": "U", "ï¼µ": "U", "Ã™": "U", "Ãš": "U", "Ã›": "U", "Å¨": "U", "á¹¸": "U", "Åª": "U", "á¹º": "U", "Å¬": "U", "Ãœ": "U", "Ç›": "U", "Ç—": "U", "Ç•": "U", "Ç™": "U", "á»¦": "U", "Å®": "U", "Å°": "U", "Ç“": "U", "È”": "U", "È–": "U", "Æ¯": "U", "á»ª": "U", "á»¨": "U", "á»®": "U", "á»¬": "U", "á»°": "U", "á»¤": "U", "á¹²": "U", "Å²": "U", "á¹¶": "U", "á¹´": "U", "É„": "U", "â“‹": "V", "ï¼¶": "V", "á¹¼": "V", "á¹¾": "V", "Æ²": "V", "êž": "V", "É…": "V", "ê ": "VY", "â“Œ": "W", "ï¼·": "W", "áº€": "W", "áº‚": "W", "Å´": "W", "áº†": "W", "áº„": "W", "áºˆ": "W", "â±²": "W", "â“": "X", "ï¼¸": "X", "áºŠ": "X", "áºŒ": "X", "â“Ž": "Y", "ï¼¹": "Y", "á»²": "Y", "Ã": "Y", "Å¶": "Y", "á»¸": "Y", "È²": "Y", "áºŽ": "Y", "Å¸": "Y", "á»¶": "Y", "á»´": "Y", "Æ³": "Y", "ÉŽ": "Y", "á»¾": "Y", "â“": "Z", "ï¼º": "Z", "Å¹": "Z", "áº": "Z", "Å»": "Z", "Å½": "Z", "áº’": "Z", "áº”": "Z", "Æµ": "Z", "È¤": "Z", "â±¿": "Z", "â±«": "Z", "ê¢": "Z", "â“": "a", "ï½": "a", "áºš": "a", "Ã ": "a", "Ã¡": "a", "Ã¢": "a", "áº§": "a", "áº¥": "a", "áº«": "a", "áº©": "a", "Ã£": "a", "Ä": "a", "Äƒ": "a", "áº±": "a", "áº¯": "a", "áºµ": "a", "áº³": "a", "È§": "a", "Ç¡": "a", "Ã¤": "a", "ÇŸ": "a", "áº£": "a", "Ã¥": "a", "Ç»": "a", "ÇŽ": "a", "È": "a", "Èƒ": "a", "áº¡": "a", "áº­": "a", "áº·": "a", "á¸": "a", "Ä…": "a", "â±¥": "a", "É": "a", "êœ³": "aa", "Ã¦": "ae", "Ç½": "ae", "Ç£": "ae", "êœµ": "ao", "êœ·": "au", "êœ¹": "av", "êœ»": "av", "êœ½": "ay", "â“‘": "b", "ï½‚": "b", "á¸ƒ": "b", "á¸…": "b", "á¸‡": "b", "Æ€": "b", "Æƒ": "b", "É“": "b", "â“’": "c", "ï½ƒ": "c", "Ä‡": "c", "Ä‰": "c", "Ä‹": "c", "Ä": "c", "Ã§": "c", "á¸‰": "c", "Æˆ": "c", "È¼": "c", "êœ¿": "c", "â†„": "c", "â““": "d", "ï½„": "d", "á¸‹": "d", "Ä": "d", "á¸": "d", "á¸‘": "d", "á¸“": "d", "á¸": "d", "Ä‘": "d", "ÆŒ": "d", "É–": "d", "É—": "d", "êº": "d", "Ç³": "dz", "Ç†": "dz", "â“”": "e", "ï½…": "e", "Ã¨": "e", "Ã©": "e", "Ãª": "e", "á»": "e", "áº¿": "e", "á»…": "e", "á»ƒ": "e", "áº½": "e", "Ä“": "e", "á¸•": "e", "á¸—": "e", "Ä•": "e", "Ä—": "e", "Ã«": "e", "áº»": "e", "Ä›": "e", "È…": "e", "È‡": "e", "áº¹": "e", "á»‡": "e", "È©": "e", "á¸": "e", "Ä™": "e", "á¸™": "e", "á¸›": "e", "É‡": "e", "É›": "e", "Ç": "e", "â“•": "f", "ï½†": "f", "á¸Ÿ": "f", "Æ’": "f", "ê¼": "f", "â“–": "g", "ï½‡": "g", "Çµ": "g", "Ä": "g", "á¸¡": "g", "ÄŸ": "g", "Ä¡": "g", "Ç§": "g", "Ä£": "g", "Ç¥": "g", "É ": "g", "êž¡": "g", "áµ¹": "g", "ê¿": "g", "â“—": "h", "ï½ˆ": "h", "Ä¥": "h", "á¸£": "h", "á¸§": "h", "ÈŸ": "h", "á¸¥": "h", "á¸©": "h", "á¸«": "h", "áº–": "h", "Ä§": "h", "â±¨": "h", "â±¶": "h", "É¥": "h", "Æ•": "hv", "â“˜": "i", "ï½‰": "i", "Ã¬": "i", "Ã­": "i", "Ã®": "i", "Ä©": "i", "Ä«": "i", "Ä­": "i", "Ã¯": "i", "á¸¯": "i", "á»‰": "i", "Ç": "i", "È‰": "i", "È‹": "i", "á»‹": "i", "Ä¯": "i", "á¸­": "i", "É¨": "i", "Ä±": "i", "â“™": "j", "ï½Š": "j", "Äµ": "j", "Ç°": "j", "É‰": "j", "â“š": "k", "ï½‹": "k", "á¸±": "k", "Ç©": "k", "á¸³": "k", "Ä·": "k", "á¸µ": "k", "Æ™": "k", "â±ª": "k", "ê": "k", "êƒ": "k", "ê…": "k", "êž£": "k", "â“›": "l", "ï½Œ": "l", "Å€": "l", "Äº": "l", "Ä¾": "l", "á¸·": "l", "á¸¹": "l", "Ä¼": "l", "á¸½": "l", "á¸»": "l", "Å¿": "l", "Å‚": "l", "Æš": "l", "É«": "l", "â±¡": "l", "ê‰": "l", "êž": "l", "ê‡": "l", "Ç‰": "lj", "â“œ": "m", "ï½": "m", "á¸¿": "m", "á¹": "m", "á¹ƒ": "m", "É±": "m", "É¯": "m", "â“": "n", "ï½Ž": "n", "Ç¹": "n", "Å„": "n", "Ã±": "n", "á¹…": "n", "Åˆ": "n", "á¹‡": "n", "Å†": "n", "á¹‹": "n", "á¹‰": "n", "Æž": "n", "É²": "n", "Å‰": "n", "êž‘": "n", "êž¥": "n", "ÇŒ": "nj", "â“ž": "o", "ï½": "o", "Ã²": "o", "Ã³": "o", "Ã´": "o", "á»“": "o", "á»‘": "o", "á»—": "o", "á»•": "o", "Ãµ": "o", "á¹": "o", "È­": "o", "á¹": "o", "Å": "o", "á¹‘": "o", "á¹“": "o", "Å": "o", "È¯": "o", "È±": "o", "Ã¶": "o", "È«": "o", "á»": "o", "Å‘": "o", "Ç’": "o", "È": "o", "È": "o", "Æ¡": "o", "á»": "o", "á»›": "o", "á»¡": "o", "á»Ÿ": "o", "á»£": "o", "á»": "o", "á»™": "o", "Ç«": "o", "Ç­": "o", "Ã¸": "o", "Ç¿": "o", "É”": "o", "ê‹": "o", "ê": "o", "Éµ": "o", "Æ£": "oi", "È£": "ou", "ê": "oo", "â“Ÿ": "p", "ï½": "p", "á¹•": "p", "á¹—": "p", "Æ¥": "p", "áµ½": "p", "ê‘": "p", "ê“": "p", "ê•": "p", "â“ ": "q", "ï½‘": "q", "É‹": "q", "ê—": "q", "ê™": "q", "â“¡": "r", "ï½’": "r", "Å•": "r", "á¹™": "r", "Å™": "r", "È‘": "r", "È“": "r", "á¹›": "r", "á¹": "r", "Å—": "r", "á¹Ÿ": "r", "É": "r", "É½": "r", "ê›": "r", "êž§": "r", "êžƒ": "r", "â“¢": "s", "ï½“": "s", "ÃŸ": "s", "Å›": "s", "á¹¥": "s", "Å": "s", "á¹¡": "s", "Å¡": "s", "á¹§": "s", "á¹£": "s", "á¹©": "s", "È™": "s", "ÅŸ": "s", "È¿": "s", "êž©": "s", "êž…": "s", "áº›": "s", "â“£": "t", "ï½”": "t", "á¹«": "t", "áº—": "t", "Å¥": "t", "á¹­": "t", "È›": "t", "Å£": "t", "á¹±": "t", "á¹¯": "t", "Å§": "t", "Æ­": "t", "Êˆ": "t", "â±¦": "t", "êž‡": "t", "êœ©": "tz", "â“¤": "u", "ï½•": "u", "Ã¹": "u", "Ãº": "u", "Ã»": "u", "Å©": "u", "á¹¹": "u", "Å«": "u", "á¹»": "u", "Å­": "u", "Ã¼": "u", "Çœ": "u", "Ç˜": "u", "Ç–": "u", "Çš": "u", "á»§": "u", "Å¯": "u", "Å±": "u", "Ç”": "u", "È•": "u", "È—": "u", "Æ°": "u", "á»«": "u", "á»©": "u", "á»¯": "u", "á»­": "u", "á»±": "u", "á»¥": "u", "á¹³": "u", "Å³": "u", "á¹·": "u", "á¹µ": "u", "Ê‰": "u", "â“¥": "v", "ï½–": "v", "á¹½": "v", "á¹¿": "v", "Ê‹": "v", "êŸ": "v", "ÊŒ": "v", "ê¡": "vy", "â“¦": "w", "ï½—": "w", "áº": "w", "áºƒ": "w", "Åµ": "w", "áº‡": "w", "áº…": "w", "áº˜": "w", "áº‰": "w", "â±³": "w", "â“§": "x", "ï½˜": "x", "áº‹": "x", "áº": "x", "â“¨": "y", "ï½™": "y", "á»³": "y", "Ã½": "y", "Å·": "y", "á»¹": "y", "È³": "y", "áº": "y", "Ã¿": "y", "á»·": "y", "áº™": "y", "á»µ": "y", "Æ´": "y", "É": "y", "á»¿": "y", "â“©": "z", "ï½š": "z", "Åº": "z", "áº‘": "z", "Å¼": "z", "Å¾": "z", "áº“": "z", "áº•": "z", "Æ¶": "z", "È¥": "z", "É€": "z", "â±¬": "z", "ê£": "z", "Î†": "Î‘", "Îˆ": "Î•", "Î‰": "Î—", "ÎŠ": "Î™", "Îª": "Î™", "ÎŒ": "ÎŸ", "ÎŽ": "Î¥", "Î«": "Î¥", "Î": "Î©", "Î¬": "Î±", "Î­": "Îµ", "Î®": "Î·", "Î¯": "Î¹", "ÏŠ": "Î¹", "Î": "Î¹", "ÏŒ": "Î¿", "Ï": "Ï…", "Ï‹": "Ï…", "Î°": "Ï…", "Ï‰": "Ï‰", "Ï‚": "Ïƒ" }; return a }), b.define("select2/data/base", ["../utils"], function (a) { function b(a, c) { b.__super__.constructor.call(this) } return a.Extend(b, a.Observable), b.prototype.current = function (a) { throw new Error("The `current` method must be defined in child classes.") }, b.prototype.query = function (a, b) { throw new Error("The `query` method must be defined in child classes.") }, b.prototype.bind = function (a, b) { }, b.prototype.destroy = function () { }, b.prototype.generateResultId = function (b, c) { var d = b.id + "-result-"; return d += a.generateChars(4), d += null != c.id ? "-" + c.id.toString() : "-" + a.generateChars(4) }, b }), b.define("select2/data/select", ["./base", "../utils", "jquery"], function (a, b, c) {
+        if (a && a.fn && a.fn.select2 && a.fn.select2.amd) var b = a.fn.select2.amd; var b; return function () { if (!b || !b.requirejs) { b ? c = b : b = {}; var a, c, d; !function (b) { function e(a, b) { return u.call(a, b) } function f(a, b) { var c, d, e, f, g, h, i, j, k, l, m, n = b && b.split("/"), o = s.map, p = o && o["*"] || {}; if (a && "." === a.charAt(0)) if (b) { for (a = a.split("/"), g = a.length - 1, s.nodeIdCompat && w.test(a[g]) && (a[g] = a[g].replace(w, "")), a = n.slice(0, n.length - 1).concat(a), k = 0; k < a.length; k += 1)if (m = a[k], "." === m) a.splice(k, 1), k -= 1; else if (".." === m) { if (1 === k && (".." === a[2] || ".." === a[0])) break; k > 0 && (a.splice(k - 1, 2), k -= 2) } a = a.join("/") } else 0 === a.indexOf("./") && (a = a.substring(2)); if ((n || p) && o) { for (c = a.split("/"), k = c.length; k > 0; k -= 1) { if (d = c.slice(0, k).join("/"), n) for (l = n.length; l > 0; l -= 1)if (e = o[n.slice(0, l).join("/")], e && (e = e[d])) { f = e, h = k; break } if (f) break; !i && p && p[d] && (i = p[d], j = k) } !f && i && (f = i, h = j), f && (c.splice(0, h, f), a = c.join("/")) } return a } function g(a, c) { return function () { var d = v.call(arguments, 0); return "string" != typeof d[0] && 1 === d.length && d.push(null), n.apply(b, d.concat([a, c])) } } function h(a) { return function (b) { return f(b, a) } } function i(a) { return function (b) { q[a] = b } } function j(a) { if (e(r, a)) { var c = r[a]; delete r[a], t[a] = !0, m.apply(b, c) } if (!e(q, a) && !e(t, a)) throw new Error("No " + a); return q[a] } function k(a) { var b, c = a ? a.indexOf("!") : -1; return c > -1 && (b = a.substring(0, c), a = a.substring(c + 1, a.length)), [b, a] } function l(a) { return function () { return s && s.config && s.config[a] || {} } } var m, n, o, p, q = {}, r = {}, s = {}, t = {}, u = Object.prototype.hasOwnProperty, v = [].slice, w = /\.js$/; o = function (a, b) { var c, d = k(a), e = d[0]; return a = d[1], e && (e = f(e, b), c = j(e)), e ? a = c && c.normalize ? c.normalize(a, h(b)) : f(a, b) : (a = f(a, b), d = k(a), e = d[0], a = d[1], e && (c = j(e))), { f: e ? e + "!" + a : a, n: a, pr: e, p: c } }, p = { require: function (a) { return g(a) }, exports: function (a) { var b = q[a]; return "undefined" != typeof b ? b : q[a] = {} }, module: function (a) { return { id: a, uri: "", exports: q[a], config: l(a) } } }, m = function (a, c, d, f) { var h, k, l, m, n, s, u = [], v = typeof d; if (f = f || a, "undefined" === v || "function" === v) { for (c = !c.length && d.length ? ["require", "exports", "module"] : c, n = 0; n < c.length; n += 1)if (m = o(c[n], f), k = m.f, "require" === k) u[n] = p.require(a); else if ("exports" === k) u[n] = p.exports(a), s = !0; else if ("module" === k) h = u[n] = p.module(a); else if (e(q, k) || e(r, k) || e(t, k)) u[n] = j(k); else { if (!m.p) throw new Error(a + " missing " + k); m.p.load(m.n, g(f, !0), i(k), {}), u[n] = q[k] } l = d ? d.apply(q[a], u) : void 0, a && (h && h.exports !== b && h.exports !== q[a] ? q[a] = h.exports : l === b && s || (q[a] = l)) } else a && (q[a] = d) }, a = c = n = function (a, c, d, e, f) { if ("string" == typeof a) return p[a] ? p[a](c) : j(o(a, c).f); if (!a.splice) { if (s = a, s.deps && n(s.deps, s.callback), !c) return; c.splice ? (a = c, c = d, d = null) : a = b } return c = c || function () { }, "function" == typeof d && (d = e, e = f), e ? m(b, a, c, d) : setTimeout(function () { m(b, a, c, d) }, 4), n }, n.config = function (a) { return n(a) }, a._defined = q, d = function (a, b, c) { if ("string" != typeof a) throw new Error("See almond README: incorrect module build, no module name"); b.splice || (c = b, b = []), e(q, a) || e(r, a) || (r[a] = [a, b, c]) }, d.amd = { jQuery: !0 } }(), b.requirejs = a, b.require = c, b.define = d } }(), b.define("almond", function () { }), b.define("jquery", [], function () { var b = a || $; return null == b && console && console.error && console.error("Select2: An instance of jQuery or a jQuery-compatible library was not found. Make sure that you are including jQuery before Select2 on your web page."), b }), b.define("select2/utils", ["jquery"], function (a) { function b(a) { var b = a.prototype, c = []; for (var d in b) { var e = b[d]; "function" == typeof e && "constructor" !== d && c.push(d) } return c } var c = {}; c.Extend = function (a, b) { function c() { this.constructor = a } var d = {}.hasOwnProperty; for (var e in b) d.call(b, e) && (a[e] = b[e]); return c.prototype = b.prototype, a.prototype = new c, a.__super__ = b.prototype, a }, c.Decorate = function (a, c) { function d() { var b = Array.prototype.unshift, d = c.prototype.constructor.length, e = a.prototype.constructor; d > 0 && (b.call(arguments, a.prototype.constructor), e = c.prototype.constructor), e.apply(this, arguments) } function e() { this.constructor = d } var f = b(c), g = b(a); c.displayName = a.displayName, d.prototype = new e; for (var h = 0; h < g.length; h++) { var i = g[h]; d.prototype[i] = a.prototype[i] } for (var j = (function (a) { var b = function () { }; a in d.prototype && (b = d.prototype[a]); var e = c.prototype[a]; return function () { var a = Array.prototype.unshift; return a.call(arguments, b), e.apply(this, arguments) } }), k = 0; k < f.length; k++) { var l = f[k]; d.prototype[l] = j(l) } return d }; var d = function () { this.listeners = {} }; return d.prototype.on = function (a, b) { this.listeners = this.listeners || {}, a in this.listeners ? this.listeners[a].push(b) : this.listeners[a] = [b] }, d.prototype.trigger = function (a) { var b = Array.prototype.slice, c = b.call(arguments, 1); this.listeners = this.listeners || {}, null == c && (c = []), 0 === c.length && c.push({}), c[0]._type = a, a in this.listeners && this.invoke(this.listeners[a], b.call(arguments, 1)), "*" in this.listeners && this.invoke(this.listeners["*"], arguments) }, d.prototype.invoke = function (a, b) { for (var c = 0, d = a.length; d > c; c++)a[c].apply(this, b) }, c.Observable = d, c.generateChars = function (a) { for (var b = "", c = 0; a > c; c++) { var d = Math.floor(36 * Math.random()); b += d.toString(36) } return b }, c.bind = function (a, b) { return function () { a.apply(b, arguments) } }, c._convertData = function (a) { for (var b in a) { var c = b.split("-"), d = a; if (1 !== c.length) { for (var e = 0; e < c.length; e++) { var f = c[e]; f = f.substring(0, 1).toLowerCase() + f.substring(1), f in d || (d[f] = {}), e == c.length - 1 && (d[f] = a[b]), d = d[f] } delete a[b] } } return a }, c.hasScroll = function (b, c) { var d = a(c), e = c.style.overflowX, f = c.style.overflowY; return e !== f || "hidden" !== f && "visible" !== f ? "scroll" === e || "scroll" === f ? !0 : d.innerHeight() < c.scrollHeight || d.innerWidth() < c.scrollWidth : !1 }, c.escapeMarkup = function (a) { var b = { "\\": "&#92;", "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;", "/": "&#47;" }; return "string" != typeof a ? a : String(a).replace(/[&<>"'\/\\]/g, function (a) { return b[a] }) }, c.appendMany = function (b, c) { if ("1.7" === a.fn.jquery.substr(0, 3)) { var d = a(); a.map(c, function (a) { d = d.add(a) }), c = d } b.append(c) }, c }), b.define("select2/results", ["jquery", "./utils"], function (a, b) { function c(a, b, d) { this.$element = a, this.data = d, this.options = b, c.__super__.constructor.call(this) } return b.Extend(c, b.Observable), c.prototype.render = function () { var b = a('<ul class="select2-results__options" role="tree"></ul>'); return this.options.get("multiple") && b.attr("aria-multiselectable", "true"), this.$results = b, b }, c.prototype.clear = function () { this.$results.empty() }, c.prototype.displayMessage = function (b) { var c = this.options.get("escapeMarkup"); this.clear(), this.hideLoading(); var d = a('<li role="treeitem" aria-live="assertive" class="select2-results__option"></li>'), e = this.options.get("translations").get(b.message); d.append(c(e(b.args))), d[0].className += " select2-results__message", this.$results.append(d) }, c.prototype.hideMessages = function () { this.$results.find(".select2-results__message").remove() }, c.prototype.append = function (a) { this.hideLoading(); var b = []; if (null == a.results || 0 === a.results.length) return void (0 === this.$results.children().length && this.trigger("results:message", { message: "noResults" })); a.results = this.sort(a.results); for (var c = 0; c < a.results.length; c++) { var d = a.results[c], e = this.option(d); b.push(e) } this.$results.append(b) }, c.prototype.position = function (a, b) { var c = b.find(".select2-results"); c.append(a) }, c.prototype.sort = function (a) { var b = this.options.get("sorter"); return b(a) }, c.prototype.highlightFirstItem = function () { var a = this.$results.find(".select2-results__option[aria-selected]"), b = a.filter("[aria-selected=true]"); b.length > 0 ? b.first().trigger("mouseenter") : a.first().trigger("mouseenter"), this.ensureHighlightVisible() }, c.prototype.setClasses = function () { var b = this; this.data.current(function (c) { var d = a.map(c, function (a) { return a.id.toString() }), e = b.$results.find(".select2-results__option[aria-selected]"); e.each(function () { var b = a(this), c = a.data(this, "data"), e = "" + c.id; null != c.element && c.element.selected || null == c.element && a.inArray(e, d) > -1 ? b.attr("aria-selected", "true") : b.attr("aria-selected", "false") }) }) }, c.prototype.showLoading = function (a) { this.hideLoading(); var b = this.options.get("translations").get("searching"), c = { disabled: !0, loading: !0, text: b(a) }, d = this.option(c); d.className += " loading-results", this.$results.prepend(d) }, c.prototype.hideLoading = function () { this.$results.find(".loading-results").remove() }, c.prototype.option = function (b) { var c = document.createElement("li"); c.className = "select2-results__option"; var d = { role: "treeitem", "aria-selected": "false" }; b.disabled && (delete d["aria-selected"], d["aria-disabled"] = "true"), null == b.id && delete d["aria-selected"], null != b._resultId && (c.id = b._resultId), b.title && (c.title = b.title), b.children && (d.role = "group", d["aria-label"] = b.text, delete d["aria-selected"]); for (var e in d) { var f = d[e]; c.setAttribute(e, f) } if (b.children) { var g = a(c), h = document.createElement("strong"); h.className = "select2-results__group"; a(h); this.template(b, h); for (var i = [], j = 0; j < b.children.length; j++) { var k = b.children[j], l = this.option(k); i.push(l) } var m = a("<ul></ul>", { "class": "select2-results__options select2-results__options--nested" }); m.append(i), g.append(h), g.append(m) } else this.template(b, c); return a.data(c, "data", b), c }, c.prototype.bind = function (b, c) { var d = this, e = b.id + "-results"; this.$results.attr("id", e), b.on("results:all", function (a) { d.clear(), d.append(a.data), b.isOpen() && (d.setClasses(), d.highlightFirstItem()) }), b.on("results:append", function (a) { d.append(a.data), b.isOpen() && d.setClasses() }), b.on("query", function (a) { d.hideMessages(), d.showLoading(a) }), b.on("select", function () { b.isOpen() && (d.setClasses(), d.highlightFirstItem()) }), b.on("unselect", function () { b.isOpen() && (d.setClasses(), d.highlightFirstItem()) }), b.on("open", function () { d.$results.attr("aria-expanded", "true"), d.$results.attr("aria-hidden", "false"), d.setClasses(), d.ensureHighlightVisible() }), b.on("close", function () { d.$results.attr("aria-expanded", "false"), d.$results.attr("aria-hidden", "true"), d.$results.removeAttr("aria-activedescendant") }), b.on("results:toggle", function () { var a = d.getHighlightedResults(); 0 !== a.length && a.trigger("mouseup") }), b.on("results:select", function () { var a = d.getHighlightedResults(); if (0 !== a.length) { var b = a.data("data"); "true" == a.attr("aria-selected") ? d.trigger("close", {}) : d.trigger("select", { data: b }) } }), b.on("results:previous", function () { var a = d.getHighlightedResults(), b = d.$results.find("[aria-selected]"), c = b.index(a); if (0 !== c) { var e = c - 1; 0 === a.length && (e = 0); var f = b.eq(e); f.trigger("mouseenter"); var g = d.$results.offset().top, h = f.offset().top, i = d.$results.scrollTop() + (h - g); 0 === e ? d.$results.scrollTop(0) : 0 > h - g && d.$results.scrollTop(i) } }), b.on("results:next", function () { var a = d.getHighlightedResults(), b = d.$results.find("[aria-selected]"), c = b.index(a), e = c + 1; if (!(e >= b.length)) { var f = b.eq(e); f.trigger("mouseenter"); var g = d.$results.offset().top + d.$results.outerHeight(!1), h = f.offset().top + f.outerHeight(!1), i = d.$results.scrollTop() + h - g; 0 === e ? d.$results.scrollTop(0) : h > g && d.$results.scrollTop(i) } }), b.on("results:focus", function (a) { a.element.addClass("select2-results__option--highlighted") }), b.on("results:message", function (a) { d.displayMessage(a) }), a.fn.mousewheel && this.$results.on("mousewheel", function (a) { var b = d.$results.scrollTop(), c = d.$results.get(0).scrollHeight - b + a.deltaY, e = a.deltaY > 0 && b - a.deltaY <= 0, f = a.deltaY < 0 && c <= d.$results.height(); e ? (d.$results.scrollTop(0), a.preventDefault(), a.stopPropagation()) : f && (d.$results.scrollTop(d.$results.get(0).scrollHeight - d.$results.height()), a.preventDefault(), a.stopPropagation()) }), this.$results.on("mouseup", ".select2-results__option[aria-selected]", function (b) { var c = a(this), e = c.data("data"); return "true" === c.attr("aria-selected") ? void (d.options.get("multiple") ? d.trigger("unselect", { originalEvent: b, data: e }) : d.trigger("close", {})) : void d.trigger("select", { originalEvent: b, data: e }) }), this.$results.on("mouseenter", ".select2-results__option[aria-selected]", function (b) { var c = a(this).data("data"); d.getHighlightedResults().removeClass("select2-results__option--highlighted"), d.trigger("results:focus", { data: c, element: a(this) }) }) }, c.prototype.getHighlightedResults = function () { var a = this.$results.find(".select2-results__option--highlighted"); return a }, c.prototype.destroy = function () { this.$results.remove() }, c.prototype.ensureHighlightVisible = function () { var a = this.getHighlightedResults(); if (0 !== a.length) { var b = this.$results.find("[aria-selected]"), c = b.index(a), d = this.$results.offset().top, e = a.offset().top, f = this.$results.scrollTop() + (e - d), g = e - d; f -= 2 * a.outerHeight(!1), 2 >= c ? this.$results.scrollTop(0) : (g > this.$results.outerHeight() || 0 > g) && this.$results.scrollTop(f) } }, c.prototype.template = function (b, c) { var d = this.options.get("templateResult"), e = this.options.get("escapeMarkup"), f = d(b, c); null == f ? c.style.display = "none" : "string" == typeof f ? c.innerHTML = e(f) : a(c).append(f) }, c }), b.define("select2/keys", [], function () { var a = { BACKSPACE: 8, TAB: 9, ENTER: 13, SHIFT: 16, CTRL: 17, ALT: 18, ESC: 27, SPACE: 32, PAGE_UP: 33, PAGE_DOWN: 34, END: 35, HOME: 36, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40, DELETE: 46 }; return a }), b.define("select2/selection/base", ["jquery", "../utils", "../keys"], function (a, b, c) { function d(a, b) { this.$element = a, this.options = b, d.__super__.constructor.call(this) } return b.Extend(d, b.Observable), d.prototype.render = function () { var b = a('<span class="select2-selection" role="combobox"  aria-haspopup="true" aria-expanded="false"></span>'); return this._tabindex = 0, null != this.$element.data("old-tabindex") ? this._tabindex = this.$element.data("old-tabindex") : null != this.$element.attr("tabindex") && (this._tabindex = this.$element.attr("tabindex")), b.attr("title", this.$element.attr("title")), b.attr("tabindex", this._tabindex), this.$selection = b, b }, d.prototype.bind = function (a, b) { var d = this, e = (a.id + "-container", a.id + "-results"); this.container = a, this.$selection.on("focus", function (a) { d.trigger("focus", a) }), this.$selection.on("blur", function (a) { d._handleBlur(a) }), this.$selection.on("keydown", function (a) { d.trigger("keypress", a), a.which === c.SPACE && a.preventDefault() }), a.on("results:focus", function (a) { d.$selection.attr("aria-activedescendant", a.data._resultId) }), a.on("selection:update", function (a) { d.update(a.data) }), a.on("open", function () { d.$selection.attr("aria-expanded", "true"), d.$selection.attr("aria-owns", e), d._attachCloseHandler(a) }), a.on("close", function () { d.$selection.attr("aria-expanded", "false"), d.$selection.removeAttr("aria-activedescendant"), d.$selection.removeAttr("aria-owns"), d.$selection.focus(), d._detachCloseHandler(a) }), a.on("enable", function () { d.$selection.attr("tabindex", d._tabindex) }), a.on("disable", function () { d.$selection.attr("tabindex", "-1") }) }, d.prototype._handleBlur = function (b) { var c = this; window.setTimeout(function () { document.activeElement == c.$selection[0] || a.contains(c.$selection[0], document.activeElement) || c.trigger("blur", b) }, 1) }, d.prototype._attachCloseHandler = function (b) { a(document.body).on("mousedown.select2." + b.id, function (b) { var c = a(b.target), d = c.closest(".select2"), e = a(".select2.select2-container--open"); e.each(function () { var b = a(this); if (this != d[0]) { var c = b.data("element"); c.select2("close") } }) }) }, d.prototype._detachCloseHandler = function (b) { a(document.body).off("mousedown.select2." + b.id) }, d.prototype.position = function (a, b) { var c = b.find(".selection"); c.append(a) }, d.prototype.destroy = function () { this._detachCloseHandler(this.container) }, d.prototype.update = function (a) { throw new Error("The `update` method must be defined in child classes.") }, d }), b.define("select2/selection/single", ["jquery", "./base", "../utils", "../keys"], function (a, b, c, d) { function e() { e.__super__.constructor.apply(this, arguments) } return c.Extend(e, b), e.prototype.render = function () { var a = e.__super__.render.call(this); return a.addClass("select2-selection--single"), a.html('<span class="select2-selection__rendered"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>'), a }, e.prototype.bind = function (a, b) { var c = this; e.__super__.bind.apply(this, arguments); var d = a.id + "-container"; this.$selection.find(".select2-selection__rendered").attr("id", d), this.$selection.attr("aria-labelledby", d), this.$selection.on("mousedown", function (a) { 1 === a.which && c.trigger("toggle", { originalEvent: a }) }), this.$selection.on("focus", function (a) { }), this.$selection.on("blur", function (a) { }), a.on("focus", function (b) { a.isOpen() || c.$selection.focus() }), a.on("selection:update", function (a) { c.update(a.data) }) }, e.prototype.clear = function () { this.$selection.find(".select2-selection__rendered").empty() }, e.prototype.display = function (a, b) { var c = this.options.get("templateSelection"), d = this.options.get("escapeMarkup"); return d(c(a, b)) }, e.prototype.selectionContainer = function () { return a("<span></span>") }, e.prototype.update = function (a) { if (0 === a.length) return void this.clear(); var b = a[0], c = this.$selection.find(".select2-selection__rendered"), d = this.display(b, c); c.empty().append(d), c.prop("title", b.title || b.text) }, e }), b.define("select2/selection/multiple", ["jquery", "./base", "../utils"], function (a, b, c) { function d(a, b) { d.__super__.constructor.apply(this, arguments) } return c.Extend(d, b), d.prototype.render = function () { var a = d.__super__.render.call(this); return a.addClass("select2-selection--multiple"), a.html('<ul class="select2-selection__rendered"></ul>'), a }, d.prototype.bind = function (b, c) { var e = this; d.__super__.bind.apply(this, arguments), this.$selection.on("click", function (a) { e.trigger("toggle", { originalEvent: a }) }), this.$selection.on("click", ".select2-selection__choice__remove", function (b) { if (!e.options.get("disabled")) { var c = a(this), d = c.parent(), f = d.data("data"); e.trigger("unselect", { originalEvent: b, data: f }) } }) }, d.prototype.clear = function () { this.$selection.find(".select2-selection__rendered").empty() }, d.prototype.display = function (a, b) { var c = this.options.get("templateSelection"), d = this.options.get("escapeMarkup"); return d(c(a, b)) }, d.prototype.selectionContainer = function () { var b = a('<li class="select2-selection__choice"><span class="select2-selection__choice__remove" role="presentation">&times;</span></li>'); return b }, d.prototype.update = function (a) { if (this.clear(), 0 !== a.length) { for (var b = [], d = 0; d < a.length; d++) { var e = a[d], f = this.selectionContainer(), g = this.display(e, f); f.append(g), f.prop("title", e.title || e.text), f.data("data", e), b.push(f) } var h = this.$selection.find(".select2-selection__rendered"); c.appendMany(h, b) } }, d }), b.define("select2/selection/placeholder", ["../utils"], function (a) { function b(a, b, c) { this.placeholder = this.normalizePlaceholder(c.get("placeholder")), a.call(this, b, c) } return b.prototype.normalizePlaceholder = function (a, b) { return "string" == typeof b && (b = { id: "", text: b }), b }, b.prototype.createPlaceholder = function (a, b) { var c = this.selectionContainer(); return c.html(this.display(b)), c.addClass("select2-selection__placeholder").removeClass("select2-selection__choice"), c }, b.prototype.update = function (a, b) { var c = 1 == b.length && b[0].id != this.placeholder.id, d = b.length > 1; if (d || c) return a.call(this, b); this.clear(); var e = this.createPlaceholder(this.placeholder); this.$selection.find(".select2-selection__rendered").append(e) }, b }), b.define("select2/selection/allowClear", ["jquery", "../keys"], function (a, b) { function c() { } return c.prototype.bind = function (a, b, c) { var d = this; a.call(this, b, c), null == this.placeholder && this.options.get("debug") && window.console && console.error && console.error("Select2: The `allowClear` option should be used in combination with the `placeholder` option."), this.$selection.on("mousedown", ".select2-selection__clear", function (a) { d._handleClear(a) }), b.on("keypress", function (a) { d._handleKeyboardClear(a, b) }) }, c.prototype._handleClear = function (a, b) { if (!this.options.get("disabled")) { var c = this.$selection.find(".select2-selection__clear"); if (0 !== c.length) { b.stopPropagation(); for (var d = c.data("data"), e = 0; e < d.length; e++) { var f = { data: d[e] }; if (this.trigger("unselect", f), f.prevented) return } this.$element.val(this.placeholder.id).trigger("change"), this.trigger("toggle", {}) } } }, c.prototype._handleKeyboardClear = function (a, c, d) { d.isOpen() || (c.which == b.DELETE || c.which == b.BACKSPACE) && this._handleClear(c) }, c.prototype.update = function (b, c) { if (b.call(this, c), !(this.$selection.find(".select2-selection__placeholder").length > 0 || 0 === c.length)) { var d = a('<span class="select2-selection__clear">&times;</span>'); d.data("data", c), this.$selection.find(".select2-selection__rendered").prepend(d) } }, c }), b.define("select2/selection/search", ["jquery", "../utils", "../keys"], function (a, b, c) { function d(a, b, c) { a.call(this, b, c) } return d.prototype.render = function (b) { var c = a('<li class="select2-search select2-search--inline"><input class="select2-search__field" type="text" tabindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" /></li>'); this.$searchContainer = c, this.$search = c.find("input"); var d = b.call(this); return this._transferTabIndex(), d }, d.prototype.bind = function (a, b, d) { var e = this; a.call(this, b, d), b.on("open", function () { e.$search.trigger("focus") }), b.on("close", function () { e.$search.val(""), e.$search.removeAttr("aria-activedescendant"), e.$search.trigger("focus") }), b.on("enable", function () { e.$search.prop("disabled", !1), e._transferTabIndex() }), b.on("disable", function () { e.$search.prop("disabled", !0) }), b.on("focus", function (a) { e.$search.trigger("focus") }), b.on("results:focus", function (a) { e.$search.attr("aria-activedescendant", a.id) }), this.$selection.on("focusin", ".select2-search--inline", function (a) { e.trigger("focus", a) }), this.$selection.on("focusout", ".select2-search--inline", function (a) { e._handleBlur(a) }), this.$selection.on("keydown", ".select2-search--inline", function (a) { a.stopPropagation(), e.trigger("keypress", a), e._keyUpPrevented = a.isDefaultPrevented(); var b = a.which; if (b === c.BACKSPACE && "" === e.$search.val()) { var d = e.$searchContainer.prev(".select2-selection__choice"); if (d.length > 0) { var f = d.data("data"); e.searchRemoveChoice(f), a.preventDefault() } } }); var f = document.documentMode, g = f && 11 >= f; this.$selection.on("input.searchcheck", ".select2-search--inline", function (a) { return g ? void e.$selection.off("input.search input.searchcheck") : void e.$selection.off("keyup.search") }), this.$selection.on("keyup.search input.search", ".select2-search--inline", function (a) { if (g && "input" === a.type) return void e.$selection.off("input.search input.searchcheck"); var b = a.which; b != c.SHIFT && b != c.CTRL && b != c.ALT && b != c.TAB && e.handleSearch(a) }) }, d.prototype._transferTabIndex = function (a) { this.$search.attr("tabindex", this.$selection.attr("tabindex")), this.$selection.attr("tabindex", "-1") }, d.prototype.createPlaceholder = function (a, b) { this.$search.attr("placeholder", b.text) }, d.prototype.update = function (a, b) { var c = this.$search[0] == document.activeElement; this.$search.attr("placeholder", ""), a.call(this, b), this.$selection.find(".select2-selection__rendered").append(this.$searchContainer), this.resizeSearch(), c && this.$search.focus() }, d.prototype.handleSearch = function () { if (this.resizeSearch(), !this._keyUpPrevented) { var a = this.$search.val(); this.trigger("query", { term: a }) } this._keyUpPrevented = !1 }, d.prototype.searchRemoveChoice = function (a, b) { this.trigger("unselect", { data: b }), this.$search.val(b.text), this.handleSearch() }, d.prototype.resizeSearch = function () { this.$search.css("width", "25px"); var a = ""; if ("" !== this.$search.attr("placeholder")) a = this.$selection.find(".select2-selection__rendered").innerWidth(); else { var b = this.$search.val().length + 1; a = .75 * b + "em" } this.$search.css("width", a) }, d }), b.define("select2/selection/eventRelay", ["jquery"], function (a) { function b() { } return b.prototype.bind = function (b, c, d) { var e = this, f = ["open", "opening", "close", "closing", "select", "selecting", "unselect", "unselecting"], g = ["opening", "closing", "selecting", "unselecting"]; b.call(this, c, d), c.on("*", function (b, c) { if (-1 !== a.inArray(b, f)) { c = c || {}; var d = a.Event("select2:" + b, { params: c }); e.$element.trigger(d), -1 !== a.inArray(b, g) && (c.prevented = d.isDefaultPrevented()) } }) }, b }), b.define("select2/translation", ["jquery", "require"], function (a, b) { function c(a) { this.dict = a || {} } return c.prototype.all = function () { return this.dict }, c.prototype.get = function (a) { return this.dict[a] }, c.prototype.extend = function (b) { this.dict = a.extend({}, b.all(), this.dict) }, c._cache = {}, c.loadPath = function (a) { if (!(a in c._cache)) { var d = b(a); c._cache[a] = d } return new c(c._cache[a]) }, c }), b.define("select2/diacritics", [], function () { var a = { "â’¶": "A", "ï¼¡": "A", "Ã€": "A", "Ã": "A", "Ã‚": "A", "áº¦": "A", "áº¤": "A", "áºª": "A", "áº¨": "A", "Ãƒ": "A", "Ä€": "A", "Ä‚": "A", "áº°": "A", "áº®": "A", "áº´": "A", "áº²": "A", "È¦": "A", "Ç ": "A", "Ã„": "A", "Çž": "A", "áº¢": "A", "Ã…": "A", "Çº": "A", "Ç": "A", "È€": "A", "È‚": "A", "áº ": "A", "áº¬": "A", "áº¶": "A", "á¸€": "A", "Ä„": "A", "Èº": "A", "â±¯": "A", "êœ²": "AA", "Ã†": "AE", "Ç¼": "AE", "Ç¢": "AE", "êœ´": "AO", "êœ¶": "AU", "êœ¸": "AV", "êœº": "AV", "êœ¼": "AY", "â’·": "B", "ï¼¢": "B", "á¸‚": "B", "á¸„": "B", "á¸†": "B", "Éƒ": "B", "Æ‚": "B", "Æ": "B", "â’¸": "C", "ï¼£": "C", "Ä†": "C", "Äˆ": "C", "ÄŠ": "C", "ÄŒ": "C", "Ã‡": "C", "á¸ˆ": "C", "Æ‡": "C", "È»": "C", "êœ¾": "C", "â’¹": "D", "ï¼¤": "D", "á¸Š": "D", "ÄŽ": "D", "á¸Œ": "D", "á¸": "D", "á¸’": "D", "á¸Ž": "D", "Ä": "D", "Æ‹": "D", "ÆŠ": "D", "Æ‰": "D", "ê¹": "D", "Ç±": "DZ", "Ç„": "DZ", "Ç²": "Dz", "Ç…": "Dz", "â’º": "E", "ï¼¥": "E", "Ãˆ": "E", "Ã‰": "E", "ÃŠ": "E", "á»€": "E", "áº¾": "E", "á»„": "E", "á»‚": "E", "áº¼": "E", "Ä’": "E", "á¸”": "E", "á¸–": "E", "Ä”": "E", "Ä–": "E", "Ã‹": "E", "áºº": "E", "Äš": "E", "È„": "E", "È†": "E", "áº¸": "E", "á»†": "E", "È¨": "E", "á¸œ": "E", "Ä˜": "E", "á¸˜": "E", "á¸š": "E", "Æ": "E", "ÆŽ": "E", "â’»": "F", "ï¼¦": "F", "á¸ž": "F", "Æ‘": "F", "ê»": "F", "â’¼": "G", "ï¼§": "G", "Ç´": "G", "Äœ": "G", "á¸ ": "G", "Äž": "G", "Ä ": "G", "Ç¦": "G", "Ä¢": "G", "Ç¤": "G", "Æ“": "G", "êž ": "G", "ê½": "G", "ê¾": "G", "â’½": "H", "ï¼¨": "H", "Ä¤": "H", "á¸¢": "H", "á¸¦": "H", "Èž": "H", "á¸¤": "H", "á¸¨": "H", "á¸ª": "H", "Ä¦": "H", "â±§": "H", "â±µ": "H", "êž": "H", "â’¾": "I", "ï¼©": "I", "ÃŒ": "I", "Ã": "I", "ÃŽ": "I", "Ä¨": "I", "Äª": "I", "Ä¬": "I", "Ä°": "I", "Ã": "I", "á¸®": "I", "á»ˆ": "I", "Ç": "I", "Èˆ": "I", "ÈŠ": "I", "á»Š": "I", "Ä®": "I", "á¸¬": "I", "Æ—": "I", "â’¿": "J", "ï¼ª": "J", "Ä´": "J", "Éˆ": "J", "â“€": "K", "ï¼«": "K", "á¸°": "K", "Ç¨": "K", "á¸²": "K", "Ä¶": "K", "á¸´": "K", "Æ˜": "K", "â±©": "K", "ê€": "K", "ê‚": "K", "ê„": "K", "êž¢": "K", "â“": "L", "ï¼¬": "L", "Ä¿": "L", "Ä¹": "L", "Ä½": "L", "á¸¶": "L", "á¸¸": "L", "Ä»": "L", "á¸¼": "L", "á¸º": "L", "Å": "L", "È½": "L", "â±¢": "L", "â± ": "L", "êˆ": "L", "ê†": "L", "êž€": "L", "Ç‡": "LJ", "Çˆ": "Lj", "â“‚": "M", "ï¼­": "M", "á¸¾": "M", "á¹€": "M", "á¹‚": "M", "â±®": "M", "Æœ": "M", "â“ƒ": "N", "ï¼®": "N", "Ç¸": "N", "Åƒ": "N", "Ã‘": "N", "á¹„": "N", "Å‡": "N", "á¹†": "N", "Å…": "N", "á¹Š": "N", "á¹ˆ": "N", "È ": "N", "Æ": "N", "êž": "N", "êž¤": "N", "ÇŠ": "NJ", "Ç‹": "Nj", "â“„": "O", "ï¼¯": "O", "Ã’": "O", "Ã“": "O", "Ã”": "O", "á»’": "O", "á»": "O", "á»–": "O", "á»”": "O", "Ã•": "O", "á¹Œ": "O", "È¬": "O", "á¹Ž": "O", "ÅŒ": "O", "á¹": "O", "á¹’": "O", "ÅŽ": "O", "È®": "O", "È°": "O", "Ã–": "O", "Èª": "O", "á»Ž": "O", "Å": "O", "Ç‘": "O", "ÈŒ": "O", "ÈŽ": "O", "Æ ": "O", "á»œ": "O", "á»š": "O", "á» ": "O", "á»ž": "O", "á»¢": "O", "á»Œ": "O", "á»˜": "O", "Çª": "O", "Ç¬": "O", "Ã˜": "O", "Ç¾": "O", "Æ†": "O", "ÆŸ": "O", "êŠ": "O", "êŒ": "O", "Æ¢": "OI", "êŽ": "OO", "È¢": "OU", "â“…": "P", "ï¼°": "P", "á¹”": "P", "á¹–": "P", "Æ¤": "P", "â±£": "P", "ê": "P", "ê’": "P", "ê”": "P", "â“†": "Q", "ï¼±": "Q", "ê–": "Q", "ê˜": "Q", "ÉŠ": "Q", "â“‡": "R", "ï¼²": "R", "Å”": "R", "á¹˜": "R", "Å˜": "R", "È": "R", "È’": "R", "á¹š": "R", "á¹œ": "R", "Å–": "R", "á¹ž": "R", "ÉŒ": "R", "â±¤": "R", "êš": "R", "êž¦": "R", "êž‚": "R", "â“ˆ": "S", "ï¼³": "S", "áºž": "S", "Åš": "S", "á¹¤": "S", "Åœ": "S", "á¹ ": "S", "Å ": "S", "á¹¦": "S", "á¹¢": "S", "á¹¨": "S", "È˜": "S", "Åž": "S", "â±¾": "S", "êž¨": "S", "êž„": "S", "â“‰": "T", "ï¼´": "T", "á¹ª": "T", "Å¤": "T", "á¹¬": "T", "Èš": "T", "Å¢": "T", "á¹°": "T", "á¹®": "T", "Å¦": "T", "Æ¬": "T", "Æ®": "T", "È¾": "T", "êž†": "T", "êœ¨": "TZ", "â“Š": "U", "ï¼µ": "U", "Ã™": "U", "Ãš": "U", "Ã›": "U", "Å¨": "U", "á¹¸": "U", "Åª": "U", "á¹º": "U", "Å¬": "U", "Ãœ": "U", "Ç›": "U", "Ç—": "U", "Ç•": "U", "Ç™": "U", "á»¦": "U", "Å®": "U", "Å°": "U", "Ç“": "U", "È”": "U", "È–": "U", "Æ¯": "U", "á»ª": "U", "á»¨": "U", "á»®": "U", "á»¬": "U", "á»°": "U", "á»¤": "U", "á¹²": "U", "Å²": "U", "á¹¶": "U", "á¹´": "U", "É„": "U", "â“‹": "V", "ï¼¶": "V", "á¹¼": "V", "á¹¾": "V", "Æ²": "V", "êž": "V", "É…": "V", "ê ": "VY", "â“Œ": "W", "ï¼·": "W", "áº€": "W", "áº‚": "W", "Å´": "W", "áº†": "W", "áº„": "W", "áºˆ": "W", "â±²": "W", "â“": "X", "ï¼¸": "X", "áºŠ": "X", "áºŒ": "X", "â“Ž": "Y", "ï¼¹": "Y", "á»²": "Y", "Ã": "Y", "Å¶": "Y", "á»¸": "Y", "È²": "Y", "áºŽ": "Y", "Å¸": "Y", "á»¶": "Y", "á»´": "Y", "Æ³": "Y", "ÉŽ": "Y", "á»¾": "Y", "â“": "Z", "ï¼º": "Z", "Å¹": "Z", "áº": "Z", "Å»": "Z", "Å½": "Z", "áº’": "Z", "áº”": "Z", "Æµ": "Z", "È¤": "Z", "â±¿": "Z", "â±«": "Z", "ê¢": "Z", "â“": "a", "ï½": "a", "áºš": "a", "Ã ": "a", "Ã¡": "a", "Ã¢": "a", "áº§": "a", "áº¥": "a", "áº«": "a", "áº©": "a", "Ã£": "a", "Ä": "a", "Äƒ": "a", "áº±": "a", "áº¯": "a", "áºµ": "a", "áº³": "a", "È§": "a", "Ç¡": "a", "ä": "a", "ÇŸ": "a", "áº£": "a", "Ã¥": "a", "Ç»": "a", "ÇŽ": "a", "È": "a", "Èƒ": "a", "áº¡": "a", "áº­": "a", "áº·": "a", "á¸": "a", "Ä…": "a", "â±¥": "a", "É": "a", "êœ³": "aa", "Ã¦": "ae", "Ç½": "ae", "Ç£": "ae", "êœµ": "ao", "êœ·": "au", "êœ¹": "av", "êœ»": "av", "êœ½": "ay", "â“‘": "b", "ï½‚": "b", "á¸ƒ": "b", "á¸…": "b", "á¸‡": "b", "Æ€": "b", "Æƒ": "b", "É“": "b", "â“’": "c", "ï½ƒ": "c", "Ä‡": "c", "Ä‰": "c", "Ä‹": "c", "Ä": "c", "Ã§": "c", "á¸‰": "c", "Æˆ": "c", "È¼": "c", "êœ¿": "c", "â†„": "c", "â““": "d", "ï½„": "d", "á¸‹": "d", "Ä": "d", "á¸": "d", "á¸‘": "d", "á¸“": "d", "á¸": "d", "Ä‘": "d", "ÆŒ": "d", "É–": "d", "É—": "d", "êº": "d", "Ç³": "dz", "Ç†": "dz", "â“”": "e", "ï½…": "e", "Ã¨": "e", "Ã©": "e", "Ãª": "e", "á»": "e", "áº¿": "e", "á»…": "e", "á»ƒ": "e", "áº½": "e", "Ä“": "e", "á¸•": "e", "á¸—": "e", "Ä•": "e", "Ä—": "e", "Ã«": "e", "áº»": "e", "Ä›": "e", "È…": "e", "È‡": "e", "áº¹": "e", "á»‡": "e", "È©": "e", "á¸": "e", "Ä™": "e", "á¸™": "e", "á¸›": "e", "É‡": "e", "É›": "e", "Ç": "e", "â“•": "f", "ï½†": "f", "á¸Ÿ": "f", "Æ’": "f", "ê¼": "f", "â“–": "g", "ï½‡": "g", "Çµ": "g", "Ä": "g", "á¸¡": "g", "ÄŸ": "g", "Ä¡": "g", "Ç§": "g", "Ä£": "g", "Ç¥": "g", "É ": "g", "êž¡": "g", "áµ¹": "g", "ê¿": "g", "â“—": "h", "ï½ˆ": "h", "Ä¥": "h", "á¸£": "h", "á¸§": "h", "ÈŸ": "h", "á¸¥": "h", "á¸©": "h", "á¸«": "h", "áº–": "h", "Ä§": "h", "â±¨": "h", "â±¶": "h", "É¥": "h", "Æ•": "hv", "â“˜": "i", "ï½‰": "i", "Ã¬": "i", "Ã­": "i", "Ã®": "i", "Ä©": "i", "Ä«": "i", "Ä­": "i", "Ã¯": "i", "á¸¯": "i", "á»‰": "i", "Ç": "i", "È‰": "i", "È‹": "i", "á»‹": "i", "Ä¯": "i", "á¸­": "i", "É¨": "i", "Ä±": "i", "â“™": "j", "ï½Š": "j", "Äµ": "j", "Ç°": "j", "É‰": "j", "â“š": "k", "ï½‹": "k", "á¸±": "k", "Ç©": "k", "á¸³": "k", "Ä·": "k", "á¸µ": "k", "Æ™": "k", "â±ª": "k", "ê": "k", "êƒ": "k", "ê…": "k", "êž£": "k", "â“›": "l", "ï½Œ": "l", "Å€": "l", "Äº": "l", "Ä¾": "l", "á¸·": "l", "á¸¹": "l", "Ä¼": "l", "á¸½": "l", "á¸»": "l", "Å¿": "l", "Å‚": "l", "Æš": "l", "É«": "l", "â±¡": "l", "ê‰": "l", "êž": "l", "ê‡": "l", "Ç‰": "lj", "â“œ": "m", "ï½": "m", "á¸¿": "m", "á¹": "m", "á¹ƒ": "m", "É±": "m", "É¯": "m", "â“": "n", "ï½Ž": "n", "Ç¹": "n", "Å„": "n", "Ã±": "n", "á¹…": "n", "Åˆ": "n", "á¹‡": "n", "Å†": "n", "á¹‹": "n", "á¹‰": "n", "Æž": "n", "É²": "n", "Å‰": "n", "êž‘": "n", "êž¥": "n", "ÇŒ": "nj", "â“ž": "o", "ï½": "o", "Ã²": "o", "Ã³": "o", "Ã´": "o", "á»“": "o", "á»‘": "o", "á»—": "o", "á»•": "o", "Ãµ": "o", "á¹": "o", "È­": "o", "á¹": "o", "Å": "o", "á¹‘": "o", "á¹“": "o", "Å": "o", "È¯": "o", "È±": "o", "Ã¶": "o", "È«": "o", "á»": "o", "Å‘": "o", "Ç’": "o", "È": "o", "È": "o", "Æ¡": "o", "á»": "o", "á»›": "o", "á»¡": "o", "á»Ÿ": "o", "á»£": "o", "á»": "o", "á»™": "o", "Ç«": "o", "Ç­": "o", "Ã¸": "o", "Ç¿": "o", "É”": "o", "ê‹": "o", "ê": "o", "Éµ": "o", "Æ£": "oi", "È£": "ou", "ê": "oo", "â“Ÿ": "p", "ï½": "p", "á¹•": "p", "á¹—": "p", "Æ¥": "p", "áµ½": "p", "ê‘": "p", "ê“": "p", "ê•": "p", "â“ ": "q", "ï½‘": "q", "É‹": "q", "ê—": "q", "ê™": "q", "â“¡": "r", "ï½’": "r", "Å•": "r", "á¹™": "r", "Å™": "r", "È‘": "r", "È“": "r", "á¹›": "r", "á¹": "r", "Å—": "r", "á¹Ÿ": "r", "É": "r", "É½": "r", "ê›": "r", "êž§": "r", "êžƒ": "r", "â“¢": "s", "ï½“": "s", "ß": "s", "Å›": "s", "á¹¥": "s", "Å": "s", "á¹¡": "s", "Å¡": "s", "á¹§": "s", "á¹£": "s", "á¹©": "s", "È™": "s", "ÅŸ": "s", "È¿": "s", "êž©": "s", "êž…": "s", "áº›": "s", "â“£": "t", "ï½”": "t", "á¹«": "t", "áº—": "t", "Å¥": "t", "á¹­": "t", "È›": "t", "Å£": "t", "á¹±": "t", "á¹¯": "t", "Å§": "t", "Æ­": "t", "Êˆ": "t", "â±¦": "t", "êž‡": "t", "êœ©": "tz", "â“¤": "u", "ï½•": "u", "Ã¹": "u", "Ãº": "u", "Ã»": "u", "Å©": "u", "á¹¹": "u", "Å«": "u", "á¹»": "u", "Å­": "u", "ü": "u", "Çœ": "u", "Ç˜": "u", "Ç–": "u", "Çš": "u", "á»§": "u", "Å¯": "u", "Å±": "u", "Ç”": "u", "È•": "u", "È—": "u", "Æ°": "u", "á»«": "u", "á»©": "u", "á»¯": "u", "á»­": "u", "á»±": "u", "á»¥": "u", "á¹³": "u", "Å³": "u", "á¹·": "u", "á¹µ": "u", "Ê‰": "u", "â“¥": "v", "ï½–": "v", "á¹½": "v", "á¹¿": "v", "Ê‹": "v", "êŸ": "v", "ÊŒ": "v", "ê¡": "vy", "â“¦": "w", "ï½—": "w", "áº": "w", "áºƒ": "w", "Åµ": "w", "áº‡": "w", "áº…": "w", "áº˜": "w", "áº‰": "w", "â±³": "w", "â“§": "x", "ï½˜": "x", "áº‹": "x", "áº": "x", "â“¨": "y", "ï½™": "y", "á»³": "y", "Ã½": "y", "Å·": "y", "á»¹": "y", "È³": "y", "áº": "y", "Ã¿": "y", "á»·": "y", "áº™": "y", "á»µ": "y", "Æ´": "y", "É": "y", "á»¿": "y", "â“©": "z", "ï½š": "z", "Åº": "z", "áº‘": "z", "Å¼": "z", "Å¾": "z", "áº“": "z", "áº•": "z", "Æ¶": "z", "È¥": "z", "É€": "z", "â±¬": "z", "ê£": "z", "Î†": "Î‘", "Îˆ": "Î•", "Î‰": "Î—", "ÎŠ": "Î™", "Îª": "Î™", "ÎŒ": "ÎŸ", "ÎŽ": "Î¥", "Î«": "Î¥", "Î": "Î©", "Î¬": "Î±", "Î­": "Îµ", "Î®": "Î·", "Î¯": "Î¹", "ÏŠ": "Î¹", "Î": "Î¹", "ÏŒ": "Î¿", "Ï": "Ï…", "Ï‹": "Ï…", "Î°": "Ï…", "Ï‰": "Ï‰", "Ï‚": "Ïƒ" }; return a }), b.define("select2/data/base", ["../utils"], function (a) { function b(a, c) { b.__super__.constructor.call(this) } return a.Extend(b, a.Observable), b.prototype.current = function (a) { throw new Error("The `current` method must be defined in child classes.") }, b.prototype.query = function (a, b) { throw new Error("The `query` method must be defined in child classes.") }, b.prototype.bind = function (a, b) { }, b.prototype.destroy = function () { }, b.prototype.generateResultId = function (b, c) { var d = b.id + "-result-"; return d += a.generateChars(4), d += null != c.id ? "-" + c.id.toString() : "-" + a.generateChars(4) }, b }), b.define("select2/data/select", ["./base", "../utils", "jquery"], function (a, b, c) {
             function d(a, b) { this.$element = a, this.options = b, d.__super__.constructor.call(this) } return b.Extend(d, a), d.prototype.current = function (a) { var b = [], d = this; this.$element.find(":selected").each(function () { var a = c(this), e = d.item(a); b.push(e) }), a(b) }, d.prototype.select = function (a) {
                 var b = this; if (a.selected = !0, c(a.element).is("option")) return a.element.selected = !0, void this.$element.trigger("change");
                 if (this.$element.prop("multiple")) this.current(function (d) { var e = []; a = [a], a.push.apply(a, d); for (var f = 0; f < a.length; f++) { var g = a[f].id; -1 === c.inArray(g, e) && e.push(g) } b.$element.val(e), b.$element.trigger("change") }); else { var d = a.id; this.$element.val(d), this.$element.trigger("change") }
