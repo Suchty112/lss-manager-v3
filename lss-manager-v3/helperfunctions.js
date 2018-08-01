@@ -1878,7 +1878,7 @@ if (I18n.locale == "en") {
             }
         },
         166: {
-            'name': 'Fassadenteile drohen zu fallen',
+            'name': 'Drowning',
             'credits': 1250,
             'vehicles': {
                 'lf': 1,
@@ -1889,7 +1889,7 @@ if (I18n.locale == "en") {
             'patients': {
                 'min': 0,
                 'max': 2,
-                'transport': 80,,
+                'transport': 80,
                 'specialisation': 'Traumatology'
             }
         },
