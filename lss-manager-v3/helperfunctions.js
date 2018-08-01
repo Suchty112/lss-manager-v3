@@ -1787,7 +1787,7 @@ if (I18n.locale == "en") {
                 'lf': 4,
                 'rw': 2,
                 'elw1': 1,
-                'dlk': 1
+                'dlk': 1,
                 'fustw': 2
             },
             'patients': {
