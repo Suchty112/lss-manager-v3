@@ -2690,7 +2690,7 @@ else if (I18n.locale == "nl") {
             }
         },
         27: {
-            'name': 'Auffahrunfall',
+            'name': 'Persoon aangereden',
             'credits': 700,
             'vehicles': {
                 'rw': 1,
@@ -2701,289 +2701,248 @@ else if (I18n.locale == "nl") {
             }
         },
         28: {
-            'name': 'Garagenbrand',
-            'credits': 1400,
+            'name': 'Brand in landbouwschuur',
+            'credits': 1600,
             'vehicles': {
-                'lf': 2
+                'lf': 2,
+                'dlk': 1,
+                'elw1': 1,
+                'gwl2': 1
             },
-            'expansions': [
-                [102, 'Feuer in Einfamilienhaus'],
-                [103, 'Feuer in Einfamilienhaus'],
-                [104, 'Feuer in Einfamilienhaus'],
-                [105, 'Feuer in Einfamilienhaus']
-            ]
+            'percentages': {
+                'dlk': 30,
+                'gwl2': 20
+            }
         },
         29: {
-            'name': 'Maschinenbrand',
+            'name': 'Brand in werkplaats',
             'credits': 2470,
             'vehicles': {
                 'lf': 3,
                 'rw': 1,
                 'elw1': 1,
                 'gwl2': 1,
-                'atem': 1
+                'atem': 1,
+                'elw2': 1,
+                'fustw': 1
             },
             'percentages': {
-                'gwl2': 30,
-                'atem': 20
+                'gwl2': 20,
+                'atem': 50,
+                'elw2': 70
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'transport': 100,
+                'specialisation': 'Algemene Heelkunde'
             }
         },
         30: {
-            'name': 'Große Ölspur',
-            'credits': 1900,
+            'name': 'Lekkende dieseltank',
+            'credits': 190,
             'vehicles': {
                 'lf': 1,
-                'oel': 1
+                'rw': 1
             },
             'percentages': {
-                'oel': 75
-            },
-            'expansions': [
-                [95, 'Ausgedehnte Ölspur']
-            ]
+                'rw': 20
+            }
         },
         31: {
-            'name': 'Auslaufende Betriebsstoffe',
+            'name': 'Oliespoor',
             'credits': 400,
             'vehicles': {
                 'lf': 1
-            },
-            'expansions': [
-                [30, 'Große Ölspur'],
-                [95, 'Ausgedehnte Ölspur'],
-                [94, 'Kleine Ölspur']
-            ]
+            }
         },
         32: {
-            'name': 'Kaminbrand',
+            'name': 'Schoorsteenbrand woning met rietenkap',
             'credits': 1310,
             'vehicles': {
-                'lf': 1,
+                'lf': 2,
                 'dlk': 1,
                 'elw1': 1
             }
         },
         33: {
-            'name': 'Mähdrescher Brand',
+            'name': 'Brandende landbouwmachine',
             'credits': 1200,
             'vehicles': {
-                'lf': 2
-            }
+                'lf': 1
+            },
+            'expansions': [
+                [127, 'Brand in landbouwschuur']
+            ]
         },
         34: {
-            'name': 'Brand im Supermarkt',
-            'credits': 3710,
+            'name': 'Brand in supermarkt',
+            'credits': 2100,
             'vehicles': {
-                'rw': 1,
-                'lf': 3,
+                'lf': 2,
                 'elw1': 1,
-                'elw2': 1,
                 'dlk': 1,
-                'mess': 1
-            },
-            'percentages': {
-                'rw': 50,
-                'elw2': 20,
-                'dlk': 80,
-                'mess': 30
-            },
-            'special': {
-                'averageMinimumEmployeesFire': 30
-            },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'specialisation': 'Allgemeine Innere'
+                'fustw': 1
             }
         },
         35: {
-            'name': 'Feuer im Krankenhaus',
-            'credits': 3810,
+            'name': 'Brand in ziekenhuis',
+            'credits': 2510,
             'vehicles': {
-                'rw': 2,
-                'lf': 4,
+                'lf': 2,
                 'elw1': 1,
                 'elw2': 1,
+                'elw3': 1,
                 'dlk': 1
             },
             'percentages': {
-                'rw': 30,
-                'elw2': 30
-            },
-            'expansions': [
-                [320, 'Großfeuer im Krankenhaus']
-            ]
+                'elw2': 10,
+                'elw3': 10
+            }
         },
         36: {
-            'name': 'Brennender Güterwaggon',
-            'credits': 3310,
+            'name': 'Brandende goederenwagon',
+            'credits': 3110,
             'vehicles': {
-                'rw': 2,
-                'lf': 4,
+                'lf': 3,
                 'elw1': 1,
-                'dlk': 1,
+                'gwl2': 1,
                 'mess': 1,
-                'dekon': 1
+                'gefahr': 1
             },
             'percentages': {
-                'rw': 30,
-                'mess': 20,
-                'dekon': 10
+                'mess': 50,
+                'gefahr': 80
             }
         },
         37: {
-            'name': 'Mülleimerbrand',
+            'name': 'Brandende afvalbak',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             }
         },
         38: {
-            'name': 'Mülleimerbrand',
+            'name': 'Brandende afvalbak',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             }
         },
         39: {
-            'name': 'Mülleimerbrand',
+            'name': 'Brandende afvalbak',
             'credits': 110,
             'vehicles': {
                 'lf': 1
             }
         },
         40: {
-            'name': 'Mülleimerbrand',
+            'name': 'Brandende afvalbak',
             'credits': 110,
             'vehicles': {
                 'lf': 1
-            },
-            'expansions': [
-                [35, 'Feuer im Krankenhaus']
-            ]
+            }
         },
         41: {
             'vge': true,
-            'name': 'Großbrand',
+            'name': 'Brand in kantoorpand',
             'credits': 10010,
             'vehicles': {
-                'lf': 6,
+                'lf': 8,
                 'mess': 1,
                 'elw1': 2,
                 'elw2': 1,
                 'dlk': 2,
                 'gwl2': 1,
-                'atem': 1
-            },
-            'percentages': {
-                'elw2': 90
+                'atem': 1,
+                'gefahr': 1
             }
         },
         42: {
-            'name': 'Tankstellenbrand',
+            'name': 'Brand in tankstation',
             'credits': 3720,
-            'vehicles': {
-                'rw': 2,
-                'lf': 4,
-                'elw1': 1,
-                'elw2': 1,
-                'dlk': 1,
-                'mess': 1,
-                'gefahr': 1
-            },
-            'percentages': {
-                'rw': 30,
-                'elw2': 10,
-                'mess': 80,
-                'gefahr': 70
-            }
-        },
-        43: {
-            'vge': true,
-            'name': 'Massenkarambolage',
-            'credits': 10010,
-            'vehicles': {
-                'lf': 10,
-                'rw': 5,
-                'elw1': 2,
-                'oel': 2
-            },
-            'patients': {
-                'min': 10,
-                'max': 12,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        44: {
-            'onlyRd': true,
-            'name': 'Alkoholintoxitation',
-            'specialisation': 'Allgemeine Innere',
-            'tragehilfe': 20
-        },
-        45: {
-            'onlyRd': true,
-            'name': 'Nasenbluten unstillbar',
-            'specialisation': 'Allgemeine Chriguie'
-        },
-        46: {
-            'onlyRd': true,
-            'name': 'Herzinfarkt',
-            'transport': 100,
-            'nef': 100,
-            'specialisation': 'Kardiologie',
-            'tragehilfe': 20
-        },
-        47: {
-            'onlyRd': true,
-            'name': 'akuter Asthma-Anfall',
-            'transport': 50,
-            'nef': 100,
-            'specialisation': 'Allgemeine Innere'
-        },
-        48: {
-            'onlyRd': true,
-            'name': 'Krampfanfall',
-            'transport': 50,
-            'nef': 80,
-            'specialisation': 'Neurologie',
-            'tragehilfe': 10
-        },
-        49: {
-            'onlyRd': true,
-            'name': 'Fieber',
-            'transport': 90,
-            'nef': 20,
-            'specialisation': 'Allgemeine Innere',
-            'tragehilfe': 5
-        },
-        50: {
-            'onlyRd': true,
-            'name': 'Gestürzte Person',
-            'transport': 30,
-            'nef': 10,
-            'specialisation': 'Unfallchirugie',
-            'tragehilfe': 5
-        },
-        51: {
-            'name': 'Brand in Werkstatt',
-            'credits': 3620,
             'vehicles': {
                 'rw': 1,
                 'lf': 4,
                 'elw1': 1,
                 'elw2': 1,
-                'dlk': 1
+                'elw3': 1,
+                'gwl2': 1,
+                'atem': 1,
+                'dlk': 1,
+                'mess': 1,
+                'gefahr': 1,
+                'fustw': 2
             },
             'percentages': {
-                'rw': 30,
-                'elw2': 10
+                'mess': 50,
+                'gefahr': 50
+            }
+        },
+        43: {
+            'vge': true,
+            'name': 'Kettingbotsing',
+            'credits': 10010,
+            'vehicles': {
+                'lf': 12,
+                'rw': 3,
+                'elw1': 3,
+                'elw2': 2,
+                'fustw': 5
             },
             'patients': {
-                'min': 0,
-                'max': 2,
-                'nef': 40,
-                'specialisation': 'Allgemeine Innere'
+                'min': 8,
+                'max': 12,
+                'specialisation': 'Traumatologie'
             }
+        },
+        44: {
+            'name': 'Liftopsluiting',
+            'credits': 170,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        45: {
+            'onlyRd': true,
+            'name': 'Overdosis alcohol',
+            'specialisation': 'Interne Geneeskunde'
+        },
+        46: {
+            'onlyRd': true,
+            'name': 'Bloedneus',
+            'transport': 100,
+            'specialisation': 'Algemene Heelkunde',
+        },
+        47: {
+            'onlyRd': true,
+            'name': 'Pijn op de borst',
+            'transport': 100,
+            'specialisation': 'Cardiologie'
+        },
+        48: {
+            'onlyRd': true,
+            'name': 'Astma aanval',
+            'transport': 50,
+            'specialisation': 'Interne Geneeskunde'
+        },
+        49: {
+            'onlyRd': true,
+            'name': 'Beroerte',
+            'transport': 50,
+            'specialisation': 'Neurologie'
+        },
+        50: {
+            'onlyRd': true,
+            'name': 'Koortsstuip',
+            'transport': 90,
+            'specialisation': 'Interne Geneeskunde'
+        },
+        51: {
+            'onlyRd': true,
+            'name': 'Gevallen persoon',
+            'transport': 30,
+            'specialisation': 'Traumatologie'
         },
         52: {
             'name': 'Brand auf Weihnachtsmarkt',

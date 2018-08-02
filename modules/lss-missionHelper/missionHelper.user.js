@@ -105,6 +105,7 @@
 				rw: 'Hulpverleningsvoertuig/Haakarmbak Hulpverlening',
 				elw1: 'Officier van Dienst Brandweer',
 				elw2: 'Hoofdofficier van Dienst - Brandweer',
+				elw3: 'Commandowagen',
 				elw_airport: 'Airport Fire Officer / On Scene Commander',
 				atem: 'Adembeschermingsvoertuig',
 				oel: 'Milieu wagen of haakarmbak milieu',
