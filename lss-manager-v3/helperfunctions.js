@@ -2364,6 +2364,16 @@ if (I18n.locale == "en") {
                 'transport': 60,
                 'specialisation': 'General Internal'
             }
+        },
+        196: {
+            'name': 'Kitchen Fire',
+            'credits': 1000,
+            'vehicles': {
+                'lf': 2
+            },
+            'expansions': [
+                [110, 'Residential Fire']
+            ]
         }
     };
 }
@@ -6540,6 +6550,26 @@ else if (I18n.locale == "nl") {
                 'specialisation': 'Allgemeine Innere'
             }
         },
+        328: {
+            'name': 'Tiefgaragenbrand',
+            'credits': 3500,
+            'vehicles': {
+                'lf': 6,
+                'dlk': 2,
+                'atem': 2,
+                'mess': 1,
+                'oel': 1,
+                'fustw': 1,
+                'elw1': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1,
+                'nef': 25,
+                'transport': 50,
+                'specialisation': 'Allgemeine Innere'
+            }
+        }
     };
 }
 else if (I18n.locale == "de") {
@@ -11535,6 +11565,18 @@ else if (I18n.locale == "de") {
                 'nef': 20,
                 'specialisation': 'Allgemeine Innere'
             }
+        },
+        384: {
+            'name': 'Brennende Ballenpresse',
+            'credits': 1100,
+            'vehicles': {
+                'lf': 2
+            },
+            'expansions': [
+                [131, 'Mittlerer Feldbrand'],
+                [132, 'Großer Feldbrand'],
+                [133, 'Großer Feldbrand']
+            ]
         }
     }
 }
