@@ -2955,230 +2955,261 @@ else if (I18n.locale == "nl") {
             'specialisation': 'Traumatologie'
         },
         52: {
-            'name': 'Brand auf Weihnachtsmarkt',
-            'credits': 310,
+            'name': 'Brand in garagebedrijf',
+            'credits': 1800,
             'vehicles': {
-                'lf': 1
-            },
-            'patients': {
-                'min': 0,
-                'max': 1,
-                'nef': 10,
-                'specialisation': 'Allgemeine Innere'
+                'lf': 2,
+                'dlk': 1,
+                'elw1': 1
             }
         },
         53: {
-            'name': 'Verkehrsunfall durch Glatteis',
-            'credits': 1410,
+            'name': 'Brand in sporthal',
+            'credits': 1700,
+            'vehicles': {
+                'lf': 4,
+                'dlk': 1,
+                'elw1': 1,
+                'elw2': 1,
+                'rw': 1,
+                'atem': 1,
+                'gwl2': 1,
+                'elw3': 1
+            },
+            'percentages': {
+                'elw3': 60
+            }
+        },
+        54: {
+            'name': 'Brand in sporthal',
+            'credits': 230,
+            'vehicles': {
+                'lf': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 20
+            }
+        },
+        55: {
+            'name': 'Brand in sporthal',
+            'credits': 1000,
+            'vehicles': {
+                'lf': 2,
+                'dlk': 1,
+                'elw1': 1
+            }
+        },
+        56: {
+            'name': 'Brand in sporthal',
+            'credits': 3100,
+            'vehicles': {
+                'lf': 8,
+                'dlk': 2,
+                'elw1': 2,
+                'elw2': 1,
+                'rw': 1,
+                'elw3': 1,
+                'gwl2': 1,
+                'atem': 1
+            },
+            'patients': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        57: {
+            'name': 'Kat in boom',
+            'credits': 210,
+            'vehicles': {
+                'lf': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 20
+            }
+        },
+        58: {
+            'name': 'Buitenbrand',
+            'credits': 250,
+            'vehicles': {
+                'lf': 1,
+            }
+        },
+        59: {
+            'vge': true,
+            'name': 'Brand in opslagloods',
+            'credits': 17500,
+            'vehicles': {
+                'lf': 16,
+                'mess': 2,
+                'gefahr': 1,
+                'elw1': 4,
+                'elw2': 2,
+                'rw': 4,
+                'dlk': 4,
+                'atem': 1,
+                'gwl2': 3
+            }
+        },
+        60: {
+            'name': 'Brand in slaapkamer',
+            'credits': 500,
+            'vehicles': {
+                'lf': 1,
+                'elw1': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 80
+            }
+        },
+        61: {
+            'name': 'Brand in slaapkamer',
+            'credits': 500,
+            'vehicles': {
+                'lf': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 10
+            },
+            'expansions': [
+                [22, 'Brandend dak']
+            ]
+        },
+        62: {
+            'name': 'Brand in keuken',
+            'credits': 2000,
+            'vehicles': {
+                'lf': 3,
+                'dlk': 1,
+                'elw1': 1,
+                'elw2': 1
+            },
+            'percentages': {
+                'elw2': 50
+            }
+        },
+        63: {
+            'name': 'Brand in keuken',
+            'credits': 500,
+            'vehicles': {
+                'lf': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 10
+            }
+        },
+        64: {
+            'name': 'Brand in keuken',
+            'credits': 700,
+            'vehicles': {
+                'lf': 2,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 80
+            }
+        },
+        65: {
+            'name': 'Takken op de weg',
+            'credits': 310,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        66: {
+            'name': 'Boom op fietspad',
+            'credits': 310,
+            'vehicles': {
+                'lf': 1
+            }
+        },
+        67: {
+            'name': 'Omgewaaide bouwsteiger',
+            'credits': 320,
+            'vehicles': {
+                'lf': 1,
+                'dlk': 1
+            },
+            'percentages': {
+                'dlk': 30
+            }
+        },
+        68: {
+            'name': 'Boom op auto',
+            'credits': 350,
             'vehicles': {
                 'lf': 1,
                 'rw': 1
             },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'specialisation': 'Unfallchirugie'
-            }
-        },
-        54: {
-            'onlyRd': true,
-            'name': 'Personenschaden durch Verbrennung',
-            'transport': 20,
-            'nef': 40,
-            'specialisation': 'Unfallchirugie'
-        },
-        55: {
-            'name': 'Brennender Tannenbaum',
-            'credits': 870,
-            'vehicles': {
-                'lf': 1
-            }
-        },
-        56: {
-            'onlyRd': true,
-            'name': 'Betrunkene Person auf Weihnachtsmarkt',
-            'specialisation': 'Allgemeine Innere'
-        },
-        57: {
-            'onlyRd': true,
-            'name': 'Gestürzter Fußgänger',
-            'transport': 20,
-            'specialisation': 'Unfallchirugie'
-        },
-        58: {
-            'onlyRd': true,
-            'name': 'Gestürzter Radfahrer',
-            'transport': 40,
-            'specialisation': 'Unfallchirugie'
-        },
-        59: {
-            'vge': true,
-            'name': 'Gefahrgutunfall',
-            'credits': 14010,
-            'vehicles': {
-                'lf': 20,
-                'mess': 4,
-                'gefahr': 4,
-                'elw1': 2,
-                'elw2': 1,
-                'rw': 5,
-                'dlk': 2,
-                'atem': 3
-            },
             'percentages': {
-                'elw2': 80
-            },
-            'patients': {
-                'min': 10,
-                'max': 20,
-                'specialisation': 'Allgemeine Innere'
-            }
-        },
-        60: {
-            'name': 'Ladendiebstahl',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            },
-            'expansions': [
-                [74, 'Randalierende Person']
-            ]
-        },
-        61: {
-            'name': 'Ladendiebstahl',
-            'credits': 100,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            },
-            'expansions': [
-                [74, 'Randalierende Person']
-            ]
-        },
-        62: {
-            'name': 'Parkendes Auto gerammt',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        63: {
-            'name': 'Parkendes Auto gerammt',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        64: {
-            'name': 'Metalldiebstahl',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        65: {
-            'name': 'Taschendiebstahl',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        66: {
-            'name': 'Notebook aus Schule entwendet',
-            'credits': 150,
-            'vehicles': {
-                'fustw': 1
-            },
-            'prisoners': {
-                'min': 0,
-                'max': 1
-            }
-        },
-        67: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        68: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
+                'rw': 10
             }
         },
         69: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
+            'name': 'Persoon bekneld onder boom',
+            'credits': 1000,
             'vehicles': {
-                'fustw': 1
-            }
-        },
-        70: {
-            'name': 'Personalienaufnahme von Schwarzfahrer',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        71: {
-            'name': 'Parkendes Auto gerammt',
-            'credits': 120,
-            'vehicles': {
-                'fustw': 1
-            }
-        },
-        72: {
-            'name': 'Bewusstloser Kranführer',
-            'credits': 2000,
-            'vehicles': {
-                'hoehen': 1,
+                'lf': 1,
                 'elw1': 1,
-                'fustw': 1,
-                'lf': 1
+                'rw': 1
+            },
+            'percentages': {
+                'rw': 40
             },
             'patients': {
                 'min': 1,
                 'max': 1,
-                'nef': 80,
-                'specialisation': 'Allgemeine Innere'
+                'transport': 100,
+                'specialisation': 'Traumatologie'
             }
         },
-        73: {
-            'name': 'Schlägerei',
-            'credits': 700,
+        70: {
+            'name': 'Winkeldiefstal',
+            'credits': 200,
             'vehicles': {
-                'fustw': 3
-            },
-            'patients': {
-                'min': 0,
-                'max': 3,
-                'specialisation': 'Unfallchirugie'
+                'fustw': 1
             },
             'prisoners': {
                 'min': 0,
-                'max': 2
+                'max': 1
+            }
+        },
+        71: {
+            'name': 'Winkeldiefstal',
+            'credits': 200,
+            'vehicles': {
+                'fustw': 1
             },
-            'expansions': [
-                [106, 'Massenschlägerei'],
-                [107, 'Massenschlägerei']
-            ]
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        72: {
+            'name': 'Winkeldiefstal',
+            'credits': 200,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        73: {
+            'name': 'Tasjesdief',
+            'credits': 200,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
         },
         74: {
             'name': 'Randalierende Person',
