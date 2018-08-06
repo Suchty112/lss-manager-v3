@@ -50,10 +50,10 @@
 				taucher: 'Taucher',
 				mek: 'MEK-Fahrzeuge',
 				sek: 'SEK-Fahrzeuge',
-				gww: 'GW-Werkfeuerwehr',
-				ulf: 'ULF mit Löscharm',
-				tm50: 'TM 50',
-				turbo: 'Turbolöscher'
+				gwwerk: 'GW-Werkfeuerwehr',
+                ulf: 'ULF mit Löscharm',
+                tm: 'Teleskopmast',
+                turbo: 'Turbolöscher'
 			}
 		}
 
