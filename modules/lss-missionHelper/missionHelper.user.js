@@ -51,9 +51,9 @@
 				mek: 'MEK-Fahrzeuge',
 				sek: 'SEK-Fahrzeuge',
 				gwwerk: 'GW-Werkfeuerwehr',
-                ulf: 'ULF mit Löscharm',
-                tm: 'Teleskopmast',
-                turbo: 'Turbolöscher'
+				ulf: 'ULF mit Löscharm',
+				tm: 'Teleskopmast',
+				turbo: 'Turbolöscher'
 			}
 		}
 
