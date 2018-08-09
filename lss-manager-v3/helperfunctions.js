@@ -3212,64 +3212,84 @@ else if (I18n.locale == "nl") {
             }
         },
         74: {
-            'name': 'Randalierende Person',
-            'credits': 500,
+            'name': 'Huiselijk geweld',
+            'credits': 750,
             'vehicles': {
-                'fustw': 2
+                'fustw': 1
             },
             'prisoners': {
                 'min': 0,
-                'max': 1
-            },
-            'expansions': [
-                [73, 'Schlägerei']
-            ]
-        },
-        75: {
-            'vge': true,
-            'name': 'Unangemeldete Demonstration',
-            'credits': 10020,
-            'vehicles': {
-                'fustw': 7
-            }
-        },
-        76: {
-            'name': 'Küchenbrand',
-            'credits': 800,
-            'vehicles': {
-                'lf': 2
-            },
-            'expansions': [
-                [102, 'Feuer in Einfamilienhaus'],
-                [103, 'Feuer in Einfamilienhaus'],
-                [104, 'Feuer in Einfamilienhaus'],
-                [105, 'Feuer in Einfamilienhaus']
-            ]
-        },
-        77: {
-            'name': 'Person hinter Tür',
-            'credits': 500,
-            'vehicles': {
-                'fustw': 1,
-                'lf': 1
+                'max': 2
             },
             'patients': {
                 'min': 0,
                 'max': 1,
-                'nef': 50,
-                'specialisation': 'Allgemeine Innere'
+                'specialisation': 'Traumatologie'
+            }
+        },
+        75: {
+            'name': 'Bestuurder onder invloed',
+            'credits': 300,
+            'vehicles': {
+                'fustw': 1
+            },
+            'prisoners': {
+                'min': 0,
+                'max': 1
+            }
+        },
+        76: {
+            'name': 'Klein vliegtuig neergestort',
+            'credits': 3000,
+            'vehicles': {
+                'lf': 2,
+                'elw1': 1,
+                'elw2': 1,
+                'rw': 1
+                'fustw': 2
+            },
+            'percentages': {
+                'elw2': 10
+            },
+            'patients': {
+                'min': 1,
+                'max': 5,
+                'transport': 100,
+                'specialisation': 'Traumatologie'
+            }
+        },
+        77: {
+            'name': 'Klein vliegtuig neergestort',
+            'credits': 2000,
+            'vehicles': {
+                'lf': 1,
+                'elw1': 1,
+                'rw': 1
+                'fustw': 2
+            },
+            'percentages': {
+                'rw': 80
+            },
+            'patients': {
+                'min': 1,
+                'max': 2,
+                'transport': 100,
+                'specialisation': 'Traumatologie'
             }
         },
         78: {
-            'name': 'Kleintier in Not',
-            'credits': 130,
+            'name': 'Rookontwikkeling in winkel',
+            'credits': 350,
             'vehicles': {
                 'lf': 1,
                 'dlk': 1
             },
             'percentages': {
-                'dlk': 20
-            }
+                'dlk': 10
+            },
+            'expansions': [
+                [34, 'Brand in supermarkt']
+            ]
         },
         79: {
             'name': 'Verletzte Person auf Baugerüst',
@@ -11612,7 +11632,95 @@ else if (I18n.locale == "de") {
                 [132, 'Großer Feldbrand'],
                 [133, 'Großer Feldbrand']
             ]
-        }
+        },
+        385: {
+            'name': 'Unfall beim Umpumpen von Flüssigkeiten',
+            'credits': 5100,
+            'vehicles': {
+                'elw1': 1,
+                'elw2': 1,
+                'atem': 1,
+                'oel': 1,
+                'lf': 4,
+                'gefahr': 1,
+                'mess': 1,
+                'gwwerk': 1,
+                'tm': 1
+              },
+              'patients': {
+                  'min': 0,
+                  'max': 3,
+                  'nef': 20,
+                  'transport': 30,
+                  'specialisation': 'Allgemeine Innere'
+                }
+          },
+          386: {
+              'name': 'Ammoniak austritt',
+              'credits': 5500,
+              'vehicles': {
+                  'elw1': 2,
+                  'elw2': 1,
+                  'atem': 1,
+                  'lf': 5,
+                  'gefahr': 1,
+                  'mess': 1,
+                  'gwwerk': 1,
+                  'tm': 1,
+                  'ulf': 1,
+                  'turbo': 1
+                },
+                'patients': {
+                    'min': 0,
+                    'max': 5,
+                    'nef': 50,
+                    'transport': 80,
+                    'specialisation': 'Allgemeine Innere'
+                  }
+            },
+            387: {
+                'name': 'Brennende Pipeline-Isolierung',
+                'credits': 6500,
+                'vehicles': {
+                    'elw1': 1,
+                    'atem': 1,
+                    'dekon': 1,
+                    'lf': 8,
+                    'gefahr': 1,
+                    'mess': 1,
+                    'gwwerk': 1,
+                    'tm': 1,
+                    'ulf': 1,
+                    'turbo': 1
+                  },
+                  'percentages': {
+                      'dekon': 20
+                  },
+                  'patients': {
+                      'min': 0,
+                      'max': 1,
+                      'nef': 20,
+                      'transport': 70,
+                      'specialisation': 'Allgemeine Innere'
+                    }
+            },
+            388: {
+                'name': 'Feuer in Verwaltungsgebäude',
+                'credits': 2500,
+                'vehicles': {
+                    'elw1': 1
+                    'lf': 5,
+                    'dlk': 1,
+                    'rw': 1
+                  },
+                  'patients': {
+                      'min': 0,
+                      'max': 1,
+                      'nef': 20,
+                      'transport': 10,
+                      'specialisation': 'Allgemeine Innere'
+                    }
+            }
     }
 }
 
