@@ -1048,7 +1048,7 @@
             startVehicle: 'No vehicles can be stationed, but 10 beds from the start',
             extensions: 'Several specialisations (in each case 7 Days, 70.000 Credits/15 Coins,  General Internal and General Surgeon only 10.000 Credits/10 Coins)',
             maxBuildings: 'No Limit',
-            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
+            special: 'Minister of Finance and (Co-)Admins can be Allianz Hospital with the help of credits from the Allianz treasury (Expand) build.'
         },
         rth: {
             name: 'Helicopter Station',
@@ -1082,7 +1082,7 @@
             startVehicle: 'No vehicles stationable',
             extensions: 'Up to 3 more Classrooms (in each case 7 Days, 400.000 Credits/40 Coins)',
             maxBuildings: 'No limit',
-            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
+            special: 'Minister of Finance and (Co-)Admins can be Allianz Police Academys with the help of credits from the Allianz treasury (Expand) build.'
         },
         polheli: {
             name: 'Police Aviation Station',
@@ -1093,7 +1093,7 @@
             startPersonell: 0,
             startVehicle: 'No starting vehicle',
             maxBuildings: 'not known',
-            extensions: 'No extensions possible',
+            extensions: 'No extensions possible'
         },
         rbd: {
             name: 'Rescue Boat Dock',
@@ -1104,7 +1104,7 @@
             startPersonell: 0,
             startVehicle: '',
             extensions: '',
-            maxBuildings: 'No Limit',
+            maxBuildings: 'No Limit'
         },
         fbd: {
             name: 'Fire Boat Dock',
@@ -1115,7 +1115,7 @@
             startPersonell: 0,
             startVehicle: '',
             extensions: '',
-            maxBuildings: 'No Limit',
+            maxBuildings: 'No Limit'
         }
     };
 
@@ -1391,106 +1391,109 @@
             special: 'Vanaf de 24e brandweerkazerne stijgen de kosten voor de bouw van een nieuwe brandweerkazerne volgens de volgende formule: <code>100.000+200.000*LOG<sub>2</sub>(Aantal brandweerposten − 22)</code>. The Coins price remains constant!'
         },
         fwschule: {
-            name: 'Fire Academy',
+            name: 'Brandweeracademie',
             credits: 500000,
             coins: 50,
             maxlevel: 0,
-            levelcost: 'No expansion stages possible',
+            levelcost: 'Geen uitbreidingsstappen mogelijk',
             startPersonell: 0,
-            startVehicle: 'No vehicles stationable',
-            extensions: 'Up to 3 more Classrooms (in each case 7 Days, 400.000 Credits/40 Coins)',
-            maxBuildings: 'No limit',
-            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
+            startVehicle: 'Geen voertuigen stationeerbaar',
+            extensions: 'Tot 3 extra klaslokalen (in elk geval 7 dagen, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Geen limiet',
+            special: 'Minister van Financiën en (Co-)Admins kunnen Allianz Brandweeracademie zijn met behulp van kredieten van de Allianz treasury (Expand) build.'
         },
         rw: {
-            name: 'Ambulance Station',
+            name: 'Ambulance standplaats',
             credits: 200000,
             coins: 35,
-            maxlevel: 40,
-            levelcost: '1. 10.000<br>2. 50.000<br>3.-40. 100.000',
+            maxlevel: 14,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
             startPersonell: 2,
             startVehicle: 'Ambulance',
-            extensions: 'No extensions possible',
-            maxBuildings: 'No Limit'
+            extensions: 'Geen uitbreidingen mogelijk',
+            maxBuildings: 'Geen limiet'
+        },
+        rwschule: {
+            name: 'Universiteit Faculteit Geneeskunde',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Geen uitbreidingsstappen mogelijk',
+            startPersonell: 0,
+            startVehicle: 'Geen voertuigen stationeerbaar',
+            extensions: 'Tot 3 extra klaslokalen (in elk geval 7 dagen, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Geen limiet',
+            special: 'Minister van Financiën en (Co-)Admins kunnen Allianz Universiteit Faculteit Geneeskunde zijn met behulp van kredieten van de Allianz treasury (Expand) build.'
         },
         kh: {
-            name: 'Hospital',
+            name: 'Ziekenhuis',
             credits: 20000,
             coins: 35,
             maxlevel: 20,
-            levelcost: 'in each case 19.000 Credits/11 Coins',
+            levelcost: 'in elk geval 19.000 Credits/11 Coins',
             startPersonell: 0,
-            startVehicle: 'No vehicles can be stationed, but 10 beds from the start',
-            extensions: 'Several specialisations (in each case 7 Days, 70.000 Credits/15 Coins,  General Internal and General Surgeon only 10.000 Credits/10 Coins)',
-            maxBuildings: 'No Limit',
-            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
+            startVehicle: 'Geen voertuigen kunnen worden gestationeerd, maar 10 bedden vanaf het begin',
+            extensions: 'Diverse specialisaties (in elk geval 7 Dagen, 70.000 Credits/15 Coins,  Interne Geneeskunde and Algemene Heelkunde slechts 10.000 Credits/10 Coins)',
+            maxBuildings: 'Geen limiet',
+            special: 'Minister van Financiën en (Co-)Admins kunnen Allianz Ziekenhuis zijn met behulp van kredieten van de Allianz treasury (Expand) build.'
         },
         rth: {
-            name: 'Helicopter Station',
+            name: 'MMT Standplaats',
             credits: 1000000,
             coins: 50,
-            maxlevel: 0,
-            levelcost: 'x',
-            startPersonell: 0,
-            startVehicle: 'No starting vehicle',
-            maxBuildings: 'not known',
-            extensions: 'No extensions possible',
+            maxlevel: 3,
+            levelcost: '1. 10.000<br>2. 50.000<br>3. 100.000',
+            startPersonell: 1,
+            startVehicle: 'Geen startend voertuig',
+            maxBuildings: 'zie speciale kenmerken',
+            extensions: 'Geen uitbreidingen mogelijk',
+            special: 'Er kunnen maximaal 4 aanlegsteigers per station (uitbreidingsstadia) worden gebouwd. Tot het 125ste gebouw (van alle soorten) kunnen maximaal 4 landingsplaatsen worden gebouwd. Dan groeit het aantal met 1 per 25 gebouwen (vanaf 125.).'
         },
         pol: {
-            name: 'Police Station',
+            name: 'Politiebureau',
             credits: 100000,
             coins: 35,
             maxlevel: 14,
             levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
             startPersonell: 2,
-            startVehicle: 'Patrol Car',
-            extensions: 'Cell (25.000 Credits)<br>Max. 10 can be built',
+            startVehicle: 'DA Noodhulp',
+            extensions: 'cel (25.000 Credits)<br>Max. 10 can be built',
             maxBuildings: 'No Limit',
         },
         polschule: {
-            name: 'Police Academy',
+            name: 'Politieacademie',
             credits: 500000,
             coins: 50,
             maxlevel: 0,
-            levelcost: 'No expansion stages possible',
+            levelcost: 'Geen uitbreidingsstappen mogelijk',
             startPersonell: 0,
-            startVehicle: 'No vehicles stationable',
-            extensions: 'Up to 3 more Classrooms (in each case 7 Days, 400.000 Credits/40 Coins)',
-            maxBuildings: 'No limit',
-            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
+            startVehicle: 'Geen voertuigen stationeerbaar',
+            extensions: 'Tot 3 extra klaslokalen (in elk geval 7 dagen, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Geen limiet',
+            special: 'Minister van Financiën en (Co-)Admins kunnen Allianz Fire Academys zijn met behulp van kredieten van de Allianz treasury (Expand) build.'
         },
         polheli: {
-            name: 'Police Aviation Station',
+            name: 'Politiehelikopter standplaats',
             credits: 1000000,
             coins: 50,
             maxlevel: 4,
             levelcost: 'x',
-            startPersonell: 0,
-            startVehicle: 'No starting vehicle',
-            maxBuildings: 'not known',
-            extensions: 'No extensions possible',
+            startPersonell: 3,
+            startVehicle: 'Geen startend voertuig',
+            maxBuildings: 'niet bekend',
+            extensions: 'Geen uitbreidingen mogelijk',
+            special: 'Er kunnen maximaal 4 aanlegsteigers per station (uitbreidingsstadia) worden gebouwd. Tot het 125ste gebouw (van alle soorten) kunnen maximaal 4 landingsplaatsen worden gebouwd. Dan groeit het aantal met 1 per 25 gebouwen (vanaf 125.).'
         },
-        rbd: {
-            name: 'Rescue Boat Dock',
-            credits: 500000,
-            coins: 35,
+        psonder: {
+            name: 'Hoofdbureau Politie',
+            credits: 400000,
+            coins: 40,
             maxlevel: 0,
-            levelcost: 'I Dont know',
-            startPersonell: 0,
-            startVehicle: '',
-            extensions: '',
-            maxBuildings: 'No Limit',
-        },
-        fbd: {
-            name: 'Fire Boat Dock',
-            credits: 500000,
-            coins: 35,
-            maxlevel: 0,
-            levelcost: 'I Dont know',
-            startPersonell: 0,
-            startVehicle: '',
-            extensions: '',
-            maxBuildings: 'No Limit',
+            levelcost: 'Geen uitbreidingsstappen mogelijk',
+            startPersonell: 1,
+            startVehicle: 'OvD-P',
+            extensions: 'OvD-P (3 Dagen, 40.000 Credits/5 Coins)<br>Mobiele Eenheid, Sectie (5 Dagen, 100.000 Credits/20 Coins)<br>Levende Have (7 Dagen, 100.000 Credits/20Coins)',
+            maxBuildings: 'Geen limiet'
         }
     };
 
