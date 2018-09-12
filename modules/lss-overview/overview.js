@@ -1101,8 +1101,9 @@
             coins: 35,
             maxlevel: 0,
             levelcost: 'I Dont know',
-            startPersonell: x,
+            startPersonell: 0,
             startVehicle: '',
+            extensions: '',
             maxBuildings: 'No Limit',
         },
         fbd: {
@@ -1111,10 +1112,11 @@
             coins: 35,
             maxlevel: 0,
             levelcost: 'I Dont know',
-            startPersonell: x,
+            startPersonell: 0,
             startVehicle: '',
+            extensions: '',
             maxBuildings: 'No Limit',
-        },
+        }
     };
 
     I18n.translations.en.lssm.overview.vehicles = {
