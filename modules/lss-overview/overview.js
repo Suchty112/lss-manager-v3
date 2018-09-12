@@ -131,13 +131,49 @@
             name: 'Polizeiwache',
             credits: 100000,
             coins: 35,
-            maxlevel: 15,
+            maxlevel: 14,
             levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
             startPersonell: 2,
             startVehicle: 'FuStW',
             extensions: 'Zelle (25.000 Credits)<br>Max. 10 können gebaut werden',
             maxBuildings: 'Keine Grenze',
             special: 'Ab der 24. Polizeiwache steigen die Kosten für den Neubau einer Wache nach folgender Formel: <code>100.000+200.000*LOG<sub>2</sub>(Anzahl der vorhandenen Polizeiache − 22)</code>. Der Coins-Preis bleibt konstant!'
+        },
+        polschule: {
+            name: 'Polizeisschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Rettungsschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        polheli: {
+            name: 'Polizeihubschrauber-Station',
+            credits: 1000000,
+            coins: 50,
+            maxlevel: 4,
+            levelcost: 'jeweils 1.000.000 Credits/50 Coins',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            maxBuildings: 'siehe Besonderheiten',
+            extensions: 'Keine Ausbauten möglich',
+            special: 'Pro Station können bis zu 4 Landeplätze gebaut werden (Ausbaustufen). Bis zum 125. Gebäude (aller Art) können insgesamt max. 4 Landeplätze gebaut werden. Danach wächst die Zahl alle 25 Geäude um 1 (Beginnend beim 125.).'
+        },
+        bpol: {
+            name: 'Schnelleinsaztgruppe (SEG)',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 10,
+            startVehicle: 'Kein Startfahrzeug',
+            extensions: 'Führung (3 Tage, 25.000 Credits/5 Coins)<br>Sanitätsdienst (3 Tage, 25.000 Credits/5 Coins)<br>Wasserrettung (7 Tage, 500.000 Credits/25 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Mit dem Bau einer Bereitschaftspolizei bekommt man automatisch 4 Stellplätze für einen Zug (3 GruKw & 1 leBefKw) geschenkt. Die Wache generiert noch keine Einsätze. Um Einsätze zu erhalten muss man die erste Ausbaustufe bauen.'
         },
     };
 
