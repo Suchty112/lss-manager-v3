@@ -20,7 +20,111 @@
         cost: 'Preis',
         schooling: 'Ausbildung',
         special: 'Besonderes',
-        none: 'Keine'
+        none: 'Keine',
+        vehiclesName: 'Fahrzeuge',
+        buildingsName: 'Gebäude',
+        buildingType: 'Gebäudename',
+        maxlevel: 'maximale Ausbaustufe',
+        levelcost: 'Kosten der Ausbaustufen',
+        startPersonell: 'Start Personal',
+        startVehicle: 'Start Fahrzeug',
+        extensions: 'Ausbauten',
+        maxBuildins: 'Baugrenze'
+    };
+
+    I18n.translations.de.lssm.overview.buildings = {
+        lst: {
+            name: 'Leitstelle',
+            credits: 0,
+            coins: 0,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Keine Ausbauten möglich',
+            maxBuildings: 'Alle 25 Gebäude eine Leitstelle',
+            special: 'Die Leitstelle ist die Verwaltungszentrale.'
+        },
+        fw: {
+            name: 'Feuerwache',
+            credits: 100000,
+            coins: 30,
+            maxlevel: 16,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-16. 100.000',
+            startPersonell: 10,
+            startVehicle: 'LF 20 oder LF 10 oder LF 8/6 oder LF 20/16 oder LF 10/6 oder LF 16-TS oder TSF-W. Ab Dienstgrad Gruppenführer(in) auch HLF 20 (dann Baukosten 20.000 mehr).',
+            extensions: 'Rettungsdienst (7 Tage, 100.000 Credits/20 Coins)<br>Wasserrettung (7 Tage, 400.000 Credits/25 Coins)<br>Flughafen (7 Tage, 300.000 Credits/25 Coins)<br>Großwache (7 Tage, 1.000.000 Credits/50 Coins)<br>Werkfeuerwehr (7 Tage, 100.000 Credits/20 Coins)<br>6*Abrollbehälter-Stellplatz (jeweils 7 Tage, 100.000 Credits/20 Coins)',
+            maxBuildings: '1.500',
+            special: 'Ab der 24. Feuerwache steigen die Kosten für den Neubau einer Wache nach folgender Formel: <code>100.000+200.000*LOG<sub>2</sub>(Anzahl der vorhandenen Feuerwachen − 22)</code>. Der Coins-Preis bleibt konstant!'
+        },
+        fwschule: {
+            name: 'Feuerwehrschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Feuerwehrschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        rw: {
+            name: 'Rettungswache',
+            credits: 200000,
+            coins: 35,
+            maxlevel: 14,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
+            startPersonell: 2,
+            startVehicle: 'RTW',
+            maxBuildings: 'Keine Grenze'
+        },
+        rwschule: {
+            name: 'Rettungsschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Rettungsschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        kh: {
+            name: 'Krankenhaus',
+            credits: 20000,
+            coins: 35,
+            maxlevel: 20,
+            levelcost: 'jeweils 19.000 Credits/11 Coins',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar, dafür aber 10 Betten von Beginn an',
+            extensions: 'Mehrere Fachrichtungen (jeweils 7 Tage, 70.000 Credits/15 Coins, allgemeine Innere und allemeine Chirguie nur 10.000 Credits/)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Krankenhäuser mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        rth: {
+            name: 'Rettungshubschrauber-Station',
+            credits: 1000000,
+            coins: 50,
+            maxlevel: 4,
+            levelcost: 'jeweils 1.000.000 Credits/50 Coins',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            maxBuildings: 'siehe Besonderheiten',
+            special: 'Pro Station können bis zu 4 Landeplätze gebaut werden (Ausbaustufen). Bis zum 125. Gebäude (aller Art) können insgesamt max. 4 Landeplätze gebaut werden. Danach wächst die Zahl alle 25 Geäude um 1 (Beginnend beim 125.).'
+        },
+        seg: {
+            name: 'Schnelleinsaztgruppe (SEG)',
+            credits: 100000,
+            coins: 30,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 10,
+            startVehicle: 'KTW Typ B',
+            extensions: 'Führung (3 Tage, 25.000 Credits/5 Coins)<br>Sanitätsdienst (3 Tage, 25.000 Credits/5 Coins)<br>Wasserrettung (7 Tage, 500.000 Credits/25 Coins)',
+            maxBuildings: 'Keine Grenze'
+        }
     };
 
     I18n.translations.de.lssm.overview.hiorgs = {
@@ -32,7 +136,8 @@
         polspecial: 'Polizei Sondereinheiten',
         thw: 'THW',
         wr: 'Wasserrettung',
-        heli: 'Helikopter'
+        heli: 'Helikopter',
+        seg: 'SEG'
     };
 
     I18n.translations.de.lssm.overview.vehicles = {
@@ -374,7 +479,7 @@
         fwspecial: {
             flf: {
                 name: 'FLF',
-                min: 3,
+                min: 2,
                 max: 3,
                 credits: 80000,
                 coins: 25,
@@ -683,7 +788,7 @@
             },
             gwtaucher: {
                 name: 'GW-Taucher',
-                min: 1,
+                min: 2,
                 max: 2,
                 credits: 10000,
                 coins: 25,
@@ -723,6 +828,41 @@
                 coins: 30,
                 schooling: 'Notarzt',
                 special: 'Kann anstelle eines NEF eingesetzt werden. Transportiert seine Patienten selbst.'
+            }
+        },
+        seg: {
+            rtw: {
+                name: 'RTW',
+                min: 1,
+                max: 2,
+                credits: 5000,
+                coins: 25
+            },
+            ktwb: {
+                name: 'KTW Typ B',
+                min: 1,
+                max: 2,
+                credits: 5000,
+                coins: 25,
+                special: 'Kann, wenn ein GW-San vor Ort ist, behandelte Patienten vom Einsatzort abtransportieren. Ein Transport mit Notarztbegleitung durch ein NEF ist auch möglich.'
+            },
+            elw: {
+                name: 'ELW 1 (SEG)',
+                min: 1,
+                max: 2,
+                credits: 25500,
+                coins: 25,
+                schooling: 'SEG-Einsatzleitung',
+                special: 'Kann automatisch eingehende Sprechwünsche der eigenen Rettungsmittel bearbeiten und ihnen im Transportfall ein geeignetes Krankenhaus zuweisen. Die automatische Zuweisungsfunktion kann in dessen Einstellungen verändert werden.'
+            },
+            gwsan: {
+                name: 'GW-San',
+                min: 6,
+                max: 6,
+                credits: 10000,
+                coins: 25,
+                schooling: 'SEG-GW-SAN',
+                special: 'Pro GW-San können 5 KTW-B wie ein RTW arbeiten. Er behandelt die Patienten zwar größtenteils, aber für die letzten paar Prozente braucht man dann einen RTW, KTW-B oder ähnliches'
             }
         }
     };
@@ -1331,15 +1471,22 @@
 
     $('body').css('margin', '10px');
 
-    $('body').append('<ul class="nav nav-tabs" id="tabs" role="tablist"></ul>');
-    $('body').append('<div class="tab-content" id="overviewContent"></div>');
+    $('body').append('<div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="typeDropdownBtn">' + I18n.t('lssm.overview.vehiclesName') + '&nbsp;<span class="caret"></span></button><ul class="dropdown-menu" id="typeDropdown"><li><a target="vehicles">' + I18n.t('lssm.overview.vehiclesName') + '</a></li><li><a target="buildings">' + I18n.t('lssm.overview.buildingsName') + '</a></li></ul></div>');
+
+    $('body').append('<div id="vehicles" class="overviewCategory"></div>');
+    $('body').append('<div id="buildings" class="overviewCategory"></div>');
+
+    $('.overviewCategory:not(:first)').hide();
+
+    $('#vehicles').append('<ul class="nav nav-tabs" id="vehicleTabs" role="tablist"></ul>');
+    $('#vehicles').append('<div class="tab-content" id="vehicleContent"></div>');
 
     for (let hiorg in I18n.t('lssm.overview.hiorgs')) {
-        $('#tabs').append('<li role="presentation"><a class="nav-link" id="' + hiorg + '-tab" data-toggle="tab" href="#' + hiorg + '" role="tab" aria-controls="' + hiorg + '" aria-selected="false">' + I18n.t('lssm.overview.hiorgs')[hiorg] + '</a></li>');
+        $('#vehicleTabs').append('<li role="presentation"><a class="nav-link" id="' + hiorg + '-tab" data-toggle="tab" href="#' + hiorg + '" role="tab" aria-controls="' + hiorg + '" aria-selected="false">' + I18n.t('lssm.overview.hiorgs')[hiorg] + '</a></li>');
 
-        $('#overviewContent').append('<div class="tab-pane' + ($('.tab-pane').length == 0 ? ' show active' : '') + '" id="' + hiorg + '" role="tabpanel"></div>');
+        $('#vehicleContent').append('<div class="tab-pane' + ($('.tab-pane').length == 0 ? ' show active' : '') + '" id="' + hiorg + '" role="tabpanel"></div>');
 
-        $('#' + hiorg).append('<table id="table-' + hiorg + '" class="table table-striped tablesorter tablesorter-default" role="grid"><thead><th>' + I18n.t('lssm.overview.vehicleType') + '</th><th>' + I18n.t('lssm.overview.min') + '</th><th>' + I18n.t('lssm.overview.max') + '</th><th>' + I18n.t('lssm.overview.cost') + '</th><th>' + I18n.t('lssm.overview.schooling') + '</th><th>' + I18n.t('lssm.overview.special') + '</th></thead><tbody id="table-' + hiorg + '-body"></tbody></table>');
+        $('#' + hiorg).append('<table id="table-' + hiorg + '" class="table table-striped" role="grid"><thead><th>' + I18n.t('lssm.overview.vehicleType') + '</th><th>' + I18n.t('lssm.overview.min') + '</th><th>' + I18n.t('lssm.overview.max') + '</th><th>' + I18n.t('lssm.overview.cost') + '</th><th>' + I18n.t('lssm.overview.schooling') + '</th><th>' + I18n.t('lssm.overview.special') + '</th></thead><tbody id="table-' + hiorg + '-body"></tbody></table>');
 
         for (let vehicle in I18n.t('lssm.overview.vehicles')[hiorg]) {
             vehicle = I18n.t('lssm.overview.vehicles')[hiorg][vehicle];
@@ -1347,9 +1494,22 @@
         }
     }
 
-    $('.nav-link').click(function() {
-        $('.tab-pane[id!=' + $(this).attr('href').replace('#', '') + ']').removeClass('show');
-        $('.tab-pane[id!=' + $(this).attr('href').replace('#', '') + ']').removeClass('active');
+    $('#vehicleTabs li a.nav-link').click(function() {
+        $('#vehicleContent .tab-pane[id!=' + $(this).attr('href').replace('#', '') + ']').removeClass('show');
+        $('#vehicleContent .tab-pane[id!=' + $(this).attr('href').replace('#', '') + ']').removeClass('active');
+    });
+
+    $('#buildings').append('<table id="table-buildings" class="table table-striped" role="grid"><thead><th>' + I18n.t('lssm.overview.buildingType') + '</th><th>' + I18n.t('lssm.overview.cost') + '</th><th>' + I18n.t('lssm.overview.maxlevel') + '</th><th>' + I18n.t('lssm.overview.levelcost') + '</th><th>' + I18n.t('lssm.overview.startPersonell') + '</th><th>' + I18n.t('lssm.overview.startVehicle') + '</th><th>' + I18n.t('lssm.overview.maxBuildins') + '</th><th>' + I18n.t('lssm.overview.extensions') + '</th><th>' + I18n.t('lssm.overview.special') + '</th></thead><tbody id="table-buildings-body"></tbody></table>');
+
+    for (let building in I18n.t('lssm.overview.buildings')) {
+        building = I18n.t('lssm.overview.buildings')[building];
+        $('#table-buildings-body').append('<tr><td>' + building.name + '</td><td>' + (building.credits || building.credits === 0 ? building.credits.toLocaleString() : "undefined") + ' Credits / ' + (building.coins || building.coins === 0 ? building.coins.toLocaleString() : "undefined") + ' Coins</td><td>' + building.maxlevel + '</td><td>' + building.levelcost + '</td><td>' + building.startPersonell + '</td><td>' + building.startVehicle + '</td><td>' + building.maxBuildings + '</td><td>' + building.extensions + '</td><td>' + (building.special ? building.special : "") + '</td></tr>');
+    }
+
+    $('#typeDropdown a').click(function() {
+        $('#typeDropdownBtn').html(I18n.t('lssm.overview.' + $(this).attr('target') + 'Name') + '&nbsp;<span class="caret"></span>');
+        $('.overviewCategory').hide();
+        $('#' + $(this).attr('target')).show();
     });
 
 })($, window, I18n);
