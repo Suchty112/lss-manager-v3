@@ -11708,7 +11708,7 @@ else if (I18n.locale == "de") {
                 'name': 'Feuer in Verwaltungsgebäude',
                 'credits': 2500,
                 'vehicles': {
-                    'elw1': 1
+                    'elw1': 1,
                     'lf': 5,
                     'dlk': 1,
                     'rw': 1
