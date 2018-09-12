@@ -399,7 +399,23 @@
         374: 'Prellung nach Lattenpraller',
         375: 'Tor gefallen',
         376: 'Pokal geklaut',
-        377: 'Überzuckerung'
+        377: 'Überzuckerung',
+        378: 'Observation',
+        379: 'PKW im Gleisbett',
+        380: 'PKW im Gleisbett',
+        381: 'PKW im Gleisbett',
+        382: 'PKW im Gleisbett',
+        383: 'Kind in PKW eingeschlossen',
+        384: 'Brennende Ballenpresse',
+        385: 'Unfall beim Umpumpen von Flüssigkeiten',
+        386: 'Ammoniak austritt',
+        387: 'Brennende Pipeline-Isolierung',
+        388: 'Feuer in Verwaltungsgebäude',
+        389: 'Brand in Chemiepark - Produktion',
+        390: 'Sicherheitslandung',
+        391: 'Vergiftung',
+        392: 'Person durch Hubmaschine eingeklemmt',
+        393: 'Einsturzgefährdeter Balkon'
       }
     };
     I18n.translations.en.lssm.missionKeywordDefaults = {
@@ -610,7 +626,19 @@
         189: 'Sinking boat',
         190: 'Sinking boat',
         191: 'Sinking boat',
-        192: 'Traffic accident with train'
+        192: 'Traffic accident with train',
+        193: 'Animal Rescue',
+        194: 'Large MVA in tunnel',
+        195: 'Single vehicle fire in tunnel',
+        196: 'Kitchen Fire',
+        197: 'Small boat fire',
+        198: 'Small boat fire',
+        199: 'Small boat fire',
+        200: 'Person with a weapon',
+        201: 'VIP appearance',
+        202: 'Large Field Fire',
+        203: 'Natural gas odor',
+        204: 'Ammonia Leak (Gas Alarm System)'
       }
     };
     I18n.translations.nl.lssm.missionKeywordDefaults = {
@@ -949,7 +977,32 @@
         317: 'Bedreiging met vuurwapen',
         318: 'Brand op binnenvaartschip',
         319: 'Brand op binnenvaartschip',
-        320: 'Brand op binnenvaartschip'
+        320: 'Brand op binnenvaartschip',
+        321: 'Brandende wegberm',
+        322: 'Brandende wegberm',
+        323: 'Verkeersongeval met motorfiets',
+        324: 'Verkeersongeval met personenauto en motorfiets',
+        325: 'Verkeersongeval met fietser en motorfiets',
+        326: 'Brand in landbouwschuur',
+        327: 'Brand in landbouwschuur',
+        328: 'Persoon onwel na mixen mest',
+        329: 'Verwaarloosde hond in woning',
+        330: 'Vechtpartij in café',
+        331: 'Inbraak in bedrijfspand',
+        332: 'Inbraak in bedrijfspand',
+        333: 'Inbraak in bedrijfspand',
+        334: 'Brand in schoolgebouw',
+        335: 'Brand in schoolgebouw',
+        336: 'Brand in schoolgebouw',
+        337: 'Huiselijk geweld',
+        338: 'Huiselijk geweld',
+        339: 'Lekkende LPG installatie',
+        340: 'Lekkende LPG installatie',
+        341: 'Nacontrole brand',
+        342: 'Nacontrole brand',
+        343: 'Nacontrole brand',
+        344: 'Vreemde lucht in kantoorgebouw',
+        345: 'Vreemde lucht in kantoorgebouw'
       }
     };
 
@@ -1350,7 +1403,23 @@
       374: 'RD 0.5',
       375: 'THL 0.5',
       376: 'POL 0.75',
-      377: 'RD 1'
+      377: 'RD 1',
+      378: 'MEK 1',
+      379: 'THL 2',
+      380: 'THL 2',
+      381: 'THL 2',
+      382: 'THL 2',
+      383: 'POL 1',
+      384: 'B 1',
+      385: 'ABC 1',
+      386: 'ABC 1',
+      387: 'ABC 2',
+      388: 'B 1',
+      389: 'ABC 4',
+      390: 'B 1',
+      391: 'RD 2',
+      392: 'THL 1 Person',
+      393: 'THL 1'
     };
     var DEFAULT_AAO_EN = {
       0: 'FIRE 1',
@@ -1545,7 +1614,19 @@
       189: 'TECH 1 SHIP',
       190: 'TECH 1 SHIP',
       191: 'TECH 1 SHIP',
-      192: 'TECH 2 TRAIN'
+      192: 'TECH 2 TRAIN',
+      193: 'TECH 1 ANIMAL',
+      194: 'TECH 3',
+      195: 'FIRE 2',
+      196: 'FIRE 1',
+      197: 'FIRE 1 BOAT',
+      198: 'FIRE 1 BOAT',
+      199: 'FIRE 1 BOAT',
+      200: 'POL 4',
+      201: 'POL 6',
+      202: 'FIRE 5',
+      203: 'FIRE 1',
+      204: 'CBRN 1'
     };
     var DEFAULT_AAO_NL = {
       0: 'KLEINE BRAND',
@@ -1868,7 +1949,32 @@
       317: 'P 4',
       318: 'KLEINE BRAND, SCHIP',
       319: 'MIDDEL BRAND, SCHIP',
-      320: 'GROTE BRAND, SCHIP'
+      320: 'GROTE BRAND, SCHIP',
+      321: 'KLEINE BRAND',
+      322: 'MIDDEL BRAND',
+      323: 'A 1',
+      324: 'A 2',
+      325: 'A 2',
+      326: 'ZEER GROOTE BRAND',
+      327: 'EXTREEM GROOTE BRAND',
+      328: 'KLEINE HV',
+      329: 'P 1',
+      330: 'P 5',
+      331: 'P 2',
+      332: 'P 2',
+      333: 'P 3',
+      334: 'KLEINE BRAND',
+      335: 'MIDDEL BRAND',
+      336: 'GROTE BRAND',
+      337: 'P 1',
+      338: 'P 1',
+      339: 'KLEINE HV',
+      340: 'MIDDEL HV',
+      341: 'KLEINE BRAND',
+      342: 'KLEINE BRAND',
+      343: 'KLEINE BRAND',
+      344: 'OGS 1',
+      345: 'OGS 2'
     };
 
     // Alle Einsatz-IDs mit Stichwort-Zuweisung
@@ -1918,7 +2024,7 @@
     var aaoText = '';
 
     // Einsatz-ID aus Hilfe-Link
-    var missionId = $('#mission_help').attr('href').split("/").pop();
+    var missionId = $('#mission_help').attr('href').split("/").pop().replace(/\?.*/, '');
 
     // aao_text = I18n.t('lssm.missionKeyword.'+missionId);
     aaoText = getSetting('missionKeyword-' + missionId);
