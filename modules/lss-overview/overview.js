@@ -169,11 +169,22 @@
             coins: 50,
             maxlevel: 0,
             levelcost: 'Keine Ausbaustufen möglich',
-            startPersonell: 10,
+            startPersonell: 0,
             startVehicle: 'Kein Startfahrzeug',
             extensions: '2. Zug Hundertschaft (3 Tage, 25.000 Credits/5 Coins)<br>3. Zug Hundertschaftt (3 Tage, 25.000 Credits/5 Coins)<br>Sonderfahrzeug: Gefangenenkraftwagen (3 Tage, 25.000 Credits/5 Coins)<br>Technischer Zug: Wasserwerfer (7 Tage, 25.000 Credits/5 Coins)<br>SEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>SEK 2. Zug(7 Tage, 100.000 Credits/10 Coins)<br>MEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>MEK 2. Zug (7 Tage, 100.000 Credits/10 Coins)',
             maxBuildings: 'Keine Grenze',
             special: 'Mit dem Bau einer Bereitschaftspolizei bekommt man automatisch 4 Stellplätze für einen Zug (3 GruKw & 1 leBefKw) geschenkt. Die Wache generiert noch keine Einsätze. Um Einsätze zu erhalten muss man die erste Ausbaustufe bauen.'
+        },
+        psonder: {
+            name: 'Polizei-Sondereinheiten',
+            credits: 400000,
+            coins: 40,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            extensions: 'SEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>SEK 2. Zug(7 Tage, 100.000 Credits/10 Coins)<br>MEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>MEK 2. Zug (7 Tage, 100.000 Credits/10 Coins)',
+            maxBuildings: 'Keine Grenze',
         },
     };
 
