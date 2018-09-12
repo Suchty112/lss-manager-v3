@@ -973,7 +973,7 @@
         special: 'Special',
         none: 'None',
         vehiclesName: 'Vehicles',
-        buildingsName: 'Building',
+        buildingsName: 'Buildings',
         buildingType: 'building name',
         maxlevel: 'maximum expansion level',
         levelcost: 'Costs of the expansion stages',
@@ -1016,27 +1016,27 @@
             special: 'From the 24th fire station onwards, the cost of building a new fire station increases according to the following formula: <code>100.000+200.000*LOG<sub>2</sub>(Number of existing fire stations − 22)</code>. The Coins price remains constant!'
         },
         fwschule: {
-            name: 'Feuerwehrschule',
+            name: 'Fire Academy',
             credits: 500000,
             coins: 50,
             maxlevel: 0,
-            levelcost: 'Keine Ausbaustufen möglich',
+            levelcost: 'No expansion stages possible',
             startPersonell: 0,
-            startVehicle: 'Keine Fahrzeuge stationierbar',
-            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
-            maxBuildings: 'Keine Grenze',
-            special: 'Finanzminister und (Co-)Admins können Verbands-Feuerwehrschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+            startVehicle: 'No vehicles stationable',
+            extensions: 'Up to 3 more Classrooms (in each case 7 Days, 400.000 Credits/40 Coins)',
+            maxBuildings: 'No limit',
+            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
         },
         rw: {
-            name: 'Rettungswache',
+            name: 'Ambulance Station',
             credits: 200000,
             coins: 35,
-            maxlevel: 14,
-            levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
+            maxlevel: 40,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-40. 100.000',
             startPersonell: 2,
-            startVehicle: 'RTW',
-            extensions: 'Keine Ausbauten möglich',
-            maxBuildings: 'Keine Grenze'
+            startVehicle: 'Ambulance',
+            extensions: 'No extensions possible',
+            maxBuildings: 'No Limit'
         },
         rwschule: {
             name: 'Rettungsschule',
