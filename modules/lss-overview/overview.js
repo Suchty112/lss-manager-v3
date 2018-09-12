@@ -135,7 +135,7 @@
             levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
             startPersonell: 2,
             startVehicle: 'FuStW',
-            extensions: '',
+            extensions: 'Zelle (25.000 Credits)<br>Max. 10 können gebaut werden',
             maxBuildings: 'Keine Grenze',
             special: 'Ab der 24. Polizeiwache steigen die Kosten für den Neubau einer Wache nach folgender Formel: <code>100.000+200.000*LOG<sub>2</sub>(Anzahl der vorhandenen Polizeiache − 22)</code>. Der Coins-Preis bleibt konstant!'
         },
