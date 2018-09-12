@@ -971,7 +971,16 @@
         cost: 'Price',
         schooling: 'Education',
         special: 'Special',
-        none: 'None'
+        none: 'None',
+        vehiclesName: 'Vehicles',
+        buildingsName: 'Building',
+        buildingType: 'building name',
+        maxlevel: 'maximum expansion level',
+        levelcost: 'Costs of the expansion stages',
+        startPersonell: 'Start Personnel',
+        startVehicle: 'Start vehicle',
+        extensions: 'extensions',
+        maxBuildins: 'building boundary'
     };
 
     I18n.translations.en.lssm.overview.hiorgs = {
@@ -979,6 +988,198 @@
         rd: 'Rescue Department',
         pol: 'Police',
         heli: 'Helicopter'
+    };
+
+    I18n.translations.en.lssm.overview.buildings = {
+        lst: {
+            name: 'Dispatch Center',
+            credits: 0,
+            coins: 0,
+            maxlevel: 0,
+            levelcost: 'No expansion stages possible',
+            startPersonell: 0,
+            startVehicle: 'No vehicles stationable',
+            extensions: 'No extensions possible',
+            maxBuildings: 'All 25 buildings one Dispatch Center',
+            special: 'The control centre is the administrative centre.'
+        },
+        fw: {
+            name: 'Fire Department',
+            credits: 100000,
+            coins: 30,
+            maxlevel: 40,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-40. 100.000',
+            startPersonell: 10,
+            startVehicle: 'Type 1 fire engine, Type 2 fire engine',
+            extensions: 'Ambulance (7 Days, 100.000 Credits/20 Coins)<br>Water Rescue (7 Days, 100.000 Credits/20 Coins)<br>Airport (7 Days, 100.000 Credits/20 Coins)',
+            maxBuildings: '1.850',
+            special: 'From the 24th fire station onwards, the cost of building a new fire station increases according to the following formula: <code>100.000+200.000*LOG<sub>2</sub>(Number of existing fire stations − 22)</code>. The Coins price remains constant!'
+        },
+        fwschule: {
+            name: 'Feuerwehrschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Feuerwehrschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        rw: {
+            name: 'Rettungswache',
+            credits: 200000,
+            coins: 35,
+            maxlevel: 14,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
+            startPersonell: 2,
+            startVehicle: 'RTW',
+            extensions: 'Keine Ausbauten möglich',
+            maxBuildings: 'Keine Grenze'
+        },
+        rwschule: {
+            name: 'Rettungsschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Rettungsschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        kh: {
+            name: 'Krankenhaus',
+            credits: 20000,
+            coins: 35,
+            maxlevel: 20,
+            levelcost: 'jeweils 19.000 Credits/11 Coins',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar, dafür aber 10 Betten von Beginn an',
+            extensions: 'Mehrere Fachrichtungen (jeweils 7 Tage, 70.000 Credits/15 Coins, allgemeine Innere und allemeine Chirguie nur 10.000 Credits/)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Krankenhäuser mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        rth: {
+            name: 'Rettungshubschrauber-Station',
+            credits: 1000000,
+            coins: 50,
+            maxlevel: 4,
+            levelcost: 'jeweils 1.000.000 Credits/50 Coins',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            maxBuildings: 'siehe Besonderheiten',
+            extensions: 'Keine Ausbauten möglich',
+            special: 'Pro Station können bis zu 4 Landeplätze gebaut werden (Ausbaustufen). Bis zum 125. Gebäude (aller Art) können insgesamt max. 4 Landeplätze gebaut werden. Danach wächst die Zahl alle 25 Geäude um 1 (Beginnend beim 125.).'
+        },
+        seg: {
+            name: 'Schnelleinsaztgruppe (SEG)',
+            credits: 100000,
+            coins: 30,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 10,
+            startVehicle: 'KTW Typ B',
+            extensions: 'Führung (3 Tage, 25.000 Credits/5 Coins)<br>Sanitätsdienst (3 Tage, 25.000 Credits/5 Coins)<br>Wasserrettung (7 Tage, 500.000 Credits/25 Coins)',
+            maxBuildings: 'Keine Grenze'
+        },
+        pol: {
+            name: 'Polizeiwache',
+            credits: 100000,
+            coins: 35,
+            maxlevel: 14,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
+            startPersonell: 2,
+            startVehicle: 'FuStW',
+            extensions: 'Zelle (25.000 Credits)<br>Max. 10 können gebaut werden',
+            maxBuildings: 'Keine Grenze',
+            special: 'Ab der 24. Polizeiwache steigen die Kosten für den Neubau einer Wache nach folgender Formel: <code>100.000+200.000*LOG<sub>2</sub>(Anzahl der vorhandenen Polizeiache − 22)</code>. Der Coins-Preis bleibt konstant!'
+        },
+        polschule: {
+            name: 'Polizeisschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Rettungsschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        },
+        polheli: {
+            name: 'Polizeihubschrauber-Station',
+            credits: 1000000,
+            coins: 50,
+            maxlevel: 4,
+            levelcost: 'jeweils 1.000.000 Credits/50 Coins',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            maxBuildings: 'siehe Besonderheiten',
+            extensions: 'Keine Ausbauten möglich',
+            special: 'Pro Station können bis zu 4 Landeplätze gebaut werden (Ausbaustufen). Bis zum 125. Gebäude (aller Art) können insgesamt max. 4 Landeplätze gebaut werden. Danach wächst die Zahl alle 25 Geäude um 1 (Beginnend beim 125.).'
+        },
+        bpol: {
+            name: 'Bereitschaftspolizei',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            extensions: '2. Zug Hundertschaft (3 Tage, 25.000 Credits/5 Coins)<br>3. Zug Hundertschaftt (3 Tage, 25.000 Credits/5 Coins)<br>Sonderfahrzeug: Gefangenenkraftwagen (3 Tage, 25.000 Credits/5 Coins)<br>Technischer Zug: Wasserwerfer (7 Tage, 25.000 Credits/5 Coins)<br>SEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>SEK 2. Zug(7 Tage, 100.000 Credits/10 Coins)<br>MEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>MEK 2. Zug (7 Tage, 100.000 Credits/10 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Mit dem Bau einer Bereitschaftspolizei bekommt man automatisch 4 Stellplätze für einen Zug (3 GruKw & 1 leBefKw) geschenkt. Die Wache generiert noch keine Einsätze. Um Einsätze zu erhalten muss man die erste Ausbaustufe bauen.'
+        },
+        psonder: {
+            name: 'Polizei-Sondereinheiten',
+            credits: 400000,
+            coins: 40,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Kein Startfahrzeug',
+            extensions: 'SEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>SEK 2. Zug(7 Tage, 100.000 Credits/10 Coins)<br>MEK 1. Zug (7 Tage, 100.000 Credits/10 Coins)<br>MEK 2. Zug (7 Tage, 100.000 Credits/10 Coins)',
+            maxBuildings: 'Keine Grenze',
+        },
+        wr: {
+            name: 'Wasserrettung',
+            credits: 500000,
+            coins: 30,
+            maxlevel: 5,
+            levelcost: '1. 10.000<br>2. 50.000<br>3.-5. 100.000',
+            startPersonell: 6,
+            startVehicle: 'GW-Wasserrettung',
+            extensions: 'Keine Ausbauten möglich',
+            maxBuildings: 'Keine Grenze',
+            special: 'Beim Bau bekommst du 10 Leute sowie ein GW-Wasserrettung geschenkt'
+        },
+        thw: {
+            name: 'THW Ortsverband',
+            credits: 200000,
+            coins: 35,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 9,
+            startVehicle: 'GKW',
+            extensions: 'Bergungsgruppe (7 Tage, 25.000 Credits/5 Coins)<br>Zugtrupp (7 Tage, 25.000 Credits/5 Coins)<br>Fachgruppe Räumen (7 Tage, 25.000 Credits/5 Coins)<br>Fachgruppe Wassergefahren (7 Tage, 500.000 Credits/25 Coins)<br>2. TZ (7 Tage, 25.000 Credits/5 Coins)<br>2. TZ Bergungsgruppe 2 (7 Tage, 25.000 Credits/5 Coins)<br>2. TZ Zugtrupp (7 Tage, 25.000 Credits/5 Coins)',
+            maxBuildings: 'z.Zt nicht bekannt',
+            special: 'Mit dem Bau eines THW-Ortsverbands bekommt man einen GKW geschenkt. Mit dem Bau eines THW-Ortsverbands bekommt man 9 Mitglieder dazu. Baukosten für weitere THW-Liegenschaften: 2. Ortsverband 300.000 Credits/ 35 Coins, 3. Ortsverband 358.496 Credits/ 35 Coins, 4. Ortsverband 432.193 Credits/ 35 Coins, 5. Ortsverband 458.496 Credits/ 35 Coins. Formel: <code>200.000+100.000*LOG<sub>2</sub>(Anzahl der vorhandenen Wachen + 1)</code>'
+        },
+        thwschule: {
+            name: 'THW Bundeschule',
+            credits: 500000,
+            coins: 50,
+            maxlevel: 0,
+            levelcost: 'Keine Ausbaustufen möglich',
+            startPersonell: 0,
+            startVehicle: 'Keine Fahrzeuge stationierbar',
+            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
+            maxBuildings: 'Keine Grenze',
+            special: 'Finanzminister und (Co-)Admins können Verbands-Rettungsschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+        }
     };
 
     I18n.translations.en.lssm.overview.vehicles = {
@@ -1175,8 +1376,8 @@
                 min: 1,
                 max: 1,
                 credits: 2500,
-                coins: 25,
-                schooling: '??'
+                coins: 18,
+                schooling: 'Motor Officer'
             },
             swatarmoured: {
                 name: 'SWAT Armoured Vehicle',
@@ -1184,15 +1385,18 @@
                 max: 6,
                 credits: 10000,
                 coins: 25,
-                schooling: 'SWAT'
+                schooling: 'SWAT',
+                special: 'Required from 8 Police stations'
             },
             swatsuv: {
                 name: 'SWAT SUV',
                 min: 1,
-                max: 6,
-                credits: 10000,
-                coins: 25,
-                schooling: 'SWAT'
+                max: 4,
+                credits: 7000,
+                coins: 23,
+                schooling: 'SWAT',
+                special: 'Required from 8 Police stations'
+
             },
         }
     };
