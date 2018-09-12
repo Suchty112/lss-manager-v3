@@ -1339,13 +1339,22 @@
     };
 
     I18n.translations.nl.lssm.overview = {
-        vehicleType: "Type voertuig",
-        min: "minimum personeel",
-        max: "maximaal personeel",
-        cost: "Prijs",
+        vehicleType: 'Type voertuig',
+        min: 'minimum personeel',
+        max: 'maximaal personeel',
+        cost: 'Prijs',
         schooling: 'opleiding',
-        special: "speciaal",
-        none: "Geen"
+        special: 'speciaal',
+        none: 'Geen',
+        vehiclesName: 'Voertuigen',
+        buildingsName: 'Gebouwen',
+        buildingType: 'bouwnaam',
+        maxlevel: 'maximaal uitbreidingsniveau',
+        levelcost: 'Kosten van de uitbreidingsfasen',
+        startPersonell: 'Start Personeel',
+        startVehicle: 'Start voertuig',
+        extensions: 'uitbreidingen',
+        maxBuildins: 'gebouwgrens'
     };
 
     I18n.translations.nl.lssm.overview.hiorgs = {
