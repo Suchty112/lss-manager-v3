@@ -1038,41 +1038,27 @@
             extensions: 'No extensions possible',
             maxBuildings: 'No Limit'
         },
-        rwschule: {
-            name: 'Rettungsschule',
-            credits: 500000,
-            coins: 50,
-            maxlevel: 0,
-            levelcost: 'Keine Ausbaustufen möglich',
-            startPersonell: 0,
-            startVehicle: 'Keine Fahrzeuge stationierbar',
-            extensions: 'Bis zu 3 weitere Klassenzimmer (jeweils 7 Tage, 400.000 Credits/40 Coins)',
-            maxBuildings: 'Keine Grenze',
-            special: 'Finanzminister und (Co-)Admins können Verbands-Rettungsschulen mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
-        },
         kh: {
             name: 'Krankenhaus',
             credits: 20000,
             coins: 35,
             maxlevel: 20,
-            levelcost: 'jeweils 19.000 Credits/11 Coins',
+            levelcost: 'in each case 19.000 Credits/11 Coins',
             startPersonell: 0,
-            startVehicle: 'Keine Fahrzeuge stationierbar, dafür aber 10 Betten von Beginn an',
-            extensions: 'Mehrere Fachrichtungen (jeweils 7 Tage, 70.000 Credits/15 Coins, allgemeine Innere und allemeine Chirguie nur 10.000 Credits/)',
-            maxBuildings: 'Keine Grenze',
-            special: 'Finanzminister und (Co-)Admins können Verbands-Krankenhäuser mit Hilfe von Credits aus der Verbandskasse (aus-)bauen.'
+            startVehicle: 'No vehicles can be stationed, but 10 beds from the start',
+            extensions: 'Several specialisations (in each case 7 Days, 70.000 Credits/15 Coins,  General Internal and General Surgeon only 10.000 Credits/10 Coins)',
+            maxBuildings: 'No Limit',
+            special: 'Minister of Finance and (Co-)Admins can be Allianz Fire Academys with the help of credits from the Allianz treasury (Expand) build.'
         },
         rth: {
-            name: 'Rettungshubschrauber-Station',
+            name: 'Helicopter Station',
             credits: 1000000,
             coins: 50,
-            maxlevel: 4,
-            levelcost: 'jeweils 1.000.000 Credits/50 Coins',
+            maxlevel: 0,
+            levelcost: 'x',
             startPersonell: 0,
             startVehicle: 'Kein Startfahrzeug',
-            maxBuildings: 'siehe Besonderheiten',
-            extensions: 'Keine Ausbauten möglich',
-            special: 'Pro Station können bis zu 4 Landeplätze gebaut werden (Ausbaustufen). Bis zum 125. Gebäude (aller Art) können insgesamt max. 4 Landeplätze gebaut werden. Danach wächst die Zahl alle 25 Geäude um 1 (Beginnend beim 125.).'
+            extensions: 'No extensions possible',
         },
         seg: {
             name: 'Schnelleinsaztgruppe (SEG)',
