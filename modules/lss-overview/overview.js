@@ -77,6 +77,7 @@
             levelcost: '1. 10.000<br>2. 50.000<br>3.-14. 100.000',
             startPersonell: 2,
             startVehicle: 'RTW',
+            extensions: 'Keine Ausbauten möglich',
             maxBuildings: 'Keine Grenze'
         },
         rwschule: {
@@ -112,6 +113,7 @@
             startPersonell: 0,
             startVehicle: 'Kein Startfahrzeug',
             maxBuildings: 'siehe Besonderheiten',
+            extensions: 'Keine Ausbauten möglich',
             special: 'Pro Station können bis zu 4 Landeplätze gebaut werden (Ausbaustufen). Bis zum 125. Gebäude (aller Art) können insgesamt max. 4 Landeplätze gebaut werden. Danach wächst die Zahl alle 25 Geäude um 1 (Beginnend beim 125.).'
         },
         seg: {
