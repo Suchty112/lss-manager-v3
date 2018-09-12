@@ -3245,7 +3245,7 @@ else if (I18n.locale == "nl") {
                 'lf': 2,
                 'elw1': 1,
                 'elw2': 1,
-                'rw': 1
+                'rw': 1,
                 'fustw': 2
             },
             'percentages': {
