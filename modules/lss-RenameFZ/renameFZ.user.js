@@ -97,7 +97,8 @@
               83: 'GW-Werkfeuerwehr',
               84: 'ULF mit Löscharm',
               85: 'TM 50',
-              86: 'Turbolöscher'
+              86: 'Turbolöscher',
+              87: 'TLF 4000'
             }
         }
         I18n.translations.en.lssm.renameFzDefaults = {
@@ -305,7 +306,8 @@
           83: 'GW-Werkfeuerwehr',
           84: 'ULF mit Löscharm',
           85: 'TM 50',
-          86: 'Turbolöscher'
+          86: 'Turbolöscher',
+          87: 'TLF 4000'
         }
         var DEFAULT_SHORTINGS_EN = {
           0: 'Type 1 fire engine',
@@ -739,11 +741,6 @@
         }
         $('#' + prefix + '_string').change(changeInput);
         $('#' + prefix + '_rename').click(rename);
-        $('#' + prefix + '_saveAll').click(function () {
-            alert(I18n.t('lssm.renameFZ.saveAllWarning'));
-            for(i=1;i<$("input.btn.btn-success").length;i++){
-                $("input.btn.btn-success")[i].click();
-            }
-        });
+        $("#" + prefix + "_saveAll").click(function(){alert(I18n.t("lssm.renameFZ.saveAllWarning")),$(".vehicle_form input.btn.btn-success").each(function(){let n=$(this);window.setTimeout(function(){n.click()},100)})});
     };
 })(I18n, jQuery);

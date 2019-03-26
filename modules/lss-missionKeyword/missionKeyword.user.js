@@ -455,7 +455,13 @@
         430: 'Ammoniakaustritt in Eishalle',
         431: 'Kreislaufkollaps',
         432: 'Fassadenbrand',
-        433: 'Großfeuer in Bank'
+        433: 'Großfeuer in Bank',
+        434: 'Brand in Eloxalanlage',
+        435: 'Brand in Eloxalanlage',
+        436: 'Verschmutzte Fahrbahn',
+        437: 'Taxi - Stiller Alarm',
+        438: 'PKW in Zapfsäule',
+        439: 'Einsturz Parkhaus'
       }
     };
     I18n.translations.en.lssm.missionKeywordDefaults = {
@@ -711,7 +717,15 @@
         234: 'Person Hit by Train',
         235: 'Person Hit by Train',
         236: 'Electrical fire on subway tracks',
-        237: 'ALPR Checkpoint'
+        237: 'ALPR Checkpoint',
+        238: 'Bulk hazardous storage tank leak (Small)',
+        239: 'Bulk hazardous storage tank leak (Large)',
+        240: 'Fire in Subway station',
+        241: 'Fire in Subway station (Large)',
+        242: 'Truck Rear-Ended with Entrapment',
+        243: 'Attempted Hommicide',
+        244: 'Fare dodger',
+        245: 'Medical emergency on crane'
       }
     };
     I18n.translations.nl.lssm.missionKeywordDefaults = {
@@ -1128,7 +1142,25 @@
         395: 'Brand bij afvalverwerker',
         396: 'Lekkende LPG installatie',
         397: 'Gaslekkage',
-        398: 'Vreemde lucht in kantoorgebouw'
+        398: 'Vreemde lucht in kantoorgebouw',
+        399: 'Inbraakalarm bedrijfspand',
+        400: 'Inbraakalarm bedrijfspand',
+        401: 'Overvalalarm supermarkt',
+        402: 'Persoon van laadklep gevallen',
+        403: 'Persoon van laadklep gevallen',
+        404: 'Persoon van laadklep gevallen',
+        405: 'Motorrijder gevallen',
+        406: 'Persoon van dak gevallen',
+        407: 'Nacontrole brand',
+        408: 'Brand in kerkgebouw',
+        409: 'Brand in kerkgebouw',
+        410: 'Brand in kerkgebouw',
+        411: 'Brand in kerkgebouw',
+        412: 'Brand in kerkgebouw',
+        413: 'Brand in kerkgebouw',
+        414: 'Brand in transformatorhuisje',
+        415: 'Brand in transformatorhuisje',
+        416: 'Brand in transformatorhuisje'
       }
     };
 
@@ -1585,7 +1617,13 @@
       430: 'ABC 3',
       431: 'RD 1',
       432: 'B 1',
-      433: 'B 5'
+      433: 'B 5',
+      434: 'ABC 2',
+      435: 'ABC 2',
+      436: 'THL 1',
+      437: 'POL 1',
+      438: 'THL 1',
+      439: 'THL 4'
     };
     var DEFAULT_AAO_EN = {
       0: 'FIRE 1',
@@ -1825,7 +1863,15 @@
       234: 'TECH 2',
       235: 'TECH 2',
       236: 'FIRE 2',
-      237: 'POL 2'
+      237: 'POL 2',
+      238: 'CBRN 1',
+      239: 'CBRN 2',
+      240: 'FIRE 3',
+      241: 'FIRE 5',
+      242: 'TECH 1',
+      243: 'POL 3',
+      244: 'POL 1',
+      245: 'TECH 1'
     };
     var DEFAULT_AAO_NL = {
       0: 'KLEINE BRAND',
@@ -2226,7 +2272,25 @@
       395: 'ZEER ZEER GROTE BRAND',
       396: 'GROTE HV',
       397: 'GROTE HV',
-      398: 'OGS 2'
+      398: 'OGS 2',
+      399: 'P 2',
+      400: 'P 2',
+      401: 'P 3',
+      402: 'A 1',
+      403: 'A 1',
+      404: 'A 1',
+      405: 'A 1',
+      406: 'A 2',
+      407: 'ZEER KLEINE BRAND',
+      408: 'KLEINE BRAND',
+      409: 'MIDDEL BRAND',
+      410: 'GROTE BRAND',
+      411: 'ZEER GROTE BRAND',
+      412: 'ZEER GROTE BRAND',
+      413: 'ZEER GROTE BRAND',
+      414: 'KLEINE BRAND',
+      415: 'MIDDEL BRAND',
+      416: 'GROTE BRAND'
     };
 
     // Alle Einsatz-IDs mit Stichwort-Zuweisung

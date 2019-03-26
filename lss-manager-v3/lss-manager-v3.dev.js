@@ -28,7 +28,8 @@ var lssm = {
         server: "https://bran.lss-m.de", // Domain wo alles liegt
         stats_uri: "https://proxy.lss-manager.de/stat.php",
         forum_link: "https://forum.leitstellenspiel.de/index.php/Thread/11166-LSS-MANAGER-V3/",
-        version: "4",
+        key_link: "/profile/external_secret_key/", // Domain wo alles liegt
+        version: "3.3.3",
         github: 'https://github.com/LSS-Manager/lss-manager-v3',
         prefix: 'lssm'
     },
@@ -72,9 +73,9 @@ var lssm = {
             console.log("On script load: " + e.message);
         }
     },
+    key: null,
 };
 
-$('head').append('<script src="https://lss-manager.de/lss-entwicklung/modules/newYear.js"></script>');
 
 /**
  * Localization
@@ -84,7 +85,7 @@ I18n.fallbacks = true;
 I18n.locales.nl = ['nl', 'en', 'de'];
 I18n.translations.de.lssm = {
     lssm: "LSS-Manager",
-    version: "Beta",
+    version: "Stable",
     appstore: "APPSTORE",
     forum: "https://forum.leitstellenspiel.de/index.php/Thread/11166-LSS-MANAGER-V",
     appstore_welcome: "Willkommen im Appstore vom LSS Manager",
@@ -108,7 +109,7 @@ I18n.translations.de.lssm = {
 };
 I18n.translations.en.lssm = {
     lssm: "LSS-Manager",
-    version: "Beta",
+    version: "Stable",
     appstore: "APPSTORE",
     forum: "http://board.missionchief.com/index.php/Thread/146-LSS-Manager-for-missionchief/",
     appstore_welcome: "Welcome to the Appstore of LSS Manager",
@@ -874,7 +875,7 @@ lssm.Module = {
         },
         source: '/modules/lss-creditserweiterung/creditserweiterung.user.js',
         noapp: false,
-        inframe: true,
+        inframe: false,
         develop: false
     },
     displayUserId: {
@@ -891,7 +892,7 @@ lssm.Module = {
         },
         source: '/modules/lss-userid/lss-userId.user.js',
         noapp: false,
-        inframe: true,
+        inframe: false,
         develop: false
     },
     showChatButtonAbove: {
@@ -908,7 +909,7 @@ lssm.Module = {
         },
         source: '/modules/lss-showChatbuttonAbove/showChatbuttonAbove.user.js',
         noapp: false,
-        inframe: true,
+        inframe: false,
         develop: false
     },
     showNotTransportButtonAbove: {
@@ -939,7 +940,7 @@ lssm.Module = {
         },
         source: "/modules/lss-verbandsverwaltung/verbandsverwaltung.js",
         noapp: false,
-        inframe: true,
+        inframe: false,
         develop: false
     },
     overview: {
