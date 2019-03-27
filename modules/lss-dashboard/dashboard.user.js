@@ -20,6 +20,7 @@ I18n.translations.de['lssm']['dashboard'] = {
     anz: 'Anzahl',
     perwp: 'MITARBEITER',
     carswp: 'FAHRZEUGE',
+    patiwp: 'PATIENTEN',
     levwp: 'STUFE',
     categories: ['Feuerwehr', 'Rettungsdienst', 'Polizei', 'THW', 'Krankenhaus', 'Wasserrettung', 'SEG', 'Bereitschaftspolizei'],
     categories_data: ['fw', 'rd', 'pol', 'thw', 'kh', 'wret', 'seg','bepo'],
@@ -48,6 +49,7 @@ I18n.translations.en['lssm']['dashboard'] = {
     anz: 'Amount',
     perwp: 'EMPLOYEE',
     carswp: 'CARS',
+    patiwp: 'PATIENTS',
     levwp: 'LEVEL',
     categories: ['Fire Stations', 'Rescue Stations', 'Police Stations', 'Hospitals'],
     categories_data: ['fw', 'rd', 'pol', 'kh'],
@@ -76,6 +78,7 @@ I18n.translations.nl['lssm']['dashboard'] = {
     anz: 'Aantal',
     perwp: 'PERSONEEL',
     carswp: 'VOERTUIGEN',
+    patiwp: 'PATIËNTEN',
     levwp: 'LEVEL',
     categories: ['Brandweer', 'Ambulance', 'Politie', 'Ziekenhuis'],
     categories_data: ['fw', 'rd', 'pol', 'kh'],
@@ -94,9 +97,9 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 (function ($, I18n) {
     function loadGraphs() {
         // Building Bar Chart
-        var building_amount = {'fw': 0, 'fw_school': 0, 'rd': 0, 'rd_school': 0, 'pol': 0, 'pol_school': 0, 'thw': 0, 'thw_school': 0, 'kh': 0, 'kh_clinic': 0, 'wret': 0, 'seg': 0, 'bepo':0};
-        $.each(lssm.get_buildings(), function (key, build) {
-            switch (build.stationType) {
+        let building_amount = {'fw': 0, 'fw_school': 0, 'rd': 0, 'rd_school': 0, 'pol': 0, 'pol_school': 0, 'thw': 0, 'thw_school': 0, 'kh': 0, 'kh_clinic': 0, 'wret': 0, 'seg': 0, 'bepo':0};
+        $.each(lssm.buildings, function (key, build) {
+            switch (build.building_type) {
                 //Feuerwehr
                 case BUILDING_TYPE_FEUERWACHE:
                     building_amount.fw += 1;
@@ -149,13 +152,13 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
         });
         data_station = [];
         data_school = [];
-        var ds = I18n.t('lssm.dashboard.categories_data');
-        for (var i in ds)
+        let ds = I18n.t('lssm.dashboard.categories_data');
+        for (let i in ds)
         {
             data_station.push(building_amount[ds[i]]);
         }
-        var ds = I18n.t('lssm.dashboard.categories_data_school');
-        for (var i in ds)
+        ds = I18n.t('lssm.dashboard.categories_data_school');
+        for (let i in ds)
         {
             data_school.push(building_amount[ds[i]]);
         }
@@ -178,7 +181,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                 }]
         });
         // Car-Donut-Charts
-        var cars = [
+        let cars = [
             {'data': [], 'total': 0},
             {'data': [], 'total': 0},
             {'data': [], 'total': 0},
@@ -186,9 +189,8 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             {'data': [], 'total': 0}];
         // Go through all cars and put them where they belong
         $.each(lssm.car_list_all(), function (key, veh) {
-            var c = ["Undefined", 0];
+            let c = ["Undefined", 0];
             if (veh.type in lssm.carsById)
-                console.log(lssm.carsById[veh.type]);
                 c = lssm.carsById[veh.type];
             if (c[1] in cars) {
                 cars[c[1]].total += 1;
@@ -203,9 +205,8 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
         function gr(k) {
             return (k != "" && k != null);
         }
-        var divs = [['#ff-ges', "#ff-fz", ["#701C1C", "#800000", "#A40000", "#B31B1B", "#B22222", "#CC0000", "#CE1620", "#D73B3E", "#E34234", "#CD5C5C", "#FF0000", "#FF0800", "#FF1C00", "#FF5C5C", "#FF6961"]], ["#rd-ges", "#rd-fz", ["#f9690e", "#f9bf3b", "#d35400"]], ["#pol-ges", "#pol-fz", ["#87d37c", "#65c6bb", "#16a085", "#019875", "#36d7b7"]], ["#thw-ges", "#thw-fz", ["#002366", "#191970", "#00008B", "#00009C", "#002FA7", "#0000FF", "#0080FF","#2E64FE", "#5578F7", "#5882FA", "#58ACFA", "#2ECCFA", "#002FA7"]], ["#wret-ges", "#wret-fz", ["#636363", "#848484", "#7C7C7C"]]];
-        console.log(cars);
-        for (var i = 0; i < 5; i++) {
+        let divs = [['#ff-ges', "#ff-fz", ["#701C1C", "#800000", "#A40000", "#B31B1B", "#B22222", "#CC0000", "#CE1620", "#D73B3E", "#E34234", "#CD5C5C", "#FF0000", "#FF0800", "#FF1C00", "#FF5C5C", "#FF6961"]], ["#rd-ges", "#rd-fz", ["#f9690e", "#f9bf3b", "#d35400"]], ["#pol-ges", "#pol-fz", ["#87d37c", "#65c6bb", "#16a085", "#019875", "#36d7b7"]], ["#thw-ges", "#thw-fz", ["#002366", "#191970", "#00008B", "#00009C", "#002FA7", "#0000FF", "#0080FF","#2E64FE", "#5578F7", "#5882FA", "#58ACFA", "#2ECCFA", "#002FA7"]], ["#wret-ges", "#wret-fz", ["#636363", "#848484", "#7C7C7C"]]];
+        for (let i = 0; i < 5; i++) {
             cars[i].data = $.grep(cars[i].data, gr);
             if (cars[i].total > 0) {
                 $(divs[i][1]).highcharts({
@@ -236,7 +237,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             if (building.user_id != user_id) {
                 return;
             }
-            var appendto = "son",
+            let appendto = "son",
                     vehicles = lssm.car_list(building.id),
                     printcars = "",
                     icon = "fa-building-o",
@@ -260,12 +261,12 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                 case BUILDING_TYPE_HOSPITAL:
                     icon3 = "fa-bed";
                     icon = "fa-hospital-o";
-                    maxcars = building.level + 10;
+                    maxcars = -(building.level + 10);
                     break;
                 case BUILDING_TYPE_CLINIC:
                     icon3 = "fa-bed";
                     icon = "fa-hospital-o";
-                    maxcars = building.level + 5;
+                    maxcars = -(building.level + 5);
                     break;
                 case BUILDING_TYPE_NOTARZTHUBSCHRAUBERLANDEPLATZ:
                     icon = "fa-h-square";
@@ -306,15 +307,15 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             $.each(vehicles, function (k, car) {
                 printcars +=
                         '<div id="db_veh_' + car.id + '">' +
-                        '<span class="'+car.classes+' lssm-wp-fz--fms">'
-                        + car.fms +
+                        '<span class="building_list_fms building_list_fms_'+car.fms_show+' lssm-wp-fz--fms">'
+                        + car.fms_real +
                         '</span>' +
                         '<a href="/vehicles/' + car.id + '" class="lightbox-open building_list_fms lssm-wp-fz--fms-vehicle">'
                         + car.name +
                         '</a>' +
                         '</div>';
             });
-            var bd_data = '\
+            let bd_data = '\
 		      <div class="db_wachen_item" id="db_wache_' + building.id + '">\
 			       <div class="panel panel-default">\
 				         <div class="panel-heading">\
@@ -344,6 +345,13 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                         '<span>' + vehicles.length + '/' + maxcars + ' </span>' +
                           I18n.t('lssm.dashboard.carswp') +
                         '</span>';
+            else if (maxcars < 0)
+                bd_data +=
+                    '<span class="label label-primary">' +
+                    '<i class="glyphicon glyphicon-home"></i> ' +
+                    '<span>' + maxcars*-1 + ' </span>' +
+                    I18n.t('lssm.dashboard.patiwp') +
+                    '</span>';
             bd_data += '\
                  </div>\
 				     <div class="panel-body">\
@@ -370,30 +378,30 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                 .append('<th>' + I18n.t('lssm.dashboard.vehicles.transport') + '</th>')
                 .append('<th>' + I18n.t('lssm.dashboard.total') + '</th>');
 
-        var c_table = $("#db_fzg_outer table tbody")
+        let c_table = $("#db_fzg_outer table tbody")
         c_table.html("");
-        var cars = {};
-        var total = {'free': 0, 'miss': 0, 'fms5': 0, 'fms6': 0, 'sum': 0};
+        let cars = {};
+        let total = {'free': 0, 'miss': 0, 'fms5': 0, 'fms6': 0, 'sum': 0};
         $.each(lssm.car_list_all(), function (key, veh) {
-            var type = 0
+            let type = 0
             if (veh.type in lssm.carsById)
                 type = lssm.carsById[veh.type][0];
             if (typeof cars[type] == 'undefined') {
                 cars[type] = {'free': 0, 'miss': 0, 'fms5': 0, 'fms6': 0, 'sum': 0};
             }
-            switch (veh.fms) {
-                case '3':
-                case '4':
-                case '7':
-                case '8':
+            switch (veh.fms_real) {
+                case 3:
+                case 4:
+                case 7:
+                case 8:
                     cars[type].miss += 1;
                     total.miss += 1;
                     break;
-                case '5':
+                case 5:
                     cars[type].fms5 += 1;
                     total.fms5 += 1;
                     break;
-                case '6':
+                case 6:
                     cars[type].fms6 += 1;
                     total.fms6 += 1;
                     break;
@@ -416,7 +424,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 				<td>' + val.sum + '</td>\
 			</tr>');
         });
-        var c_table = $("#db_fzg_outer table tfoot");
+        c_table = $("#db_fzg_outer table tfoot");
         c_table.html("");
         c_table.append('\
 		<tr style="font-weight:bold">\
@@ -453,9 +461,9 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
         curtab_wp = tab;
     }
 // Suche nach Wache/Fahrzeug
-    var searchby = "wache";
+    let searchby = "wache";
     function wp_suche() {
-        var val = $("#wp_search").val(), elements = $("#db_wachen_outer .db_wachen_item");
+        let val = $("#wp_search").val(), elements = $("#db_wachen_outer .db_wachen_item");
         if (val.length > 0) {
             if (searchby === "wache") {
                 elements.find(".panel-title:not(:conaintsci('" + val + "'))").closest(".db_wachen_item").fadeOut();
@@ -468,7 +476,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             elements.fadeIn();
         }
     }
-    var prefix = lssm.config.prefix + '_db';
+    let prefix = lssm.config.prefix + '_db';
     // Bind dashboard buttons (called after dashboard has been loaded... fuck you jquery...)
     function bind_db_buttons() {
         $("a[id^='wp_a_']").click(function (e) {
@@ -476,7 +484,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             $(this).parent().addClass("active");
             switch_wp_tab($(this).attr('id'));
         });
-        var db_menu_btns = $("#dashboard_buttons>a, #dasboard_buttons>a");
+        let db_menu_btns = $("#dashboard_buttons>a, #dasboard_buttons>a");
         db_menu_btns.click(function () {
             db_menu_btns.removeClass("active");
             $(this).addClass("active");
@@ -527,7 +535,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
     $('#map_outer').before('<div id="' + prefix + '" class="container-fluid"></div>');
     $('head').append('<script src="https://use.fontawesome.com/12accc0f95.js"></script>');
     //.append("<style type='text/css' rel='stylesheet' id='dashboard-css'>body {-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid;}#db_wachen_outer>div {-moz-column-count: 4;-moz-column-gap: 10px;-webkit-column-count: 4;-webkit-column-gap: 10px;column-count: 4;column-gap: 10px;width: 100%;height: 100%;-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid;}#wp_sub, #wp_sub2{ display:none;}.db_wachen_item {display: inline-block;width: 100%;}</style>");
-    var dasboard_button = $('<li><a id="' + prefix + '_activate" href="#"><span class="glyphicon glyphicon-stats"></span> ' + I18n.t('lssm.dashboard.name') + '</a></li>');
+    let dasboard_button = $('<li><a id="' + prefix + '_activate" href="#"><span class="glyphicon glyphicon-stats"></span> ' + I18n.t('lssm.dashboard.name') + '</a></li>');
     $('#' + lssm.config.prefix + '_menu').append(dasboard_button);
     $('#' + prefix + '_activate').click(function () {
         if ($('#' + prefix).html().length > 0)

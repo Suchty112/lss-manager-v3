@@ -2,7 +2,7 @@
     function getModules()
     {
         let active = [];
-        for (var m in lssm.Module){
+        for (let m in lssm.Module){
             if (lssm.Module[m].active)
             {
                 active.push(m);
@@ -41,7 +41,7 @@
                 let name = $.trim($("#navbar_profile_link").text());
                 data.bro = getUserAgent();
                 data.pro = user_premium;
-                data.bui = lssm.get_buildings().length;
+                data.bui = lssm.buildings.length;
                 data.version = lssm.config.version;
                 data.mods = getModules();
                 let game = window.location.hostname;

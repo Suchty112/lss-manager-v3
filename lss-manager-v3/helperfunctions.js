@@ -113,7 +113,7 @@ else if (I18n.locale == "de")
         "16": ["SW Kats", 0],
         "17": ["TLF 2000", 0],
         "18": ["TLF 3000", 0],
-        "19": ["TLF 8/18", 0],
+        "19": ["TLF 8/8", 0],
         "20": ["TLF 8/18", 0],
         "21": ["TLF 16/24-Tr", 0],
         "22": ["TLF 16/25", 0],
@@ -194,62 +194,87 @@ lssm.getVehicleNameById = function(vehicleId) {
 
 lssm.car_list = function(building) {
     // liefert die Fahrzeuge einer Wache zurück
-    var data = [];
-    $('#vehicle_building_' + building).find('li').each(function (index, element) {
+    let data = [];
+    $.each(lssm.vehicles, function (vid, car) {
+        if(car.building != building)
+            return true;
         data.push({
-            "id": $(element).attr('vehicle_id'),
-            "name": $(element).find('a').html(),
-            "type": $(element).find('a').attr('vehicle_type_id'),
-            "fms": $(element).find(".building_list_fms").html(),
-            "classes": $(element).find(".building_list_fms").attr('class')
+            "id": vid,
+            "name": car.name,
+            "type": car.type,
+            "caption": car.typename,
+            "customname": car.customtype,
+            "fms_real": car.fms_real,
+            "fms_show": car.fms_show,
         });
     });
     return data;
 }
 lssm.car_list_all = function() {
-    var data = [];
-    $("[id^='vehicle_building']").find('li').each(function (index, element) {
-        data.push({
-            "id": $(element).attr('vehicle_id'),
-            "name": $(element).find('a').html(),
-            "type": $(element).find('a').attr('vehicle_type_id'),
-            "fms": $(element).find(".building_list_fms").html(),
-            "classes": $(element).find(".building_list_fms").attr('class')
-        });
-    });
-    return data;
+    return lssm.vehicles;
 }
 // Formatiert Fahrzeugliste um (mit FMS)
 lssm.car_list_printable = function(list) {
-    var data = "";
+    let data = "";
     $.each(list, function (key, car) {
-		data += "<div style=\"margin-top: 3px;\"><span class=\"" + car.classes + "\">" + car.fms + "</span> " + car.name +
+		data += "<div style=\"margin-top: 3px;\"><span class=\"building_list_fms building_list_fms_" + car.fms_show + "\">" + car.fms_real + "</span> " + car.name +
 			"</div>";
     });
     return data;
 }
 
-lssm.get_buildings = function() {
-    var data = [],
-        stationId, stationName, stationLat, stationLng, stationType, el, map;
-    $('#building_list').find('.building_list_li').each(function(index, element) {
-        el = $(element).find('.building_list_caption'),
-            map = el.find('.map_position_mover'),
-            stationId = el.find('.building_marker_image').attr('building_id'),
-            stationName = map.html(),
-            stationLat = map.attr('data-latitude'),
-            stationLng = map.attr('data-longitude'),
-            stationType = $(element).attr('building_type_id');
-
-        data.push({
-            'stationId': stationId,
-            'stationName': stationName,
-            'stationLat': stationLat,
-            'stationLng': stationLng,
-            'stationType': parseInt(stationType)
+lssm.get_vehicles = function(async = false) {
+    let path = window.location.pathname.length;
+    if (path <= 2) {
+        let tmpCar = {};
+        $.ajax({
+            url: "/api/vehicles",
+            method: "GET",
+            cache: true,
+            async: !async,
+            success: function (response) {
+                $.each(response, function (key, car) {
+                    tmpCar[car.id] = {
+                        name: lssm.carsById[car.vehicle_type][0],
+                        building: car.building_id,
+                        type: car.vehicle_type,
+                        typename: (car.vehicle_type_caption === null) ? lssm.carsById[car.vehicle_type][0] : car.vehicle_type_caption,
+                        customtype: car.vehicle_type_caption,
+                        fms_real: car.fms_real,
+                        fms_show: car.fms_show,
+                    };
+                });
+                lssm.vehicles = tmpCar;
+            }
         });
-    });
-    return data;
+    }
+};
+
+// Funktion zum Updaten des FMS eigener Fzg.
+$(document).bind(lssm.hook.postname("radioMessage"), function(event, t) {
+    if(t.type == "vehicle_fms"
+        && lssm.vehicles.hasOwnProperty(t.id)
+        && !t.fms_text.startsWith("[Verband]"))
+    {
+        lssm.vehicles[t.id].name = t.caption;
+        lssm.vehicles[t.id].fms_show = t.fms;
+        lssm.vehicles[t.id].fms_real = t.fms_real;
+    }
+});
+
+lssm.get_buildings = function(async = false) {
+    let path = window.location.pathname.length;
+    if (path <= 2) {
+        $.ajax({
+            url: "/api/buildings",
+            method: "GET",
+            cache: true,
+            async: !async,
+            success: function (response) {
+                lssm.buildings = response;
+            }
+        });
+    }
 };
 // liefert ein Div zurück welches auf der Karte verschoben werden kann und seine Position speichert und beim laden wieder annimmt.
 lssm.newDragableDivOnMap=function(id, classe, pos) {
@@ -257,7 +282,7 @@ lssm.newDragableDivOnMap=function(id, classe, pos) {
         if (p <= -m + info._div.offsetWidth + 20)
             return -m + info._div.offsetWidth + 20;
         else if (p >= 0)
-            return 0
+            return 0;
         else
             return p;
     }
@@ -270,21 +295,21 @@ lssm.newDragableDivOnMap=function(id, classe, pos) {
         else
             return p
     }
-    var info = L.control();
+    let info = L.control();
 
     info.onAdd = function () {
         this._div = L.DomUtil.create('div', classe || "");
         this._div.id = id+"Div";
-        var m = map.getSize();
+        let m = map.getSize();
         L.DomUtil.setPosition(info._div, new L.Point(changeX(pos.x, m.x), changeY(pos.y, m.y)));
         this.update();
         return this._div;
     };
 
     info.update = function () {
-        var m = map.getSize();
-        var p = L.DomUtil.getPosition(info._div);
-		var pos = {
+        let m = map.getSize();
+        let p = L.DomUtil.getPosition(info._div);
+        let pos = {
 			x: changeX(p.x, m.x),
 			y: changeY(p.y, m.y)
 		};
@@ -293,7 +318,7 @@ lssm.newDragableDivOnMap=function(id, classe, pos) {
     };
 
     info.addTo(map);
-    var t = new L.Draggable(info._div);
+    let t = new L.Draggable(info._div);
     t.enable();
     t.on('drag', info.update);
     return $(info._div);
@@ -303,7 +328,7 @@ lssm.newDragableDivOnMap=function(id, classe, pos) {
 if (!String.format) {
 //	console.log("execute");
   String.format = function(format) {
-    var args = Array.prototype.slice.call(arguments, 1);
+      let args = Array.prototype.slice.call(arguments, 1);
     return format.replace(/{(\d+)}/g, function(match, number) {
       return typeof args[number] != 'undefined' ? args[number] : match;
     });
