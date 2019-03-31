@@ -19,7 +19,7 @@ $.ajaxPrefilter(function (options, originalOptions) {
  */
 jQuery.expr[':'].containsci = function (a, i, m) {
     return jQuery(a).text().toUpperCase()
-            .indexOf(m[3].toUpperCase()) >= 0;
+        .indexOf(m[3].toUpperCase()) >= 0;
 };
 
 let lssm = {
@@ -44,7 +44,7 @@ let lssm = {
             //$('body').append('<script src="' + this.config.server + link + uid +'" type="text/javascript"></script>');
             $.getScript(this.config.server + link + uid);
         } catch (e) {
-            console.log("On script load: " + e.message);
+            console.error("On script load: " + e.message);
         }
     },
     loadStyle: function (link) {
@@ -57,7 +57,7 @@ let lssm = {
             uid = "?uid=" + game + user_id;
             $('body').append('<link href="' + this.getlink(link) + '" rel="stylesheet" type="text/css">');
         } catch (e) {
-            console.log("On script load: " + e.message);
+            console.error("On script load: " + e.message);
         }
     },
     getlink: function (file) {
@@ -70,7 +70,7 @@ let lssm = {
             uid = "?uid=" + game + user_id;
             return this.config.server + file + uid;
         } catch (e) {
-            console.log("On script load: " + e.message);
+            console.error("On script load: " + e.message);
         }
     },
     key: null,
@@ -87,7 +87,7 @@ I18n.fallbacks = true;
 I18n.locales.nl = ['nl', 'en', 'de'];
 I18n.translations.de.lssm = {
     lssm: "LSS-Manager",
-    version: "Stable",
+    version: "Beta",
     appstore: "APPSTORE",
     forum: "https://forum.leitstellenspiel.de/index.php/Thread/11166-LSS-MANAGER-V",
     appstore_welcome: "Willkommen im Appstore vom LSS Manager",
@@ -103,7 +103,7 @@ I18n.translations.de.lssm = {
     activated: "Folgende Module wurden aktiviert:",
     cantload: "<h2>LSS-Manager konnte nicht geladen werden</h2>Bitte kontaktiere ein Mitglied vom Entwicklerteam.",
     login: "Bitte zuerst anmelden",
-    mapkit: "Mapkit wird aktuell noch nicht vom LSS-Manager unterstützt.\n\nBitte deaktiviere das Addon solange oder schalte wieder \nauf OpenStreeMap um",
+    mapkit: "Dieses Modul unterstützt kein Mapkit",
     domainpro: "https://www.leitstellenspiel.de/profile/",
     domainmes: "https://www.leitstellenspiel.de/messages/new?target=",
 
@@ -111,7 +111,6 @@ I18n.translations.de.lssm = {
 };
 I18n.translations.en.lssm = {
     lssm: "LSS-Manager",
-    version: "Stable",
     appstore: "APPSTORE",
     forum: "http://board.missionchief.com/index.php/Thread/146-LSS-Manager-for-missionchief/",
     appstore_welcome: "Welcome to the Appstore of LSS Manager",
@@ -127,7 +126,7 @@ I18n.translations.en.lssm = {
     cantactivate: "can't be activated as it's incompatible with the following modul(es):",
     cantload: "<h2>LSS-Manager could not be loaded</h2>Please contact a member of the development team.",
     login: "Please log in first",
-    mapkit: "Mapkit is not currently supported by LSS-Manager.\n\nPlease turn this Add-On off or change back to OpenStreetMap",
+    mapkit: "This module doesn't support Mapkit",
     domainpro: "https://www.missionchief.com/profile/",
     domainmes: "https://www.missionchief.com/messages/new?target=",
     apps: {}
@@ -148,7 +147,7 @@ I18n.translations.nl.lssm = {
     save: "Opslaan",
     activated: "De volgende modules zijn geactiveerd:",
     cantactivate: "Kan niet worden geactiveerd omdat deze lssm_module niet samenwerkt met de volgende lssm_module(s):",
-    mapkit: "Mapkit wordt momenteel niet ondersteund door LSS-Manager.\n\nPlease zet deze Add-On uit of ga terug naar OpenStreetMap.",
+    mapkit: "Deze module ondersteunt Mapkit niet",
     domainpro: "https://www.meldkamerspel.com/profile/",
     domainmes: "https://www.meldkamerspel.com/messages/new?target=",
     apps: {}
@@ -201,7 +200,6 @@ lssm.Module = {
             nl: 'Bestuur het meldingscherm met het toetsenbord.'
         },
         source: '/modules/lss-keyboardAlert/lss-keyboardAlert.user.js',
-        develop: false,
         inframe: true
     },
     AaoTime: {
@@ -217,7 +215,6 @@ lssm.Module = {
             nl: 'Toont de berekende totale tijd voor alle voertuigen die aankomen bij het zweven van een AUR-link.'
         },
         source: '/modules/lss-aao-time/lss-aao-time.user.js',
-        develop: false,
         inframe: true
     },
     tailoredTabs: {
@@ -229,7 +226,6 @@ lssm.Module = {
             de: 'Das Plugin ermöglicht es, weitere Tabs zur Trennung von Fahrzeug-Typen im Alarmierungsfenster einzustellen.'
         },
         source: '/modules/lss-TailoredTabs/TailoredTabs.user.js',
-        develop: false,
         inframe: true,
         supportedLocales: ['de']
     },
@@ -249,7 +245,6 @@ lssm.Module = {
             'meldingen voor je bij.'
         },
         source: '/modules/lss-layout-01/layout-01.user.js',
-        develop: false,
         collisions: ['Layout02', 'Layout03', 'Layout04', 'Layout05']
     },
     Layout02: {
@@ -266,7 +261,6 @@ lssm.Module = {
         },
         ghuser: 'lostdesign',
         source: '/modules/lss-layout-02/layout-02.user.js',
-        develop: false,
         collisions: ['Layout01', 'Layout03', 'Layout04', 'Layout05']
     },
     Layout03: {
@@ -280,7 +274,6 @@ lssm.Module = {
             nl: 'Design zonder kaart. De vier overige schermen vullen het gehele scherm.'
         },
         source: '/modules/lss-layout-03/layout-03.user.js',
-        develop: false,
         collisions: ['Layout01', 'Layout02', 'Layout04', 'Layout05', 'FMS5InMap']
     },
     Layout04: {
@@ -297,7 +290,6 @@ lssm.Module = {
             'van de meldingen en daaronder hebben de overige schermen een eigen kolom'
         },
         source: '/modules/lss-layout-04/layout-04.user.js',
-        develop: false,
         collisions: ['Layout01', 'Layout02', 'Layout03', 'Layout05']
     },
     Layout05: {
@@ -462,7 +454,6 @@ lssm.Module = {
             'de juiste afdeling hebben uit het spraakaanvraagscherm te filteren'
         },
         source: '/modules/lss-destinationFilter/DestinationFilter.user.js',
-        develop: false,
         inframe: true
     },
     FMS5InMap: {
@@ -478,8 +469,8 @@ lssm.Module = {
             nl: 'Toont alle spraakaanvragen op de kaart.'
         },
         source: '/modules/lss-FMS5InMap/FMS5InMap.user.js',
-        develop: false,
-        collisions: ['Layout03', 'WachenplanungOnMap']
+        collisions: ['Layout03', 'WachenplanungOnMap'],
+        nomapkit: true,
     },
     Clock: {
         name: {
@@ -493,7 +484,7 @@ lssm.Module = {
             nl: 'Toont een kleine klok op de kaart.'
         },
         source: '/modules/lss-clock/clock.user.js',
-        develop: false
+        nomapkit: true,
     },
     WachenplanungOnMap: {
         name: {
@@ -511,8 +502,8 @@ lssm.Module = {
             'gebouwen.'
         },
         source: '/modules/lss-WachenplanungOnMap/WachenplanungOnMap.user.js',
-        develop: false,
-        collisions: ['Layout03', 'FMS5InMap', 'heatmap']
+        collisions: ['Layout03', 'FMS5InMap', 'heatmap'],
+        nomapkit: true,
     },
     tagMissions: {
         name: {
@@ -588,7 +579,7 @@ lssm.Module = {
             nl: 'Toont de status van voertuigen van een gebouw als je je muis boven het gebouw houdt.'
         },
         source: '/modules/lss-WachenHoverStati/WachenHoverStati.user.js',
-        develop: false
+        nomapkit: true,
     },
     RenameFZ: {
         name: {
@@ -664,7 +655,6 @@ lssm.Module = {
             nl: 'Maakt het mogelijk om de Alarm en Uitrukregels te doorzoeken met een dropdownmenu.'
         },
         source: '/modules/lss-aao-search/aao-search.user.js',
-        noapp: false,
         inframe: true,
         develop: false
     },
@@ -701,8 +691,8 @@ lssm.Module = {
         source: '/modules/lss-heatmap/LSHeatmap.user.js',
         noapp: false, // Nicht im App-Store auflisten
         inframe: false,
-        develop: false,
-        collisions: ['Layout03', 'WachenplanungOnMap']
+        collisions: ['Layout03', 'WachenplanungOnMap'],
+        nomapkit: true,
     },
     centermap: {
         name: {
@@ -719,7 +709,7 @@ lssm.Module = {
         source: '/modules/lss-centermap/Centermap.user.js',
         noapp: false, // Nicht im App-Store auflisten
         inframe: false,
-        develop: false
+        nomapkit: true,
     },
     missionHelper: {
         name: {
@@ -753,7 +743,6 @@ lssm.Module = {
         source: '/modules/lss-statusDispatching/statusDispatching.user.js',
         noapp: false, // Nicht im App-Store auflisten
         inframe: true,
-        develop: false,
         settings: {
             has: false,
             function_code: "statusDispatching_show_settings"
@@ -859,7 +848,6 @@ lssm.Module = {
             nl: 'Telt het aantal keer dat een AUR aangeklikt is.'
         },
         source: '/modules/lss-AAO-Zaehler/aao-zaehler.js',
-        noapp: false,
         inframe: true,
         develop: false
     },
@@ -876,7 +864,6 @@ lssm.Module = {
             nl: 'Voegt wat speciale informatie over de credits toe in een vervolgkeuzelijst'
         },
         source: '/modules/lss-creditserweiterung/creditserweiterung.user.js',
-        noapp: false,
         inframe: false,
         develop: false
     },
@@ -893,7 +880,6 @@ lssm.Module = {
             nl: 'Geeft uw eigen ID in de kopregel weer'
         },
         source: '/modules/lss-userid/lss-userId.user.js',
-        noapp: false,
         inframe: false,
         develop: false
     },
@@ -910,7 +896,6 @@ lssm.Module = {
             nl: 'Toont de chatgeschiedenisknop  in de chatheader.'
         },
         source: '/modules/lss-showChatbuttonAbove/showChatbuttonAbove.user.js',
-        noapp: false,
         inframe: false,
         develop: false
     },
@@ -923,7 +908,6 @@ lssm.Module = {
             de: 'Zeigt den Patient-Entlassen-Knopf bei einem Sprechwunsch unter dem Fahrzeugnamen an.'
         },
         source: '/modules/lss-show-notTransportPatientButtonAbove/show-notTransportPatientButtonAbove.user.js',
-        noapp: false,
         supportedLocales: ['de'],
         inframe: true,
         develop: false
@@ -941,7 +925,6 @@ lssm.Module = {
             nl: "Teamoverzicht in een oogopslag in het hoofdvenster"
         },
         source: "/modules/lss-verbandsverwaltung/verbandsverwaltung.js",
-        noapp: false,
         inframe: false,
         develop: false
     },
@@ -958,9 +941,23 @@ lssm.Module = {
             nl: "Overzicht van alle voertuigen, later ook gebouwen."
         },
         source: "/modules/lss-overview/overview.js",
-        noapp: false,
         inframe: true,
-        develop: false
+        nomapkit: true,
+    },
+    extendedBuilding: {
+        name: {
+            de: "Erweiterte Gebäudeansicht",
+            en: "Extended building view",
+            nl: "Uitgebreide bouwweergave"
+        },
+        active: false,
+        description: {
+            de: "Übersicht über Ausbauten und Personalbedarf",
+            en: "Overview of extensions and personnel requirements",
+            nl: "Overzicht van uitbreidingen en personeelsvereisten"
+        },
+        source: "/modules/lss-extendedBuilding/extendedBuilding.js",
+        inframe: true,
     }
 };
 
@@ -1021,33 +1018,31 @@ lssm.appstore = {
             if ('noapp' in mod && mod.noapp === true || !isSupportedLocale) {
                 continue;
             }
-            let panel = $('<div style="margin-top:10px;" class="lssm_module' +
+            let nomapkit = (typeof mapkit !== "undefined" && 'nomapkit' in mod && mod.nomapkit === true);
+            let dom = '<div style="margin-top:10px;" class="lssm_module' +
                 (mod.develop ? ' lssm_module_develop' : '') + '">' +
                 '<div class="panel panel-default" style="display: inline-block;width:100%;">' +
                 '<div class="panel-body">' +
-                '<span class="pull-right">' +
-                '<div class="onoffswitch">' +
-                '<input class="onoffswitch-checkbox" id="lssm.modules_' + mods[i] + '" ' +
-                (mod.active ? 'checked="true"' : '') + ' value="' + mods[i] +
-                '"name="onoffswitch" type="checkbox">' +
-                '<label class="onoffswitch-label" for="lssm.modules_' + mods[i] + '"></label>' +
+                '<span class="pull-right">';
+            if(!nomapkit)
+                dom += '<div class="onoffswitch">' +
+                    '<input class="onoffswitch-checkbox" id="lssm.modules_' + mods[i] + '" ' +
+                    (mod.active ? 'checked="true"' : '') + ' value="' + mods[i] +
+                    '" name="onoffswitch" type="checkbox">' +
+                    '<label class="onoffswitch-label" for="lssm.modules_' + mods[i] + '"></label>' +
+                    '</div>';
+            dom += '</span>' +
+                '<h4>' + I18n.t('lssm.apps.' + mods[i] + '.name') + '</h4>';
+            if(!nomapkit)
+                dom += '<small style="display:none">' + I18n.t('lssm.apps.' + mods[i] + '.description');
+            else
+                dom += '<small style="color:darkred">' +I18n.t('lssm.mapkit');
+
+            dom += '</small>' +
                 '</div>' +
-                '</span>' +
-                '<h4>' + I18n.t('lssm.apps.' + mods[i] + '.name') + '</h4>' +
-                '<small style="display:none">' + I18n.t('lssm.apps.' + mods[i] + '.description') +
-                '</small>' +
                 '</div>' +
-                '</div>' +
-                '</div>');
-            panel.find("h4").on("click", function () {
-                "use strict";
-                let next = $(this).next();
-                if (next.is(":hidden")) {
-                    next.slideDown("slow");
-                } else {
-                    next.slideUp("slow");
-                }
-            });
+                '</div>';
+            let panel = $(dom);
             panels.find("#apps_col_" + col).append(panel);
             col++;
             if (col > 2) {
@@ -1063,108 +1058,15 @@ lssm.appstore = {
         let prefix = lssm.config.prefix + '_appstore';
         let div = $(
             '<div class="col-md-12 lssm.appstore" id="' + prefix + '">' +
-            '<div class="jumbotron">' +
-            '<h1>' + I18n.t('lssm.appstore') + '</h1>' +
-            '<p>' + I18n.t('lssm.appstore_welcome') + '.</p>' +
-            '<p>' + I18n.t('lssm.appstore_desc') + '</p> <br>' +
-            '<p>' +
+            '<div class="row">' +
+            '<h2>' + I18n.t('lssm.appstore') + '</h2>' +
+            '<p class="lead">' + I18n.t('lssm.appstore_welcome') + '.</p>' +
+            '<p>' + I18n.t('lssm.appstore_desc') + '</p>' +
             '<input type="text" class="form-control pull-right" id="' + prefix +
             '_search" placeholder="Suche" style=" width:25%;display:inline-block;">' +
-            '<button type="button" class="btn btn-grey btn-sm" id="' + prefix +
-            '_close" aria-label="Close">' +
-            '<span aria-hidden="true">' + I18n.t('lssm.back_lss') + '</span>' +
-            '</button></p>' +
-            '<span class="pull-right"><small>MADE BY:</small>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="https://www.leitstellenspiel.de/profile/81460" target="_blank" class="username-link">' +
-            '@lost</a>&nbsp;' +
-            '<a href="https://www.leitstellenspiel.de/messages/new?target=lost" target="_blank" ' +
-            'class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="https://www.leitstellenspiel.de/profile/168556" target="_blank" class="username-link">' +
-            '@Northdegree</a>&nbsp;' +
-            '<a href="https://www.leitstellenspiel.de/messages/new?target=Northdegree" target="_blank"' +
-            ' class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="https://www.leitstellenspiel.de/profile/201213" target="_blank" class="username-link">' +
-            '@Mausmajor</a>&nbsp;' +
-            '<a href="https://www.leitstellenspiel.de/messages/new?target=Mausmajor" target="_blank"' +
-            ' class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="https://www.leitstellenspiel.de/profile/359760" target="_blank" class="username-link">' +
-            '@DLRG-Dominik</a>&nbsp;' +
-            '<a href="https://www.leitstellenspiel.de/messages/new?target=DLRG-Dominik" target="_blank" ' +
-            'class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="https://www.leitstellenspiel.de/profile/68742" target="_blank" class="username-link">' +
-            '@MrWeezle</a>&nbsp;' +
-            '<a href="https://www.leitstellenspiel.de/messages/new?target=MrWeezle" target="_blank" ' +
-            'class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="'+ I18n.t('lssm.domainpro') +''+ I18n.t('lssm.developers.sanni.id') +'" target="_blank" class="username-link">' +
-            '@SanniHameln</a>&nbsp;' +
-            '<a href="' + I18n.t('lssm.domainmes') + '' + I18n.t('lssm.developers.sanni.name') +'" target="_blank" ' +
-            'class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>&nbsp;' +
-            '<span class="label label-primary">' +
-            '<a href="'+ I18n.t('lssm.domainpro') +''+ I18n.t('lssm.developers.kboe.id') +'" target="_blank" class="username-link">' +
-            '@KBOE2</a>&nbsp;' +
-            '<a href="' + I18n.t('lssm.domainmes') + '' + I18n.t('lssm.developers.kboe.name') +'" target="_blank" ' +
-            'class="username-link">' +
-            '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>' +
-            '</a>' +
-            '</span>' +
             '</div>' +
             '</div>'
         );
-        div.on('keyup', '#' + prefix + '_search', function () {
-            "use strict";
-            let ss = $(this).val();
-            if (ss.length > 0) {
-                div.find(".lssm_module:containsci(" + ss + ")").show();
-                div.find(".lssm_module:not(:containsci(" + ss + "))").hide();
-            } else {
-                div.find(".lssm_module").show();
-            }
-        });
-        div.on('click', '#' + prefix + '_close', function () {
-            lssm.appstore.closeAppstore();
-        });
-        div.on('change', '.onoffswitch-checkbox', function (ev) {
-            let e = ev.target;
-            if (e.checked && !lssm.appstore.canActivate(lssm.Module[e.value])) {
-                $(e).prop('checked', false);
-                let warn = "\"" + I18n.t('lssm.apps.' + e.value + '.name') + "\" " + I18n.t(
-                    'lssm.cantactivate');
-                // TODO: Sprechendere Variablennamen
-                for (let c in lssm.Module[e.value].collisions) {
-                    let d = lssm.Module[e.value].collisions[c];
-                    if (lssm.Module[d].active) {
-                        warn += "\r\n" + I18n.t('lssm.apps.' + d + '.name');
-                    }
-                }
-                alert(warn);
-                return;
-            }
-            lssm.Module[e.value].active = e.checked;
-        });
         div.append(this.createModulePanels());
         return div;
     },
@@ -1176,34 +1078,62 @@ lssm.appstore = {
         let settingButton = $('<li role="presentation" id="' + prefix + '"><a id="' + prefix +
             '_activate" href="#">' +
             I18n.t('lssm.appstore') + '</a></li>');
-        let div = $('<div class="row" id="' + prefix + '_row"></div>').append(this.createModuleMain());
+
         let content = $('#navbar-mobile-footer').prev();
-        // hier ist alles drin
         content.attr('id', 'content');
-        //div.append(createModulePanels());
+
         settingButton.click(function () {
-            // versteckt den Hauptkörper von LSS und öffnet das LSS Manager Einstellungsfenster / den Appstore
-            content.hide().after(div);
-            $('#' + lssm.config.prefix + '_appstore_row').show();
-            $('footer').hide();
-            //lssm.modal.show(div[0].innerHTML, lssm.appstore.closeAppstore);
+            let div = $('<div class="row" id="' + prefix + '_row"></div>').append(lssm.appstore.createModuleMain());
+            let dom = lssm.modal.show(div.html(), lssm.appstore.closeAppstore);
+            $(dom).on('keyup', '#' + prefix + '_search', function () {
+                "use strict";
+                let ss = $(this).val();
+                if (ss.length > 0) {
+                    $(dom).find(".lssm_module:containsci(" + ss + ")").show();
+                    $(dom).find(".lssm_module:not(:containsci(" + ss + "))").hide();
+                } else {
+                    $(dom).find(".lssm_module").show();
+                }
+            });
+            $(dom).on('change', '.onoffswitch-checkbox', function (ev) {
+                let e = ev.target;
+                if (e.checked && !lssm.appstore.canActivate(lssm.Module[e.value])) {
+                    $(e).prop('checked', false);
+                    let warn = "\"" + I18n.t('lssm.apps.' + e.value + '.name') + "\" " + I18n.t(
+                        'lssm.cantactivate');
+                    // TODO: Sprechendere Variablennamen
+                    for (let c in lssm.Module[e.value].collisions) {
+                        let d = lssm.Module[e.value].collisions[c];
+                        if (lssm.Module[d].active) {
+                            warn += "\r\n" + I18n.t('lssm.apps.' + d + '.name');
+                        }
+                    }
+                    alert(warn);
+                    return;
+                }
+                lssm.Module[e.value].active = e.checked;
+            });
+            $(dom).find("h4").on("click", function () {
+                "use strict";
+                let next = $(this).next();
+                if (next.is(":hidden")) {
+                    next.slideDown("slow");
+                } else {
+                    next.slideUp("slow");
+                }
+            });
         });
         // einhängen des Buttons in der Navi
         $('#' + lssm.config.prefix + '_menu').append(settingButton);
     },
     closeAppstore: function () {
         "use strict";
-        //var action = lssm.appstore.checkModChanges();
-        let action = this.checkModChanges();
+        let action = lssm.appstore.checkModChanges();
         lssm.modules.saveall();
         if (action === "Reload") {
             location.reload();
         } else {
-
-            $('#' + lssm.config.prefix + '_appstore_row').hide();
-            $('#content').show();
-            $('footer').show();
-            //$(document).unbind(lssm.hook.prename("lightboxClose"),lssm.appstore.closeAppstore);
+            $(document).unbind(lssm.hook.prename("lightboxClose"),lssm.appstore.closeAppstore);
             // Inform the user about activated modules.
             let activated = "";
             for (let m in action) {
@@ -1270,6 +1200,11 @@ lssm.settings = {
             localStorage.setItem(lssm.config.prefix + '_' + key, value);
         }
     },
+	
+	exists: function(key)
+	{
+		return localStorage.getItem(lssm.config.prefix + '_' + key) !== null;
+	},
 
     // Get a config value from localstorage
     get: function (key, defaultvalue) {
@@ -1379,7 +1314,8 @@ lssm.modules = {
         "use strict";
         let arr = {};
         for (let i in lssm.Module) {
-            arr[i] = lssm.Module[i].active;
+            if(lssm.Module[i].active)
+                arr[i] = lssm.Module[i].active;
         }
         lssm.settings.set("Modules", arr);
     },
@@ -1411,7 +1347,7 @@ lssm.modules = {
                 this.load(m);
             }
         } catch (e) {
-            console.log("LOADALL: " + e.message);
+            console.error("LOADALL: " + e.message);
         }
     },
 
@@ -1428,14 +1364,14 @@ lssm.modules = {
             if (lssm.Module[module].active && lssm.Module.status !== 'develop' &&
                 lssm.appstore.canActivate(lssm.Module[module])) {
                 if (path <= 2 || ("inframe" in lssm.Module[module] && lssm.Module[module].inframe ===
-                        true)) {
+                    true)) {
                     if (lssm.Module[module].source) {
                         $.getScript(lssm.getlink(lssm.Module[module].source));
                     }
                 }
             }
         } catch (e) {
-            console.log("On lssm_module load: " + e.message);
+            console.error("On lssm_module load: " + e.message);
         }
     },
     isActive: function(e) {
@@ -1510,11 +1446,11 @@ lssm.modal = {
         $("#lightbox_box").css("top", (i - n) / 2 + "px");
         $("#lightbox_iframe_" + iframe_lightbox_number + " #iframe-inside-container").css("height", a).css(
             "width", o);
-        if (typeof closefunc !== "undefined") {
-            $(document).bind(lssm.hook.prename("lightboxClose"), closefunc);
-        }
         setTimeout(function () {
             $("#lightbox_iframe_" + iframe_lightbox_number).show().focus();
+            if (typeof closefunc !== "undefined") {
+                $(document).bind(lssm.hook.prename("lightboxClose"), closefunc);
+            }
         }, 100);
         return "#lightbox_iframe_" + iframe_lightbox_number + " #iframe-inside-container";
     }
@@ -1568,16 +1504,27 @@ lssm.modal = {
                     setInterval(function(){lssm.get_buildings(false);lssm.get_vehicles(false);}, 120000);
                     // Get the last activated modules
                     let modules = lssm.settings.get('Modules') || {};
+                    let deact = 0;
                     for (let i in modules) {
                         let modname = i.toString();
-                        if ((modname in lssm.Module) === false) {
-                            console.log(modname + " is not a valid app. Skipping.");
+                        let nomapkit = (typeof mapkit !== "undefined" && 'nomapkit' in lssm.Module[i] && lssm.Module[i].nomapkit === true);
+                        if (nomapkit && modules[i]) {
+                            console.error(modname + " is not compatible with mapkit.");
+                            lssm.Module[i].active = false;
+                            deact++;
                             continue;
                         }
-                        if (lssm.Module[i].active === false) {
+                        else if ((modname in lssm.Module) === false) {
+                            console.error(modname + " is not a valid app. Skipping.");
+                            deact++;
+                            continue;
+                        }
+                        else if (lssm.Module[i].active === false) {
                             lssm.Module[i].active = modules[i];
                         }
                     }
+                    if(deact>0)
+                        lssm.modules.saveall();
                     // Let's load all the modules
                     lssm.modules.loadall();
                     // Oh, we also need a appstore

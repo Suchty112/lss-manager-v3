@@ -233,12 +233,8 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
         }
     }
     function load_build_planning() {
-        $.each(building_markers_cache, function (i, building) {
-            if (building.user_id != user_id) {
-                return;
-            }
+        $.each(lssm.buildings, function (i, building) {
             let appendto = "son",
-                    vehicles = lssm.car_list(building.id),
                     printcars = "",
                     icon = "fa-building-o",
                     icon3 = "fa-car",
@@ -304,6 +300,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                     icon = "fa-university";
                     break;
             }
+			let vehicles = lssm.car_list(building.id);
             $.each(vehicles, function (k, car) {
                 printcars +=
                         '<div id="db_veh_' + car.id + '">' +
@@ -320,7 +317,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 			       <div class="panel panel-default">\
 				         <div class="panel-heading">\
 					            <h3 class="panel-title" style="margin-bottom:5px;"><i class="fa ' + icon + '"></i>\
-						                <a href="/buildings/' + building.id + '" class="lightbox-open">' + building.name + '</a>\
+						                <a href="/buildings/' + building.id + '" class="lightbox-open">' + building.caption + '</a>\
                       </h3>';
             if (building.level != null)
                 bd_data +=
@@ -361,11 +358,9 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             </div>\
 			</div>\
 		</div>';
-
-            /*<div class="panel-footer" style="background-color:#fff;">\
-             <a class="btn btn-sm btn-default"><i class="fa fa-cog"></i> '+I18n.t('lssm.settings')+'</a>\
-             </div>\*/
             $("#wp_" + appendto).append(bd_data);
+			delete vehicles;
+			
         });
     }
     // Fill vehicle table
@@ -439,13 +434,15 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 
     // Wechseln der Dashboard-Ansicht
     function switch_dashboard(tab) {
+		if (tab == "db_fzg")
+			populate_fzgtable();
+		else if (tab == "db_wachen")
+			load_build_planning();
+			
         tab = "#" + tab + "_outer";
         $(curtab_db).fadeOut(500);
         $(tab).fadeIn(500);
         curtab_db = tab;
-        if (tab == "#db_fzg_outer") {
-            populate_fzgtable();
-        }
         if (tab == "#db_wachen_outer") {
             $("#wp_sub").fadeIn(500);
             $("#wp_sub2").fadeIn(500);
@@ -454,6 +451,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             $("#wp_sub2").fadeOut(500);
         }
     }
+	
     function switch_wp_tab(tab) {
         tab = "#" + tab.replace("a_", "");
         $(curtab_wp).fadeOut(500);
@@ -479,6 +477,14 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
     let prefix = lssm.config.prefix + '_db';
     // Bind dashboard buttons (called after dashboard has been loaded... fuck you jquery...)
     function bind_db_buttons() {
+		$("#"+prefix).on('click', '.lightbox-open', function(e){
+			e.preventDefault();
+			lightboxClose();
+			$("lightbox_iframe_"+iframe_lightbox_number).remove();
+			setTimeout(function() {
+				lightboxOpen(e.target.getAttribute('href'));
+			}, 500);
+		});
         $("a[id^='wp_a_']").click(function (e) {
             $("#wp_sub>a").removeClass("active");
             $(this).parent().addClass("active");
@@ -502,49 +508,44 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             wp_suche();
         });
     }
+	function closeDashboard()
+	{
+		$(document).unbind(lssm.hook.postname("lightboxClose"), closeDashboard)
+		$("#"+prefix).remove();
+	}
     function loadDashboard() {
-        $('#' + prefix).html('<span class="glyphicon glyphicon-refresh spinning"></span> ' + I18n.t('lssm.dashboard.loading') + ' ...');
-        setTimeout(function () {
-            $.get(lssm.getlink("/modules/lss-dashboard/dashboard.html"), function (data) {
-                $('#' + prefix).html(data);
-            })
-                    .done(function () {
-                        loadGraphs();
-                        $('#building-s_outer .panel-heading .panel-title').append('<i class="fa fa-building"></i> ' + I18n.t('lssm.dashboard.overview'));
-                        $('#fz-s_outer .panel-heading .panel-title').append('<i class="fa fa-car"></i> ' + I18n.t('lssm.dashboard.distribution'));
-                        $('#dashboard_buttons').append('<a class="btn btn-default" href="#" id="db_main">' + I18n.t('lssm.dashboard.name') + '</a>')
-                                .append('<a class="btn btn-default" href="#" id="db_fzg">' + I18n.t('lssm.dashboard.vehicles.name') + '</a>')
-                                .append('<a class="btn btn-default" href="#" id="db_wachen">' + I18n.t('lssm.dashboard.station_plan') + '</a>');
+		$(document).bind(lssm.hook.prename("lightboxClose"), closeDashboard);
+		$.get(lssm.getlink("/modules/lss-dashboard/dashboard.html"), function (data) {
+			let dom = lssm.modal.show('<div id="' + prefix + '" class="container-fluid"></div>');
+			$("#"+prefix).html(data);
+			$('#wp_sub').css("display", "none");
+			$('#wp_sub2').css("display", "none");
+			$('#building-s_outer .panel-heading .panel-title').append('<i class="fa fa-building"></i> ' + I18n.t('lssm.dashboard.overview'));
+			$('#fz-s_outer .panel-heading .panel-title').append('<i class="fa fa-car"></i> ' + I18n.t('lssm.dashboard.distribution'));
+			$('#dashboard_buttons').append('<a class="btn btn-default" href="#" id="db_main">' + I18n.t('lssm.dashboard.name') + '</a>')
+					.append('<a class="btn btn-default" href="#" id="db_fzg">' + I18n.t('lssm.dashboard.vehicles.name') + '</a>')
+					.append('<a class="btn btn-default" href="#" id="db_wachen">' + I18n.t('lssm.dashboard.station_plan') + '</a>');
 
-                        $('#wp_sub').append('<a class="btn btn-sm btn-default" href="#" id="wp_a_fw">'+I18n.t('lssm.dashboard.categories')[0]+'</a>')
-                            .append('<a class="btn btn-sm btn-default" href="#" id="wp_a_rd">'+I18n.t('lssm.dashboard.categories')[1]+'</a>')
-                            .append('<a class="btn btn-sm btn-default" href="#" id="wp_a_pol">'+I18n.t('lssm.dashboard.categories')[2]+'</a>');
-                        if(I18n.locale == "de")
-                            $('#wp_sub').append('<a class="btn btn-sm btn-default" href="#" id="wp_a_thw">THW</a>')
-                                .append('<a class="btn btn-sm btn-default" href="#" id="wp_a_wret">Wasser</a>')
-                        $("#wp_sub").append('<a class="btn btn-sm btn-default" href="#" id="wp_a_sch">'+I18n.t('lssm.dashboard.school')+'</a>')
-                            .append('<a class="btn btn-sm btn-default" href="#" id="wp_a_son">'+I18n.t('lssm.dashboard.other')+'</a>');
-
-                        bind_db_buttons();
-                        curtab_db = "#db_main_outer";
-                        curtab_wp = "#wp_fw";
-                        load_build_planning();
-                    });
-        }, 200);
+			$('#wp_sub').append('<a class="btn btn-sm btn-default" href="#" id="wp_a_fw">'+I18n.t('lssm.dashboard.categories')[0]+'</a>')
+				.append('<a class="btn btn-sm btn-default" href="#" id="wp_a_rd">'+I18n.t('lssm.dashboard.categories')[1]+'</a>')
+				.append('<a class="btn btn-sm btn-default" href="#" id="wp_a_pol">'+I18n.t('lssm.dashboard.categories')[2]+'</a>');
+			if(I18n.locale == "de")
+				$('#wp_sub').append('<a class="btn btn-sm btn-default" href="#" id="wp_a_thw">THW</a>')
+					.append('<a class="btn btn-sm btn-default" href="#" id="wp_a_wret">Wasser</a>')
+			$("#wp_sub").append('<a class="btn btn-sm btn-default" href="#" id="wp_a_sch">'+I18n.t('lssm.dashboard.school')+'</a>')
+				.append('<a class="btn btn-sm btn-default" href="#" id="wp_a_son">'+I18n.t('lssm.dashboard.other')+'</a>');
+			curtab_db = "#db_main_outer";
+			curtab_wp = "#wp_fw";
+			bind_db_buttons();
+			loadGraphs();
+		});
     }
-    $('#map_outer').before('<div id="' + prefix + '" class="container-fluid"></div>');
+	
     $('head').append('<script src="https://use.fontawesome.com/12accc0f95.js"></script>');
-    //.append("<style type='text/css' rel='stylesheet' id='dashboard-css'>body {-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid;}#db_wachen_outer>div {-moz-column-count: 4;-moz-column-gap: 10px;-webkit-column-count: 4;-webkit-column-gap: 10px;column-count: 4;column-gap: 10px;width: 100%;height: 100%;-webkit-column-break-inside: avoid;page-break-inside: avoid;break-inside: avoid;}#wp_sub, #wp_sub2{ display:none;}.db_wachen_item {display: inline-block;width: 100%;}</style>");
     let dasboard_button = $('<li><a id="' + prefix + '_activate" href="#"><span class="glyphicon glyphicon-stats"></span> ' + I18n.t('lssm.dashboard.name') + '</a></li>');
     $('#' + lssm.config.prefix + '_menu').append(dasboard_button);
     $('#' + prefix + '_activate').click(function () {
-        if ($('#' + prefix).html().length > 0)
-        {
-            $('#' + prefix).html("");
-        } else
-        {
-            loadDashboard();
-        }
+		loadDashboard();
     });
 
 })(jQuery, I18n)

@@ -57,24 +57,23 @@
         import_success: "De instellingen zijn succesvol geïmporteerd. Ververs de pagina om ze te gebruiken.",
         import_missmatch: "Het te openen bestand werkt helaas niet meer met de huidige versie van LSSM.",
         import_fail: "Foutmelding: Er is een fout opgetreden bij het importeren van het volgende bestand: <strong> {0} </ strong>." +
-            "Informeer AUB een ontwikkelaar van deze melding."
+        "Informeer AUB een ontwikkelaar van deze melding."
     };
+    function closeManagedSettings() {
+        $(document).unbind(lssm.hook.prename("lightboxClose"), closeManagedSettings);
+        $("#lightbox_iframe_"+iframe_lightbox_number).remove();
+    }
 
     function renderSettings() {
-        if ($('#' + lssm.config.prefix + '_appstore_ManagedSettings').length > 0) return false;
-        let markup = '<div class="jumbotron" id="' + lssm.config.prefix + '_appstore_ManagedSettings">';
+        $(document).bind(lssm.hook.prename("lightboxClose"), closeManagedSettings);
+        let markup = '<div class="col-md-12" id="' + lssm.config.prefix + '_appstore_ManagedSettings">';
         markup += '<h1>' + I18n.t('lssm.managedsettings.title') + '</h1>';
         markup += '<p>' + I18n.t('lssm.managedsettings.text1') + '</p>';
-        markup += '<div><fieldset id="module_settings" style="margin-bottom: 10px;">';
-        markup += '<legend>' + I18n.t('lssm.managedsettings.text2') + '</legend>';
-        markup += '</fieldset></div>';
-        markup += '<p>';
-        markup += '<button type="button" class="btn btn-success btn-sm" id="' + lssm.config.prefix +
-            '_appstore_ManagedSettings_close" aria-label="Close">';
+        markup += '<span class="pull-right">';
+        markup += '<button type="button" class="btn btn-success btn-sm ';
+        markup += lssm.config.prefix +'_appstore_ManagedSettings_close" aria-label="Close">';
         markup += '<span aria-hidden="true">' + I18n.t('lssm.managedsettings.save') + '</span>';
         markup += '</button>';
-        markup += '</p>';
-        markup += '<span class="pull-right">';
         markup += '<a id="lssm-export-settings" class="btn btn-warning btn-xs" style="margin-right: 5px;">';
         markup += '<span aria-hidden="true"><span class="glyphicon glyphicon-floppy-save"></span>' + I18n.t(
             'lssm.managedsettings.export_btn') + '</span>';
@@ -87,7 +86,23 @@
         markup += '<span class="label label-danger">Version: ' + VERSION + '</span>';
         markup += '</span>';
         markup += '</div>';
-        $('#map_outer').before(markup);
+        markup += '<div class="col-md-12">';
+        markup += '<fieldset id="module_settings" style="margin-bottom: 10px;">';
+        markup += '<div id="managedsettings_tab_button"></div>';
+        markup += '<legend>' + I18n.t('lssm.managedsettings.text2') + '</legend>';
+        markup += '<div id="managedsettings_tabs">';
+        markup += '</div>';
+        markup += '</fieldset>';
+        markup += '</div>';
+        markup += '<p>';
+        markup += '<button type="button" class="btn btn-success btn-sm ';
+        markup += lssm.config.prefix +'_appstore_ManagedSettings_close" aria-label="Close">';
+        markup += '<span aria-hidden="true">' + I18n.t('lssm.managedsettings.save') + '</span>';
+        markup += '</button>';
+        markup += '</p>';
+        markup += '</div>';
+        //$('#map_outer').before(markup);
+        let dom = lssm.modal.show(markup);
 
         let sortable = [];
         for (let module in lssm.managedSettings.registeredModules) {
@@ -99,12 +114,19 @@
             if (a.title > b.title) return 1;
             return 0;
         });
-
+        let first = true;
         $.each(sortable, function () {
             let module = this;
             let moduleKey = module.id;
+            $("#managedsettings_tab_button").append('<button id="' + moduleKey + '" class="btn btn-sm btn-primary">' + module.title + '</button>');
             markup = "";
-            markup += '<div id="' + moduleKey + '_wrap">';
+            if(first)
+            {
+                markup += '<div id="' + moduleKey + '_wrap">';
+                first = false;
+            }
+            else
+                markup += '<div id="' + moduleKey + '_wrap" style="display:none">';
             markup += '<h3>' + module.title +
                 '<button class="btn btn-default settings-reset" data-module="' + moduleKey +
                 '" style="margin-left: 5px;" type="reset"><span class="glyphicon glyphicon-floppy-remove" title="' + I18n.t(
@@ -113,7 +135,7 @@
                 markup += '<h5 id="' + moduleKey + '_description">' + module.info_text + '</h5>';
             }
             markup += '</div>';
-            $('#module_settings').append(markup);
+            $('#managedsettings_tabs').append(markup);
             for (let settingsKey in module.settings) {
                 if (module.settings[settingsKey].ui.parent) {
                     $('#' + module.settings[settingsKey].ui.parent + '_wrap').append(renderUIElement(moduleKey, settingsKey, module
@@ -123,10 +145,16 @@
                 }
             }
         });
+        $('#managedsettings_tab_button button').on("click", function(e){
+            let tab = e.target.getAttribute('id');
+            $('#managedsettings_tabs').children(':visible').fadeOut('fast', function(){
+                $('#managedsettings_tabs #' + tab + '_wrap').fadeIn();
+            });
+        });
 
 
         // Save & Close function
-        $('#' + lssm.config.prefix + '_appstore_ManagedSettings_close').click(function () {
+        $('.' + lssm.config.prefix + '_appstore_ManagedSettings_close').click(function () {
             saveSettings();
             location.reload();
         });
@@ -235,47 +263,50 @@
 
     function renderUIElement(moduleKey, settingsKey, element) {
         let elementName = moduleKey + '_' + settingsKey;
-        let response = '<div id="' + elementName + '_wrap">';
+        let response = '<div id="' + elementName + '_wrap"' + (element.ui.hidden ? 'style="display: none;"' : '') + ' class="lssm_setting_line">';
         if (element.ui.type === "radio") {
             let optionCount = 0;
             $.each(element.ui.options, function () {
                 let prop_checked = "";
                 if (this.value === element.value) prop_checked = " checked ";
-                response += '<div id="' + elementName + '_' + optionCount + '_wrap">';
+                response += '<div id="' + elementName + '_' + optionCount + '_wrap" class="col-md-12" style="border-bottom:1px solid black">';
+                response += '<div style="margin-left: 4px;" class="col-md-6">' + this.title + '<br />';
+                response += '<small>' + this.description + '</small></div>';
+                response += '<div class="col-md-4">';
                 response += '<input type="radio" name="' + elementName + '" id="' + elementName + '_' + optionCount + '" ' +
                     prop_checked;
                 response += ' value="' + this.value + '">';
-                response += '<label style="margin-left: 4px;" for="radio-1">' + this.title + '</label>';
-                response += '<div style="margin-left: 16px;">' + this.description + '</div>';
-                response += '</div>';
+                response += '</div></div>';
                 optionCount++;
             });
         } else if (element.ui.type === "checkbox") {
             let checked = element.value === true ? " checked " : "";
-            response += '<div style="margin-left: 16px;"><input type="checkbox" ' + checked +
-                ' style="margin-right: 4px;" name="' + elementName + '" id="' + elementName + '">' + element.ui.label + '</div>';
-            if (element.ui.description) response += '<div style="margin-left: 16px;">' + element.ui.description + '</div>';
+            response += '<div style="margin-left: 16px;" class="col-md-12">';
+            response += '<div class="col-md-6">' + element.ui.label;
+            if (element.ui.description) response += '<br /><small>' + element.ui.description + '</small>';
+            response += '</div>';
+            response += '<div class="col-md-2"><input type="checkbox" ' + checked +
+                ' style="margin-right: 4px;" name="' + elementName + '" id="' + elementName + '"></div>';
+            response += '</div>';
         } else if (element.ui.type === "hidden") {
             response += '<input type="hidden" value="' + element.value + '" id="' + elementName + '" name="' + elementName +
                 '">';
         } else if (element.ui.type === "button") {
+            response += '<div class="col-md-3">';
             response += '<button type="button" class="btn btn-grey btn-sm" id="' + elementName +
-                '" style="margin-left: 16px;">';
-            response += '<span>' + element.ui.label + '</span>';
-            response += '</button>';
+                '" style="margin-left: 16px;">' + element.ui.label + '</button></div>';
         } else if (element.ui.type === "text" || element.ui.type === "int" || element.ui.type === "float") {
-            response += '<div id="' + elementName + '_wrap" ' + (element.ui.class ? 'class="' + element.ui.class + '"' : "") +
-                '>';
-            response += '<label style="margin-left: 4px;" for="' + elementName + '">' + element.ui.label + '</label>';
-            response += '<input type="text" name="' + elementName + '" id="' + elementName + '" value="' + element.value +
+            response += '<div class="col-md-12 ' + (element.ui.class ? element.ui.class : "") + '" id="' + elementName + '_wrap">';
+            response += '<span style="margin-left: 4px;" class="col-md-4">' + element.ui.label + '</span>';
+            response += '<input type="text" class="col-md-4" name="' + elementName + '" id="' + elementName + '" value="' + element.value +
                 '">';
             if (element.ui.description) response += '<div style="margin-left: 16px;">' + element.ui.description + '</div>';
             response += '</div>';
         } else if (element.ui.type === "number") {
-            response += '<div id="' + elementName + '_wrap" ' + (element.ui.class ? 'class="' + element.ui.class + '"' : "") +
+            response += '<div class="col-md-12" id="' + elementName + '_wrap" ' + (element.ui.class ? 'class="' + element.ui.class + '"' : "") +
                 '>';
-            response += '<label style="margin-left: 4px;" for="' + elementName + '">' + element.ui.label + '</label>';
-            response += '<input type="number" name="' + elementName + '" id="' + elementName + '" value="' + element.value +
+            response += '<span style="margin-left: 4px;" class="col-md-4" >' + element.ui.label + '</span>';
+            response += '<input type="number" class="col-md-4" name="' + elementName + '" id="' + elementName + '" value="' + element.value +
                 '" ' + (element.ui.min ? ' min=' + element.ui.min : "") + (element.ui.max ? ' max=' + element.ui.max : "") + '>';
             if (element.ui.description) response += '<div style="margin-left: 16px;">' + element.ui.description + '</div>';
             response += '</div>';
@@ -293,6 +324,7 @@
         } else {
             console.log(elementName + ' has unknown ui type: ' + element.ui.type);
         }
+        response += '</div>';
         return response;
     }
 
