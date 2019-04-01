@@ -1,4 +1,7 @@
 (($, win, I18n) => {
+
+    alert("Bitte deaktiviert im Appstore das Modul: AAO-Anrückzeit! Es ist mittlerweile im Spiel integriert!\nPlease deactivate the module in the Appstore: ARR duration! It is now integrated into the game!\nDeactiveer de module in de Appstore: AUR duur! Het is nu geïntegreerd in het spel!");
+/*
     if (!location.pathname.match(/\/missions\/\d+/)) return;
 
     I18n.translations.de.lssm.aaotime = {
@@ -180,5 +183,5 @@
 
     aaoObjects.on('mouseout', function () {
         aaoTitle.hide();
-    });
+    }); */
 })($, window, I18n);
