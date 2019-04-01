@@ -89,12 +89,12 @@ I18n.translations.de.lssm = {
     lssm: "LSS-Manager",
     version: "Beta",
     appstore: "APPSTORE",
-    forum: "https://forum.leitstellenspiel.de/index.php/Thread/11166-LSS-MANAGER-V",
+    forum: "https://forum.leitstellenspiel.de/index.php/Thread/11166-LSS-MANAGER-V3/",
     appstore_welcome: "Willkommen im Appstore vom LSS Manager",
     appstore_desc: "Hier findest du verschiedene Plugins, die dein Spielerlebnis bereichern sollen. Jedes Plugin " +
     "kann einzeln aktiviert werden, indem du den Hebel auf Grün stellst. Sollte es zu irgendwelchen Problemen " +
     "kommen, kannst du uns gerne eine Nachricht schreiben oder <a href=\"" +
-    lssm.config.forum_link + "\" target=\"blank\">im Forum einen Beitrag verfassen</a>.",
+    lssm.forum + "\" target=\"blank\">im Forum einen Beitrag verfassen</a>.",
     back_lss: "Zurück zu Leitstellenspiel",
     settings: "Einstellungen",
     saving: "Speichere...",
@@ -104,9 +104,6 @@ I18n.translations.de.lssm = {
     cantload: "<h2>LSS-Manager konnte nicht geladen werden</h2>Bitte kontaktiere ein Mitglied vom Entwicklerteam.",
     login: "Bitte zuerst anmelden",
     mapkit: "Dieses Modul unterstützt kein Mapkit",
-    domainpro: "https://www.leitstellenspiel.de/profile/",
-    domainmes: "https://www.leitstellenspiel.de/messages/new?target=",
-
     apps: {}
 };
 I18n.translations.en.lssm = {
@@ -117,7 +114,7 @@ I18n.translations.en.lssm = {
     appstore_desc: "Here you will find various plugins that will enrich your playing experience. Each plugin can be " +
     "activated individually by placing the lever on green. If there are any problems, you can write us a message or " +
     "<a href=\"" +
-    lssm.config.forum_link + "\" target=\"blank\">write a message in the forum</a>.",
+    lssm.forum + "\" target=\"blank\">write a message in the forum</a>.",
     back_lss: "Back to missionchief",
     settings: "Settings",
     saving: "Saving...",
@@ -127,8 +124,6 @@ I18n.translations.en.lssm = {
     cantload: "<h2>LSS-Manager could not be loaded</h2>Please contact a member of the development team.",
     login: "Please log in first",
     mapkit: "This module doesn't support Mapkit",
-    domainpro: "https://www.missionchief.com/profile/",
-    domainmes: "https://www.missionchief.com/messages/new?target=",
     apps: {}
 };
 I18n.translations.nl.lssm = {
@@ -139,7 +134,7 @@ I18n.translations.nl.lssm = {
     appstore_desc: "Hier vindt u verschillende plug-ins die uw game-ervaring kunnen verbeteren. " +
     "Elke plugin kan individueel worden geactiveerd, de bijbehorende hendel op groen te zetten. Mochten er " +
     "problemen zijn, kunt u <a href=\"" +
-    lssm.config.forum_link +
+    lssm.forum +
     "\" target=\"blank\">ons een bericht sturen of een bericht posten in ons topic op het forum.</a>.",
     back_lss: "Terug naar Meldkamerspel",
     settings: "Instellingen",
@@ -148,41 +143,9 @@ I18n.translations.nl.lssm = {
     activated: "De volgende modules zijn geactiveerd:",
     cantactivate: "Kan niet worden geactiveerd omdat deze lssm_module niet samenwerkt met de volgende lssm_module(s):",
     mapkit: "Deze module ondersteunt Mapkit niet",
-    domainpro: "https://www.meldkamerspel.com/profile/",
-    domainmes: "https://www.meldkamerspel.com/messages/new?target=",
     apps: {}
 };
 
-I18n.translations.de.lssm.developers = {
-    "sanni": {
-        "id": 675,
-        "name": "SanniHameln"
-    },
-    "kboe": {
-        "id": 205976,
-        "name": "KBOE2"
-    }
-};
-I18n.translations.en.lssm.developers = {
-    "sanni": {
-        "id": 1065,
-        "name": "SanniHameln"
-    },
-    "kboe": {
-        "id": 49584,
-        "name": "KBOE2-Scripttester"
-    }
-};
-I18n.translations.nl.lssm.developers = {
-    "sanni": {
-        "id": 2091,
-        "name": "SanniHameln"
-    },
-    "kboe": {
-        "id": 28153,
-        "name": "KBOE2"
-    }
-};
 /**
  * Add the modules to lssm
  */
