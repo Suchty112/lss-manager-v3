@@ -303,6 +303,7 @@ lssm.Module = {
         },
         source: '/modules/lss-layout-05/layout-05.user.js',
         develop: true,
+        noapp: true,
         collisions: ['Layout01', 'Layout02', 'Layout03', 'Layout04']
     },
     DoctorRadioCall: {
@@ -518,6 +519,7 @@ lssm.Module = {
             nl: 'Zit in het spel ingebouwd - momenteel gedeactiveerd.'
         },
         source: '/modules/lss-tagMissions/tagMissions.user.js',
+        noapp: true,
         develop: true
     },
     allianceMissionlistShare: {
@@ -671,7 +673,7 @@ lssm.Module = {
             nl: 'Verander de kleur van meldkamerspel. DEZE FUNCTIE IS NOG IN AANBOUW.'
         },
         source: '/modules/lss-recolor/recolor.user.js',
-        noapp: false, // Nicht im App-Store auflisten
+        noapp: true, // Nicht im App-Store auflisten
         inframe: true,
         develop: true
     },
@@ -1200,7 +1202,7 @@ lssm.settings = {
             localStorage.setItem(lssm.config.prefix + '_' + key, value);
         }
     },
-	
+
 	exists: function(key)
 	{
 		return localStorage.getItem(lssm.config.prefix + '_' + key) !== null;
