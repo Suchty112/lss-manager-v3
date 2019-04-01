@@ -115,7 +115,7 @@ I18n.translations.en.lssm = {
     appstore_desc: "Here you will find various plugins that will enrich your playing experience. Each plugin can be " +
     "activated individually by placing the lever on green. If there are any problems, you can write us a message or " +
     "<a href=\"" +
-    I18n.t('lssm.forum') +
+    I18n.t('en.lssm.forum') +
     "\" target=\"blank\">write a message in the forum</a>.",
     back_lss: "Back to missionchief",
     settings: "Settings",
