@@ -94,7 +94,7 @@ I18n.translations.de.lssm = {
     appstore_desc: "Hier findest du verschiedene Plugins, die dein Spielerlebnis bereichern sollen. Jedes Plugin " +
     "kann einzeln aktiviert werden, indem du den Hebel auf Grün stellst. Sollte es zu irgendwelchen Problemen " +
     "kommen, kannst du uns gerne eine Nachricht schreiben oder <a href=\"" +
-    I18n.t('I18n.translations.de.lssm.forum') +
+    I18n.t('lssm.forum') +
     "\" target=\"blank\">im Forum einen Beitrag verfassen</a>.",
     back_lss: "Zurück zu Leitstellenspiel",
     settings: "Einstellungen",
