@@ -98,6 +98,15 @@
           'float: right;'+
           'cursor: pointer'+
       '}'+
+      '#lightbox_close_inside {' +
+          'color: white;' +
+          'opacity: 0.7;' +
+          'position: fixed;'
+          'right: 20 px;' +
+          'background - color: #424242;'
+          'z-index:100;' +
+          'padding:2px 2px' +
+      '}' +
       '#buildings_outer .panel-body, #chat_outer .panel-body, #radio_outer .panel-body {'+
           'max-height: 500px;'+
           'overflow: auto;'+
