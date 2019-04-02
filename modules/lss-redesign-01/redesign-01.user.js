@@ -92,6 +92,11 @@
           'display: none;'+
           'margin: 0'+
       '}'+
+      '.lightbox_iframe_ {'+
+          'border: 0;'+
+          'display: none;'+
+          'margin: 0'+
+      '}'+
       '#lightbox_close {'+
           'width: 32px;'+
           'height: 32px;'+
