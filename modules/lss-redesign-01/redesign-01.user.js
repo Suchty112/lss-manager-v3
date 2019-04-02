@@ -101,7 +101,7 @@
       '#lightbox_close_inside {' +
           'color: white;' +
           'opacity: 0.7;' +
-          'position: fixed;'
+          'position: fixed;' +
           'right: 20 px;' +
           'background - color: #424242;'
           'z-index:100;' +
