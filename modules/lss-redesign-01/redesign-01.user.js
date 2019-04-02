@@ -103,7 +103,7 @@
           'opacity: 0.7;' +
           'position: fixed;' +
           'right: 20 px;' +
-          'background - color: #424242;'
+          'background - color: #424242;' +
           'z-index:100;' +
           'padding:2px 2px' +
       '}' +
