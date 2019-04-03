@@ -64,7 +64,7 @@ I18n.translations.nl['lssm']['dashboard'] = {
         available: "Beschikbaar",
         onsite: "Ter plaatse",
         request: "Spraakaanvraag",
-        transport: "Transport1",
+        transport: "Transport",
     },
     total: "Totaal",
     overview: "Overzicht",
@@ -400,9 +400,6 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                     total.fms5 += 1;
                     break;
                 case 6:
-                    cars[type].fms6 += 1;
-                    total.fms6 += 1;
-                    break;
                 default:
                     cars[type].free += 1;
                     total.free += 1;
