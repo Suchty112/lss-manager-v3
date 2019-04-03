@@ -7,6 +7,7 @@ I18n.translations.de['lssm']['dashboard'] = {
         onsite: "Im Einsatz",
         request: "Sprechwunsch",
         transport: "Transport",
+        fms6: "Status 6",
     },
     total: "Summe",
     overview: "Übersicht",
@@ -36,6 +37,7 @@ I18n.translations.en['lssm']['dashboard'] = {
         onsite: "On Site",
         request: "Request",
         transport: "Transport",
+        fms6: "Status 6",
     },
     total: "Sum",
     overview: "Overview",
@@ -65,6 +67,7 @@ I18n.translations.nl['lssm']['dashboard'] = {
         onsite: "Ter plaatse",
         request: "Spraakaanvraag",
         transport: "Transport",
+        fms6: "Status 6",
     },
     total: "Totaal",
     overview: "Overzicht",
@@ -371,18 +374,19 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                 .append('<th>' + I18n.t('lssm.dashboard.vehicles.onsite') + '</th>')
                 .append('<th>' + I18n.t('lssm.dashboard.vehicles.request') + '</th>')
                 .append('<th>' + I18n.t('lssm.dashboard.vehicles.transport') + '</th>')
+                .append('<th>' + I18n.t('lssm.dashboard.vehicles.fms6') + '</th>')
                 .append('<th>' + I18n.t('lssm.dashboard.total') + '</th>');
 
         let c_table = $("#db_fzg_outer table tbody")
         c_table.html("");
         let cars = {};
-        let total = {'free': 0, 'miss': 0, 'fms5': 0, 'transport': 0, 'sum': 0};
+        let total = {'free': 0, 'miss': 0, 'fms5': 0, 'transport': 0, 'fms6': 0, 'sum': 0};
         $.each(lssm.car_list_all(), function (key, veh) {
             let type = 0
             if (veh.type in lssm.carsById)
                 type = lssm.carsById[veh.type][0];
             if (typeof cars[type] == 'undefined') {
-                cars[type] = {'free': 0, 'miss': 0, 'fms5': 0, 'transport': 0, 'sum': 0};
+                cars[type] = {'free': 0, 'miss': 0, 'fms5': 0, 'transport': 0, 'fms6': 0, 'sum': 0};
             }
             switch (veh.fms_real) {
                 case 3:
@@ -400,6 +404,9 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
                     total.fms5 += 1;
                     break;
                 case 6:
+                    cars[type].fms6 += 1;
+                    total.fms6 += 1;
+                    break;
                 default:
                     cars[type].free += 1;
                     total.free += 1;
@@ -415,7 +422,8 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 				<td>' + val.free + '</td>\
 				<td>' + val.miss + '</td>\
 				<td>' + val.fms5 + '</td>\
-				<td>' + val.transport + '</td>\
+                <td>' + val.transport + '</td>\
+                <td>' + val.fms6 + ' </td>\
 				<td>' + val.sum + '</td>\
 			</tr>');
         });
@@ -427,7 +435,8 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 			<td>' + total.free + '</td>\
 			<td>' + total.miss + '</td>\
 			<td>' + total.fms5 + '</td>\
-			<td>' + total.transport + '</td>\
+            <td>' + total.transport + '</td>\
+            <td>' + total.fms6 + '</td>\
 			<td>' + total.sum + '</td>\
 		</tr>');
     }
