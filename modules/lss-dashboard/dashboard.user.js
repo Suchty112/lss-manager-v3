@@ -64,7 +64,7 @@ I18n.translations.nl['lssm']['dashboard'] = {
         available: "Beschikbaar",
         onsite: "Ter plaatse",
         request: "Spraakaanvraag",
-        transport: "Transport",
+        transport: "Transport1",
     },
     total: "Totaal",
     overview: "Overzicht",
@@ -360,7 +360,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 		</div>';
             $("#wp_" + appendto).append(bd_data);
 			delete vehicles;
-			
+
         });
     }
     // Fill vehicle table
@@ -376,18 +376,21 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
         let c_table = $("#db_fzg_outer table tbody")
         c_table.html("");
         let cars = {};
-        let total = {'free': 0, 'miss': 0, 'fms5': 0, 'fms6': 0, 'sum': 0};
+        let total = {'free': 0, 'miss': 0, 'fms5': 0, 'transport': 0, 'sum': 0};
         $.each(lssm.car_list_all(), function (key, veh) {
             let type = 0
             if (veh.type in lssm.carsById)
                 type = lssm.carsById[veh.type][0];
             if (typeof cars[type] == 'undefined') {
-                cars[type] = {'free': 0, 'miss': 0, 'fms5': 0, 'fms6': 0, 'sum': 0};
+                cars[type] = {'free': 0, 'miss': 0, 'fms5': 0, 'transport': 0, 'sum': 0};
             }
             switch (veh.fms_real) {
                 case 3:
                 case 4:
                 case 7:
+                    cars[type].transport += 1;
+                    total.transport += 1;
+                    break;
                 case 8:
                     cars[type].miss += 1;
                     total.miss += 1;
@@ -415,7 +418,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 				<td>' + val.free + '</td>\
 				<td>' + val.miss + '</td>\
 				<td>' + val.fms5 + '</td>\
-				<td>' + val.fms6 + '</td>\
+				<td>' + val.transport + '</td>\
 				<td>' + val.sum + '</td>\
 			</tr>');
         });
@@ -427,7 +430,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 			<td>' + total.free + '</td>\
 			<td>' + total.miss + '</td>\
 			<td>' + total.fms5 + '</td>\
-			<td>' + total.fms6 + '</td>\
+			<td>' + total.transport + '</td>\
 			<td>' + total.sum + '</td>\
 		</tr>');
     }
@@ -438,7 +441,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 			populate_fzgtable();
 		else if (tab == "db_wachen")
 			load_build_planning();
-			
+
         tab = "#" + tab + "_outer";
         $(curtab_db).fadeOut(500);
         $(tab).fadeIn(500);
@@ -451,7 +454,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
             $("#wp_sub2").fadeOut(500);
         }
     }
-	
+
     function switch_wp_tab(tab) {
         tab = "#" + tab.replace("a_", "");
         $(curtab_wp).fadeOut(500);
@@ -540,7 +543,7 @@ jQuery.expr[":"].conaintsci = jQuery.expr.createPseudo(function (arg) {
 			loadGraphs();
 		});
     }
-	
+
     $('head').append('<script src="https://use.fontawesome.com/12accc0f95.js"></script>');
     let dasboard_button = $('<li><a id="' + prefix + '_activate" href="#"><span class="glyphicon glyphicon-stats"></span> ' + I18n.t('lssm.dashboard.name') + '</a></li>');
     $('#' + lssm.config.prefix + '_menu').append(dasboard_button);
