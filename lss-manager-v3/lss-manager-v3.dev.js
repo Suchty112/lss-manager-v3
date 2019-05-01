@@ -242,6 +242,22 @@ lssm.Module = {
         source: '/modules/lss-layout-04/layout-04.user.js',
         collisions: ['Layout01', 'Layout02', 'Layout03', 'Layout05']
     },
+    Layout04: {
+        name: {
+            de: 'Layout NachtDesign 01'
+        },
+        active: false,
+        description: {
+            de: 'Karte im linken Bereich auf 100% Höhe. Rechts davon die Einsätze auf voller breite - alle ' +
+                'Einsatzarten werden in jeweils einer Spalte dargestellt. Darunter Gebäude, Chat und Funk.',
+            en: 'Map with 100% height on the left side. Next to it the calls, each category in its own column. ' +
+                'Below that the buildings, chat and radio.',
+            nl: 'Design met een langwerpige kaart aan de linkerzijde van het scherm. Daarnaast een groot overzicht ' +
+                'van de meldingen en daaronder hebben de overige schermen een eigen kolom'
+        },
+        source: '/modules/lss-Layout-Nacht-01/layout-nacht-01.user.js',
+        collisions: ['Redesign01']
+    },
     Layout05: {
         name: {
             de: 'Layout 05'
