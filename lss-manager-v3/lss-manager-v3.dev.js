@@ -271,7 +271,7 @@ lssm.Module = {
             nl: 'Design met een langwerpige kaart aan de linkerzijde van het scherm. Daarnaast een groot overzicht ' +
                 'van de meldingen en daaronder hebben de overige schermen een eigen kolom'
         },
-        source: '/modules/lss-layout-nacht-01/layout-nacht-02.user.js',
+        source: '/modules/lss-layout-nacht-02/layout-nacht-02.user.js',
         collisions: ['Redesign01']
     },
     Layout05: {
