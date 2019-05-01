@@ -2,7 +2,7 @@
     $('head').prepend('<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">')
 
     $('body').prepend(
-        '<style type="text/css" rel="stylesheet" id="lss-layout-nacht-02-style">' +
+        '<style type="text/css" rel="stylesheet" id="lss-layout-nacht-01-style">' +
         '.well{background-image:none !important}div[id$="_outer"] .btn-default:focus,div[id$="_outer"] .btn-default:hover {color:#ee212a} div[id$="_outer"] ' +
         '.btn-default {background-color:#1d212a !important;color:#b9b9b9} .input-group-addon,.modal-content {border:0; background-color:#13151b}.table-striped>tbody>tr:nth-of-type(odd),' +
         '.lightbox_iframe,.dropdown-menu>li>a{border:0;background-color:#191F3A!important;color:#b9b9b9}.panel-heading, .panel-footer{background-color:#1d212a !important; color:#b9b9b9!important}' +
