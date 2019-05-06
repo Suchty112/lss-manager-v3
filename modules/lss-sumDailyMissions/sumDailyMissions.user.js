@@ -12,10 +12,8 @@
 			extended2: 'erweitert',
 			built: 'gebaut',
             team: 'Verbandse',
-            team1: '[Verband]',
 			prisoner: 'Gefangenen transportiert',
             num_missions: 'Anzahl Einsätze',
-            num_missions_v: 'Anzahl angefa. Verbandseinsätze',
 			num_patients: 'Anzahl Patienten',
 			num_prisoners: 'Anzahl Gefangene',
 			num_team: 'Anzahl Verbandseinlieferungen'
@@ -56,7 +54,6 @@
         let anzahl_pro_einsatz = document.querySelectorAll("#iframe-inside-container > table > tbody > tr > td:nth-child(3)");
         let einsatz_titel = document.querySelectorAll("#iframe-inside-container > table > tbody > tr > td:nth-child(4)");
         let sum_einsaetze = 0;
-        let sum_einsaetze_v = 0;
         let sum_patienten = 0;
         let sum_gefangene = 0;
         let sum_verband = 0;
@@ -110,10 +107,6 @@
                     anzahl = anzahl_pro_einsatz[i].innerHTML;
                     sum_einsaetze = sum_einsaetze + Number(anzahl.replace(" x",""));
                 }
-                else if (einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.team1'))) {
-                    anzahl = anzahl_pro_einsatz[i].innerHTML;
-                    sum_einsaetze_v = sum_einsaetze_v + Number(anzahl.replace(" x", ""));
-                }
             }
             let tables = document.querySelectorAll("#iframe-inside-container > table");
             let table = tables[0];
@@ -121,9 +114,6 @@
 				table.insertAdjacentHTML('beforebegin',
 					'<div class="label label-danger" id="num_label"><i class="glyphicon glyphicon-fire" id="num_icon"></i>'+
                     I18n.t('lssm.sumDailyMissions.num_missions')+'<span id="num_anzahl">'+sum_einsaetze+'</span></div>'+
-                    
-                    '<div class="label label-danger" id="num_label"><i class="glyphicon glyphicon-fire" id="num_icon"></i>' +
-                    I18n.t('lssm.sumDailyMissions.num_missions_v')+'<span id="num_anzahl">' +sum_einsaetze_v+ '</span></div>' +
 
 					'<div class="label label-warning" id="num_label"><i class="glyphicon glyphicon-plus" id="num_icon"></i>'+
 					I18n.t('lssm.sumDailyMissions.num_patients')+'<span id="num_anzahl">'+sum_patienten+'</span></div>'+
