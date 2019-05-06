@@ -50,8 +50,8 @@
 			num_team: 'Aantal Teamopnames'
 		};
 
-        let anzahl_pro_einsatz = document.querySelectorAll("#iframe-inside-container > table > tbody > tr > td:nth-child(2)");
-        let einsatz_titel = document.querySelectorAll("#iframe-inside-container > table > tbody > tr > td:nth-child(3)");
+        let anzahl_pro_einsatz = document.querySelectorAll("#iframe-inside-container > table > tbody > tr > td:nth-child(3)");
+        let einsatz_titel = document.querySelectorAll("#iframe-inside-container > table > tbody > tr > td:nth-child(4)");
         let sum_einsaetze = 0;
         let sum_patienten = 0;
         let sum_gefangene = 0;
