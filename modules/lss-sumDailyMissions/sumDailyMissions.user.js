@@ -6,7 +6,8 @@
 			patient_treatment: 'Patienten Behandlung',
 			education: 'Ausbildung',
 			purchase: 'gekauft',
-			cancelled: 'Abgebrochen',
+            cancelled: 'Abgebrochen',
+            cancelled2: 'Rückerstattung',
 			extended: 'ausgebaut',
 			extended2: 'erweitert',
 			built: 'gebaut',
@@ -84,6 +85,7 @@
                 else if(einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.extended')) ||
                         einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.purchase')) ||
                         einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.cancelled')) ||
+                        einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.cancelled2')) ||
                         einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.education')) ||
                         einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.extended2')) ||
                         einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.built')))
