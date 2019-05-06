@@ -15,7 +15,7 @@
             team1: '[Verband]',
 			prisoner: 'Gefangenen transportiert',
             num_missions: 'Anzahl Einsätze',
-            num_missions_verband: 'Anzahl angefa. Verbandseinsätze'
+            num_missions_verband: 'Anzahl angefa. Verbandseinsätze',
 			num_patients: 'Anzahl Patienten',
 			num_prisoners: 'Anzahl Gefangene',
 			num_team: 'Anzahl Verbandseinlieferungen'
