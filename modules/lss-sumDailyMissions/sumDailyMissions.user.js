@@ -104,16 +104,15 @@
                     anzahl = anzahl_pro_einsatz[i].innerHTML;
                     sum_verband = sum_verband + Number(anzahl.replace(" x",""));
                 }
-                else if (einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.team1')))
-                {
-                    anzahl = anzahl_pro_einsatz[i].innerHTML;
-                    sum_einsaetze_v = sum_einsaetze_v + Number(anzahl.replace(" x",""));
-                }
                 //Alles andere sind normale Einsätze und können gezählt werden
                 else
                 {
                     anzahl = anzahl_pro_einsatz[i].innerHTML;
                     sum_einsaetze = sum_einsaetze + Number(anzahl.replace(" x",""));
+                }
+                else if (einsatz_titel[i].innerText.match(I18n.t('lssm.sumDailyMissions.team1'))) {
+                    anzahl = anzahl_pro_einsatz[i].innerHTML;
+                    sum_einsaetze_v = sum_einsaetze_v + Number(anzahl.replace(" x", ""));
                 }
             }
             let tables = document.querySelectorAll("#iframe-inside-container > table");
