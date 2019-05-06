@@ -11,7 +11,7 @@
 			extended: 'ausgebaut',
 			extended2: 'erweitert',
 			built: 'gebaut',
-			team: 'Verbands',
+			team: 'Verbandse',
 			prisoner: 'Gefangenen transportiert',
 			num_missions: 'Anzahl Einsätze',
 			num_patients: 'Anzahl Patienten',
