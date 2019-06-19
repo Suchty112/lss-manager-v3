@@ -25,7 +25,7 @@ jQuery.expr[':'].containsci = function (a, i, m) {
 let lssm = {
     config: {
         //server: "https://localhost/lss-manager-v3",
-        server: "https://bran.lss-m.de", // Domain wo alles liegt
+        server: "https://beta.lss-m.de", // Domain wo alles liegt
         stats_uri: "https://proxy.lss-manager.de/stat.php",
         forum_link: "https://forum.leitstellenspiel.de/index.php/Thread/11166-LSS-MANAGER-V3/",
         key_link: "/profile/external_secret_key/", // Domain wo alles liegt
@@ -611,7 +611,7 @@ lssm.Module = {
         inframe: true,
         develop: false
     },
-    aaosearch: {
+    AaoSearch: {
         name: {
             de: 'AAO-Suche',
             en: 'AAO-Search',
