@@ -11,7 +11,23 @@
                 "ui": {
                     "label": 'Bereitschaftspolizei',
                     "type": "toggle",
-                    "description": 'Polizeihubschrauber hinzufügen zur BPol'
+                    "description": 'Bereitschaftspolizei in eigenem Tab'
+                }
+            },
+            "polhub": {
+                "default": false,
+                "ui": {
+                    "label": 'Polizeihubschrauber hinzufügen',
+                    "type": "checkbox",
+                    "parent": SETTINGS + "_bpol_toggle",
+                }
+            },
+            "seme": {
+                "default": false,
+                "ui": {
+                    "label": 'SEK/MEK hier hinzufügen',
+                    "type": "checkbox",
+                    "parent": SETTINGS + "_bpol_toggle",
                 }
             },
             "sekmek": {
@@ -38,12 +54,20 @@
                     "description": 'Werkfeuerwehr in eigenen Tab'
                 }
             },
+            "heli": {
+                "default": false,
+                "ui": {
+                    "label": 'Helikopter',
+                    "type": "toggle",
+                    "description": 'RTH und Polizeihelikopter in eigenen Tab'
+                }
+            },
             "nas": {
                 "default": false,
                 "ui": {
                     "label": 'Notärzte',
                     "type": "toggle",
-                    "description": 'NEF/NAWs und RTHs in eigenem Tab'
+                    "description": 'NEF/NAWs und RTHs in eigenen Tab'
                 }
             },
             "lna": {
@@ -124,10 +148,16 @@
     let sections = [];
     if (getSetting('bpol') && !isKtwMode) {
         let bpolSection = {
-            name: 'Bereitschaftspolizei',
-            short: 'bereitschaftspolizei',
-            vehicles: [61]
+            name: 'BPol',
+            short: 'bpol',
+            vehicles: [50, 51, 52, 35, 72]
         };
+        if (getSetting('polhub')) {
+            bpolSection.vehicles.push(61);
+        } 
+        if (getSetting('seme')) {
+            bpolSection.vehicles.push(79,80,81,82);
+        }
         sections.push(bpolSection);
     }
     if (getSetting('sekmek') && !isKtwMode) {
@@ -171,7 +201,6 @@
         }
         sections.push(naSection);
     }
-
     if (getSetting('seg') && !isKtwMode) {
         let segSection = {
             name: 'SEG',
@@ -179,6 +208,14 @@
             vehicles: [59, 60]
         };
         sections.push(segSection);
+    }
+    if (getSetting('heli') && !isKtwMode) {
+        let segSection = {
+            name: 'Helikopter',
+            short: 'heli',
+            vehicles: [61, 31]
+        };
+        sections.push(heliSection);
     }
 
     // Yes, I know... Excluding the tab in KTW mode does not really make sense.
