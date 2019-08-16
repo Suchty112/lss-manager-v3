@@ -71,7 +71,7 @@
                 }
             },
             "lna": {
-                "default": true,
+                "default": false,
                 "ui": {
                     "label": 'LNA hinzufügen',
                     "type": "checkbox",
@@ -79,7 +79,7 @@
                 }
             },
             "orgl": {
-                "default": true,
+                "default": false,
                 "ui": {
                     "label": 'OrgL hinzufügen',
                     "type": "checkbox",
@@ -102,6 +102,14 @@
                     "description": 'SEG Einheiten in eigenem Tab'
                 }
             },
+            "segktw": {
+                "default": true,
+                "ui": {
+                    "label": 'KTW Typ B hinzufügen',
+                    "type": "checkbox",
+                    "parent": SETTINGS + "_seg_toggle",
+                }
+            },
             "ktw": {
                 "default": false,
                 "ui": {
@@ -110,8 +118,8 @@
                     "description": 'KTWs in eigenem Tab. (Funktioniert leider momentan nicht bei der Einsatzart Krankentransport)'
                 }
             },
-            "segktw": {
-                "default": true,
+            "segktw1": {
+                "default": false,
                 "ui": {
                     "label": 'KTWs der SEG hinzufügen',
                     "type": "checkbox",
@@ -207,6 +215,9 @@
             short: 'seg',
             vehicles: [59, 60]
         };
+        if (getSetting('segktw')) {
+            segSection.vehicles.push(58);
+        }
         sections.push(segSection);
     }
     if (getSetting('heli') && !isKtwMode) {
@@ -227,7 +238,7 @@
             short: 'ktw',
             vehicles: [38]
         };
-        if (getSetting('segktw')) {
+        if (getSetting('segktw1')) {
             ktwSection.vehicles.push(58);
         }
         sections.push(ktwSection);
