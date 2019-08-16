@@ -11,23 +11,7 @@
                 "ui": {
                     "label": 'Bereitschaftspolizei',
                     "type": "toggle",
-                    "description": 'Bereitschaftspolizei in eigenem Tab'
-                }
-            },
-            "polhub": {
-                "default": false,
-                "ui": {
-                    "label": 'Polizeihubschrauber hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_bpol_toggle",
-                }
-            },
-            "seme": {
-                "default": false,
-                "ui": {
-                    "label": 'SEK/MEK hier hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_bpol_toggle",
+                    "description": 'Polizeihubschrauber hinzufügen zur BPol'
                 }
             },
             "sekmek": {
@@ -140,16 +124,10 @@
     let sections = [];
     if (getSetting('bpol') && !isKtwMode) {
         let bpolSection = {
-            name: 'BPol',
-            short: 'bpol',
-            vehicles: [50, 51, 52, 35, 72]
+            name: 'Bereitschaftspolizei',
+            short: 'bereitschaftspolizei',
+            vehicles: [61]
         };
-        if (getSetting('polhub')) {
-            bpolSection.vehicles.push(61);
-        } 
-        if (getSetting('seme')) {
-            bpolSection.vehicles.push(79,80,81,82);
-        }
         sections.push(bpolSection);
     }
     if (getSetting('sekmek') && !isKtwMode) {
