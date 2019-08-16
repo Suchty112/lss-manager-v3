@@ -210,7 +210,7 @@
         sections.push(segSection);
     }
     if (getSetting('heli') && !isKtwMode) {
-        let segSection = {
+        let heliSection = {
             name: 'Helikopter',
             short: 'heli',
             vehicles: [61, 31]
