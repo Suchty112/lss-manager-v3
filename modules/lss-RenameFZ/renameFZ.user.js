@@ -239,6 +239,57 @@
         }
     };
 
+    I18n.translations.fj.lssm.renameFz = {
+        name: 'Rename vehicles',
+        rename: "rename",
+        id: "{id} Id of Vehicle",
+        old: "{old} Current name",
+        vehicleType: "{vehicleType} Type of Vehicle",
+        stationName: "{stationName} Name of building",
+        number: '{number} Type-counter',
+        numberRoman: '{numberRoman} Type-counter (Roman numerals)',
+        dispatch: '{dispatch} Name of Dispatchcenter',
+        dispatchAlias: '{dispatchAlias} Alias od Dispatchcenter',
+        stationAlias: '{stationAlias} Building-Alias',
+        saveAll: 'save All',
+        statusWaiting: 'Wait for input',
+        statusError: '<b>Error during generation!</b> If this error occurs again, please report it. Please provide the following information:',
+        statusWorking: 'Generate names and forms. This can take a certain amount of time, depending on the system and number of vehicles.',
+        statusSuccess: 'Names and Forumlare successfully generated!',
+        nameAlreadyCorrect: 'Name already corresponds to the template!',
+        nameToLong: 'The name is too long for the following vehicles:',
+        nameToLongOriginalName: 'Original Name',
+        nameToLongGeneratedName: 'Generated Name',
+        nameToLongShortenedName: 'New/shortened name',
+        helpTitle: 'You can find a small instruction under this link: ',
+        helpLink: 'https://github.com/LSS-Manager/lss-manager-v3/wiki/RenameFZ',
+        startNum: 'Counter start',
+        startNumHelp: 'Here you can enter a start value for the type counter. If you set 0 as the start value, the first vehicle of a type will not get the numbering, this is very practical if you have only one vehicle of a type on a guard and do not want to number it. But you can also start the counter at 5 (for whatever reason you want, but it is possible ;) )',
+        toggleNameCorrect: 'Show/Hide Vehicles with correct names',
+        settings: {
+            show: 'Show/Hide',
+            names: {
+                vehicleTypes: 'vehicle Types',
+                stations: 'Building alias'
+            },
+            descriptions: {
+                vehicleTypes: 'Here you can set alternative names for each vehicle Type. You can use them when renaming you vehicles via dispatch center.',
+                stations: 'Here you can set alternative names for each building. You can use them when renaming you vehicles via dispatch center.'
+            },
+            validStationTypes: {
+                0: "Fire Station",
+                1: "Dispatch Center",
+                2: "Ambulance Station"
+            },
+            vehicleTypes: {
+                0: 'Type 1 fire engine',
+                1: 'Type 2 fire engine',
+                2: 'Platform truck',
+                3: 'Bataillon chief unit'
+            }
+        }
+    };
+
     I18n.translations.nl.lssm.renameFz = {
         name: 'Voertuigen herbenoemen',
         rename: "Naam aanpassen",

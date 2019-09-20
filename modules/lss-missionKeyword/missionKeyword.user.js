@@ -833,6 +833,34 @@
         313: 'Passenger train derailment (Major)'
       }
     };
+    I18n.translations.en.lssm.missionKeywordDefaults = {
+      name: 'Mission Keywords',
+      settingsName: 'Mission Keywords - Settings',
+      domain: 'missionchief.co.uk',
+      fw: 'FIRE',
+      thl: 'TECH',
+      abc: 'CBRN',
+      rd: 'MED',
+      ktp: 'MEDT',
+      pol: 'POL',
+      thw: 'TECH',
+      bp: 'POL',
+      bma: 'FAS',
+      bmaLong: 'Fire Alarm System',
+      show: 'Show/Hide',
+      keywords: {
+        0: 'Bin fire',
+        1: 'Container fire',
+        2: 'Burning car',
+        3: 'Burning motorbike',
+        4: 'Burning grass',
+        5: 'Room fire',
+        6: 'Garden shed fire',
+        7: 'Burning leaves',
+        8: 'Bulk trash fire',
+        9: 'Bale of straw fire'
+      }
+    };
     I18n.translations.nl.lssm.missionKeywordDefaults = {
       name: 'Steekwoorden bij meldingen',
       settingsName: 'Steekwoorden bij meldingen - Instellingen',
@@ -2149,6 +2177,14 @@
       312: 'TECH 6 TRAIN',
       313: 'TECH 6 TRAIN'
     };
+    let DEFAULT_AAO_FJ = {
+      0: 'FIRE 1',
+      1: 'FIRE 1',
+      2: 'FIRE 1',
+      3: 'FIRE 1',
+      4: 'FIRE 1',
+      5: 'FIRE 2'
+    };
       let DEFAULT_AAO_NL = {
       0: 'KLEINE BRAND',
       1: 'KLEINE BRAND',
@@ -2638,6 +2674,7 @@
     // Alle Einsatz-IDs mit Stichwort-Zuweisung
     I18n.translations.de.lssm.missionKeyword = DEFAULT_AAO_DE;
     I18n.translations.en.lssm.missionKeyword = DEFAULT_AAO_EN;
+    I18n.translations.fj.lssm.missionKeyword = DEFAULT_AAO_FJ;
     I18n.translations.nl.lssm.missionKeyword = DEFAULT_AAO_NL;
 
       let defaultAao;
@@ -2645,6 +2682,8 @@
       defaultAao = DEFAULT_AAO_DE;
     else if (I18n.locale === 'en')
       defaultAao = DEFAULT_AAO_EN;
+    else if (I18n.locale === 'fj')
+      defaultAao = DEFAULT_AAO_FJ
     else if (I18n.locale === 'nl')
       defaultAao = DEFAULT_AAO_NL;
     else
