@@ -22,6 +22,12 @@
 	text = text.replace('Schokoladenspur auf Strasse', '[OSTERN] Schokoladenspur auf Strasse');
 	text = text.replace('Eierkocherbrand', '[OSTERN] Eierkocherbrand');
 	text = text.replace('Hasentreffen in Ostereistedt', '[OSTERN] Hasentreffen in Ostereistedt');
+	text = text.replace('Osterei in Wasser', '[OSTERN] Osterei in Wasser');
+	text = text.replace('Osterei-LKW umgestürzt', '[OSTERN] Osterei-LKW umgestürzt');
+	text = text.replace('Schwerpunkteinsatz Osterei suche', '[OSTERN] Schwerpunkteinsatz Osterei suche');
+	text = text.replace('Ei rollt in Schlangenlinien', '[OSTERN] Ei rollt in Schlangenlinien');
+	text = text.replace('Osterhase auf Kran', '[OSTERN] Osterhase auf Kran');
+
 	//WM Missions
 	text = text.replace('Fußball aufpumpen', '[WM] Fußball aufpumpen');
 	text = text.replace('Mannschaftsbus in Halteverbot abgestellt', '[WM] Mannschaftsbus in Halteverbot abgestellt');
@@ -33,6 +39,7 @@
 	text = text.replace('Sonnenstich', '[SOMMER] Sonnenstich');
 	text = text.replace('Hitzschlag', '[SOMMER] Hitzschlag');
 	text = text.replace('Hitzekrampf', '[SOMMER] Hitzekrampf');
+	text = text.replace('Dehydrierte Person', '[SOMMER] Dehydrierte Person');
 	//Halloween Missions
 	text = text.replace('Brennende Vogelscheuche', '[HALLOWEEN] Brennende Vogelscheuche');
 	text = text.replace('Brennendes Kürbisfeld', '[HALLOWEEN] Brennendes Kürbisfeld');

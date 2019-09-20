@@ -1,7 +1,4 @@
 (($, win, I18n) => {
-
-    alert("Bitte deaktiviert im Appstore das Modul: AAO-Anrückzeit! Es ist mittlerweile im Spiel integriert!\nPlease deactivate the module in the Appstore: ARR duration! It is now integrated into the game!\nDeactiveer de module in de Appstore: AUR duur! Het is nu geïntegreerd in het spel!");
-/*
     if (!location.pathname.match(/\/missions\/\d+/)) return;
 
     I18n.translations.de.lssm.aaotime = {
@@ -129,14 +126,13 @@
     const getAaoVehicles = (aaoObject) => {
         let vehicles = {};
         $.each(aaoObject.attributes, function (index, attribute) {
-            if (!isNaN(attribute.value) && attribute.value > 0 && attribute.name !== 'building_id') {
+            if (!isNaN(attribute.value) && attribute.value > 0 && attribute.name !== 'building_ids') {
                 vehicles[attribute.name] = parseInt(attribute.value);
             }
         });
 
         return vehicles;
     };
-
     const handleMouseOver = (aaoObject) => {
         if ($(aaoObject).find('span').hasClass('label-danger')) {
             return false;
@@ -183,5 +179,5 @@
 
     aaoObjects.on('mouseout', function () {
         aaoTitle.hide();
-    }); */
+    });
 })($, window, I18n);

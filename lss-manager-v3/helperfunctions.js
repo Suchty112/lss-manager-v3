@@ -9,14 +9,15 @@
 if(I18n.locale == "en")
 {
 	lssm.extensions = {
-		// FW-Erwerterungen (0-9)
-		"Ambulance extension": 0,
-		"Water rescue expansion": 1,
-		"Airport extension": 2,
-		// Pol-Erweiterungen (10-19)
-		//Schule-Erweiterungen (20-29)
-		// SEG-Erweiterungen (30-39)
-		// THW-Erweiterungen (40-49)
+        // FW-Erwerterungen (0-9)
+        "Ambulance extension": 0,
+        "Water rescue expansion": 1,
+        "Airport extension": 2,
+        // Pol-Erweiterungen (10-19)
+        "Prison cell": 10,
+        "More cell": 10,
+        // Schule-Erweiterungen (20-29)
+        "More classrooms": 20,
 	};
     lssm.carsById = {
         "0": ["Type 1 fire engine", 0],
@@ -46,21 +47,27 @@ if(I18n.locale == "en")
         "24": ["Large Fireboat", 0],
         "25": ["Large Rescue Boat", 1],
         "26": ["SWAT SUV", 2],
-        "27": ["BLS Ambulance", 1]
+        "27": ["BLS Ambulance", 1],
+        "28": ["EMS Rescue", 1],
+        "29": ["EMS Chief", 1]
     };
 }
 else if (I18n.locale == "nl")
 {
 	lssm.extensions = {
-		// FW-Erwerterungen (0-9)
-		"Ambulance standplaats": 0,
-		"Waterongevallenbestrijding": 1,
-		"Vliegtuigbrandbestrijding": 2,
-		"Haakarmbak parkeerplaats": 5,
-		// Pol-Erweiterungen (10-19)
-		//Schule-Erweiterungen (20-29)
-		// SEG-Erweiterungen (30-39)
-		// THW-Erweiterungen (40-49)
+        // FW-Erwerterungen (0-9)
+        "Ambulance standplaats": 0,
+        "Waterongevallenbestrijding": 1,
+        "Vliegtuigbrandbestrijding": 2,
+        "Haakarmbak parkeerplaats": 5,
+        // Pol-Erweiterungen (10-19)
+        "Gevangeniscel": 10,
+        "Extra cel": 10,
+        "2e OvD-P": 11,
+        "Mobiele Eenheid, Sectie": 12,
+        "Levende Have": 13,
+        // Schule-Erweiterungen (20-29)
+        "Extra klaslokaal": 20,
 	};
     lssm.carsById = {
         "0": ["SIV | Snel Interventie Voertuig", 0],
@@ -114,7 +121,8 @@ else if (I18n.locale == "nl")
         "48": ["DB Hondengeleider | Dienstbus Hondengeleider", 2],
         "49": ["PM-OR | Materieelvoertuig - Oppervlakteredding", 0],
         "50": ["TS-OR | Tankautospuit - Oppervlakteredding", 0],
-        "51": ["HVH | HulpverleningsHaakarmbak", 0]
+        "51": ["HVH | HulpverleningsHaakarmbak", 0],
+        "52": ["RR | Rapid Responder", 1]
     };
 }
 else if (I18n.locale == "de")
@@ -241,7 +249,10 @@ else if (I18n.locale == "de")
         "84": ["ULF mit Löscharm", 0],
         "85": ["TM 50", 0],
         "86": ["Turbolöscher", 0],
-        "87": ["TLF 4000", 0]
+        "87": ["TLF 4000", 0],
+        "88": ["KLF", 0],
+        "89": ["MLF", 0],
+        "90": ["HLF 10", 0]
     };
 }
 lssm.getVehicleNameById = function(vehicleId) {
@@ -276,21 +287,21 @@ lssm.car_list_all = function() {
 lssm.car_list_printable = function(list) {
     let data = "";
     $.each(list, function (key, car) {
-		data += "<div style=\"margin-top: 3px;\"><span class=\"building_list_fms building_list_fms_" + car.fms_show + "\">" + car.fms_real + "</span> " + car.name +
+		data += "<div style=\"margin-top: 3px;\"><span class=\"building_list_fms building_list_fms_" + car.fms_real + "\">" + car.fms_show + "</span> " + car.name +
 			"</div>";
     });
     return data;
 }
 
-lssm.get_vehicles = function(async = false) {
+lssm.get_vehicles = function(async=true, overwritePathSetting=false) {
     let path = window.location.pathname.length;
-    if (path <= 2) {
+    if (path <= 2 || overwritePathSetting) {
         let tmpCar = {};
         $.ajax({
             url: "/api/vehicles",
             method: "GET",
             cache: true,
-            async: !async,
+            async: async,
             success: function (response) {
                 $.each(response, function (key, car) {
                     tmpCar[car.id] = {
@@ -308,26 +319,54 @@ lssm.get_vehicles = function(async = false) {
     }
 };
 
+lssm.statusCount = {
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    9: 0
+};
+
+lssm.updateStatusCount = function(async=true) {
+    $.ajax({
+        url: "/api/vehicle_states",
+        method: "GET",
+        cache: true,
+        async: async,
+        success: function (response) {
+          for (let status in response) {
+              lssm.statusCount[status] = response[status];
+          }
+        }
+    });
+};
+
 // Funktion zum Updaten des FMS eigener Fzg.
 $(document).bind(lssm.hook.postname("radioMessage"), function(event, t) {
-    if(t.type == "vehicle_fms"
+    if(t.type === "vehicle_fms"
         && lssm.vehicles.hasOwnProperty(t.id)
         && !t.fms_text.startsWith("[Verband]"))
     {
+        let vehicle = lssm.vehicles[t.id];
+        lssm.statusCount[vehicle.fms_show]--;
         lssm.vehicles[t.id].name = t.caption;
         lssm.vehicles[t.id].fms_show = t.fms;
         lssm.vehicles[t.id].fms_real = t.fms_real;
+        lssm.statusCount[t.fms]++;
     }
 });
 
-lssm.get_buildings = function(async = false) {
+lssm.get_buildings = function(async=true, overwritePathSetting=false) {
     let path = window.location.pathname.length;
-    if (path <= 2) {
+    if (path <= 2 || overwritePathSetting) {
         $.ajax({
             url: "/api/buildings",
             method: "GET",
             cache: true,
-            async: !async,
+            async: async,
             success: function (response) {
                 lssm.buildings = response;
             }

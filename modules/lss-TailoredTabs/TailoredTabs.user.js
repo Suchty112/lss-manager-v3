@@ -6,30 +6,6 @@
         "id": SETTINGS,
         "title": 'Tailored Tabs',
         "settings": {
-            "bpol": {
-                "default": false,
-                "ui": {
-                    "label": 'Bereitschaftspolizei',
-                    "type": "toggle",
-                    "description": 'Bereitschaftspolizei in eigenem Tab'
-                }
-            },
-            "polhub": {
-                "default": false,
-                "ui": {
-                    "label": 'Polizeihubschrauber hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_bpol_toggle",
-                }
-            },
-            "seme": {
-                "default": false,
-                "ui": {
-                    "label": 'SEK/MEK hier hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_bpol_toggle",
-                }
-            },
             "sekmek": {
                 "default": false,
                 "ui": {
@@ -102,14 +78,6 @@
                     "description": 'SEG Einheiten in eigenem Tab'
                 }
             },
-            "segktw": {
-                "default": true,
-                "ui": {
-                    "label": 'KTW Typ B hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_seg_toggle",
-                }
-            },
             "ktw": {
                 "default": false,
                 "ui": {
@@ -118,7 +86,7 @@
                     "description": 'KTWs in eigenem Tab. (Funktioniert leider momentan nicht bei der Einsatzart Krankentransport)'
                 }
             },
-            "segktw1": {
+            "segktw": {
                 "default": false,
                 "ui": {
                     "label": 'KTWs der SEG hinzufügen',
@@ -154,20 +122,6 @@
     let isKtwMode = $('#tabs').text().trim().startsWith('Rettung');
 
     let sections = [];
-    if (getSetting('bpol') && !isKtwMode) {
-        let bpolSection = {
-            name: 'BPol',
-            short: 'bpol',
-            vehicles: [50, 51, 52, 35, 72]
-        };
-        if (getSetting('polhub')) {
-            bpolSection.vehicles.push(61);
-        } 
-        if (getSetting('seme')) {
-            bpolSection.vehicles.push(79,80,81,82);
-        }
-        sections.push(bpolSection);
-    }
     if (getSetting('sekmek') && !isKtwMode) {
         let sekmekSection = {
             name: 'SEK/MEK',
@@ -213,11 +167,8 @@
         let segSection = {
             name: 'SEG',
             short: 'seg',
-            vehicles: [59, 60]
+            vehicles: [58, 59, 60]
         };
-        if (getSetting('segktw')) {
-            segSection.vehicles.push(58);
-        }
         sections.push(segSection);
     }
     if (getSetting('heli') && !isKtwMode) {
@@ -238,7 +189,7 @@
             short: 'ktw',
             vehicles: [38]
         };
-        if (getSetting('segktw1')) {
+        if (getSetting('segktw')) {
             ktwSection.vehicles.push(58);
         }
         sections.push(ktwSection);
