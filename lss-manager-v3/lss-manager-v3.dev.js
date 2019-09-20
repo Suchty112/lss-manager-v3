@@ -112,6 +112,24 @@ I18n.translations.en.lssm = {
     mapkit: "This module doesn't support Mapkit",
     apps: {}
 };
+I18n.translations.fj.lssm = {
+    appstore_welcome: "Welcome to the Appstore of LSS Manager",
+    appstore_desc: "Here you will find various plugins that will enrich your playing experience. Each plugin can be " +
+        "activated individually by placing the lever on green. If there are any problems, you can join our " +
+        "<a href=\"https://discord.gg/RcTNjpB\" target=\"blank\">Discord</a> or " +
+        "<a href=\"http://board.missionchief.com/index.php/Thread/146-LSS-Manager-for-missionchief/" +
+        "\" target=\"blank\">write a message in the forum</a>.",
+    back_lss: "Back to missionchief",
+    settings: "Settings",
+    saving: "Saving...",
+    save: "Save",
+    activated: "Following Modules have been activated:",
+    cantactivate: "can't be activated as it's incompatible with the following modul(es):",
+    cantload: "<h2>LSS-Manager could not be loaded</h2>Please contact a member of the development team.",
+    login: "Please log in first",
+    mapkit: "This module doesn't support Mapkit",
+    apps: {}
+};
 I18n.translations.nl.lssm = {
     appstore_welcome: "Welkom bij de App Store van LSS Manager",
     appstore_desc: "Hier vindt u verschillende plug-ins die uw game-ervaring kunnen verbeteren. " +
