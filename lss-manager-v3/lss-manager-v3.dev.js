@@ -72,7 +72,7 @@ let lssm = {
  */
 I18n.defaultLocale = 'de';
 I18n.fallbacks = true;
-I18n.locales.nl = ['nl', 'en', 'de'];
+I18n.locales.nl = ['nl', 'en', 'fj', 'de'];
 I18n.translations.de.lssm = {
     lssm: "LSS-Manager",
     version: "Beta",
@@ -155,12 +155,14 @@ lssm.Module = {
         name: {
             de: 'Keyboard Alarmierung',
             en: 'Callview control',
+            fj: 'Callview control',
             nl: 'Besturing met toetsenbord'
         },
         active: false,
         description: {
             de: 'Einsatzmaske mit Tastatur steuern.',
             en: 'Control the mission view with the keyboard.',
+            fj: 'Control the mission view with the keyboard.',
             nl: 'Bestuur het meldingscherm met het toetsenbord.'
         },
         source: '/modules/lss-keyboardAlert/lss-keyboardAlert.user.js',
@@ -189,6 +191,8 @@ lssm.Module = {
                 'Fensters im Menu.',
             en: 'View with main focus on the map. Missions and other windows can be changed using a menu. A badge ' +
                 'is telling you how many missions etc. you have since your last visit within that window.',
+            fj: 'View with main focus on the map. Missions and other windows can be changed using a menu. A badge ' +
+                'is telling you how many missions etc. you have since your last visit within that window.',
             nl: 'Design met een extra grote kaartweergave aan de linkerkant. Aan de rechterkant van het scherm kan ' +
                 'met menuknoppen tussen de andere schermen gewisseld worden. Een teller houdt het aantal bericheten en ' +
                 'meldingen voor je bij.'
@@ -205,6 +209,7 @@ lssm.Module = {
             de: 'Ansicht mit 100% Karte im oberen Bereich - darunter die vier Fenster Einsätze, Gebäude, Chat & ' +
                 'Funksprüche.',
             en: 'View with 100% map at the upper area - below that the four windows calls, buildings, chat and radio.',
+            fj: 'View with 100% map at the upper area - below that the four windows calls, buildings, chat and radio.',
             nl: 'Design met een grote kaart bovenaan je scherm. onder de kaart zijn de vier overige schermen; ' +
                 'meldingen, gebouwen, chat en statusmeldingen weergegeven.'
         },
@@ -220,6 +225,7 @@ lssm.Module = {
         description: {
             de: 'Layout ohne Karte. Die vier Fenster werden über die ganze Höhe dargestellt.',
             en: 'Layout without map. The four windows are using 100% of the given browser height.',
+            fj: 'Layout without map. The four windows are using 100% of the given browser height.',
             nl: 'Design zonder kaart. De vier overige schermen vullen het gehele scherm.'
         },
         source: '/modules/lss-layout-03/layout-03.user.js',
@@ -235,6 +241,8 @@ lssm.Module = {
                 'Einsatzarten werden in jeweils einer Spalte dargestellt. Darunter Gebäude, Chat und Funk.',
             en: 'Map with 100% height on the left side. Next to it the calls, each category in its own column. ' +
                 'Below that the buildings, chat and radio.',
+            fj: 'Map with 100% height on the left side. Next to it the calls, each category in its own column. ' +
+                'Below that the buildings, chat and radio.',
             nl: 'Design met een langwerpige kaart aan de linkerzijde van het scherm. Daarnaast een groot overzicht ' +
                 'van de meldingen en daaronder hebben de overige schermen een eigen kolom'
         },
@@ -245,6 +253,7 @@ lssm.Module = {
         name: {
             de: 'NEF Nachforderung per FMS',
             en: 'HEMS request in radio',
+            fj: 'HEMS request in radio',
             nl: 'Spraakaanvraag voor MMT'
         },
         active: false,
@@ -266,6 +275,8 @@ lssm.Module = {
             de: 'Alle Einsätze ein/ausklappen oder für jeden Einsatz einzeln.',
             en: 'Minimize mission list entries. You can either expand or minimize all calls at once or do it for ' +
                 'each one.',
+            fj: 'Minimize mission list entries. You can either expand or minimize all calls at once or do it for ' +
+                'each one.',
             nl: 'Verkleint de meldingen in de lijst. Je kunt alle meldingen verkleint weergeven of per melding kiezen.'
         },
         source: '/modules/lss-MissionOut/MissionOut.user.js',
@@ -275,12 +286,14 @@ lssm.Module = {
         name: {
             de: 'Eigene VGE speichern',
             en: 'Save created alliance calls',
+            fj: 'Save created alliance calls',
             nl: 'Zelfgemaakte inzetten opslaan.'
         },
         active: false,
         description: {
             de: 'Funktion um selbst erstellte VGE zu speichern.',
             en: 'Enables a function to save own created mission calls to use them as template.',
+            fj: 'Enables a function to save own created mission calls to use them as template.',
             nl: 'Maakt het mogelijk om zelfgemaakte inzetten op te slaan als sjabloon om ze later te gebruiken.'
         },
         source: '/modules/lss-saveVGE/saveVGE.user.js',
@@ -295,7 +308,8 @@ lssm.Module = {
         inframe: false,
         description: {
             de: 'Informiert immer über die Neusten Updates im LSSM',
-            en: 'Provides information about the latest updates in LSSM'
+            en: 'Provides information about the latest updates in LSSM',
+            fj: 'Provides information about the latest updates in LSSM'
         },
         source: '/modules/lss-releasenotes/Releasenotes.user.js',
         develop: false
@@ -325,6 +339,7 @@ lssm.Module = {
             de: 'Zeigt eine HTML-5 Notification an sobald ein Status oder eine Nachricht eingegangen ist. ' +
                 '(ChatPoput included)',
             en: 'HTML5 Chatnotifications using the browser notificationsystem.',
+            fj: 'HTML5 Chatnotifications using the browser notificationsystem.',
             nl: 'Toon HTML5 chatnotificaties met behulp van het notificatiesysteem van je browser zodat je nooit ' +
                 'meer een chat of melding hoeft te missen.'
         },
@@ -339,6 +354,7 @@ lssm.Module = {
         description: {
             de: 'Neues Design für die Oberfläche',
             en: 'New design for the game.',
+            fj: 'New design for the game.',
             nl: 'Een nieuw uiterlijk voor het spel.'
         },
         source: '/modules/lss-redesign-01/redesign-01.user.js',
@@ -348,6 +364,7 @@ lssm.Module = {
         name: {
             de: 'Markiert Eventeinsätze',
             en: 'Marked events',
+            fj: 'Marked events',
             nl: 'Merken gebeurtenissen'
         },
         active: false,
@@ -355,6 +372,7 @@ lssm.Module = {
         description: {
             de: 'Zeigt die Aktuellen Eventeinsätze an mit Großgeschriebenen ZEILEN!',
             en: 'Displays the current events with capitalized LINE!',
+            fj: 'Displays the current events with capitalized LINE!',
             nl: 'Toont de actuele gebeurtenissen met hoofdlettercode LINE!'
         },
         source: '/modules/lss-eventmissions/eventmission.user.js',
@@ -364,12 +382,14 @@ lssm.Module = {
         name: {
             de: 'Zielort Filter',
             en: 'Destination filter',
+            fj: 'Destination filter',
             nl: 'Bestemming Filter'
         },
         active: false,
         description: {
             de: 'Ermöglicht es, belegte oder ungeeignete Zielorte bei Sprechwünschen auszublenden',
             en: 'Allows you to hide busy or inappropriate destinations for speech requests',
+            fj: 'Allows you to hide busy or inappropriate destinations for speech requests',
             nl: 'Hiermee kunt u drukke of ongeschikte bestemmingen voor spraakverzoeken verbergen.'
         },
         source: '/modules/lss-destinationFilter/DestinationFilter.user.js',
@@ -379,12 +399,14 @@ lssm.Module = {
         name: {
             de: 'FMS 5 in der Karte',
             en: 'Request transport in map',
+            fj: 'Request transport in map',
             nl: 'Spraakaanvragen op de kaart weergeven.'
         },
         active: false,
         description: {
             de: 'Zeigt alle FMS 5 in der Karte an.',
             en: 'Shows request transports within the map lower left corner.',
+            fj: 'Shows request transports within the map lower left corner.',
             nl: 'Toont alle spraakaanvragen op de kaart.'
         },
         source: '/modules/lss-FMS5InMap/FMS5InMap.user.js',
@@ -400,6 +422,7 @@ lssm.Module = {
         description: {
             de: 'Zeigt eine Uhr in der Karte an.',
             en: 'Enables a small clock within the map.',
+            fj: 'Enables a small clock within the map.',
             nl: 'Toont een kleine klok op de kaart.'
         },
         source: '/modules/lss-clock/clock.user.js',
@@ -409,6 +432,7 @@ lssm.Module = {
         name: {
             de: 'Wachenplanung auf der Karte',
             en: 'Station management on map',
+            fj: 'Station management on map',
             nl: 'Gebouwplanning op de kaart.'
         },
         active: false,
@@ -416,6 +440,8 @@ lssm.Module = {
             de: 'Zeichnet Kreise im Radius X um deine Wachen. Der Radius kann selbst bestimmt werden & die ' +
                 'Gebäude sind wählbar.',
             en: 'Draws circles around buildings with your chosen radius in kilometer. You can also filter for ' +
+                'specific buildings.',
+            fj: 'Draws circles around buildings with your chosen radius in kilometer. You can also filter for ' +
                 'specific buildings.',
             nl: 'Toont cirkels met een zelf in te stellen radius rondom gebouwen. Je kunt ook filteren op specifieke ' +
                 'gebouwen.'
@@ -429,12 +455,14 @@ lssm.Module = {
         name: {
             de: 'Einsätze freigeben',
             en: 'Mission share',
+            fj: 'Mission share',
             nl: 'Meldingen vrijgeven'
         },
         active: false,
         description: {
             de: 'Mit einem klick in der Übersicht, ohne den Einsatz zu öffnen, freigeben.',
             en: 'Instantly share missions without opening the call by clicking a button in the overview.',
+            fj: 'Instantly share missions without opening the call by clicking a button in the overview.',
             nl: 'Vanuit het hoofdscherm gemakkelijk meldingen vrijgeven in je team met behulp van een extra knop in ' +
                 'de meldingenlijst.'
         },
