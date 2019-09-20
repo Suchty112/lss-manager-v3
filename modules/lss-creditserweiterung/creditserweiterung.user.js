@@ -1,5 +1,5 @@
 (($, win, I18n) => {
-    if (!document.URL.match(/(leitstellenspiel|missionchief|meldkamerspel)(.de|.com|co.uk)\/#?/)) {
+    if (!document.URL.match(/(leitstellenspiel|missionchief|meldkamerspel|missionchief)(.de|.com|.com|co.uk)\/#?/)) {
         return;
     }
     I18n.translations.de.lssm.creditserweiterung = {
