@@ -833,7 +833,7 @@
         313: 'Passenger train derailment (Major)'
       }
     };
-    I18n.translations.en.lssm.missionKeywordDefaults = {
+    I18n.translations.fj.lssm.missionKeywordDefaults = {
       name: 'Mission Keywords',
       settingsName: 'Mission Keywords - Settings',
       domain: 'missionchief.co.uk',
