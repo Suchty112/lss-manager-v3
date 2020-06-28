@@ -1,33 +1,129 @@
 (function ($, I18n) {
-    I18n.translations.de['lssm']['aaosearch'] = {
+    I18n.translations.de_DE['lssm']['aaosearch'] = {
         search_aao: "AAO suchen",
         use_dd: "Dropdown nutzen: ",
         reset: "Zurücksetzen",
         select: "Bitte wählen..."
     };
-    I18n.translations.en['lssm']['aaosearch'] = {
+    I18n.translations.en_US['lssm']['aaosearch'] = {
         search_aao: "Search AAO",
         use_dd: "Use dropdown: ",
         reset: "Reset",
         select: "Please select..."
     };
-	I18n.translations.nl['lssm']['aaosearch'] = {
+    I18n.translations.cs_CZ['lssm']['aaosearch'] = {
+        search_aao: "Hledání AAO",
+        use_dd: "Použít rozbalovací nabídku: ",
+        reset: "Obnovit",
+        select: "Vyberte..."
+    };
+    I18n.translations.pl_PL['lssm']['aaosearch'] = {
+        search_aao: "Szukaj AAO",
+        use_dd: "Wykorzystaj droppdown: ",
+        reset: "Resetuj",
+        select: "Proszę, wybierz...."
+    };
+    I18n.translations.sv_SE['lssm']['aaosearch'] = {
+        search_aao: "Sök AAO",
+        use_dd: "Använd rullgardinsmenyn: ",
+        reset: "Återställa",
+        select: "Vänligen välj..."
+    };
+    I18n.translations.da_DK['lssm']['aaosearch'] = {
+        search_aao: "Søg i AAO",
+        use_dd: "Brug rulleliste: ",
+        reset: "Nulstil",
+        select: "Vælg venligst..."
+    };
+    I18n.translations.nb_NO['lssm']['aaosearch'] = {
+        search_aao: "Søk i AAO",
+        use_dd: "Bruk rullegardin: ",
+        reset: "Nullstille",
+        select: "Vennligst velg..."
+    };
+    I18n.translations.it_IT['lssm']['aaosearch'] = {
+        search_aao: "Ricerca AAO",
+        use_dd: "Utilizzare il menu a tendina: ",
+        reset: "Reset",
+        select: "Si prega di selezionare..."
+    };
+    I18n.translations.tr_TR['lssm']['aaosearch'] = {
+        search_aao: "AAO'da Ara",
+        use_dd: "Açılır listeyi kullan: ",
+        reset: "Sıfırla",
+        select: "Lütfen seçin..."
+    };
+    I18n.translations.fr_FR['lssm']['aaosearch'] = {
+        search_aao: "Recherche AAO",
+        use_dd: "Utiliser le menu déroulant: ",
+        reset: "Réinitialiser",
+        select: "Veuillez sélectionner....."
+    };
+    I18n.translations.ru_RU['lssm']['aaosearch'] = {
+        search_aao: "Поиск в ААО",
+        use_dd: "Использовать выпадающий список: ",
+        reset: "Сброс",
+        select: "Пожалуйста, выберите...."
+    };
+    I18n.translations.uk_UA['lssm']['aaosearch'] = {
+        search_aao: "Пошук AAO",
+        use_dd: "Використовувати спадне меню: ",
+        reset: "Скидання",
+        select: "Виберіть будь ласка..."
+    };
+    I18n.translations.es_ES['lssm']['aaosearch'] = {
+        search_aao: "Buscar AAO",
+        use_dd: "Use el menú desplegable: ",
+        reset: "Reiniciar",
+        select: "Por favor seleccione...."
+    };
+    I18n.translations.pt_PT['lssm']['aaosearch'] = {
+        search_aao: "Pesquisa AAO",
+        use_dd: "Use o menu suspenso: ",
+        reset: "Redefinir",
+        select: "Por favor, selecione..."
+    };
+    I18n.translations.ja_JP['lssm']['aaosearch'] = {
+        search_aao: "AAOを検索",
+        use_dd: "ドロップダウンを使用： ",
+        reset: "リセットする",
+        select: "選んでください..."
+    };
+    I18n.translations.ko_KR['lssm']['aaosearch'] = {
+        search_aao: "AAO 검색",
+        use_dd: "드롭 다운 사용 : ",
+        reset: "초기화",
+        select: "선택 해주세요..."
+    };
+    I18n.translations.ro_RO['lssm']['aaosearch'] = {
+        search_aao: "Caută AAO",
+        use_dd: "Utilizare verticală: ",
+        reset: "Reseta",
+        select: "Citește și..."
+    };
+    I18n.translations.fi_FI['lssm']['aaosearch'] = {
+        search_aao: "Hae AAO: sta",
+        use_dd: "Käytä pudotusvalikkoa: ",
+        reset: "Nollaa",
+        select: "Ole hyvä ja valitse..."
+    };
+	I18n.translations.nl_NL['lssm']['aaosearch'] = {
         search_aao: "AUR Doorzoeken",
-	use_dd: "Gebruik dropdown-menu: ",
-	reset: "Reset",
-	select: "Maak je keuze.."
+        use_dd: "Gebruik dropdown-menu: ",
+        reset: "Reset",
+        select: "Maak je keuze.."
     };
     /**
      * Creates a select
      */
-    var use_dropdown = lssm.settings.get("aaos_dropdown", false).toString();
+    let use_dropdown = lssm.settings.get("aaos_dropdown", false).toString();
     function addToDropdown()
     {
         "use strict";
         // Add all the original AAO options
         $(".aao,.vehicle_group").each(function (i,e) {
             e = $(e);
-            var option = document.createElement("option");
+            let option = document.createElement("option");
             option.value = e.attr('id');
             option.text = e.text();
             $("#lssm_aao_dropdown").append(option);
@@ -35,7 +131,7 @@
 
         // When we select something
         $("#lssm_aao_dropdown").on("change", function(){
-            var aao_id = $(this).val();
+            let aao_id = $(this).val();
             // We need a ID
             if (aao_id === -1)
                 return;
@@ -59,8 +155,8 @@
             return option.text;
         }
         option.id = option.id.replace(/vehicle_group_/,'');
-        var available = document.getElementById("available_"+option.id).innerHTML;
-        var bg = $("#"+option.id).css("background-color");
+        let available = document.getElementById("available_"+option.id).innerHTML;
+        let bg = $("#"+option.id).css("background-color");
         if (typeof bg != "undefined")
             option = $('<span style="background-color: '+bg+';">'+available + option.text+'</span>');
         else
@@ -70,19 +166,19 @@
     function activateSearch()
     {
         "use strict";
-        $("#mission-aao-group").before('<input type="text" id="lssm_aao_search" style="min-width: 400px;" placeholder="'+I18n.t('lssm.aaosearch.search_aao')+'">');
+        $("#mission-aao-group").before('<input type="text" search_class="aao_searchable" class="search_input_field" id="lssm_aao_search" style="min-width: 400px;" placeholder="'+I18n.t('lssm.aaosearch.search_aao')+'">');
         $('#lssm_aao_search').focus();
         $("#mission-aao-group").before('<div id="lssm_aao_results"></div>');
         $("#mission-aao-group").before('<div id="lssm_vehicle_group_results"></div>');
         $("a[id^='aao_']").css("display", "inline-block");
         $("#lssm_aao_search").on("keyup", function(){
             "use strict";
-            var value = this.value;
+            let value = this.value;
             if(value.length > 0)
             {
                 if($("#lssm_aao_results > a[id^='lssm_aao']:containsci('"+value+"')").length === 0) {
                     $("a[id^='aao_']:containsci('" + value + "')").each(function() {
-                        var id = this.id;
+                        let id = this.id;
                         $(this).clone().prop({ id: "lssm_"+id}).appendTo("#lssm_aao_results").on("click", function(){
                             $("#"+this.id.substring(5)).click();
                         });
@@ -90,7 +186,7 @@
                 }
                 if($("#lssm_vehicle_group_results > a[id^='lssm_vehicle_group']:containsci('"+value+"')").length === 0) {
                     $("a[id^='vehicle_group_']:containsci('" + value + "')").each(function() {
-                        var id = this.id;
+                        let id = this.id;
                         $(this).clone().prop({ id: "lssm_"+id}).appendTo("#lssm_vehicle_group_results").on("click", function(){
                             $("#"+this.id.substring(5)).click();
                         });
@@ -166,8 +262,10 @@
             activateSearch();
         }
     });
+
     $("#lssm_aao_reset").on("click", function(){
         "use strict";
         vehicleSelectionReset();
     });
+
 })($, I18n);

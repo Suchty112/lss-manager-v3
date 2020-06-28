@@ -1,89 +1,126 @@
-(function ($, win,I18n) {
-    I18n.translations.de['lssm']['missionout']={
-        title:"Mission aus/ein-blenden"
-    };
-    I18n.translations.en['lssm']['missionout']={
-        title:"Hide/Show mission"
-    };
-	I18n.translations.nl['lssm']['missionout']={
-		title:"Verberg/toon melding"
-    };
-    // /hode/show Event abfangen
-    $('#missions-panel-body').on('click', '.MissionOut', function (e) {
-        e.preventDefault();
-        var $e = $(this);
-        $('#icon_' + $e.data('header')).toggle();
-        if ($(this).hasClass('btn-success')) {
-            $('#mission_panel_heading_' + $e.data('header')).next().hide();
-            $e.removeClass('btn-success').addClass('btn-danger');
-            $e.html('<i class="glyphicon glyphicon-eye-close"></i>');
-        } else {
-            $('#mission_panel_heading_' + $e.data('header')).next().show();
-            $e.removeClass('btn-danger').addClass('btn-success');
-            $e.html('<i class="glyphicon glyphicon-eye-open"></i>');
-        }
-    });
-    var isHideAll = false;
-    function create(h, id, icon) {
-        var div = $('<div class="pull-right" id="mission_out_'+id+'"></div>');
-        var $button = $('<a  href="#" class="btn btn-success btn-xs MissionOut pull-right" data-header="' + id + '" title="'+I18n.t('lssm.missionout.title')+'"><i class="glyphicon glyphicon-eye-open"></i></a>');
-        div.prepend($button);
-        icon.attr('id', 'icon_' + id).hide();
-        h.prepend(icon);
-        h.prepend(div);
-        if(isHideAll){
-            $button.click();
-        }
+(function ($, win, I18n) {
+    const lsName = `${lssm.config.prefix}_missionOut`;
 
-    }
-    $(document).bind(lssm.hook.postname("missionMarkerAdd"),function(event,t){
-        var s = "undefined" !== typeof mission_graphics[t.mtid] && null !== mission_graphics[t.mtid] && "undefined" !== typeof mission_graphics[t.mtid][t.vehicle_state] && "" !== mission_graphics[t.mtid][t.vehicle_state] ? mission_graphics[t.mtid][t.vehicle_state] : "/images/" + t.icon + ".png";
-        $('#icon_' + t.id).length && $('#icon_' + t.id).attr('src', s);
-        var $header = $('#mission_panel_heading_' + t.id);
-        if (!$header.find('.MissionOut').length) {
-            create($header, t.id, $('#mission_vehicle_state_' + t.id).clone());
+    I18n.translations.de_DE.lssm.missionOut = {
+        title: 'Einsatz aus/ein-blenden'
+    };
+    I18n.translations.en_US.lssm.missionOut = {
+        title: 'Hide/Show mission'
+    };
+    I18n.translations.cs_CZ.lssm.missionOut = {
+        title: 'Skrýt / Zobrazit misi'
+    };
+    I18n.translations.pl_PL.lssm.missionOut = {
+        title: 'Misja ukrycia/pokazania'
+    };
+    I18n.translations.sv_SE.lssm.missionOut = {
+        title: 'Dölj / Visa uppdrag'
+    };
+    I18n.translations.da_DK.lssm.missionOut = {
+        title: 'Skjul / vis mission'
+    };
+    I18n.translations.nb_NO.lssm.missionOut = {
+        title: 'Skjul / vis misjon'
+    };
+    I18n.translations.it_IT.lssm.missionOut = {
+        title: 'Nascondi/Mostra missione'
+    };
+    I18n.translations.tr_TR.lssm.missionOut = {
+        title: 'Görevi Gizle/Göster'
+    };
+    I18n.translations.fr_FR.lssm.missionOut = {
+        title: 'Masquer/afficher la mission'
+    };
+    I18n.translations.ru_RU.lssm.missionOut = {
+        title: 'Скрыть / Показать миссию'
+    };
+    I18n.translations.uk_UA.lssm.missionOut = {
+        title: 'Сховати / показати місію'
+    };
+    I18n.translations.es_ES.lssm.missionOut = {
+        title: 'Ocultar/Mostrar misión'
+    };
+    I18n.translations.pt_PT.lssm.missionOut = {
+        title: 'Ocultar / Mostrar missão'
+    };
+    I18n.translations.ja_JP.lssm.missionOut = {
+        title: 'ミッションの非表示/表示'
+    };
+    I18n.translations.ko_KR.lssm.missionOut = {
+        title: '미션 숨기기 / 보이기'
+    };
+    I18n.translations.ro_RO.lssm.missionOut = {
+        title: 'Ascundere/Afișare misiune'
+    };
+    I18n.translations.fi_FI.lssm.missionOut = {
+        title: 'Piilota / Näytä tehtävä'
+    };
+    I18n.translations.nl_NL.lssm.missionOut = {
+        title: 'Verberg/toon melding'
+    };
+
+    const get_full_storage = () => JSON.parse(localStorage[lsName] || '{}');
+    const switch_storage = (btn, mission_id) => {
+        let storage = JSON.parse(localStorage[lsName] || '{}');
+        (btn.hasClass('btn-danger') && (storage[mission_id] = true)) || delete storage[mission_id];
+        localStorage[lsName] = JSON.stringify(storage);
+    };
+
+    addBtns();
+
+    let missionMarkerOrig = missionMarkerAdd;
+    missionMarkerAdd = e => {
+        missionMarkerOrig(e);
+        addBtns(e);
+    };
+
+    function addBtns(e) {
+        $(`.missionSideBarEntry .panel-heading${(e && e.id) ? `#mission_panel_heading_${e.id}` : ''}`).each((key, mission) => {
+            mission = $(mission);
+            let mission_id = mission.parent().parent().attr('mission_id');
+            $(`.missionPatients_${mission_id}`).remove();
+            !mission.find('.MissionOut')[0] && mission.prepend(`<div class="pull-right"><a class="btn btn-success btn-xs MissionOut pull-right" mission_id="${mission_id}" title="${I18n.t('lssm.missionOut.title')}"><i class="glyphicon glyphicon-eye-open"></i></a></div>`);
+            mission.find('.MissionOut').parent().append(`<small class="missionPatients_${mission_id} pull-right">Pat.: ${$(`#mission_patients_${mission_id} .patient_progress`).length||$(`#mission_patient_summary_${mission_id}>strong`).text().replace(/\D*/g, "")||0}&nbsp;</small>`);
+            mission.find('.MissionOut')
+                .unbind()
+                .click(e => {
+                    let btn = $(e.currentTarget);
+                    let mission_id = btn
+                        .toggleClass('btn-success')
+                        .toggleClass('btn-danger')
+                        .find('i')
+                        .toggleClass('glyphicon-eye-open')
+                        .toggleClass('glyphicon-eye-close')
+                        .parent()
+                        .attr('mission_id');
+                    switch_storage(btn, mission_id);
+                    let panel = $(`#mission_panel_${mission_id} .panel-body`);
+                    panel.toggle();
+                    let icon = $(`#mission_vehicle_state_${mission_id}`);
+                    btn.hasClass('btn-danger') ? icon.prependTo(btn.parent().parent()) : icon.appendTo(panel.find('.col-xs-1'));
+                    //let mission_icon = mission_markers.find(x => x.mission_id === parseInt(mission_id));
+                    //mission_icon && mission_icon._icon && $(mission_icon._icon).toggle();
+                });
+        });
+        if (e) return;
+        let full_storage = get_full_storage();
+        for (let mission in full_storage) {
+            if (!full_storage.hasOwnProperty(mission)) continue;
+            let btn = $(`.MissionOut[mission_id=${mission}]`);
+            (btn && btn.click()) ||switch_storage(btn, mission);
         }
-        patienten(t.id, t.patients_count);
-    });
-    function patienten(id, t) {
-        $('#pat_' + id).length ? $('#pat_' + id).html('Pat.: ' + t) : $('#mission_out_' + id).append('<small class="lssm_pat_count" id="pat_' + id + '">Pat.: ' + t + '</small>&nbsp;');
     }
-    // Fix load Problem einmalig am Anfang alle schon vorhandenen Einsätze durgehen und bearbeiten
-    $('div.missionSideBarEntry:not(:hidden)').each(function () {
-        var e = $(this);
-        if (e.find('.MissionOut').length === 0) {
-            var id = e.attr('mission_id');
-            create($('#mission_panel_heading_' + id), id, $('#mission_vehicle_state_' + id).clone());
-            patienten(id, $('#mission_patients_' + id + ' .patient_progress').length);
-        }
+
+    $('#mission_select_sicherheitswache').after(`<a id="missionOut_all" class="btn btn-success btn-xs MissionOut" title="${I18n.t('lssm.missionOut.title')}"><i class="glyphicon glyphicon-eye-open"></i></a>`);
+    $('#missionOut_all').click(e => {
+        $(e.currentTarget)
+            .toggleClass('btn-success')
+            .toggleClass('btn-danger')
+            .find('i')
+            .toggleClass('glyphicon-eye-open')
+            .toggleClass('glyphicon-eye-close')
+            .parent()
+            .hasClass('btn-danger') ? $('.MissionOut.btn-success').click() : $('.MissionOut.btn-danger').click();
     });
-    var hideAll = $('<a  href="#" class="btn btn-xs btn-success" title="'+I18n.t('lssm.missionout.title')+'"><i class="glyphicon glyphicon-eye-open"></i></a>')
-            .click(function () {
-                var e = $(this);
-                if (e.hasClass('btn-success')) {
-                    isHideAll = true;
-                    e.removeClass('btn-success').addClass('btn-danger');
-                    e.html('<i class="glyphicon glyphicon-eye-close"></i>');
-                    $('.MissionOut.btn-success').not(':hidden').each(function () {
-                        var e = $(this);
-                        e.html('<i class="glyphicon glyphicon-eye-close"></i>');
-                        e.removeClass('btn-success').addClass('btn-danger');
-                        $('#mission_panel_heading_' + e.data('header')).next().hide();
-                        $('#icon_'+ e.data('header')).toggle();
-                    });
-                } else {
-                    isHideAll = false;
-                    e.removeClass('btn-danger').addClass('btn-success');
-                    e.html('<i class="glyphicon glyphicon-eye-open"></i>');
-                    $('.MissionOut.btn-danger').not(':hidden').each(function () {
-                        var e = $(this);
-                        e.html('<i class="glyphicon glyphicon-eye-open"></i>');
-                        $('#icon_'+ e.data('header')).toggle();
-                        $('#mission_panel_heading_' + e.data('header')).next().show();
-                        e.removeClass('btn-danger').addClass('btn-success');
-                    });
-                }
-                return false;
-            });
-    $('#mission_select_sicherheitswache').after(hideAll);
-})(jQuery, window,I18n);
+
+})(jQuery, window, I18n);

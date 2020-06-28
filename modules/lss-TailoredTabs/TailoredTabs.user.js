@@ -6,30 +6,6 @@
         "id": SETTINGS,
         "title": 'Tailored Tabs',
         "settings": {
-            "bpol": {
-                "default": false,
-                "ui": {
-                    "label": 'Bereitschaftspolizei',
-                    "type": "toggle",
-                    "description": 'Bereitschaftspolizei in eigenem Tab'
-                }
-            },
-            "polhub": {
-                "default": false,
-                "ui": {
-                    "label": 'Polizeihubschrauber hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_bpol_toggle",
-                }
-            },
-            "seme": {
-                "default": false,
-                "ui": {
-                    "label": 'SEK/MEK hier hinzufügen',
-                    "type": "checkbox",
-                    "parent": SETTINGS + "_bpol_toggle",
-                }
-            },
             "sekmek": {
                 "default": false,
                 "ui": {
@@ -54,16 +30,32 @@
                     "description": 'Werkfeuerwehr in eigenen Tab'
                 }
             },
+            "abwlf": {
+                "default": false,
+                "ui": {
+                    "label": 'WLF und AB',
+                    "type": "toggle",
+                    "description": 'Wechsellader und AB in eigenen Tab'
+                }
+            },
+            "heli": {
+                "default": false,
+                "ui": {
+                    "label": 'Helikopter',
+                    "type": "toggle",
+                    "description": 'RTH und Polizeihelikopter in eigenen Tab'
+                }
+            },
             "nas": {
                 "default": false,
                 "ui": {
                     "label": 'Notärzte',
                     "type": "toggle",
-                    "description": 'NEF/NAWs und RTHs in eigenem Tab'
+                    "description": 'NEF/NAWs und RTHs in eigenen Tab'
                 }
             },
             "lna": {
-                "default": true,
+                "default": false,
                 "ui": {
                     "label": 'LNA hinzufügen',
                     "type": "checkbox",
@@ -71,7 +63,7 @@
                 }
             },
             "orgl": {
-                "default": true,
+                "default": false,
                 "ui": {
                     "label": 'OrgL hinzufügen',
                     "type": "checkbox",
@@ -86,12 +78,28 @@
                     "parent": SETTINGS + "_nas_toggle",
                 }
             },
+            "rhs": {
+                "default": false,
+                "ui": {
+                    "label": 'RHS',
+                    "type": "toggle",
+                    "description": 'Hundestaffeln in eigenen Tab'
+                }
+            },
             "seg": {
                 "default": false,
                 "ui": {
                     "label": 'SEG',
                     "type": "toggle",
-                    "description": 'SEG Einheiten in eigenem Tab'
+                    "description": 'SEG Einheiten in eigenen Tab'
+                }
+            },
+            "rhs1": {
+                "default": false,
+                "ui": {
+                    "label": 'RHS hinzufügen',
+                    "type": "checkbox",
+                    "parent": SETTINGS + "_seg_toggle",
                 }
             },
             "ktw": {
@@ -103,7 +111,7 @@
                 }
             },
             "segktw": {
-                "default": true,
+                "default": false,
                 "ui": {
                     "label": 'KTWs der SEG hinzufügen',
                     "type": "checkbox",
@@ -138,20 +146,6 @@
     let isKtwMode = $('#tabs').text().trim().startsWith('Rettung');
 
     let sections = [];
-    if (getSetting('bpol') && !isKtwMode) {
-        let bpolSection = {
-            name: 'BPol',
-            short: 'bpol',
-            vehicles: [50, 51, 52, 35, 72]
-        };
-        if (getSetting('polhub')) {
-            bpolSection.vehicles.push(61);
-        } 
-        if (getSetting('seme')) {
-            bpolSection.vehicles.push(79,80,81,82);
-        }
-        sections.push(bpolSection);
-    }
     if (getSetting('sekmek') && !isKtwMode) {
         let sekmekSection = {
             name: 'SEK/MEK',
@@ -169,12 +163,20 @@
         sections.push(icaoSection);
     }
     if (getSetting('wf') && !isKtwMode) {
-        let icaoSection = {
+        let wfSection = {
             name: 'WF',
             short: 'wf',
             vehicles: [83, 84, 85, 86]
         };
-        sections.push(icaoSection);
+        sections.push(wfSection);
+    }
+    if (getSetting('abwlf') && !isKtwMode) {
+        let abwlfSection = {
+            name: 'AB u. WLF',
+            short: 'abwlf',
+            vehicles: [46, 47, 48, 49, 54, 62, 71, 77, 78]
+        };
+        sections.push(abwlfSection);
     }
     if (getSetting('nas') && !isKtwMode) {
         let naSection = {
@@ -193,14 +195,32 @@
         }
         sections.push(naSection);
     }
-
     if (getSetting('seg') && !isKtwMode) {
         let segSection = {
             name: 'SEG',
             short: 'seg',
-            vehicles: [59, 60]
+            vehicles: [58, 59, 60]
         };
+        if (getSetting('rhs1')) {
+            segSection.vehicles.push(91);
+        }
         sections.push(segSection);
+    }
+    if (getSetting('rhs') && !isKtwMode) {
+        let rhsSection = {
+            name: 'RHS',
+            short: 'rhs',
+            vehicles: [91, 92]
+        };
+        sections.push(rhsSection);
+    }
+    if (getSetting('heli') && !isKtwMode) {
+        let heliSection = {
+            name: 'Helikopter',
+            short: 'heli',
+            vehicles: [61, 31]
+        };
+        sections.push(heliSection);
     }
 
     // Yes, I know... Excluding the tab in KTW mode does not really make sense.
