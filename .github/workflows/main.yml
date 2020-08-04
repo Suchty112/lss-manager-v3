@@ -1,0 +1,8 @@
+name: json-lint
+uses: ocular-d/json-linter@0.0.1
+
+name: eslint + fix
+uses: getsentry/action-eslint-fix@v1
+with:
+# GitHub token
+GITHUB_TOKEN: 
