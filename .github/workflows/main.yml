@@ -22,7 +22,5 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: eslint + fix
-      uses: getsentry/action-eslint-fix@v1
-      with:
-        GITHUB_TOKEN: ${{ secrets.06819d8f5d89ec7c42bb6d9d9dfb127eb43b5679 }}
+    - name: W ES Lint
+      uses: avgar/awesome-lint@1.0.0
