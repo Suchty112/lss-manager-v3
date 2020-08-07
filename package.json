@@ -1,0 +1,26 @@
+{
+    "version": "3.3.8",
+    "license": "CC-BY-NC-SA-4.0",
+    "dependencies": {
+        "select2": "^4.0.12",
+        "jquery-ui": "^1.12.0",
+        "fontawesome": "^5.6.2"
+    },
+    "devDependencies": {
+        "select2": "^4.0.12",
+        "jquery-ui": "^1.12.0",
+        "fontawesome": "^5.6.2"
+    },
+    "prettier": {
+        "endOfLine": "lf",
+        "quoteProps": "consistent",
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "es5"
+    },
+    "userscript": {
+        "name": "LSS-Manager V.3",
+        "author": "Aisaka | Sanni | Jan (jxn_30)",
+        "description": "Das Tool für das LSS in der Version 3"
+    }
+}
